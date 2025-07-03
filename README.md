@@ -1,5 +1,8 @@
 ## Hi there 👋
 
+* Bioinformatics
+* Webdevelopment
+* iGEM
 
 ## Overview 
 
