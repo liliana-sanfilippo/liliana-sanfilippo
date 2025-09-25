@@ -1,9 +1,14 @@
-import Document  from './document.mdx'
+import {Post} from "../post_interface";
+import DocumentPost, {meta as meeta} from "./document";
 
-export default {
-  title: `Congratulations on Your New Blog!`,
-  tags: ['react', 'navi'],
-  spoiler: 'Learn how to add new posts and tweak the theme to your liking.',
-    slug: "document",
-    MDXComponent: Document
-}
+export const posts: Post[] = [
+    {
+        ...meeta,
+        MDXComponent: DocumentPost,
+    },
+    {
+        ...meeta,
+        MDXComponent: DocumentPost,
+    },
+
+]

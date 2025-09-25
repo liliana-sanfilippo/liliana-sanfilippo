@@ -4,7 +4,6 @@ export interface Post {
     spoiler: string
     slug: string
     date: Date
-    getContent: () => Promise<any>
     previousDetails?: { title: string; path: string }
     nextDetails?: { title: string; path: string },
     MDXComponent: React.ComponentType

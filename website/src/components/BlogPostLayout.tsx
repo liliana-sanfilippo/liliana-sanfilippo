@@ -23,6 +23,7 @@ function BlogPostLayout({ blogRoot, post  }: BlogPostLayoutProps) {
     if (!post) {
         return <div>Post not found</div> // oder deine NotFoundPage
     }
+    const MDXComponent = post.MDXComponent
   return (
     <>
       <article className={styles.container}>
@@ -30,18 +31,23 @@ function BlogPostLayout({ blogRoot, post  }: BlogPostLayoutProps) {
           <h1 className={styles.title}>
             <Link to={location.pathname}>{post.title}</Link>
           </h1>
-          <ArticleMeta
-            blogRoot={blogRoot}
-            data={post}
-          />
+            <ArticleMeta
+                blogRoot={blogRoot}
+                data={post}
+            />
         </header>
-        <MDXProvider
-            components={{
-                a: (props: any) => <Link to={props.href}>{props.children}</Link>,
-                wrapper: ({ children }: { children: ReactNode} ) => <div className={styles.content}>{children}</div>,
-          }}>
-            {post.MDXComponent}
-        </MDXProvider>
+          {}
+
+          <MDXProvider
+              components={{
+                  a: (props: any) => <Link to={props.href}>{props.children}</Link>,
+                  wrapper: ({ children }: { children: ReactNode }) => (
+                      <div className={styles.content}>{children}</div>
+                  ),
+              }}
+          >
+              <MDXComponent />  {/* <-- so rendern, nicht nur {post.MDXComponent} */}
+          </MDXProvider>
         <footer className={styles.footer}>
           <h3 className={styles.title}>
             <Link to={blogRoot}>{siteMetadata.title}</Link>

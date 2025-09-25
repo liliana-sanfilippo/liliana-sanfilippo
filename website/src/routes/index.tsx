@@ -7,36 +7,23 @@ import siteMetadata from '../siteMetadata'
 import { chunk } from 'lodash'
 import NotFoundPage from "../components/NotFoundPage";
 import {AboutPage} from "./about/AboutPage";
-import {loadPosts} from "./posts";
-import {Post} from "./posts/post_interface";
 import TagIndexPageWrapper from "./TagIndexWrapper";
+import postsWithNav from "./posts";
 
 
-function BlogPostWrapper({ posts, blogRoot }: { posts: Post[], blogRoot: string }) {
+
+
+function BlogPostWrapper({ blogRoot }: { blogRoot: string }) {
     const { slug } = useParams<{ slug: string }>()
-    const post = posts.find((p) => p.slug === slug)
-
+    const post = postsWithNav.find(p => p.slug === slug)
     if (!post) return <div>Post not found</div>
-
     return <BlogPostLayout blogRoot={blogRoot} post={post} />
 }
 
-
 function AppRouter() {
-    const [posts, setPosts] = useState<Post[]>([])
-    const [loading, setLoading] = useState(true)
+    console.log("Load site")
 
-    useEffect(() => {
-        loadPosts().then((loaded) => {
-            setPosts(loaded)
-            setLoading(false)
-        })
-    }, [])
-
-    if (loading) return <div>Loading...</div>
-
-
-    let chunks = chunk(posts, siteMetadata.indexPageSize)
+    let chunks = chunk(postsWithNav, siteMetadata.indexPageSize)
 
 
 
@@ -83,7 +70,7 @@ function AppRouter() {
 
 
                         {/* Posts */}
-                        <Route path="/posts/:slug" element={<BlogPostWrapper blogRoot="/" posts={posts} />} />
+                        <Route path="/posts/:slug" element={<BlogPostWrapper blogRoot="/" />} />
 
                         {/* Misc Pages */}
                         {/* <Route path="/tags" element={<TagsPage />} />*/}

@@ -47,14 +47,8 @@ function BlogIndexPage({
       )}
       <footer className={styles.footer}>
         <div>
-          <a href="./rss.xml" target="_blank" style={{ float: 'right' }}>
-            RSS
-          </a>
-          <Link to="./about">About</Link> &bull;{' '}
-          <Link to="./tags">Tags</Link> &bull;{' '}
-          <a href="https://github.com/frontarm/create-react-blog">
-            Source
-          </a>
+          <Link to="./home">About</Link> &bull;{' '}
+          <Link to="./tags">Tags</Link>
         </div>
       </footer>
     </div>

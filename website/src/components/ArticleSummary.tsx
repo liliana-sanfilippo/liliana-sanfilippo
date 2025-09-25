@@ -13,7 +13,7 @@ function ArticleSummary({ blogRoot, post }: {blogRoot: string, post: Post}) {
   return (
     <article className={styles.ArticleSummary}>
       <h2>
-        <Link to={post.slug}>{post.title}</Link>
+        <Link to={`posts/${post.slug}`}>{post.title}</Link>
       </h2>
       <ArticleMeta blogRoot={blogRoot} data={post} />
       <p>{post.spoiler}</p>
