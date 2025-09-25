@@ -1,1 +1,10 @@
-/// <reference types="react-scripts" />
+/// <reference types="react-scripts-mdx" />
+declare module '*.module.css' {
+    const classes: { [key: string]: string };
+    export default classes;
+}
+
+
+
+
+
