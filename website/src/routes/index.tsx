@@ -1,110 +1,106 @@
-import { compose, lazy, map, mount, redirect, resolve, route, withContext, withView, Route } from 'navi'
-import React from 'react'
-import { join } from 'path'
-import { chunk, fromPairs } from 'lodash'
-import BlogIndexPage from '../components/BlogIndexPage'
+import React, { Suspense, useEffect, useState} from 'react'
+import {BrowserRouter, Routes, Route, Navigate, useParams} from 'react-router-dom'
 import BlogLayout from '../components/BlogLayout'
+import BlogIndexPage from '../components/BlogIndexPage'
 import BlogPostLayout from '../components/BlogPostLayout'
 import siteMetadata from '../siteMetadata'
-import posts from './posts'
+import { chunk } from 'lodash'
+import NotFoundPage from "../components/NotFoundPage";
+import {AboutPage} from "./about/AboutPage";
+import {loadPosts} from "./posts";
+import {Post} from "./posts/post_interface";
+import TagIndexPageWrapper from "./TagIndexWrapper";
 
-interface AppNavContext {
-  blogRoot: string
+
+function BlogPostWrapper({ posts, blogRoot }: { posts: Post[], blogRoot: string }) {
+    const { slug } = useParams<{ slug: string }>()
+    const post = posts.find((p) => p.slug === slug)
+
+    if (!post) return <div>Post not found</div>
+
+    return <BlogPostLayout blogRoot={blogRoot} post={post} />
 }
 
-// Split the posts into a list of chunks of the given size, and
-// then build index pages for each chunk.
-let chunks = chunk(posts, siteMetadata.indexPageSize)
-let chunkPagePairs = chunks.map((chunk, i) => [
-  '/' + (i + 1),
-  map<AppNavContext>(async (req, context) => {
-    // Don't load anything when just crawling
-    if (req.method === 'HEAD') {
-      return route()
-    }
 
-    // Get metadata for all pages on this page
-    let postRoutes = await Promise.all<Route>(
-      chunk.map(async post => {
-        let href = join(context.blogRoot, 'posts', post.slug)
-        return await resolve({
-          // If you want to show the page content on the index page, set
-          // this to 'GET' to be able to access it.
-          method: 'HEAD',
-          routes,
-          url: href,
+function AppRouter() {
+    const [posts, setPosts] = useState<Post[]>([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        loadPosts().then((loaded) => {
+            setPosts(loaded)
+            setLoading(false)
         })
-      }),
-    )
+    }, [])
 
-    // Only add a page number to the page title after the first index page.
-    let pageTitle = siteMetadata.title
-    if (i > 0) {
-      pageTitle += ` – page ${i + 1}`
-    }
+    if (loading) return <div>Loading...</div>
 
-    return route({
-      title: pageTitle,
-      getView: () => (
-        <BlogIndexPage
-          blogRoot={context.blogRoot}
-          pageNumber={i + 1}
-          pageCount={chunks.length}
-          postRoutes={postRoutes}
-        />
-      ),
-    })
-  }),
-])
 
-const routes = compose(
-  withContext((req, context): AppNavContext => ({
-    // By adding the point at which the blog was mounted to context, it
-    // makes it possible to easily scope all URLs to the blog root, thus
-    // making it possible to mount the entire route on a subdirectory.
-    blogRoot: req.mountpath || '/',
-    ...context,
-  })),
-  withView((req, context) => {
-    // Check if the current page is an index page by comparing the remaining
-    // portion of the URL's pathname with the index page paths.
-    let isViewingIndex = req.path === '/' || /^\/page\/\d+\/$/.test(req.path)
+    let chunks = chunk(posts, siteMetadata.indexPageSize)
 
-    // Wrap the current page's content with a React Context to pass global
-    // configuration to the blog's components.
+
+
     return (
-      <BlogLayout
-        blogRoot={context.blogRoot}
-        isViewingIndex={isViewingIndex}
-      />
+        <BrowserRouter>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Routes>
+
+                    {/* Blog Layout Wrapper */}
+                    <Route element={<BlogLayout blogRoot="/" isViewingIndex={false} />}>
+
+                        <Route path="/" element={<Navigate to="/home" replace />} />
+
+                        {/* Index Pages */}
+                        {chunks.map((chunkPosts: any[], i:number) => (
+                            i === 0 ? (
+                                <Route
+                                    key={i}
+                                    index
+                                    element={
+                                        <BlogIndexPage
+                                            blogRoot="/"
+                                            pageNumber={1}
+                                            pageCount={chunks.length}
+                                            postRoutes={chunkPosts}
+                                        />
+                                    }
+                                />
+                            ) : (
+                                <Route
+                                    key={i}
+                                    path={`page/${i + 1}`}
+                                    element={
+                                        <BlogIndexPage
+                                            blogRoot="/"
+                                            pageNumber={i + 1}
+                                            pageCount={chunks.length}
+                                            postRoutes={chunkPosts}
+                                        />
+                                    }
+                                />
+                            )
+                        ))}
+
+
+                        {/* Posts */}
+                        <Route path="/posts/:slug" element={<BlogPostWrapper blogRoot="/" posts={posts} />} />
+
+                        {/* Misc Pages */}
+                        {/* <Route path="/tags" element={<TagsPage />} />*/}
+                        <Route path="/home" element={<AboutPage />} />
+
+                        {/* Tag Index Page */}
+                        <Route path="/tags" element={<TagIndexPageWrapper blogRoot="/" />} />
+
+                    </Route>
+                    {/* Fallback 404 */}
+                    <Route path="*" element={<NotFoundPage />} />
+
+                </Routes>
+            </Suspense>
+        </BrowserRouter>
     )
-  }),
-  mount({
-    // The blog's index pages go here. The first index page is mapped to the
-    // root URL, with a redirect from "/page/1". Subsequent index pages are
-    // mapped to "/page/n".
-    '/': chunkPagePairs.shift()[1],
-    '/page': mount({
-      '/1': redirect((req, context: AppNavContext) => context.blogRoot),
-      ...fromPairs(chunkPagePairs),
-    }),
+}
 
-    // Put posts under "/posts", so that they can be wrapped with a
-    // "<BlogPostLayout />" that configures MDX and adds a post-specific layout.
-    '/posts': compose(
-      withView((req, context: AppNavContext) => <BlogPostLayout blogRoot={context.blogRoot} />),
-      mount(fromPairs(posts.map(post => ['/' + post.slug, post.getPage]))),
-    ),
 
-    // Miscellaneous pages can be added directly to the root switch.
-    '/tags': lazy(() => import('./tags')),
-    '/about': lazy(() => import('./about')),
-
-    // Only the statically built copy of the RSS feed is intended to be opened,
-    // but the route is defined here so that the static renderer will pick it
-    // up.
-    '/rss': route(),
-  }),
-)
-
-export default routes
+export default AppRouter

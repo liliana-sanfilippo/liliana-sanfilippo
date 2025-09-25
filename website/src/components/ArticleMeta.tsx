@@ -1,7 +1,8 @@
-import { join } from 'path'
+
 import React from 'react'
 import { formatDate } from '../utils/formats'
 import styles from './ArticleMeta.module.css'
+import { Link } from 'react-router-dom'
 
 interface ArticleMetaProps {
   blogRoot: string
@@ -35,7 +36,7 @@ function ArticleMeta({ blogRoot, data, readingTime }: ArticleMetaProps) {
           <ul className={styles.tags}>
             {data.tags.map((tag: string) => (
               <li key={tag}>
-                <Link href={join(blogRoot, 'tags', tag)}>{tag}</Link>
+                <Link to={`${blogRoot.replace(/\/$/, '')}/tags/${tag}`}>{tag}</Link>
               </li>
             ))}
           </ul>

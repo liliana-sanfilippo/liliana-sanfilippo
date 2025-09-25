@@ -1,24 +1,22 @@
 import React from 'react'
 import ArticleMeta from './ArticleMeta'
 import styles from './ArticleSummary.module.css'
-import {Route} from "./Route";
+import { Link } from 'react-router-dom'
+import {Post} from "../routes/posts/post_interface";
 
 
 
 
-interface ArticleSummaryProps {
-  blogRoot: string
-  route: Route
-}
 
-function ArticleSummary({ blogRoot, route }: ArticleSummaryProps) {
+
+function ArticleSummary({ blogRoot, post }: {blogRoot: string, post: Post}) {
   return (
     <article className={styles.ArticleSummary}>
       <h2>
-        <a href={route.url.href}>{route.title}</a>
+        <Link to={post.slug}>{post.title}</Link>
       </h2>
-      <ArticleMeta blogRoot={blogRoot} data={route} />
-      <p>{route.data.spoiler}</p>
+      <ArticleMeta blogRoot={blogRoot} data={post} />
+      <p>{post.spoiler}</p>
     </article>
   )
 }

@@ -4,13 +4,16 @@ import ArticleSummary from './ArticleSummary'
 import Bio from './Bio'
 import Pagination from './Pagination'
 import styles from './BlogIndexPage.module.css'
-import {Route} from "./Route";
+import { Link } from 'react-router-dom'
+import {Post} from "../routes/posts/post_interface";
+
+
 
 interface BlogIndexPageProps {
   blogRoot: string
   pageCount: number
   pageNumber: number
-  postRoutes: Route[]
+  postRoutes: Post[]
 }
 
 
@@ -24,14 +27,14 @@ function BlogIndexPage({
     <div>
       <header>
         <h1 className={styles.title}>
-          <a href={blogRoot}>{siteMetadata.title}</a>
+          <Link to={blogRoot}>{siteMetadata.title}</Link>
         </h1>
         <Bio />
       </header>
       <ul className={styles.articlesList}>
         {postRoutes.map(route => (
-          <li key={route.url.href}>
-            <ArticleSummary blogRoot={blogRoot} route={route} />
+          <li key={route.slug}>
+            <ArticleSummary blogRoot={blogRoot} post={route} />
           </li>
         ))}
       </ul>
@@ -47,8 +50,8 @@ function BlogIndexPage({
           <a href="./rss.xml" target="_blank" style={{ float: 'right' }}>
             RSS
           </a>
-          <a href="./about">About</a> &bull;{' '}
-          <a href="./tags">Tags</a> &bull;{' '}
+          <Link to="./about">About</Link> &bull;{' '}
+          <Link to="./tags">Tags</Link> &bull;{' '}
           <a href="https://github.com/frontarm/create-react-blog">
             Source
           </a>

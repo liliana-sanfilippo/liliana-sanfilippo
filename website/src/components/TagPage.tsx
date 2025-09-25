@@ -1,13 +1,14 @@
 import React from 'react'
 import ArticleSummary from './ArticleSummary'
 import styles from './TagPage.module.css'
-import {PageData} from "../interface";
+import {Post} from "../routes/posts/post_interface";
+
 
 
 interface TagPageProps {
-  blogRoot: string
-  name: string
-  routes: PageData[]
+    blogRoot: string
+    name: string
+    routes: Post[]
 }
 
 function TagPage({ blogRoot, name, routes }: TagPageProps) {
@@ -16,8 +17,8 @@ function TagPage({ blogRoot, name, routes }: TagPageProps) {
       <h1>{name} posts</h1>
       <ul>
         {routes.map(route => (
-          <li key={route.url}>
-            <ArticleSummary blogRoot={blogRoot} route={route} />
+          <li key={route.slug}>
+            <ArticleSummary blogRoot={blogRoot} post={route} />
           </li>
         ))}
       </ul>

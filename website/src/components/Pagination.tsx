@@ -1,6 +1,7 @@
-import { join } from 'path'
+
 import React from 'react'
-import { Link } from 'react-navi'
+
+import { Link } from 'react-router-dom'
 import styles from './Pagination.module.css'
 
 interface PaginationProps {
@@ -10,12 +11,21 @@ interface PaginationProps {
 }
 
 function Pagination({ blogRoot, pageCount, pageNumber }: PaginationProps) {
-  return (
+
+    const joinUrl = (...parts: (string | number)[]) => {
+        return parts
+            .map(part => String(part).replace(/^\/|\/$/g, '')) // führende/abschließende / entfernen
+            .filter(Boolean)
+            .join('/')
+            .replace(/\/\/+/g, '/') // doppelte / vermeiden
+            .replace(/^$/, '/');
+    }
+    return (
     <small className={styles.Pagination}>
       {pageNumber !== 1 && (
         <Link
           className={styles.previous}
-          href={join(blogRoot, 'page', String(pageNumber - 1))}>
+          to={`/${joinUrl(blogRoot, 'page', pageNumber - 1)}`}>
           ← Previous
         </Link>
       )}
@@ -27,7 +37,7 @@ function Pagination({ blogRoot, pageCount, pageNumber }: PaginationProps) {
       {pageNumber < pageCount && (
         <Link
           className={styles.next}
-          href={join(blogRoot, 'page', String(pageNumber + 1))}>
+          to={`/${joinUrl(blogRoot, 'page', pageNumber + 1)}`}>
           Next →
         </Link>
       )}
