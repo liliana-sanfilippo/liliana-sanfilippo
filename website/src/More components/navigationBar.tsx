@@ -8,6 +8,13 @@ export const NavigationBar: (PageRef | Folder)[] = [
         path: "/about",
         component: <AboutPage/>
 
+    },
+    {
+        name: "Homepage",
+        title: "Homepage",
+        path: "/",
+        component: <AboutPage/>
+
     }
 
     ]

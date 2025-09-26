@@ -1,9 +1,11 @@
 import { Link, Outlet } from 'react-router-dom'
 import React from 'react'
-
 import siteMetadata from '../siteMetadata'
 import styles from './BlogLayout.module.css'
 import {Navbar} from "./Navbar";
+import {BlogSidebar} from "../More components/BlogSidebar";
+import posts from "../routes/posts";
+
 
 
 interface BlogLayoutProps {
@@ -11,27 +13,29 @@ interface BlogLayoutProps {
   isViewingIndex: boolean
 }
 
-function BlogLayout({ blogRoot, isViewingIndex }: BlogLayoutProps) {
-  //let location = useLocation()
+function BlogLayout({ blogRoot}: BlogLayoutProps) {
   return (
       <>
-      <Navbar />
     <div className={styles.container}>
-        {/*}  <LoadingIndicator active={!!location} />*/}
-
-      {// Don't show the header on index pages, as it has a special
-      // header.
-      !isViewingIndex && (
+        <Navbar />
         <header>
           <h3 className={styles.title}>
             <Link to={blogRoot}>{siteMetadata.title}</Link>
           </h3>
+          <div className="row">
+              <div className="col-3">
+                  <BlogSidebar postRoutes={posts}></BlogSidebar>
+              </div>
+              <div className="col-8">
+                  <main>
+                      <Outlet />
+                  </main>
+              </div>
+          </div>
         </header>
-      )}
 
-        <main>
-            <Outlet />
-        </main>
+
+
     </div>
       </>
   )

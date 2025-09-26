@@ -35,9 +35,9 @@ function AppRouter() {
 
 
                     {/* Blog Layout Wrapper */}
-                    <Route element={<BlogLayout blogRoot="/blog" isViewingIndex={false} />}>
+                    <Route element={<BlogLayout  blogRoot="/blog" isViewingIndex={false} />}>
 
-                        <Route path="/blog" element={<Navigate to="/home" replace />} />
+
 
                         {/* Index NavigationBar */}
                         {chunks.map((chunkPosts: any[], i:number) => (
@@ -47,7 +47,7 @@ function AppRouter() {
                                     index
                                     element={
                                         <BlogIndexPage
-                                            blogRoot="/"
+                                            blogRoot="/blog"
                                             pageNumber={1}
                                             pageCount={chunks.length}
                                             postRoutes={chunkPosts}
@@ -60,7 +60,7 @@ function AppRouter() {
                                     path={`page/${i + 1}`}
                                     element={
                                         <BlogIndexPage
-                                            blogRoot="/"
+                                            blogRoot="/blog"
                                             pageNumber={i + 1}
                                             pageCount={chunks.length}
                                             postRoutes={chunkPosts}
@@ -69,7 +69,6 @@ function AppRouter() {
                                 />
                             )
                         ))}
-
 
                         {/* Posts */}
                         <Route path="/posts/:slug" element={<BlogPostWrapper blogRoot="/blog" />} />

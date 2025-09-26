@@ -21,7 +21,6 @@ function BlogIndexPage({
   blogRoot,
   pageCount,
   pageNumber,
-  postRoutes,
 }: BlogIndexPageProps) {
   return (
     <div>
@@ -29,15 +28,9 @@ function BlogIndexPage({
         <h1 className={styles.title}>
           <Link to={blogRoot}>{siteMetadata.title}</Link>
         </h1>
-        <Bio />
+
       </header>
-      <ul className={styles.articlesList}>
-        {postRoutes.map(route => (
-          <li key={route.slug}>
-            <ArticleSummary blogRoot={blogRoot} post={route} />
-          </li>
-        ))}
-      </ul>
+
       {pageCount > 1 && (
         <Pagination
           blogRoot={blogRoot}
