@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import BootstrapNavbar from "react-bootstrap/Navbar";
@@ -6,6 +6,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link as OurLink } from '@liliana-sanfilippo/react-link';
 import { Link } from 'react-router-dom';
 import {NavigationBar} from "../More components/navigationBar";
+import styles from "./BlogLayout.module.css";
+import siteMetadata from "../siteMetadata";
 
 export function Navbar() {
     const navbarCollapseRef = useRef<HTMLDivElement>(null);
@@ -120,7 +122,7 @@ export function Navbar() {
 
     return (
         <BootstrapNavbar
-            className="navbar-custom"
+            className="py-3"
             expand="lg"
             bg="bg-transparent"
             fixed="top"
@@ -128,17 +130,15 @@ export function Navbar() {
             <Container>
                 <BootstrapNavbar.Brand>
                     <div className="row">
-                        <div className="col" style={{ width: "fit-content" }}>
-                            <Link to="/home">
-                             Home
-                            </Link>
-                        </div>
+                        <h3 className={styles.title}>
+                            <Link to={"/"}>{siteMetadata.title}</Link>
+                        </h3>
                     </div>
                 </BootstrapNavbar.Brand>
 
                 <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
                 <BootstrapNavbar.Collapse id="basic-navbar-nav" ref={navbarCollapseRef}>
-                    <Nav className="ms-auto">{pages}</Nav>
+                    <Nav className="">{pages}</Nav>
                 </BootstrapNavbar.Collapse>
 
                 {/* Scroll Progress mit Maskottchen */}

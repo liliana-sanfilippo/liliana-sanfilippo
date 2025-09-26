@@ -1,5 +1,4 @@
 import styles from './document.module.css'
-import {ReactNode} from "react";
 
 export function AboutPage() {
     return(<div className={styles.Document}>

@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "../components/BlogIndexPage.module.css";
 import ArticleSummary from "../components/ArticleSummary";
-import {Post} from "../routes/posts/post_interface";
+import posts from "../routes/posts";
 
-export function BlogSidebar(  {postRoutes}:{ postRoutes: Post[]}) {
+export function BlogSidebar() {
     return (
         <>
             <ul className={styles.articlesList}>
-                {postRoutes.map(route => (
+                {posts.map(route => (
                     <li key={route.slug}>
                         <ArticleSummary blogRoot={"/"} post={route} />
                     </li>

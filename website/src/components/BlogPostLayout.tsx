@@ -6,6 +6,8 @@ import ArticleMeta from './ArticleMeta'
 import Bio from './Bio'
 import styles from './BlogPostLayout.module.css'
 import {Post} from "../routes/posts/post_interface";
+import {BlogSidebar} from "../More components/BlogSidebar";
+import posts from "../routes/posts";
 
 
 
@@ -29,12 +31,14 @@ function BlogPostLayout({ blogRoot, post  }: BlogPostLayoutProps) {
             <Link to={location.pathname}>{post.title}</Link>
           </h1>
             <ArticleMeta
-                blogRoot={blogRoot}
+                blogRoot={"/"}
                 data={post}
             />
         </header>
           {}
 
+          <div className="row">
+              <div className="col-9">
           <MDXProvider
               components={{
                   a: (props: any) => <Link to={props.href}>{props.children}</Link>,
@@ -45,6 +49,13 @@ function BlogPostLayout({ blogRoot, post  }: BlogPostLayoutProps) {
           >
               <MDXComponent />
           </MDXProvider>
+              </div>
+
+          <div className="col-3">
+              <BlogSidebar></BlogSidebar>
+          </div>
+          </div>
+
         <footer className={styles.footer}>
           <h3 className={styles.title}>
             <Link to={blogRoot}>{siteMetadata.title}</Link>

@@ -11,3 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root{
+    --ourgradient: linear-gradient(90deg, rgba(147,94,184,1) 0%, rgba(160,167,243,1) 100%);
+    --text-primary: #850F78 ;
+    --mediumpurple: #bc15aa;
+    --lightpurple: #B85BD1;
+    --very-light-purple: #ce9fc9;
+    --purple: #B85BD1;
+    --accen-secondary: #F57D22;
+    --dark-secondary: #ac5818 ;
+    --light-secondary: #f7974e ;
+    --very-light-secondary: #fabb8c;
+    --accent-gradient-one-of-three: #F59121;
+    --accent-gradient-two-of-three: #F5A520;
+    --accent-gradient-three-of-three: #F5B91F;
+    --yellow-dark: #BB9909;
+    --accent-primary: #F4CC1E;
+    --lightyellow: #fae99e;
+    --lightblue: #A0A7F3 ;
+    --lightblue-zwei: #abb1f4;
+    --lightblue-drei: #c6caf8;
+    --verylightblue: #ebecfd;
+    --offblack: #32232C ;
+    --cebitecgray: #8295A4;
+    --ourbeige: #FFF6F2;
+    --darkerbeige: #e2dad7;
+    --background: #FFF6F2;
+    /*igem colours*/
+    --igemdarkgreen: #006530;
+    --igemmediumgreen: #019968;
+    --igemlightgreen: #99cb9a;
+
+}
+
+hr {
+    color: var(--text-primary) !important;
+    opacity: 0.5;
+}
+
+
+a {
+    color: var(--text-primary) !important;
+}
+
+
+
+

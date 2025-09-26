@@ -18,16 +18,11 @@ function BlogLayout() {
         <header>
         </header>
           <div className="row">
-              <div className="col-9">
-                  <h3 className={styles.title}>
-                      <Link to={"/"}>{siteMetadata.title}</Link>
-                  </h3>
+              <div className="col-12">
+
                   <main>
                       <Outlet />
                   </main>
-              </div>
-              <div className="col-3">
-                  <BlogSidebar postRoutes={posts}></BlogSidebar>
               </div>
           </div>
         <Footer></Footer>

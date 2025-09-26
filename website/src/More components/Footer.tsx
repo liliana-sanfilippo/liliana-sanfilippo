@@ -1,20 +1,18 @@
 import {Link} from "react-router-dom";
 import React from "react";
 import TagIndexPageWrapper from "../routes/TagIndexWrapper";
+import Container from "react-bootstrap/Container";
 
 export function Footer() {
 
 
     return (
-        <footer className="">
-            <div className="">
+        <footer className="px-3">
+            <Container className="">
                 <div className="row align-items-center" style={{}}>
                     <div className="col grid">
           <span className="text-start no-pad no-marg">
-             <div>
-                            <Link to="./home">About</Link> &bull;{' '}
-                 <Link to="./tags">Tags</Link>
-                        </div>
+
           </span>
                     </div>
                     <div className="col ">
@@ -39,9 +37,7 @@ export function Footer() {
                         <a href="./partners">
                             <h6 className="sticky-top">Sponsors and partners</h6>
                         </a>
-                        <div className="col-4 footer-slider bg-dark">
 
-                        </div>
                     </div>
 
                     <div className="col-sm-4" style={{paddingLeft: "20px"}}>
@@ -67,7 +63,7 @@ export function Footer() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </Container>
         </footer>
     );
 }

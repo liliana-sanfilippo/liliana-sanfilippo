@@ -1,5 +1,6 @@
 import {Folder, PageRef} from "./Pages";
 import {AboutPage} from "../routes/about/AboutPage";
+import {BlogPage} from "../routes/about/BlogPage";
 
 export const NavigationBar: (PageRef | Folder)[] = [
     {
@@ -10,10 +11,10 @@ export const NavigationBar: (PageRef | Folder)[] = [
 
     },
     {
-        name: "Homepage",
-        title: "Homepage",
-        path: "/",
-        component: <AboutPage/>
+        name: "Blog",
+        title: "Blog",
+        path: "/blog",
+        component: <BlogPage/>
 
     }
 
