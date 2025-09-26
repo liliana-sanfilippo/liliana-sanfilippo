@@ -57,4 +57,29 @@ a {
 
 
 
+.uni-embed{
+    .wp-block-cgb-block-uniicon{
+        display: none;
+    }
+    padding: 2rem;
+    p{
+        text-align: justify;
+    }
+    .uni-image {
+        margin: auto !important;
+        max-width: 70%;
+        img{
+            max-width: 100% !important;
+            margin: auto !important;
+        }
+    }
+
+    .caption-text{
+        margin-bottom: 2rem;
+    }
+
+
+}
+
+
 

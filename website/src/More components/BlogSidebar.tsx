@@ -4,6 +4,10 @@ import ArticleSummary from "../components/ArticleSummary";
 import posts from "../routes/posts";
 
 export function BlogSidebar() {
+    posts.forEach(post => {
+        console.log("posts:" + post.slug)
+    })
+    console.log("Post length:" + posts.length)
     return (
         <>
             <ul className={styles.articlesList}>

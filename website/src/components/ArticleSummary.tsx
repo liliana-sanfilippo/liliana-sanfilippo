@@ -12,9 +12,9 @@ import {Post} from "../routes/posts/post_interface";
 function ArticleSummary({ blogRoot, post }: {blogRoot: string, post: Post}) {
   return (
     <article className={styles.ArticleSummary}>
-      <h2>
+      <h5>
         <Link to={`/posts/${post.slug}`}>{post.title}</Link>
-      </h2>
+      </h5>
       <ArticleMeta blogRoot={blogRoot} data={post} />
       <p>{post.spoiler}</p>
     </article>

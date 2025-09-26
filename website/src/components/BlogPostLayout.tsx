@@ -1,13 +1,11 @@
 import React, {ReactNode} from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { MDXProvider } from '@mdx-js/react'
-import siteMetadata from '../siteMetadata'
 import ArticleMeta from './ArticleMeta'
 import Bio from './Bio'
 import styles from './BlogPostLayout.module.css'
 import {Post} from "../routes/posts/post_interface";
 import {BlogSidebar} from "../More components/BlogSidebar";
-import posts from "../routes/posts";
 
 
 
@@ -57,10 +55,6 @@ function BlogPostLayout({ blogRoot, post  }: BlogPostLayoutProps) {
           </div>
 
         <footer className={styles.footer}>
-          <h3 className={styles.title}>
-            <Link to={blogRoot}>{siteMetadata.title}</Link>
-          </h3>
-          <Bio className={styles.bio} />
           <section className={styles.links}>
             {post.previousDetails && (
               <Link
