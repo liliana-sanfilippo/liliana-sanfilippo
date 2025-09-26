@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export default function ExternalMain({ url }: { url: string }) {
+export default function UniBlog({ url }: { url: string }) {
     const [mainContent, setMainContent] = useState<string>("")
     const [headerContent, setHeaderContent] = useState<string>("")
     const [entryContent, setEntryContent] = useState<string>("")

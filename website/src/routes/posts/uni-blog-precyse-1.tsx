@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import styles from './document.module.css'
-import ExternalMeta from "../../More components/getMeta";
-import ExternalMain from "../../More components/getMeta";
+import ExternalMeta from "../../More components/getUniBlog";
+import UniBlog from "../../More components/getUniBlog";
 
 export const metauniBlogPrecyse1 = {
     title: "Students conduct research into gene therapy for cystic fibrosis",
@@ -16,7 +16,7 @@ export default function uniBlogPrecyse1() {
 
     return (
         <div className={styles.Welcome}>
-            <ExternalMain url="https://aktuell.uni-bielefeld.de/2024/10/15/studierende-forschen-an-gentherapie-fuer-mukoviszidose/"></ExternalMain>
+            <UniBlog url="https://aktuell.uni-bielefeld.de/2024/10/15/studierende-forschen-an-gentherapie-fuer-mukoviszidose/"></UniBlog>
 
         </div>
     )

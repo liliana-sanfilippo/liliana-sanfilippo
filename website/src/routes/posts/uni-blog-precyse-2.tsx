@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import styles from './document.module.css'
-import ExternalMeta from "../../More components/getMeta";
-import ExternalMain from "../../More components/getMeta";
+import ExternalMeta from "../../More components/getUniBlog";
+import UniBlog from "../../More components/getUniBlog";
 
 export const metauniBlogPrecyse2 = {
     title: "Four gold medals for Bielefeld iGEM team",
@@ -16,7 +16,7 @@ export default function uniBlogPrecyse2() {
 
     return (
         <div className={styles.Welcome}>
-            <ExternalMain url="https://aktuell.uni-bielefeld.de/2024/11/05/vierfach-gold-fuer-bielefelder-igem-team/"></ExternalMain>
+            <UniBlog url="https://aktuell.uni-bielefeld.de/2024/11/05/vierfach-gold-fuer-bielefelder-igem-team/"></UniBlog>
 
         </div>
     )
