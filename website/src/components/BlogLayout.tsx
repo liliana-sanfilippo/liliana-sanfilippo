@@ -1,10 +1,10 @@
-import { Link, Outlet, useLocation } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import React from 'react'
 
 import siteMetadata from '../siteMetadata'
-import NotFoundPage from './NotFoundPage'
-import LoadingIndicator from './LoadingIndicator'
 import styles from './BlogLayout.module.css'
+import {Navbar} from "./Navbar";
+
 
 interface BlogLayoutProps {
   blogRoot: string
@@ -14,6 +14,8 @@ interface BlogLayoutProps {
 function BlogLayout({ blogRoot, isViewingIndex }: BlogLayoutProps) {
   //let location = useLocation()
   return (
+      <>
+      <Navbar />
     <div className={styles.container}>
         {/*}  <LoadingIndicator active={!!location} />*/}
 
@@ -31,6 +33,7 @@ function BlogLayout({ blogRoot, isViewingIndex }: BlogLayoutProps) {
             <Outlet />
         </main>
     </div>
+      </>
   )
 }
 

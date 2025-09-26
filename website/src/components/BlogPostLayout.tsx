@@ -5,20 +5,17 @@ import siteMetadata from '../siteMetadata'
 import ArticleMeta from './ArticleMeta'
 import Bio from './Bio'
 import styles from './BlogPostLayout.module.css'
-import {LoadedPost} from "../routes/posts/post_interface";
+import {Post} from "../routes/posts/post_interface";
 
 
 
 export interface BlogPostLayoutProps {
     blogRoot: string
-    post: LoadedPost
+    post: Post
 }
 
 function BlogPostLayout({ blogRoot, post  }: BlogPostLayoutProps) {
     const location = useLocation();
-  // The content for posts is an MDX component, so we'll need
-  // to use <MDXProvider> to ensure that links are rendered
-  // with <Link>, and thus use pushState.
 
     if (!post) {
         return <div>Post not found</div> // oder deine NotFoundPage
@@ -46,7 +43,7 @@ function BlogPostLayout({ blogRoot, post  }: BlogPostLayoutProps) {
                   ),
               }}
           >
-              <MDXComponent />  {/* <-- so rendern, nicht nur {post.MDXComponent} */}
+              <MDXComponent />
           </MDXProvider>
         <footer className={styles.footer}>
           <h3 className={styles.title}>

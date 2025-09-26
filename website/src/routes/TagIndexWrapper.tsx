@@ -5,7 +5,7 @@ export default function TagIndexPageWrapper({ blogRoot }: { blogRoot: string }) 
 
             const tagMap: Record<string, number> = {}
     postsWithNav.forEach(post => {
-                post.tags?.forEach(tag => {
+                post.tags?.forEach((tag: string) => {
                     const key = tag.toLowerCase()
                     tagMap[key] = (tagMap[key] || 0) + 1
                 })

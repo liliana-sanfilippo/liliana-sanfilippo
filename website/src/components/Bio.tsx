@@ -5,10 +5,6 @@ interface BioProps {
 }
 
 function Bio(props: BioProps) {
- /* let photoURL = getGravatarURL({
-    email: "test1@example.com",
-    size: 56,
-  })*/
 
   return (
     <div

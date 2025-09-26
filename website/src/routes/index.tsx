@@ -9,6 +9,7 @@ import NotFoundPage from "../components/NotFoundPage";
 import {AboutPage} from "./about/AboutPage";
 import TagIndexPageWrapper from "./TagIndexWrapper";
 import postsWithNav from "./posts";
+import TagPageWrapper from "./tags";
 
 
 
@@ -78,6 +79,11 @@ function AppRouter() {
 
                         {/* Tag Index Page */}
                         <Route path="/tags" element={<TagIndexPageWrapper blogRoot="/" />} />
+
+
+                        {/* Tag Pages */}
+                        <Route path="/tags/:tag" element={<TagPageWrapper blogRoot="/" />} />
+
 
                     </Route>
                     {/* Fallback 404 */}

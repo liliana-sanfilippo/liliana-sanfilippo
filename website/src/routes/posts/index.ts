@@ -1,5 +1,5 @@
-import {posts} from "./2019-01-05-welcome/post";
 
+import {posts} from "../posts/post"
 
 const sorted = [...posts].sort((a, b) => b.date.getTime() - a.date.getTime())
 const postsWithNav = sorted.map((post, i) => ({
