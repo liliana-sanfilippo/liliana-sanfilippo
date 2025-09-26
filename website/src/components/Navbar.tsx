@@ -1,43 +1,151 @@
+import { useEffect, useRef, useState } from 'react';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import BootstrapNavbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link as OurLink } from '@liliana-sanfilippo/react-link';
+import { Link } from 'react-router-dom';
+import {NavigationBar} from "../More components/navigationBar";
+
 export function Navbar() {
+    const navbarCollapseRef = useRef<HTMLDivElement>(null);
+    const progressBarRef = useRef<HTMLDivElement>(null);
+    const progressImageRef = useRef<HTMLImageElement>(null);
+    let scrollTimeout: NodeJS.Timeout;
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercentage = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+
+            // Balkenbreite setzen
+            if (progressBarRef.current) {
+                progressBarRef.current.style.width = `${scrollPercentage}%`;
+            }
+
+            // Timeout für Animation
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                if (progressImageRef.current) {
+                    progressImageRef.current.classList.remove('walking');
+                    progressImageRef.current.style.transform = 'translateY(0)';
+                }
+            }, 1000);
+        };
+
+        const onLoad = () => {
+            handleScroll(); // initial aufrufen
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', onLoad);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('load', onLoad);
+            clearTimeout(scrollTimeout);
+        };
+    }, []);
+
+    useEffect(() => {
+        const handleLinkClick = (event: Event) => {
+            if (navbarCollapseRef.current && navbarCollapseRef.current.classList.contains('show')) {
+                const target = event.target as HTMLElement;
+                if (target.closest('.dropdown-text')) {
+                    navbarCollapseRef.current.classList.remove('show');
+                }
+            }
+        };
+
+        const links = document.querySelectorAll('.navbar-text');
+        links.forEach(link => link.addEventListener('click', handleLinkClick));
+
+        return () => {
+            links.forEach(link => link.removeEventListener('click', handleLinkClick));
+        };
+    }, []);
+
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+    const pages = NavigationBar.map((item, pageIndex) => {
+        const isOpen = openIndex === pageIndex;
+
+        const showDropdown = () => setOpenIndex(pageIndex);
+        const hideDropdown = () => setOpenIndex(null);
+
+        if ("folder" in item && item.folder) {
+            const folderItems = item.folder.map((subpage, subpageIndex) => {
+                if (subpage.path) {
+                    return (
+                        <OurLink
+                            text={subpage.name}
+                            page={subpage.path}
+                            classes='dropdown-item'
+                            key={`subpage-${pageIndex}-${subpageIndex}`}
+                        />
+                    );
+                }
+                return null;
+            });
+            return (
+                <NavDropdown
+                    key={`page-${pageIndex}`}
+                    title={item.name}
+                    show={isOpen}
+                    id="basic-nav-dropdown"
+                    onMouseEnter={showDropdown}
+                    onMouseLeave={hideDropdown}
+                >
+                    {folderItems}
+                </NavDropdown>
+            );
+        } else if ("path" in item && item.path) {
+            return (
+                <OurLink
+
+                    text={item.name}
+
+                    page={item.path}
+
+                    key={`page-${pageIndex}`}
+
+                    classes='nav-link'
+
+                />
+            );
+        }
+        return null;
+    });
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#">Navbar</a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a className="dropdown-item" href="#">Action</a>
-                            <a className="dropdown-item" href="#">Another action</a>
-                            <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">Something else here</a>
+        <BootstrapNavbar
+            className="navbar-custom"
+            expand="lg"
+            bg="bg-transparent"
+            fixed="top"
+        >
+            <Container>
+                <BootstrapNavbar.Brand>
+                    <div className="row">
+                        <div className="col" style={{ width: "fit-content" }}>
+                            <Link to="/home">
+                             Home
+                            </Link>
                         </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-                <form className="form-inline my-2 my-lg-0">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
-    )
+                    </div>
+                </BootstrapNavbar.Brand>
+
+                <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+                <BootstrapNavbar.Collapse id="basic-navbar-nav" ref={navbarCollapseRef}>
+                    <Nav className="ms-auto">{pages}</Nav>
+                </BootstrapNavbar.Collapse>
+
+                {/* Scroll Progress mit Maskottchen */}
+                <div className="scroll-progress" ref={progressBarRef}>
+
+                </div>
+            </Container>
+        </BootstrapNavbar>
+    );
 }

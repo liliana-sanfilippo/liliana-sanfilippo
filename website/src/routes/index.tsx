@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState} from 'react'
+import React, { Suspense} from 'react'
 import {BrowserRouter, Routes, Route, Navigate, useParams} from 'react-router-dom'
 import BlogLayout from '../components/BlogLayout'
 import BlogIndexPage from '../components/BlogIndexPage'
@@ -10,6 +10,7 @@ import {AboutPage} from "./about/AboutPage";
 import TagIndexPageWrapper from "./TagIndexWrapper";
 import postsWithNav from "./posts";
 import TagPageWrapper from "./tags";
+import {getPathMapping} from "../utils/getPathMapping";
 
 
 
@@ -22,10 +23,9 @@ function BlogPostWrapper({ blogRoot }: { blogRoot: string }) {
 }
 
 function AppRouter() {
-    console.log("Load site")
 
     let chunks = chunk(postsWithNav, siteMetadata.indexPageSize)
-
+    const pathMapping = getPathMapping();
 
 
     return (
@@ -33,12 +33,13 @@ function AppRouter() {
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
 
+
                     {/* Blog Layout Wrapper */}
-                    <Route element={<BlogLayout blogRoot="/" isViewingIndex={false} />}>
+                    <Route element={<BlogLayout blogRoot="/blog" isViewingIndex={false} />}>
 
-                        <Route path="/" element={<Navigate to="/home" replace />} />
+                        <Route path="/blog" element={<Navigate to="/home" replace />} />
 
-                        {/* Index Pages */}
+                        {/* Index NavigationBar */}
                         {chunks.map((chunkPosts: any[], i:number) => (
                             i === 0 ? (
                                 <Route
@@ -71,18 +72,23 @@ function AppRouter() {
 
 
                         {/* Posts */}
-                        <Route path="/posts/:slug" element={<BlogPostWrapper blogRoot="/" />} />
+                        <Route path="/posts/:slug" element={<BlogPostWrapper blogRoot="/blog" />} />
 
-                        {/* Misc Pages */}
+                        {/* Misc NavigationBar */}
                         {/* <Route path="/tags" element={<TagsPage />} />*/}
                         <Route path="/home" element={<AboutPage />} />
 
+
+                        {Object.entries(pathMapping).map(([path, { component: Component }]) => (
+                            <Route path={path} element={Component} />
+                        ))}
+
                         {/* Tag Index Page */}
-                        <Route path="/tags" element={<TagIndexPageWrapper blogRoot="/" />} />
+                        <Route path="/tags" element={<TagIndexPageWrapper blogRoot="/blog" />} />
 
 
-                        {/* Tag Pages */}
-                        <Route path="/tags/:tag" element={<TagPageWrapper blogRoot="/" />} />
+                        {/* Tag NavigationBar */}
+                        <Route path="/tags/:tag" element={<TagPageWrapper blogRoot="/blog" />} />
 
 
                     </Route>

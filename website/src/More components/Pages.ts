@@ -1,3 +1,5 @@
+import {ReactNode} from "react";
+
 export type SidebarContents = { header: string; subheaders?: string[] };
 
 export interface Base {
@@ -13,14 +15,14 @@ export class Page implements Base {
     name: string | undefined;
     title: string | undefined;
     path: string | undefined;
-    component!: React.FC;
-    header?: React.FC;
+    component!: ReactNode;
+    header?: ReactNode;
 }
 
 export class PageRef implements Base{
     name: string | undefined;
     title: string | undefined;
     path: string | undefined;
-    component?: React.FC;
-    header?: React.FC;
+    component?: ReactNode;
+    header?: ReactNode;
 }
