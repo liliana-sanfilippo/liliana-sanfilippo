@@ -1,7 +1,5 @@
 import React from 'react'
 import siteMetadata from '../siteMetadata'
-import ArticleSummary from './ArticleSummary'
-import Bio from './Bio'
 import Pagination from './Pagination'
 import styles from './BlogIndexPage.module.css'
 import { Link } from 'react-router-dom'
@@ -38,12 +36,6 @@ function BlogIndexPage({
           pageNumber={pageNumber}
         />
       )}
-      <footer className={styles.footer}>
-        <div>
-          <Link to="./home">About</Link> &bull;{' '}
-          <Link to="./tags">Tags</Link>
-        </div>
-      </footer>
     </div>
   )
 }

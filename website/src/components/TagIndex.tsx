@@ -12,10 +12,9 @@ interface TagIndexPage {
   tags: Tag[]
 }
 
-function TagIndexPage({ tags }: TagIndexPage) {
+function TagIndex({ tags }: TagIndexPage) {
   return (
     <div className={styles.TagIndexPage}>
-      <h1>Tags</h1>
       <ul>
         {tags.map(tag => (
           <li key={tag.href}>
@@ -29,4 +28,4 @@ function TagIndexPage({ tags }: TagIndexPage) {
   )
 }
 
-export default TagIndexPage
+export default TagIndex

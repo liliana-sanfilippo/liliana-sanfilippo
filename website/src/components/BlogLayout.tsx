@@ -5,38 +5,34 @@ import styles from './BlogLayout.module.css'
 import {Navbar} from "./Navbar";
 import {BlogSidebar} from "../More components/BlogSidebar";
 import posts from "../routes/posts";
+import {Footer} from "../More components/Footer";
+import Container from "react-bootstrap/Container";
 
 
 
-interface BlogLayoutProps {
-  blogRoot: string
-  isViewingIndex: boolean
-}
-
-function BlogLayout({ blogRoot}: BlogLayoutProps) {
+function BlogLayout() {
   return (
       <>
-    <div className={styles.container}>
+    <Container className={styles.container}>
         <Navbar />
         <header>
-          <h3 className={styles.title}>
-            <Link to={blogRoot}>{siteMetadata.title}</Link>
-          </h3>
+        </header>
           <div className="row">
-              <div className="col-3">
-                  <BlogSidebar postRoutes={posts}></BlogSidebar>
-              </div>
-              <div className="col-8">
+              <div className="col-9">
+                  <h3 className={styles.title}>
+                      <Link to={"/"}>{siteMetadata.title}</Link>
+                  </h3>
                   <main>
                       <Outlet />
                   </main>
               </div>
+              <div className="col-3">
+                  <BlogSidebar postRoutes={posts}></BlogSidebar>
+              </div>
           </div>
-        </header>
+        <Footer></Footer>
 
-
-
-    </div>
+    </Container>
       </>
   )
 }

@@ -1,7 +1,7 @@
-import TagIndexPage from "../components/TagIndexPage"
+import TagIndex from "../components/TagIndex"
 import postsWithNav from "./posts";
 
-export default function TagIndexPageWrapper({ blogRoot }: { blogRoot: string }) {
+export default function TagIndexPageWrapper() {
 
             const tagMap: Record<string, number> = {}
     postsWithNav.forEach(post => {
@@ -20,5 +20,5 @@ export default function TagIndexPageWrapper({ blogRoot }: { blogRoot: string }) 
 
 
 
-    return <TagIndexPage tags={tagsArray} />
+    return <TagIndex tags={tagsArray} />
 }

@@ -35,7 +35,7 @@ function AppRouter() {
 
 
                     {/* Blog Layout Wrapper */}
-                    <Route element={<BlogLayout  blogRoot="/blog" isViewingIndex={false} />}>
+                    <Route element={<BlogLayout  />}>
 
 
 
@@ -83,11 +83,11 @@ function AppRouter() {
                         ))}
 
                         {/* Tag Index Page */}
-                        <Route path="/tags" element={<TagIndexPageWrapper blogRoot="/blog" />} />
+                        <Route path="/tags" element={<TagIndexPageWrapper />} />
 
 
                         {/* Tag NavigationBar */}
-                        <Route path="/tags/:tag" element={<TagPageWrapper blogRoot="/blog" />} />
+                        <Route path="/tags/:tag" element={<TagPageWrapper blogRoot="/" />} />
 
 
                     </Route>

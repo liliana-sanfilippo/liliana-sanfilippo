@@ -19,5 +19,5 @@ export default function TagPageWrapper({ blogRoot }: { blogRoot: string }) {
     }, [tag])
 
 
-    return <TagPage blogRoot={blogRoot} name={tag!} routes={filteredPosts} />
+    return <TagPage name={tag!} routes={filteredPosts} />
 }

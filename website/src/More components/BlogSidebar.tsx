@@ -9,7 +9,7 @@ export function BlogSidebar(  {postRoutes}:{ postRoutes: Post[]}) {
             <ul className={styles.articlesList}>
                 {postRoutes.map(route => (
                     <li key={route.slug}>
-                        <ArticleSummary blogRoot={"/blog"} post={route} />
+                        <ArticleSummary blogRoot={"/"} post={route} />
                     </li>
                 ))}
             </ul>
