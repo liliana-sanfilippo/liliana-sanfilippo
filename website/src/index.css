@@ -57,6 +57,7 @@ a {
 
 
 
+
 .uni-embed{
     .wp-block-cgb-block-uniicon{
         display: none;
@@ -72,6 +73,25 @@ a {
             max-width: 100% !important;
             margin: auto !important;
         }
+    }
+
+    .caption-text{
+        margin-bottom: 2rem;
+    }
+
+
+}
+
+
+.zif-embed{
+    padding: 2rem;
+    p{
+        text-align: justify;
+    }
+    img{
+        margin: auto !important;
+        max-width: 70%;
+        max-height: 40vh;
     }
 
     .caption-text{
