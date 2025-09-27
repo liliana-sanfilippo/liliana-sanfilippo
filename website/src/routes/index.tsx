@@ -48,8 +48,6 @@ function AppRouter() {
                                     element={
                                         <BlogIndexPage
                                             blogRoot="/blog"
-                                            pageNumber={1}
-                                            pageCount={chunks.length}
                                             postRoutes={chunkPosts}
                                         />
                                     }
@@ -61,8 +59,6 @@ function AppRouter() {
                                     element={
                                         <BlogIndexPage
                                             blogRoot="/blog"
-                                            pageNumber={i + 1}
-                                            pageCount={chunks.length}
                                             postRoutes={chunkPosts}
                                         />
                                     }

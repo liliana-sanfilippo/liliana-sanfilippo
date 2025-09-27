@@ -6,7 +6,9 @@ export interface Post {
     date: Date
     previousDetails?: { title: string; path: string }
     nextDetails?: { title: string; path: string },
-    MDXComponent: React.ComponentType
+    MDXComponent: React.ComponentType,
+    image?: string
+    cc?: string;
 }
 
 export interface LoadedPost extends Post {

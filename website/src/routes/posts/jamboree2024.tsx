@@ -2,20 +2,35 @@ import React from 'react'
 import styles from './document.module.css'
 import Carousel from "react-bootstrap/Carousel";
 import {LinkedInCarousel} from "../../More components/LinkedInCarousel";
+import {FLink, FurtherLinks} from "../../More components/FurtherLinks";
 
 export const metajamboree2024 = {
     title: "Grand Jamboree 2024",
     tags: ["igem", "precyse"],
     spoiler: "Title",
     slug: "jamboree-2024",
-    date: new Date("2024-11")
+    date: new Date("2024-11"),
+    image: "https://static.igem.wiki/teams/5247/photos/header/judging.webp",
+    cc: "iGEM team Bielefeld-CeBiTec 2024"
 }
 
-const linkedinposts: string[] = [
+const linkedinposts_jamboree_24: string[] = [
     "https://www.linkedin.com/embed/feed/update/urn:li:share:7259238460971003904?collapsed=1",
     "https://www.linkedin.com/embed/feed/update/urn:li:share:7252608529297981442?collapsed=1",
     "https://www.linkedin.com/embed/feed/update/urn:li:share:7258151267380662274?collapsed=1",
-    "https://www.linkedin.com/embed/feed/update/urn:li:share:7259600599707537408?collapsed=1"
+    "https://www.linkedin.com/embed/feed/update/urn:li:share:7259600599707537408?collapsed=1",
+    "https://www.linkedin.com/embed/feed/update/urn:li:share:7259834308335431680?collapsed=1"
+]
+
+export const flinks_jamboree_24: FLink[] =  [
+    {
+        text: "Hertz",
+        url: "https://www.hertz879.de/nachrichten/forschungspreis-fuer-bielefelder-studierendenteam/"
+    },
+    {
+        text: "Westfahlen Blatt",
+        url: "https://www.westfalen-blatt.de/owl/bielefeld/therapieansatz-fuer-mukoviszidose-vier-preise-gehen-nach-bielefeld-3189405"
+    }
 ]
 
 export default function jamboree2024() {
@@ -35,8 +50,8 @@ export default function jamboree2024() {
                 </div>
             </div>
 
-            <LinkedInCarousel urls={linkedinposts}/>
-
+            <LinkedInCarousel urls={linkedinposts_jamboree_24}/>
+            <FurtherLinks flinks={flinks_jamboree_24}/>
 
         </div>
     )

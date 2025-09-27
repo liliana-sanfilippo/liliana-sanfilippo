@@ -5,7 +5,9 @@ export const metazifBlogAidare2  = {
     tags: ["aidare", "ai", "zif"],
     spoiler: "",
     slug: "aidare-zif-blog-2",
-    date: new Date("2025-05-27")
+    date: new Date("2025-05-27"),
+    cc: "P. Ottendörfer/Universität Bielefeld",
+    image: "https://blogs.uni-bielefeld.de/blog/zif/mediaresource/b179621c-67ea-4507-a44a-18442eedf51e"
 }
 
 export default function zifBlogAidare2() {
