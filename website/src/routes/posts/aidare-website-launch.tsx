@@ -1,0 +1,25 @@
+import React from 'react'
+import styles from './document.module.css'
+
+export const metaAidareWebsiteLaunch = {
+    title: "AIDARE website goes live",
+    tags: [],
+    spoiler: "",
+    slug: "aidare-website-launch",
+    date: new Date("2025-09-22"),
+    image: "",
+    cc: ""
+}
+
+export default function AidareWebsiteLaunch() {
+    return (
+        <div className={styles.Welcome}>
+
+            <div className="row align-items-center">
+                <iframe className="m-auto" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7376158271956750336" height="1253"
+                        width="504" frameBorder="0" allowFullScreen title="Embedded post"></iframe>
+
+            </div>
+        </div>
+    )
+}

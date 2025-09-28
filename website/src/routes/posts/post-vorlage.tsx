@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './document.module.css'
 
-export const metaVorlage = {
+export const meta = {
     title: "",
     tags: [],
     spoiler: "",
@@ -10,6 +10,12 @@ export const metaVorlage = {
     image: "",
     cc: ""
 }
+
+
+// Todo post für Chatbot-Umfrage
+// Todo Post für Jamboree Prep 2024?
+// Todo first chatbot version goes live
+// Todo igem startup ding evtl
 
 export default function PostVorlage() {
     return (

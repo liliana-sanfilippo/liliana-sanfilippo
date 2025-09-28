@@ -1,17 +1,17 @@
 import React from 'react'
 import styles from './document.module.css'
 
-export const metaLexartes = {
-    title: "LexArtes",
+export const metaPrecysePaper = {
+    title: "PreCyse paper",
     tags: [],
     spoiler: "",
     slug: "",
-    date: new Date("2025-10-06"),
+    date: new Date("2025-11"),
     image: "",
     cc: ""
 }
 
-export default function Lexartes() {
+export default function PrecysePaper() {
     return (
         <div className={styles.Welcome}>
 

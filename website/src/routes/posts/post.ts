@@ -15,6 +15,13 @@ import muensterMeetup2025, {metamuensterMeetup2025} from "./muenster-meetup-2025
 import CitationManagerFirstsTests, {metaCitationManagerFirstsTests} from "./citation-manager-firsts-tests";
 import Cellective, {metaCellective} from "./cellective";
 import Lexartes, {metaLexartes} from "./lexartes";
+import AidareWebsiteLaunch, {metaAidareWebsiteLaunch} from "./aidare-website-launch";
+import MeetupEindhoven2025, {metaMeetupEindhoven2025} from "./meetup-eindhoven-2025";
+import PrecysePaper, {metaPrecysePaper} from "./precyse.paper";
+import Biteach2024, {metaBiteach2024} from "./biteach-2024";
+import RoxenTraining, {metaRoxenTraining} from "./roxen-training";
+import WikiGuide1, {metaWikiGuide1} from "./wiki-guide-1";
+import SailSpringSchool, {metaSailSpringSchool} from "./sail-spring-school";
 
 export const posts: Post[] = [
     {
@@ -25,14 +32,7 @@ export const posts: Post[] = [
         ...metauniBlogPrecyse2,
         MDXComponent: uniBlogPrecyse2,
     },
-    {
-        ...metazifBlogAidare,
-        MDXComponent: zifBlogAidare,
-    },
-    {
-        ...metawiardaBlogAidare,
-        MDXComponent: wiardaBlogAidare,
-    },
+
     {
         ...metazifModelsOfChange,
         MDXComponent: zifModelsOfChange
@@ -73,6 +73,33 @@ export const posts: Post[] = [
         ...metaLexartes,
         MDXComponent: Lexartes
     },
-
+    {
+        ...metaAidareWebsiteLaunch,
+        MDXComponent: AidareWebsiteLaunch
+    },
+    {
+        ...metaMeetupEindhoven2025,
+        MDXComponent: MeetupEindhoven2025
+    },
+    {
+        ...metaPrecysePaper,
+        MDXComponent: PrecysePaper
+    },
+    {
+        ...metaBiteach2024,
+        MDXComponent: Biteach2024
+    },
+    {
+        ...metaRoxenTraining,
+        MDXComponent: RoxenTraining
+    },
+    {
+        ...metaWikiGuide1 ,
+        MDXComponent: WikiGuide1
+    },
+    {
+        ...metaSailSpringSchool ,
+        MDXComponent: SailSpringSchool
+    },
 
 ]
