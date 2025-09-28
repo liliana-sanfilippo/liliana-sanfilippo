@@ -3,7 +3,7 @@ import styles from './document.module.css'
 
 export const metaCitationManagerFirstsTests = {
     title: "First release of React BibTeX Reference Manager",
-    tags: ["react", "software", "open-source"],
+    tags: ["react", "software", "open-source", "igem"],
     spoiler: "React component for managing references. Automatically generates references based on the IDs cited on a page. For Scientific blogging and iGEM wikis. ",
     slug: "citation-manager-firsts-tests",
     date: new Date("2025-09-25"),

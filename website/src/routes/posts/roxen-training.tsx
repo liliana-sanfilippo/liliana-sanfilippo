@@ -3,7 +3,7 @@ import styles from './document.module.css'
 
 export const metaRoxenTraining = {
     title: "Roxen CMS training",
-    tags: [],
+    tags: ["training"],
     spoiler: "",
     slug: "",
     date: new Date("2025-12-28"),

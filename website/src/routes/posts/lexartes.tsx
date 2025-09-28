@@ -3,7 +3,7 @@ import styles from './document.module.css'
 
 export const metaLexartes = {
     title: "LexArtes",
-    tags: [],
+    tags: ["software", "award"],
     spoiler: "",
     slug: "",
     date: new Date("2025-10-06"),

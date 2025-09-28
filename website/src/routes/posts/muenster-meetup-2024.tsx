@@ -3,8 +3,9 @@ import styles from './document.module.css'
 
 export const metamuensterMeetup2024 = {
     title: "MeetUp: Münster 2024",
-    tags: ["igem"],
-    spoiler: "Title",
+    tags: ["igem", "meetup"],
+    spoiler: "Team Münster invited to an exciting weekend full of scientific lectures on synthetic biology and" +
+        " entrepreneurship, project presentations, and plenty of networking opportunities.",
     slug: "muenster-2024",
     date: new Date("2024-09"),
     cc: "iGEM team Bielefeld-CeBiTec 2024",

@@ -22,6 +22,7 @@ import Biteach2024, {metaBiteach2024} from "./biteach-2024";
 import RoxenTraining, {metaRoxenTraining} from "./roxen-training";
 import WikiGuide1, {metaWikiGuide1} from "./wiki-guide-1";
 import SailSpringSchool, {metaSailSpringSchool} from "./sail-spring-school";
+import JamboreePrep2024, {metaJamboreePrep2024} from "./jamboree-prep-2024";
 
 export const posts: Post[] = [
     {
@@ -100,6 +101,10 @@ export const posts: Post[] = [
     {
         ...metaSailSpringSchool ,
         MDXComponent: SailSpringSchool
+    },
+    {
+        ...metaJamboreePrep2024 ,
+        MDXComponent: JamboreePrep2024
     },
 
 ]

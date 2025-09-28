@@ -6,7 +6,7 @@ import {FLink, FurtherLinks} from "../../More components/FurtherLinks";
 
 export const metabfh2024 = {
     title: "BFH European MeetUp 2024",
-    tags: ["bfh", "igem"],
+    tags: ["bfh", "igem", "meetup"],
     spoiler: "The iGEM team Bielefeld-CeBiTec hosted the first BFH European Meet-Up. Over the course of three full" +
         " days, iGEM teams from across Europe presented their projects, participated in workshops and discussions and were able to get their first external feedback.",
     slug: "bfh-2024",

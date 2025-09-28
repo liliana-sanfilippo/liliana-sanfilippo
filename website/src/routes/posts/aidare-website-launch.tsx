@@ -3,7 +3,7 @@ import styles from './document.module.css'
 
 export const metaAidareWebsiteLaunch = {
     title: "AIDARE website goes live",
-    tags: [],
+    tags: ["aidare"],
     spoiler: "",
     slug: "aidare-website-launch",
     date: new Date("2025-09-22"),

@@ -11,11 +11,11 @@ export const meta = {
     cc: ""
 }
 
-
 // Todo post für Chatbot-Umfrage
-// Todo Post für Jamboree Prep 2024?
 // Todo first chatbot version goes live
 // Todo igem startup ding evtl
+// Todo Evtl. Start Tage
+// Todo eigener Post über AIDARE
 
 export default function PostVorlage() {
     return (

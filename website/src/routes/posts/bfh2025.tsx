@@ -5,8 +5,8 @@ import {LinkedInCarousel} from "../../More components/LinkedInCarousel";
 
 export const metabfh2025 = {
     title: "BFH European MeetUp 2025",
-    tags: ["bfh", "igem"],
-    spoiler: "Title",
+    tags: ["bfh", "igem", "meetup"],
+    spoiler: "",
     slug: "bfh-2025",
     date: new Date("2025-05"),
     image: "https://media.licdn.com/dms/image/v2/D4D22AQGteDfDPh4hVA/feedshare-shrink_2048_1536/B4DZiPmBXzGsAo-/0/1754755771342?e=1761782400&v=beta&t=YDWS5jeTfcgy2INolJFrjIGi7wtyZ4inYsPJ--m7jD0",

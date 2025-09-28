@@ -6,7 +6,7 @@ import {FLink, FurtherLinks} from "../../More components/FurtherLinks";
 
 export const metajamboree2024 = {
     title: "Grand Jamboree 2024",
-    tags: ["igem", "precyse"],
+    tags: ["igem", "precyse", "award"],
     spoiler: "Title",
     slug: "jamboree-2024",
     date: new Date("2024-11"),

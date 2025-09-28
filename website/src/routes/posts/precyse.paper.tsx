@@ -3,7 +3,7 @@ import styles from './document.module.css'
 
 export const metaPrecysePaper = {
     title: "PreCyse paper",
-    tags: [],
+    tags: ["precyse", "publication"],
     spoiler: "",
     slug: "",
     date: new Date("2025-11"),

@@ -3,7 +3,7 @@ import styles from './document.module.css'
 
 export const metaMeetupEindhoven2025 = {
     title: "MeetUp: Eindhoven 2025",
-    tags: [],
+    tags: ["igem", "meetup"],
     spoiler: "",
     slug: "",
     date: new Date("2025-10-19"),

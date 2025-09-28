@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react'
+import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { MDXProvider } from '@mdx-js/react'
 import ArticleMeta from './ArticleMeta'
@@ -12,7 +12,7 @@ export interface BlogPostLayoutProps {
     post: Post
 }
 
-function BlogPostLayout({ blogRoot, post  }: BlogPostLayoutProps) {
+function BlogPostLayout({post  }: BlogPostLayoutProps) {
     const location = useLocation();
 
     if (!post) {
@@ -38,9 +38,6 @@ function BlogPostLayout({ blogRoot, post  }: BlogPostLayoutProps) {
           <MDXProvider
               components={{
                   a: (props: any) => <Link to={props.href}>{props.children}</Link>,
-                  wrapper: ({ children }: { children: ReactNode }) => (
-                      <div className={styles.content}>{children}</div>
-                  ),
               }}
           >
               <MDXComponent />

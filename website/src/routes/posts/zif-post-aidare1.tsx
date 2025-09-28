@@ -2,7 +2,7 @@ import React from 'react'
 import {SourceBox} from "../../More components/SourceBox";
 export const metazifBlogAidare  = {
     title: "Workshop: Artificial Intelligence and Digital Autonomy in Research and Education",
-    tags: ["aidare", "ai", "zif"],
+    tags: ["aidare", "ai", "zif", "workshop"],
     spoiler: "",
     slug: "aidare-zif-blog",
     date: new Date("2025-09-22"),

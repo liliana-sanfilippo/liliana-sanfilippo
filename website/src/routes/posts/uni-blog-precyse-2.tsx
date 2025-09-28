@@ -5,7 +5,7 @@ import UniBlog from "../../More components/getUniBlog";
 
 export const metauniBlogPrecyse2 = {
     title: "External Blog: Four gold medals for Bielefeld iGEM team",
-    tags: ["igem", "precyse"],
+    tags: ["igem", "precyse", "external"],
     spoiler: "An interdisciplinary team of students from Bielefeld University won four prizes at the" +
         " 2024 International Genetically Engineered Machine (iGEM) competition in Paris with their own project for treating the hereditary disease cystic fibrosis.",
     slug: "uni-blog-precyse-preise",
