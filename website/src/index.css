@@ -142,9 +142,23 @@ section {
     margin-bottom: 5rem;
 }
 
-.carousel {
+.carousel, .accordion {
     margin-bottom: 3rem;
 }
 
+.cv-year{
+    padding-right: 1rem;
+}
 
+.cv-stelle {
+    font-weight: bold;
+}
 
+.cv-desc{
+    padding-left: 0.5rem;
+}
+
+.cv-inst {
+    padding-left: 0.5rem;
+    font-style: italic;
+}

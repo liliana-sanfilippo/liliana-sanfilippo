@@ -7,6 +7,7 @@ import {React} from "../routes/pages/react";
 import {Bfh} from "../routes/pages/bfh";
 import {CounsellingChatbot} from "../routes/pages/CounsellingChatbot";
 import {IgemBielefeld} from "../routes/pages/igemBielefeld";
+import {Cv} from "../routes/pages/cv";
 
 export const NavigationBar: (PageRef | Folder)[] = [
     {
@@ -17,6 +18,13 @@ export const NavigationBar: (PageRef | Folder)[] = [
 
     },
     {
+        name: "CV",
+        title: "CV",
+        path: "/cv",
+        component: <Cv/>
+
+    },
+    {
         name: "Posts",
         title: "Posts",
         path: "/posts",
@@ -24,7 +32,7 @@ export const NavigationBar: (PageRef | Folder)[] = [
 
     },
     {
-        name: "Projects",
+        name: "Current Projects",
     folder: [
         {
             name: "AIDARE",
@@ -70,6 +78,6 @@ export const NavigationBar: (PageRef | Folder)[] = [
         },
 
     ]
-    }
+    },
 
     ]

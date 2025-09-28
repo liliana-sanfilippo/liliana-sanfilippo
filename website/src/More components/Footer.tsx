@@ -34,9 +34,7 @@ export function Footer() {
                     </div>
 
                     <div className="col-sm-4 align-top">
-                        <a href="./partners">
-                            <h6 className="sticky-top">Sponsors and partners</h6>
-                        </a>
+                        Something
 
                     </div>
 
