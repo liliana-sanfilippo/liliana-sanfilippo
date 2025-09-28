@@ -2,10 +2,8 @@ import React, {ReactNode} from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { MDXProvider } from '@mdx-js/react'
 import ArticleMeta from './ArticleMeta'
-import Bio from './Bio'
 import styles from './BlogPostLayout.module.css'
 import {Post} from "../routes/posts/post_interface";
-import {BlogSidebar} from "../More components/BlogSidebar";
 
 
 
@@ -36,7 +34,7 @@ function BlogPostLayout({ blogRoot, post  }: BlogPostLayoutProps) {
           {}
 
           <div className="row">
-              <div className="col-9">
+              <div className="col-12">
           <MDXProvider
               components={{
                   a: (props: any) => <Link to={props.href}>{props.children}</Link>,
@@ -49,9 +47,11 @@ function BlogPostLayout({ blogRoot, post  }: BlogPostLayoutProps) {
           </MDXProvider>
               </div>
 
-          <div className="col-3">
+              {/*
+               <div className="col-3">
               <BlogSidebar></BlogSidebar>
           </div>
+              */}
           </div>
 
         <footer className={styles.footer}>

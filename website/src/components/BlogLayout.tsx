@@ -3,7 +3,7 @@ import React from 'react'
 import siteMetadata from '../siteMetadata'
 import styles from './BlogLayout.module.css'
 import {Navbar} from "./Navbar";
-import {BlogSidebar} from "../More components/BlogSidebar";
+import {BlogPage} from "../More components/BlogPage";
 import posts from "../routes/posts";
 import {Footer} from "../More components/Footer";
 import Container from "react-bootstrap/Container";
