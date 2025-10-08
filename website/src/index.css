@@ -105,6 +105,15 @@ a {
 }
 
 
+.card {
+    border-radius: 0!important;
+}
+
+.card-img-indi{
+    max-height: 25rem;
+    object-fit: cover;
+    width: 100%;
+}
 
 
 .card-img-top{
@@ -132,9 +141,9 @@ p {
     color: white;
 }
 
-.bottom-right {
+.new {
     position: absolute;
-    bottom: 8px;
+    top: 8px;
     right: 16px;
     font-size: 0.6rem;
 }
