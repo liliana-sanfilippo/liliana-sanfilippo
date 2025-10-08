@@ -80,12 +80,12 @@ export function Navbar() {
             const folderItems = item.folder.map((subpage, subpageIndex) => {
                 if (subpage.path) {
                     return (
-                        <OurLink
-                            text={subpage.name}
-                            page={subpage.path}
-                            classes='dropdown-item'
-                            key={`subpage-${pageIndex}-${subpageIndex}`}
-                        />
+                        <NavDropdown.Item
+                            as={Link}
+                            to={subpage.path}
+                            key={`subpage-${pageIndex}-${subpageIndex}`}>
+                            {subpage.name}
+                        </NavDropdown.Item>
                     );
                 }
                 return null;
@@ -94,10 +94,8 @@ export function Navbar() {
                 <NavDropdown
                     key={`page-${pageIndex}`}
                     title={item.name}
-                    show={isOpen}
                     id="basic-nav-dropdown"
-                    onMouseEnter={showDropdown}
-                    onMouseLeave={hideDropdown}
+
                 >
                     {folderItems}
                 </NavDropdown>
@@ -122,23 +120,19 @@ export function Navbar() {
 
     return (
         <BootstrapNavbar
-            className="py-3"
+            className="p-0"
             expand="lg"
             bg="bg-transparent"
             fixed="top"
         >
-            <Container>
-                <BootstrapNavbar.Brand>
-                    <div className="row">
-                        <h3 className={styles.title}>
-                            <Link to={"/"}>{siteMetadata.title}</Link>
-                        </h3>
-                    </div>
+            <Container className={"h-100"}>
+                <BootstrapNavbar.Brand href="/" className={"py-4 px-5"}>
+                    {siteMetadata.title}
                 </BootstrapNavbar.Brand>
 
                 <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
                 <BootstrapNavbar.Collapse id="basic-navbar-nav" ref={navbarCollapseRef}>
-                    <Nav className="">{pages}</Nav>
+                    <Nav className="ms-auto px-5">{pages}</Nav>
                 </BootstrapNavbar.Collapse>
 
                 {/* Scroll Progress mit Maskottchen */}

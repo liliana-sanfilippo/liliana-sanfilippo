@@ -8,7 +8,7 @@ export const metaBiteach2024 = {
     slug: "biteach-2024",
     date: new Date("2024-11-20"),
     image: "https://media.licdn.com/dms/image/v2/D4E2DAQGwWFw8b0Xldw/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1736722244976?e=1759683600&v=beta&t=D-cbad-RK6WpQLXM4PYGlU0nsNedd_Lmw2jkm-nvqyQ",
-    cc: "Jasper Matzat & Liliana Sanfilippo"
+    cc: "Liliana Sanfilippo"
 }
 
 
