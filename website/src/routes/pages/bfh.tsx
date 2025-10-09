@@ -2,12 +2,17 @@ import {Video} from "../../More components/Video";
 import {GBox, VideoBox} from "../../More components/G_Box";
 import PosterCarousel from "../../More components/PosterCarousel";
 import {posters25} from "../../data/poster2025";
-import {H2} from "../../More components/H2";
+import {H2, H3} from "../../More components/H2";
 import {posters24} from "../../data/poster24";
 import {bfhfiles24} from "../../data/bfhfiles24";
 import {bfhfiles25} from "../../data/bfhfiles25";
 import TabbedBox, {TabData} from "../../components/TabbedBox";
 import {othertalks24, talks24, workshops24} from "../../data/talks24";
+import {talks25, workshops25} from "../../data/talks25";
+import {Row} from "react-bootstrap";
+import WinnerCarousel from "../../More components/Carousel";
+import {winners24} from "../../data/winners24";
+import {winners25} from "../../data/winners25";
 
 
 const bfhtabs: TabData[] = [
@@ -31,19 +36,45 @@ const bfhtabs: TabData[] = [
                     <Video url={"https://video.igem.org/videos/embed/4owykB8DWkx8Dwkc5YaMCM"}/>
                 </VideoBox>
                 <H2>
-                    Poster
+                    Teams
                 </H2>
+                <H3>
+                    Poster Gallery
+                </H3>
                 <PosterCarousel posters={posters25}/>
                 <H2>
+                    Program
+                </H2>
+                <H3>
                     Workshops
+                </H3>
+                <TabbedBox id={"workshops25"} tabs={workshops25} defaultActiveKey="design"/>
+                <H3>
+                    Talks
+                </H3>
+                <TabbedBox tabs={talks25} defaultActiveKey="design"/>
+                <H3>
+                    Prizes and Winners
+                </H3>
+                <Row>
+                    <WinnerCarousel winners={winners25}/>
+                </Row>
+                <H2>
+                    Supporters
                 </H2>
                 <H2>
-                    Talks
+                    Gallery
+                </H2>
+                <H2>
+                    Social Media
                 </H2>
                 <H2>
                     Files
                 </H2>
                 <PosterCarousel posters={bfhfiles25}/>
+                <H2>
+                    Links
+                </H2>
             </div>
         )
     },
@@ -67,22 +98,46 @@ const bfhtabs: TabData[] = [
                     <Video url={"https://video.igem.org/videos/embed/2G8U94Ubp6bCK5abA8Gu89"}/>
                 </VideoBox>
                 <H2>
-                    Poster
+                    Teams
                 </H2>
+                <H3>
+                    Poster Gallery
+                </H3>
                 <PosterCarousel posters={posters24}/>
                 <H2>
+                    Program
+                </H2>
+                <H3>
                     Workshops
-                </H2>
+                </H3>
                 <TabbedBox id={"workshops24"} tabs={workshops24} defaultActiveKey="design"/>
-                <H2>
+                <H3>
                     Talks
-                </H2>
+                </H3>
                 <TabbedBox tabs={talks24} defaultActiveKey="design"/>
                 <TabbedBox tabs={othertalks24} defaultActiveKey="design"/>
+                <H3>
+                    Prizes and Winners
+                </H3>
+                <Row>
+                    <WinnerCarousel winners={winners24}/>
+                </Row>
+                <H2>
+                    Supporters
+                </H2>
+                <H2>
+                    Gallery
+                </H2>
+                <H2>
+                    Social Media
+                </H2>
                 <H2>
                     Files
                 </H2>
                 <PosterCarousel posters={bfhfiles24}/>
+                <H2>
+                    Links
+                </H2>
             </div>)
     }
 ]
@@ -99,7 +154,6 @@ export function Bfh() {
             <section className={"flex flex-col gap-8 lg:gap-16"}>
                 <TabbedBox tabs={bfhtabs} defaultActiveKey={"first"}/>
             </section>
-
 
 
         </div>
