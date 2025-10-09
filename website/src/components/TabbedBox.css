@@ -1,0 +1,133 @@
+/* Gemeinsame Tab Schrift */
+.navLink {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+/* Wrapper, der Tab + Content zusammenhält */
+.tabWrapper {
+    overflow: hidden;
+    margin-top: -1px; /* sorgt dafür, dass der Rahmen bündig mit dem Tab ist */
+}
+
+/* Inhaltshintergrund */
+.tabContent {
+    padding: 4rem 3rem;
+    background-color: var(--background);
+}
+/* reduced padding on smaller screens */
+@media (max-width: 991px) {
+    .tabContent {
+        padding: 1rem 0.5rem;
+    }
+}
+
+.tabbedBox{
+    .tab-content {
+        margin-top: -1px !important;
+    }
+}
+
+.navTabs {
+    border-bottom: none !important;
+}
+
+/* Auch die aktive Tab-Unterstreichung entfernen */
+.navTabs .nav-link {
+    border: none !important;
+    font-size: clamp(0.1rem, 768px, 1.1rem);
+    min-width: clamp(100px, 991px, 200px) !important;
+    text-align: center;
+    white-space: nowrap; /* keep on one line */
+}
+/* DESIGN */
+.design-tab {
+    background-color: var(--accent-gradient-one-of-three)  !important; /* Grundfarbe */
+    color: #fff !important;
+}
+.nav-link.active.design-tab {
+    background-color: var(--accent-gradient-one-of-three) !important; /* aktiv */
+}
+.design-wrapper {
+    border: 2px solid var(--accent-gradient-one-of-three);
+}
+
+/* BUILD */
+.build-tab {
+    background-color: var(--accent-gradient-two-of-three) !important;
+    color: #fff !important;
+}
+.nav-link.active.build-tab {
+    background-color: var(--accent-gradient-two-of-three) !important;
+}
+.build-wrapper {
+    border: 2px solid var(--accent-gradient-two-of-three);
+}
+
+.nav-tabs .nav-item .nav-link {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.navbar-nav,
+.nav-tabs {
+    align-items: baseline !important;
+}
+
+
+/* TEST */
+.test-tab {
+    background-color: var(--accent-gradient-three-of-three) !important;
+    color: #fff !important;
+}
+.nav-link.active.test-tab {
+    background-color:  var(--accent-gradient-three-of-three) !important;
+}
+.test-wrapper {
+    border: 2px solid  var(--accent-gradient-three-of-three);
+}
+
+/* LEARN */
+.learn-tab {
+    background-color:  var(--accent-gradient-four-of-three) !important;
+    color: #fff !important;
+}
+.nav-link.active.learn-tab {
+    background-color: var(--accent-gradient-four-of-three) !important;
+}
+.learn-wrapper {
+    border: 2px solid var(--accent-gradient-four-of-three);
+}
+
+/* Secret 5th tab */
+.secret-tab {
+    background-color: var(--accent-gradient-five-of-three) !important;
+    color: #fff !important;
+}
+.nav-link.active.secret-tab {
+    background-color: var(--accent-gradient-five-of-three) !important;
+}
+.secret-wrapper {
+    border: 2px solid var(--accent-gradient-five-of-three);
+}
+
+@media (max-width: 550px) {
+    .tabWrapper {
+        overflow: hidden;
+        margin-top: -1px; /* sorgt dafür, dass der Rahmen bündig mit dem Tab ist */
+    }
+    .navTabs .nav-link {
+        border: none !important;
+        padding: 0.5rem 4rem; /* mehr Innenabstand → breiter & höher */
+        font-size: 1.25rem; /* Text größer */
+        min-width: 200px; /* Mindestbreite */
+        text-align: center;
+    }
+    .navTabs .nav-link.design-tab {
+        border: none !important;
+        padding: 0.5rem 4rem; /* mehr Innenabstand → breiter & höher */
+        font-size: 1.25rem; /* Text größer */
+        min-width: 200px; /* Mindestbreite */
+        text-align: center;
+    }
+}

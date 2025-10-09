@@ -14,7 +14,7 @@ function BlogLayout() {
         <Navbar />
         <header>
         </header>
-          <div className="row">
+          <div id={"main-wrapper"}>
               <div className="col-12">
 
                   <main>

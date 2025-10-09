@@ -27,6 +27,8 @@ code {
     --accent-gradient-one-of-three: #F59121;
     --accent-gradient-two-of-three: #F5A520;
     --accent-gradient-three-of-three: #F5B91F;
+    --accent-gradient-four-of-three: var(--accent-primary);
+    --accent-gradient-five-of-three: var(--lightyellow);
     --yellow-dark: #BB9909;
     --accent-primary: #F4CC1E;
     --lightyellow: #fae99e;
@@ -47,7 +49,6 @@ code {
 }
 
 hr {
-    color: var(--text-primary) !important;
     opacity: 0.5;
 }
 
@@ -180,6 +181,9 @@ section {
 
 img {
     max-width: 100%;
+}
+.navbar-nav{
+    visibility: visible;
 }
 
 #basic-navbar-nav {

@@ -6,7 +6,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link as OurLink } from '@liliana-sanfilippo/react-link';
 import { Link } from 'react-router-dom';
 import {NavigationBar} from "../More components/navigationBar";
-import styles from "./BlogLayout.module.css";
 import siteMetadata from "../siteMetadata";
 
 export function Navbar() {
@@ -131,9 +130,9 @@ export function Navbar() {
                 </BootstrapNavbar.Brand>
 
                 <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
-                <BootstrapNavbar.Collapse id="basic-navbar-nav" ref={navbarCollapseRef}>
+                <BootstrapNavbar id="basic-navbar-nav" ref={navbarCollapseRef}>
                     <Nav className="ms-auto px-5">{pages}</Nav>
-                </BootstrapNavbar.Collapse>
+                </BootstrapNavbar>
 
                 {/* Scroll Progress mit Maskottchen */}
                 <div className="scroll-progress" ref={progressBarRef}>
