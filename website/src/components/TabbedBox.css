@@ -111,6 +111,55 @@
     border: 2px solid var(--accent-gradient-five-of-three);
 }
 
+/* Secret 6th tab */
+.secretA-tab {
+    background-color: var(--accent-gradient-five-of-three) !important;
+    color: #fff !important;
+}
+.nav-link.active.secretA-tab {
+    background-color: var(--accent-gradient-five-of-three) !important;
+}
+.secretA-wrapper {
+    border: 2px solid var(--accent-gradient-five-of-three);
+}
+/* Secret 7th tab */
+.secretB-tab {
+    background-color: var(--accent-gradient-five-of-three) !important;
+    color: #fff !important;
+}
+.nav-link.active.secretB-tab {
+    background-color: var(--accent-gradient-five-of-three) !important;
+}
+.secretB-wrapper {
+    border: 2px solid var(--accent-gradient-five-of-three);
+}
+
+
+/* other first tab */
+.first-tab {
+    background-color: var(--lightblue) !important;
+    color: #fff !important;
+}
+.nav-link.active.first-tab {
+    background-color: var(--lightblue) !important;
+}
+.first-wrapper {
+    border: 2px solid var(--lightblue);
+}
+
+
+/* other second tab */
+.second-tab {
+    background-color: var(--lightblue-zwei) !important;
+    color: #fff !important;
+}
+.nav-link.active.second-tab {
+    background-color: var(--lightblue-zwei) !important;
+}
+.second-wrapper {
+    border: 2px solid var(--lightblue-zwei);
+}
+
 @media (max-width: 550px) {
     .tabWrapper {
         overflow: hidden;
@@ -130,4 +179,9 @@
         min-width: 200px; /* Mindestbreite */
         text-align: center;
     }
+}
+
+
+#workshops24 .nav-item button{
+min-width: clamp(100px, 991px, 160px) !important;
 }

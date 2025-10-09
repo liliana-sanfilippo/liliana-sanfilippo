@@ -6,18 +6,16 @@ import {H2} from "../../More components/H2";
 import {posters24} from "../../data/poster24";
 import {bfhfiles24} from "../../data/bfhfiles24";
 import {bfhfiles25} from "../../data/bfhfiles25";
-import TabbedBox from "../../components/TabbedBox";
-import {talks24} from "../../data/talks24";
+import TabbedBox, {TabData} from "../../components/TabbedBox";
+import {othertalks24, talks24, workshops24} from "../../data/talks24";
 
-export function Bfh() {
 
-    return (
-        <div className={"mx-5"}>
-            <div className={"row my-5"}>
-                <img alt={"BFH European Meetup Logo"} className="mx-auto w-25 mt-5"
-                     src="https://static.igem.wiki/teams/5247/logos-team/bfh-with-tagline-black.svg"/>
-            </div>
-            <section className={"flex flex-col gap-8 lg:gap-16"}>
+const bfhtabs: TabData[] = [
+    {
+        eventKey: "first",
+        title: "2025",
+        content: (
+            <div className={"flex flex-col gap-8 lg:gap-16"}>
                 <h1>BFH 2025</h1>
                 <VideoBox>
                     <GBox background={"https://static.igem.wiki/teams/5833/meetups/bfh/bfh-buttons-min.webp"}>
@@ -46,10 +44,15 @@ export function Bfh() {
                     Files
                 </H2>
                 <PosterCarousel posters={bfhfiles25}/>
-            </section>
-
-            <section className={"flex flex-col gap-8 lg:gap-16"}>
-                <h1>2024</h1>
+            </div>
+        )
+    },
+    {
+        eventKey: "second",
+        title: "2024    ",
+        content: (
+            <div className={"flex flex-col gap-8 lg:gap-16"}>
+                <h1>BFH 2024</h1>
                 <VideoBox>
                     <GBox background={"https://static.igem.wiki/teams/5247/photos/meetup/badges.jpeg"}>
                         <h3 className="my-auto">150+ attendees</h3>
@@ -70,15 +73,35 @@ export function Bfh() {
                 <H2>
                     Workshops
                 </H2>
+                <TabbedBox id={"workshops24"} tabs={workshops24} defaultActiveKey="design"/>
                 <H2>
                     Talks
                 </H2>
                 <TabbedBox tabs={talks24} defaultActiveKey="design"/>
+                <TabbedBox tabs={othertalks24} defaultActiveKey="design"/>
                 <H2>
                     Files
                 </H2>
                 <PosterCarousel posters={bfhfiles24}/>
+            </div>)
+    }
+]
+
+
+export function Bfh() {
+
+    return (
+        <div className={"mx-5"}>
+            <div className={"row my-5"}>
+                <img alt={"BFH European Meetup Logo"} className="mx-auto w-25 mt-5"
+                     src="https://static.igem.wiki/teams/5247/logos-team/bfh-with-tagline-black.svg"/>
+            </div>
+            <section className={"flex flex-col gap-8 lg:gap-16"}>
+                <TabbedBox tabs={bfhtabs} defaultActiveKey={"first"}/>
             </section>
+
+
+
         </div>
     )
 }

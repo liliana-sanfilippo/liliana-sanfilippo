@@ -21,7 +21,7 @@ const TabbedBox: React.FC<TabbedBoxProps> = ({
                                                  defaultActiveKey,
                                                  id,
                                              }) => {
-    const autoId = useId();
+    const autoId = id;
 
     return (
         <div className="tabbedBox dont-style">
