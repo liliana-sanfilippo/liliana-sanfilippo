@@ -14,7 +14,7 @@ export function FurtherLinks({flinks, title}: { flinks: FLink[], title?: string}
         <>
             <Card className="my-4" style={{ width: '100%', border: "solid 1px var(--lightblue-drei)" }}>
                 <Card.Body>
-                    <Card.Title>{title ? title : <>Further Links:</>}</Card.Title>
+                    <Card.Title>{title ? title : <></>}</Card.Title>
                     <Card.Text>
                       <ul style={{listStyle: "none"}}>
                           {flinks.map( (flink) => (

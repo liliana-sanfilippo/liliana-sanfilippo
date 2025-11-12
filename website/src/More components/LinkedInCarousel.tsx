@@ -10,7 +10,7 @@ export function LinkedInCarousel({ urls }: { urls: string[] }) {
                         <iframe
                             className="col-6 m-auto"
                             src={url}
-                            height="335"
+                            height="600"
                             width="50%"
                             frameBorder="0"
                             title={`Embedded post ${i}`}

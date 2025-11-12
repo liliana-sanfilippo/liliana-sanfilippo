@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './document.module.css'
+
 export const metajamboree2025 = {
     title: "Grand Jamboree 2025",
     tags: ["igem", "cellective", "award"],
