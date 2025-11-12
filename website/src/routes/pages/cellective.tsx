@@ -10,7 +10,7 @@ import {Row, Col} from "react-bootstrap";
 import TabbedBox, {TabData} from "../../components/TabbedBox";
 
 export function Cellective() {
-    return(
+    return (
         <div className={"flex flex-col gap-8 lg:gap-16"}>
             <h1>
                 Cellective
@@ -35,8 +35,45 @@ export function Cellective() {
         </div>
     )
 }
-const presse: FLink[] = []
-const linkedinposts: string[] =[]
+
+const presse: FLink[] = [
+    {
+        text: "Die Glocke",
+        url: "https://www.die-glocke.de/regionales/artikel/uni-bielefeld-neuer-therapieansatz-gegen-brustkrebs-1761060854",
+        linktitle: "Uni Bielefeld: Neuer Therapieansatz gegen Brustkrebs"
+    },
+    {
+        url: "https://aktuell.uni-bielefeld.de/2025/10/16/studierende-forschen-mit-professoren-als-coaches-zu-krebs/",
+        linktitle: "Studierende forschen mit Professoren als Coaches zu Krebs",
+        text: "BIS Blog"
+    },
+    {
+        text: "BIS Blog",
+        linktitle: "Studierende entwickeln Therapieansatz gegen Brustkrebs",
+        url: "https://aktuell.uni-bielefeld.de/2025/10/20/studierende-entwickeln-therapieansatz-gegen-brustkrebs/"
+    },
+    {
+        text: "Tagesschau",
+        linktitle: "Bielefelder Studierende forschen an neuer Brustkrebs-Therapie",
+        url: "https://www.tagesschau.de/inland/regional/nordrheinwestfalen/wdr-bielefelder-studierende-forschen-an-neuer-brustkrebs-therapie-100.html"
+    },
+    {
+        linktitle: "Neue Therapie gegen aggressiven Brustkrebs aus Bielefeld",
+        text: "WDR",
+        url: "https://www1.wdr.de/lokalzeit/fernsehen/suedwestfalen/neue-therapie-gegen-aggressiven-brustkrebs-aus-bielefeld-100.html"
+    },
+    {
+        linktitle: "Bielefelder Studierende forschen an neuer Brustkrebs-Therapie",
+        text: "WDR",
+        url: "https://www1.wdr.de/nachrichten/westfalen-lippe/studierende-bielefeld-brustkrebs-forschung-100.html"
+    },
+    {
+        linktitle: "iGEM 2025: Meet some of the teams driving innovation",
+        text: "IDT",
+        url: "https://eu.idtdna.com/page/support-and-education/decoded-plus/igem-2025-meet-some-of-the-teams-driving-innovation/"
+    }
+]
+const linkedinposts: string[] = []
 const instaurls: string[] = []
 
 const projectTabs: TabData[] = [
@@ -67,7 +104,7 @@ const projectTabs: TabData[] = [
     }
 ]
 
-const peopletabs : TabData[] = [
+const peopletabs: TabData[] = [
     {
         eventKey: "design",
         title: "Team",

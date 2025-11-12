@@ -3,6 +3,9 @@ import React from "react";
 import {InstagramCarousel, LinkedInCarousel} from "../../More components/LinkedInCarousel";
 import {InstagramEmbed} from "react-social-media-embed";
 import {VideoBox, LargeGBox} from "../../More components/G_Box";
+
+import {igemfiles24} from "../../data/igemfiles24";
+import PosterCarousel from "../../More components/PosterCarousel";
 import {TBox} from "../../More components/T_Box";
 import {H2, H3} from "../../More components/H2";
 import {Video} from "../../More components/Video";
@@ -46,6 +49,11 @@ export function Precyse() {
             linktitle: "Vierfach Gold für Bielefelder iGEM-Team",
             url: "https://blogs.uni-bielefeld.de/blog/pressemitteilungen/entry/vierfach-gold-f-uuml-r",
             text: "BIS-Blog"
+        },
+        {
+            text: "Bio Spektrum",
+            linktitle: "iGEM-Teams aus Aachen, Wien, Münster, Heidelberg, Marburg und Bielefeld",
+            url: "https://www.biospektrum.de/magazinartikel/igem-teams-aus-aachen-wien-muenster-heidelberg-marburg-und-bielefeld"
         }
     ]
 
@@ -110,6 +118,7 @@ export function Precyse() {
             </H2>
             <FurtherLinks flinks={presse}/>
             <H2> Files </H2>
+            <PosterCarousel posters={igemfiles24}/>
             <H2> Social Media </H2>
             <LinkedInCarousel urls={linkedinposts}/>
             <InstagramCarousel urls={instaurls}/>

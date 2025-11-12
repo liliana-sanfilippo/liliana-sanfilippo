@@ -3,6 +3,7 @@ import React from "react";
 import ArticleSummary, {ArticleCard} from "../../components/ArticleSummary";
 import posts from "../posts";
 
+// TODO einstellen, dass auf jeder Projektseit die dazugehörige Posts angezeigt werden 
 export function BlogPage() {
     return(<div className={styles.Document}>
         <div className="w-75 mx-auto">
