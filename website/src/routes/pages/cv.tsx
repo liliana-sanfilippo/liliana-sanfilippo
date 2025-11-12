@@ -1,9 +1,12 @@
 import {Accordion} from "react-bootstrap";
+import { Typescript } from 'react-bootstrap-icons';
+
+import {Row, Col} from "react-bootstrap";
 
 export function Cv() {
 
     return (
-        <>
+        <section>
             <h2>Work Experience</h2>
             <Accordion>
                 <Accordion.Item eventKey="0">
@@ -14,14 +17,14 @@ export function Cv() {
                         <span className="cv-inst">Universität Bielefeld</span>
                     </Accordion.Header>
                     <Accordion.Body>
-
+                        <Row><Typescript/>    </Row>
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
 
             <h2>Academic Education</h2>
             <Accordion>
-                <Accordion.Item eventKey="0">
+                <Accordion.Item eventKey="1">
                     <Accordion.Header>
                         <span className="cv-year">Oct. 2022 - today</span>
                         <span className="cv-stelle">Bachelor</span>
@@ -35,10 +38,21 @@ export function Cv() {
             </Accordion>
             <h2>Awards</h2>
             <Accordion>
-                <Accordion.Item eventKey="1">
+                <Accordion.Item eventKey="6">
                     <Accordion.Header>
                         <span className="cv-year">Oct. 2025</span>
-                        <span className="cv-stelle"> ... </span>
+                        <span className="cv-stelle">Silver Medal</span>
+                        <span className="cv-desc"> for the iGEM project Cellective</span>
+                        <span className="cv-inst">iGEM Foundation</span>
+                    </Accordion.Header>
+                    <Accordion.Body>
+
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="2">
+                    <Accordion.Header>
+                        <span className="cv-year">Oct. 2025</span>
+                        <span className="cv-stelle"> 2nd place </span>
                         <span className="cv-desc"> for the software project LexArtes</span>
                         <span className="cv-inst">LexMea</span>
                     </Accordion.Header>
@@ -46,7 +60,7 @@ export function Cv() {
 
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="0">
+                <Accordion.Item eventKey="3">
                     <Accordion.Header>
                         <span className="cv-year">Oct. 2024</span>
                         <span className="cv-stelle">Best Integrated Human Practices, Safety and Security, Best Presentation and Gold Medal</span>
@@ -60,7 +74,7 @@ export function Cv() {
             </Accordion>
             <h2>Academic Functions</h2>
             <Accordion>
-                <Accordion.Item eventKey="0">
+                <Accordion.Item eventKey="4">
                     <Accordion.Header>
                         <span className="cv-year">May 2025</span>
                         <span className="cv-desc">Participated in Workshop on AI and Autonomy in Higher Education</span>
@@ -70,7 +84,7 @@ export function Cv() {
 
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="0">
+                <Accordion.Item eventKey="5">
                     <Accordion.Header>
                         <span className="cv-year">May 2025</span>
                         <span className="cv-stelle">Frontend Developer and Photographer</span>
@@ -130,7 +144,7 @@ export function Cv() {
 
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="0">
+                <Accordion.Item eventKey="5">
                     <Accordion.Header>
                         <span className="cv-year">Aug. 2021 - Jan. 2022 </span>
                         <span className="cv-stelle">Integration work</span>
@@ -144,6 +158,6 @@ export function Cv() {
             <h2>Software</h2>
 
             <h2>Outreach & Press</h2>
-        </>
+        </section>
     )
 }

@@ -13,7 +13,7 @@ export function Cellective() {
     return(
         <div className={"flex flex-col gap-8 lg:gap-16"}>
             <h1>
-                Cellective <i class="bi bi-typescript"></i>
+                Cellective
             </h1>
             <H2>
                 Project

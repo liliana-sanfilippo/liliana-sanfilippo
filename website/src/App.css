@@ -405,7 +405,7 @@
     .pointer-events-none {
         pointer-events:none
     }
-    .collapse {
+    .collapse:not(.show){
         visibility:collapse
     }
     .invisible {
@@ -8096,7 +8096,7 @@ ol+* {
     .pointer-events-none {
         pointer-events:none
     }
-    .collapse {
+    .collapse:not(.show) {
         visibility:collapse
     }
     .invisible {
