@@ -213,3 +213,14 @@ img {
 .container {
     max-width: 100% !important;
 }
+
+
+.linkimg{
+    width: 32px;
+    border-radius: 50%;
+}
+
+.linkding{
+    color: #0f0f0f !important;
+    background-color: var(--darkerbeige);
+}

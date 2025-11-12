@@ -13,7 +13,28 @@ import {Row} from "react-bootstrap";
 import WinnerCarousel from "../../More components/Carousel";
 import {winners24} from "../../data/winners24";
 import {winners25} from "../../data/winners25";
+import PictureRotation from "../../More components/PictureRotation";
+import {bfhimages24} from "../../data/bfhimages24";
+import {bfhimages25} from "../../data/bfhimages25";
+import {LinkLine} from "../../More components/LinkLine";
 
+const links24 = [
+    {
+        href: "https://2024.igem.wiki/gu-frankfurt/contribution",
+        text: "Wiki of team Frankfurt",
+        img: "https://static.igem.wiki/teams/5295/logo.svg"
+    },
+    {
+        href: "https://2024.igem.wiki/bielefeld-cebitec/contribution/?scrollTo=bfh-european-meetup",
+        text: "Wiki of team Bielefeld",
+        img: "https://static.igem.wiki/teams/5247/logos-team/precyse-no-slogan.png"
+    },
+    {
+        href: "https://2024.igem.wiki/hamburg/education",
+        text: "Wiki of team Hamburg",
+        img: "https://static.igem.wiki/teams/5077/libelle.png"
+    }
+]
 
 const bfhtabs: TabData[] = [
     {
@@ -65,6 +86,7 @@ const bfhtabs: TabData[] = [
                 <H2>
                     Gallery
                 </H2>
+                <PictureRotation images={bfhimages25} interval={5000}/>
                 <H2>
                     Social Media
                 </H2>
@@ -75,6 +97,7 @@ const bfhtabs: TabData[] = [
                 <H2>
                     Links
                 </H2>
+
             </div>
         )
     },
@@ -116,9 +139,9 @@ const bfhtabs: TabData[] = [
                 </H3>
                 <TabbedBox tabs={talks24} defaultActiveKey="design"/>
                 <TabbedBox tabs={othertalks24} defaultActiveKey="design"/>
-                <H3>
+                <H2>
                     Prizes and Winners
-                </H3>
+                </H2>
                 <Row>
                     <WinnerCarousel winners={winners24}/>
                 </Row>
@@ -128,6 +151,7 @@ const bfhtabs: TabData[] = [
                 <H2>
                     Gallery
                 </H2>
+                <PictureRotation images={bfhimages24} interval={5000}/>
                 <H2>
                     Social Media
                 </H2>
@@ -138,6 +162,12 @@ const bfhtabs: TabData[] = [
                 <H2>
                     Links
                 </H2>
+                <p></p>
+                <div className={"row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2"}>
+                    {links24.map(link => (
+                        <LinkLine url={link.img} text={link.text} href={link.href}/>
+                    ))}
+                </div>
             </div>)
     }
 ]

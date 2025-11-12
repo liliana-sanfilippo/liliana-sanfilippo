@@ -62,13 +62,13 @@ export const NavigationBar: (PageRef | Folder)[] = [
             component: <IgemBielefeld/>
 
         },
-        {
+        /**{
             name: "PreCyse",
             title: "PreCyse",
             path: "/precyse",
             component: <Precyse/>
 
-         },
+         },**/
         {
             name: "React Reference Manager",
             title: "React Reference Manager",
