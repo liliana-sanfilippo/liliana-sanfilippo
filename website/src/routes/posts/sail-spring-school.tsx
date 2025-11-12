@@ -3,7 +3,7 @@ import styles from './document.module.css'
 
 export const metaSailSpringSchool = {
     title: "SAIL Spring School 2025: Innovating AI Evaluation – Beyond Accuracy and Precision",
-    tags: ["workshop", "ai", "spring-school"],
+    tags: ["workshop", "ai", "spring-school", "sail"],
     spoiler: "",
     slug: "sail-spring-school-2025",
     date: new Date("2025-03-30"),

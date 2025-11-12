@@ -8,6 +8,7 @@ import zifBlogAidare2, {metazifBlogAidare2} from "./zif-post-aidare2";
 import wiardaBlogAidare, {metawiardaBlogAidare} from "./wiarda-blog-aidare";
 import zifModelsOfChange, {metazifModelsOfChange} from "./zif-models-of-change";
 import jamboree2024, {metajamboree2024} from "./jamboree2024";
+import jamboree2025, {metajamboree2025} from "./jamboree2025";
 import bfh2024, {metabfh2024} from "./bfh2024";
 import bfh2025, {metabfh2025} from "./bfh2025";
 import muensterMeetup2024, {metamuensterMeetup2024} from "./muenster-meetup-2024";
@@ -23,6 +24,7 @@ import RoxenTraining, {metaRoxenTraining} from "./roxen-training";
 import WikiGuide1, {metaWikiGuide1} from "./wiki-guide-1";
 import SailSpringSchool, {metaSailSpringSchool} from "./sail-spring-school";
 import JamboreePrep2024, {metaJamboreePrep2024} from "./jamboree-prep-2024";
+import EegHackathon, {metaEegHackathon} from "./eeg-hackathon";
 
 export const posts: Post[] = [
     {
@@ -45,6 +47,10 @@ export const posts: Post[] = [
     {
         ...metajamboree2024,
         MDXComponent: jamboree2024,
+    },
+    {
+        ...metajamboree2025,
+        MDXComponent: jamboree2025,
     },
     {
         ...metabfh2025,
@@ -106,5 +112,9 @@ export const posts: Post[] = [
         ...metaJamboreePrep2024 ,
         MDXComponent: JamboreePrep2024
     },
+    {
+        ...metaEegHackathon,
+        MDXComponent: EegHackathon
+    }
 
 ]
