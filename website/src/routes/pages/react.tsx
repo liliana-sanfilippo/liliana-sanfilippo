@@ -2,7 +2,7 @@
 export function React() {
 
     return (
-        <div className={"mx-5"}>
+        <div className="w-75 mx-auto">
             Text
 
         </div>

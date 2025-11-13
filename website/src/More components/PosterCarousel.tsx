@@ -2,7 +2,7 @@ import "./Carousel.css";
 import { useState } from "react";
 import { Modal, Image } from "react-bootstrap";
 
-interface Poster {
+export interface Poster {
     id: number;
     title: string;
     thumbnail?: string;

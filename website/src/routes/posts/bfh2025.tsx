@@ -9,7 +9,7 @@ export const metabfh2025 = {
     spoiler: "",
     slug: "bfh-2025",
     date: new Date("2025-05"),
-    image: "https://media.licdn.com/dms/image/v2/D4D22AQGteDfDPh4hVA/feedshare-shrink_2048_1536/B4DZiPmBXzGsAo-/0/1754755771342?e=1761782400&v=beta&t=YDWS5jeTfcgy2INolJFrjIGi7wtyZ4inYsPJ--m7jD0",
+    image: "https://static.igem.org/websites/community/2025/images/events/ambassadors-regions/europe/igem-at-2025-bfh-euorpean-meetup-2.webp",
     cc: "BFH European MeetUp"
 }
 

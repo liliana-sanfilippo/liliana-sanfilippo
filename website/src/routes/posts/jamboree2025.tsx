@@ -7,8 +7,8 @@ export const metajamboree2025 = {
     spoiler: "Title",
     slug: "jamboree-2025",
     date: new Date("2025-11"),
-    image: "",
-    cc: ""
+    image: "https://live.staticflickr.com/65535/54906126378_ee509e66a2_b.jpg",
+    cc: "iGEM Foundation"
 }
 
 export default function Jamboree2025() {

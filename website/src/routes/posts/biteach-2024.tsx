@@ -7,7 +7,7 @@ export const metaBiteach2024 = {
     spoiler: "Our faculty-specific  counselling chatbot project was presented at the BI.teach days.",
     slug: "biteach-2024",
     date: new Date("2024-11-20"),
-    image: "https://media.licdn.com/dms/image/v2/D4E2DAQGwWFw8b0Xldw/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1736722244976?e=1759683600&v=beta&t=D-cbad-RK6WpQLXM4PYGlU0nsNedd_Lmw2jkm-nvqyQ",
+    image: "https://www.uni-bielefeld.de/_internal/cimg!0/fp6dwzg3oq8x5jgf4tg45hhmwpzc6q1.jpeg",
     cc: "Liliana Sanfilippo"
 }
 

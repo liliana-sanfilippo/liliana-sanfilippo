@@ -4,6 +4,7 @@ import { MDXProvider } from '@mdx-js/react'
 import ArticleMeta from './ArticleMeta'
 import styles from './BlogPostLayout.module.css'
 import {Post} from "../routes/posts/post_interface";
+import Container from "react-bootstrap/Container";
 
 
 
@@ -20,7 +21,7 @@ function BlogPostLayout({post  }: BlogPostLayoutProps) {
     }
     const MDXComponent = post.MDXComponent
   return (
-    <>
+    <div className="w-75 mx-auto">
       <article className={styles.container}>
         <header className={styles.header}>
           <h1 className={styles.title}>
@@ -68,7 +69,7 @@ function BlogPostLayout({post  }: BlogPostLayoutProps) {
           </section>
         </footer>
       </article>
-    </>
+    </div>
   )
 }
 
