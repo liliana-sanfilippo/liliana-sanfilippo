@@ -49,8 +49,8 @@ export const NavigationBar: (PageRef | Folder)[] = [
 
         },
         {
-            name: "Counselling Chatbot",
-            title: "Counselling Chatbot",
+            name: "Intelligent Counselling System",
+            title: "Intelligent Counselling System",
             path: "/counselling-chatbot",
             component: <CounsellingChatbot  />
 
