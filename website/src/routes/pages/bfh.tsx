@@ -17,6 +17,7 @@ import PictureRotation from "../../More components/PictureRotation";
 import {bfhimages24} from "../../data/bfhimages24";
 import {bfhimages25} from "../../data/bfhimages25";
 import {LinkLine} from "../../More components/LinkLine";
+import TagCarousel from "../../More components/TagCarousel";
 
 const links24 = [
     {
@@ -181,6 +182,9 @@ export function Bfh() {
                 <img alt={"BFH European Meetup Logo"} className="mx-auto w-25 mt-5"
                      src="https://static.igem.wiki/teams/5247/logos-team/bfh-with-tagline-black.svg"/>
             </div>
+            <section>
+                <TagCarousel tag={"bfh"}/>
+            </section>
             <section className={"flex flex-col gap-8 lg:gap-16"}>
                 <TabbedBox tabs={bfhtabs} defaultActiveKey={"first"}/>
             </section>

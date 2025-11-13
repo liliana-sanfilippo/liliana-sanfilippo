@@ -10,6 +10,7 @@ import {Row, Col} from "react-bootstrap";
 import TabbedBox, {TabData} from "../../components/TabbedBox";
 import {precysePresse} from "../../data/precysePresse";
 import {instaurls, linkedinposts} from "../../data/precyseSocials";
+import TagCarousel from "../../More components/TagCarousel";
 
 export function Precyse() {
 
@@ -70,6 +71,8 @@ export function Precyse() {
             <H2> Social Media </H2>
             <LinkedInCarousel urls={linkedinposts}/>
             <InstagramCarousel urls={instaurls}/>
+            <H2>Posts</H2>
+            <TagCarousel tag={"precyse"}/>
         </div>
     )
 }

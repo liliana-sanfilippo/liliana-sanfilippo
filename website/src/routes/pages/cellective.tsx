@@ -11,6 +11,7 @@ import TabbedBox, {TabData} from "../../components/TabbedBox";
 import {cellectivepresse} from "../../data/cellectivepresse";
 import PosterCarousel from "../../More components/PosterCarousel";
 import {igemfiles25} from "../../data/igemfiles25";
+import TagCarousel from "../../More components/TagCarousel";
 
 export function Cellective() {
     return (
@@ -48,6 +49,8 @@ export function Cellective() {
             <H2> Social Media </H2>
             <LinkedInCarousel urls={linkedinposts}/>
             <InstagramCarousel urls={instaurls}/>
+            <H2>Posts</H2>
+            <TagCarousel tag={"cellective"}/>
         </div>
     )
 }
