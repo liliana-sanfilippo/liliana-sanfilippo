@@ -5,7 +5,7 @@ export function LinkLine({url, text, href}: {url: string, text: string, href: st
            " rounded-full p-3" +
             " transition-grow cursor-pointer"}>
             <div className="flex items-center w-fit gap-2">
-                <img className={"linkimg"} src={url}/>
+                <img className={"linkimg"} src={url} style={{objectFit: "contain"}}/>
             </div>
             <div className="font-bold">{text}</div>
         </div>

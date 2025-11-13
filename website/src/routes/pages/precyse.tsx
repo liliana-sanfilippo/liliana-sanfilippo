@@ -11,6 +11,7 @@ import TabbedBox, {TabData} from "../../components/TabbedBox";
 import {precysePresse} from "../../data/precysePresse";
 import {instaurls, linkedinposts} from "../../data/precyseSocials";
 import TagCarousel from "../../More components/TagCarousel";
+import {LinkLine} from "../../More components/LinkLine";
 
 export function Precyse() {
 
@@ -65,7 +66,11 @@ export function Precyse() {
             <H2>
                 Press
             </H2>
-            <FurtherLinks flinks={precysePresse}/>
+            <div className={"row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2"}>
+                {precysePresse.map(link => (
+                    <LinkLine url={link.img ?? ""} text={link.linktitle ?? ""} href={link.url}/>
+                ))}
+            </div>
             <H2> Files </H2>
             <PosterCarousel posters={igemfiles24}/>
             <H2> Social Media </H2>

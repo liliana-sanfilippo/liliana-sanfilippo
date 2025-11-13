@@ -5,6 +5,7 @@ export interface FLink{
     linktitle?: string
     text: string,
     url: string
+    img?: string
 }
 
 

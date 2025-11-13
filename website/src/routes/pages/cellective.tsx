@@ -12,6 +12,8 @@ import {cellectivepresse} from "../../data/cellectivepresse";
 import PosterCarousel from "../../More components/PosterCarousel";
 import {igemfiles25} from "../../data/igemfiles25";
 import TagCarousel from "../../More components/TagCarousel";
+import {precysePresse} from "../../data/precysePresse";
+import {LinkLine} from "../../More components/LinkLine";
 
 export function Cellective() {
     return (
@@ -43,7 +45,11 @@ export function Cellective() {
             <H2>
                 Press
             </H2>
-            <FurtherLinks flinks={cellectivepresse}/>
+            <div className={"row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2"}>
+                {cellectivepresse.map(link => (
+                    <LinkLine url={link.img ?? ""} text={link.linktitle ?? ""} href={link.url}/>
+                ))}
+            </div>
             <H2> Files </H2>
             <PosterCarousel posters={igemfiles25}/>
             <H2> Social Media </H2>
