@@ -1,74 +1,19 @@
 import {FLink, FurtherLinks} from "../../More components/FurtherLinks";
 import React from "react";
 import {InstagramCarousel, LinkedInCarousel} from "../../More components/LinkedInCarousel";
-import {InstagramEmbed} from "react-social-media-embed";
-import {VideoBox, LargeGBox} from "../../More components/G_Box";
 
 import {igemfiles24} from "../../data/igemfiles24";
 import PosterCarousel from "../../More components/PosterCarousel";
 import {TBox} from "../../More components/T_Box";
 import {H2, H3} from "../../More components/H2";
-import {Video} from "../../More components/Video";
 import {Row, Col} from "react-bootstrap";
 import TabbedBox, {TabData} from "../../components/TabbedBox";
+import {precysePresse} from "../../data/precysePresse";
+import {instaurls, linkedinposts} from "../../data/precyseSocials";
 
 export function Precyse() {
 
-    const presse: FLink[] = [
-        {
-            text: "NW",
-            linktitle: "Bielefelder Wissenschaftler im Kampf gegen Mukoviszidose",
-            url: "https://www.nw.de/lokal/bielefeld/mitte/23937853_Bielefelder-Wissenschaftler-im-Kampf-gegen-Mukoviszidose.html"
-        },
-        {
-            text: "Hertz",
-            linktitle: "Forschungspreis für Bielefelder Studierendenteam",
-            url: "https://www.hertz879.de/nachrichten/forschungspreis-fuer-bielefelder-studierendenteam/"
-        },
-        {
-            text: "Westfahlen Blatt",
-            linktitle: "Therapieansatz für Mukoviszidose: Vier Preise gehen nach Bielefeld",
-            url: "https://www.westfalen-blatt.de/owl/bielefeld/therapieansatz-fuer-mukoviszidose-vier-preise-gehen-nach-bielefeld-3189405"
-        },
-        {
-            text: "Ostwestfahlen",
-            linktitle: "Mukoviszidose behandeln: Uni Bielefeld gewinnt vier Preise in Paris",
-            url: "https://www.linkedin.com/posts/ostwestfalen_studierende-forschen-an-gentherapie-für-mukoviszidose-activity-7259834308918407169-mwQ8/"
-        },
-        {
-            linktitle: "Bielefelder Studierende revolutionieren Gentherapie gegen Mukoviszidose!",
-            text: "Nachrichten Österreich",
-            url: "https://die-nachrichten.at/deutschland/nordrhein-westfalen/bielefeld/bielefelder-studierende-revolutionieren-gentherapie-gegen-mukoviszidose/"
-        },
-        {
-            linktitle: "Studierende forschen an Gentherapie für Mukoviszidose",
-            url: "https://blogs.uni-bielefeld.de/blog/pressemitteilungen/entry/studierende-forschen-an-gentherapie-f",
-            text: "BIS-Blog"
-        },
-        {
-            linktitle: "Vierfach Gold für Bielefelder iGEM-Team",
-            url: "https://blogs.uni-bielefeld.de/blog/pressemitteilungen/entry/vierfach-gold-f-uuml-r",
-            text: "BIS-Blog"
-        },
-        {
-            text: "Bio Spektrum",
-            linktitle: "iGEM-Teams aus Aachen, Wien, Münster, Heidelberg, Marburg und Bielefeld",
-            url: "https://www.biospektrum.de/magazinartikel/igem-teams-aus-aachen-wien-muenster-heidelberg-marburg-und-bielefeld"
-        }
-    ]
 
-    const linkedinposts: string[] = [
-        "https://www.linkedin.com/embed/feed/update/urn:li:share:7259238460971003904?collapsed=1",
-        "https://www.linkedin.com/embed/feed/update/urn:li:share:7252608529297981442?collapsed=1",
-        "https://www.linkedin.com/embed/feed/update/urn:li:share:7258151267380662274?collapsed=1",
-        "https://www.linkedin.com/embed/feed/update/urn:li:share:7259600599707537408?collapsed=1",
-        "https://www.linkedin.com/embed/feed/update/urn:li:share:7259834308335431680?collapsed=1"
-    ]
-
-    const instaurls: string[] = [
-        "https://www.instagram.com/p/DCBamUFMuyZ/?utm_source=ig_embed&amp;utm_campaign=loading",
-        "https://www.instagram.com/reel/DA-rJmEO4Uq/?utm_source=ig_embed&amp;utm_campaign=loading"
-    ]
 
     return (
         <div className={"flex flex-col gap-8 lg:gap-16"}>
@@ -110,13 +55,16 @@ export function Precyse() {
 
             {/**<p><img src="https://static.igem.wiki/teams/5247/photos/meetup/posters-and-stuff/bfh-poster-bielefeld-1.png"/></p>**/}
             <H2>
+                Wiki
+            </H2>
+            <H2>
                 Paper
             </H2>
             
             <H2>
                 Press
             </H2>
-            <FurtherLinks flinks={presse}/>
+            <FurtherLinks flinks={precysePresse}/>
             <H2> Files </H2>
             <PosterCarousel posters={igemfiles24}/>
             <H2> Social Media </H2>

@@ -8,6 +8,9 @@ import {H2, H3} from "../../More components/H2";
 import {Video} from "../../More components/Video";
 import {Row, Col} from "react-bootstrap";
 import TabbedBox, {TabData} from "../../components/TabbedBox";
+import {cellectivepresse} from "../../data/cellectivepresse";
+import PosterCarousel from "../../More components/PosterCarousel";
+import {igemfiles25} from "../../data/igemfiles25";
 
 export function Cellective() {
     return (
@@ -15,20 +18,33 @@ export function Cellective() {
             <h1>
                 Cellective
             </h1>
+            <TBox video={"https://video.igem.org/videos/embed/jqk8dmnmEmHsHrbErzhycd"}>
+                <p>
+                    We present Cellective: a riboswitch-based therapeutic platform that selectively targets cancer cells by detecting specific microRNAs and mRNAs, subsequently translating a cellular kill system.
+                </p>
+                <p> <a href="https://2025.igem.wiki/bielefeld-cebitec/">https://2025.igem.wiki/bielefeld-cebitec/</a></p>
+                {/**
+                 <iframe title="Programmable circRNA Switches for Cell‑Type‑Specific Gasdermin‑Based Cancer Therapy" width="560" height="315" src="https://video.igem.org/videos/embed/v49GcrdbQG6irwd19Q8545" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+                 **/}
+            </TBox>
             <H2>
                 Project
             </H2>
-            <TabbedBox tabs={projectTabs} defaultActiveKey="design"/>
+            <TabbedBox tabs={cellectiveProjectTabs} defaultActiveKey="design"/>
 
             <H2>
                 People
             </H2>
             <TabbedBox tabs={peopletabs} defaultActiveKey="design"/>
             <H2>
+                Wiki
+            </H2>
+            <H2>
                 Press
             </H2>
-            <FurtherLinks flinks={presse}/>
+            <FurtherLinks flinks={cellectivepresse}/>
             <H2> Files </H2>
+            <PosterCarousel posters={igemfiles25}/>
             <H2> Social Media </H2>
             <LinkedInCarousel urls={linkedinposts}/>
             <InstagramCarousel urls={instaurls}/>
@@ -36,47 +52,10 @@ export function Cellective() {
     )
 }
 
-const presse: FLink[] = [
-    {
-        text: "Die Glocke",
-        url: "https://www.die-glocke.de/regionales/artikel/uni-bielefeld-neuer-therapieansatz-gegen-brustkrebs-1761060854",
-        linktitle: "Uni Bielefeld: Neuer Therapieansatz gegen Brustkrebs"
-    },
-    {
-        url: "https://aktuell.uni-bielefeld.de/2025/10/16/studierende-forschen-mit-professoren-als-coaches-zu-krebs/",
-        linktitle: "Studierende forschen mit Professoren als Coaches zu Krebs",
-        text: "BIS Blog"
-    },
-    {
-        text: "BIS Blog",
-        linktitle: "Studierende entwickeln Therapieansatz gegen Brustkrebs",
-        url: "https://aktuell.uni-bielefeld.de/2025/10/20/studierende-entwickeln-therapieansatz-gegen-brustkrebs/"
-    },
-    {
-        text: "Tagesschau",
-        linktitle: "Bielefelder Studierende forschen an neuer Brustkrebs-Therapie",
-        url: "https://www.tagesschau.de/inland/regional/nordrheinwestfalen/wdr-bielefelder-studierende-forschen-an-neuer-brustkrebs-therapie-100.html"
-    },
-    {
-        linktitle: "Neue Therapie gegen aggressiven Brustkrebs aus Bielefeld",
-        text: "WDR",
-        url: "https://www1.wdr.de/lokalzeit/fernsehen/suedwestfalen/neue-therapie-gegen-aggressiven-brustkrebs-aus-bielefeld-100.html"
-    },
-    {
-        linktitle: "Bielefelder Studierende forschen an neuer Brustkrebs-Therapie",
-        text: "WDR",
-        url: "https://www1.wdr.de/nachrichten/westfalen-lippe/studierende-bielefeld-brustkrebs-forschung-100.html"
-    },
-    {
-        linktitle: "iGEM 2025: Meet some of the teams driving innovation",
-        text: "IDT",
-        url: "https://eu.idtdna.com/page/support-and-education/decoded-plus/igem-2025-meet-some-of-the-teams-driving-innovation/"
-    }
-]
 const linkedinposts: string[] = []
 const instaurls: string[] = []
 
-const projectTabs: TabData[] = [
+const cellectiveProjectTabs: TabData[] = [
     {
         eventKey: "design",
         title: "Background",
