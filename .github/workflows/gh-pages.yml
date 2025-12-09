@@ -1,0 +1,39 @@
+name: Deploy React App to GitHub Pages
+on:
+  push:
+    branches:
+      - master  
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        working-directory: ./website
+        run: npm install
+      
+      - name: Build the React app
+        working-directory: ./website
+        run: npm run build
+      
+      - name: Add _redirects file
+        run: echo '/* /index.html 200' > website/build/_redirects
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./website/build
