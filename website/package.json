@@ -12,7 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.126",
-    "@types/react": "^18.2.66",
+    "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.22",
     "blueimp-md5": "^2.19.0",
     "bootstrap": "^5.3.8",
@@ -24,6 +24,7 @@
     "react-bootstrap": "^2.10.2",
     "react-bootstrap-icons": "^1.11.6",
     "react-dom": "^18.2.0",
+    "react-icons": "4.10.1",
     "react-router-dom": "^6.26.0",
     "react-scripts": "5.0.1",
     "react-social-media-embed": "^2.5.18",
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.17.20",
+    "baseline-browser-mapping": "^2.9.4",
     "lodash": "^4.17.21"
   },
   "browserslist": {

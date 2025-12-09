@@ -4,7 +4,6 @@ import { MDXProvider } from '@mdx-js/react'
 import ArticleMeta from './ArticleMeta'
 import styles from './BlogPostLayout.module.css'
 import {Post} from "../routes/posts/post_interface";
-import Container from "react-bootstrap/Container";
 
 
 

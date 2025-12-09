@@ -57,7 +57,41 @@ a {
     color: var(--text-primary) !important;
 }
 
-
+.accordion {
+    .bi, svg, .icon {
+        width: min-content !important;
+    }
+    .bi-typescript, .bi-javascript, .icon-python, .icon-java{
+        fill: var(--lightpurple);
+        svg {
+            fill: var(--lightpurple);
+        }
+    }
+    .bi-css, .icon-html {
+        fill: var(--mediumpurple);
+        svg {
+            fill: var(--mediumpurple);
+        }
+    }
+    .bi-gitlab, .bi-github, .icon-vsc, .icon-intellij {
+        fill: var(--very-light-purple);
+        svg {
+            fill: var(--very-light-purple);
+            stroke: var(--very-light-purple);
+        }
+    }
+    .icon-react, .icon-angular, .bi-bootstrap-fill, .icon-tailwind {
+        svg {
+            fill: var(--text-primary);
+        }
+        fill: var(--text-primary);
+    }
+    .icon-counselling {
+        svg {
+            fill: var(--accen-secondary);
+        }
+    }
+}
 
 
 .uni-embed{

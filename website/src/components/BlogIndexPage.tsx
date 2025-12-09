@@ -1,7 +1,5 @@
 import React from 'react'
 import siteMetadata from '../siteMetadata'
-import Pagination from './Pagination'
-import styles from './BlogIndexPage.module.css'
 import { Link } from 'react-router-dom'
 import {Post} from "../routes/posts/post_interface";
 
@@ -19,7 +17,7 @@ function BlogIndexPage({
   return (
     <div>
       <header>
-        <h1 className={styles.title}>
+        <h1 className={"blogindex-title"}>
           <Link to={blogRoot}>{siteMetadata.title}</Link>
         </h1>
 

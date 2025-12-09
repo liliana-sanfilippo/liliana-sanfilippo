@@ -5,10 +5,6 @@ import {Post} from "../routes/posts/post_interface";
 import {Card} from "react-bootstrap";
 
 
-
-// &copy;
-
-
 function ArticleSummary({ blogRoot, post, noimg, spoiler}: {blogRoot: string, post: Post, noimg?: boolean, spoiler?: boolean}) {
     const image: string = post.image ? post.image : "https://static.igem.wiki/teams/5833/other/placeholder.svg";
   return (
