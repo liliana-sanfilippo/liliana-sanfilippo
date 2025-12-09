@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './document.module.css'
+import {ImageWrapper} from "../../More components/ImageWrapper";
 
 export const metamuensterMeetup2024 = {
     title: "MeetUp: Münster 2024",
@@ -25,6 +26,7 @@ export default function muensterMeetup2024() {
                     <img src="https://media.licdn.com/dms/image/v2/D4E22AQG-CunGJwyWRw/feedshare-shrink_800/feedshare-shrink_800/0/1724261410172?e=1761782400&v=beta&t=04ofbCb_9_aMNKiSpg5gO-dwWuWGZ0ph98hhqrP29Zo"/>
                 </div>
             </div>
+            <ImageWrapper src={"https://x.com/iGEM_Bielefeld/status/1826312465027682727/photo/1"}/>
         </div>
     )
 }

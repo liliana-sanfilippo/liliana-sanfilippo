@@ -5,8 +5,6 @@ import {InstagramEmbed} from "react-social-media-embed";
 import {VideoBox, LargeGBox} from "../../More components/G_Box";
 import {TBox} from "../../More components/T_Box";
 import {H2, H3} from "../../More components/H2";
-import {Video} from "../../More components/Video";
-import {Row, Col} from "react-bootstrap";
 import TabbedBox, {TabData} from "../../components/TabbedBox";
 import {cellectivepresse} from "../../data/cellectivepresse";
 import PosterCarousel from "../../More components/PosterCarousel";
@@ -62,7 +60,11 @@ export function Cellective() {
 }
 
 const linkedinposts: string[] = []
-const instaurls: string[] = []
+const instaurls: string[] = [
+    "https://www.instagram.com/systems.biology.master/p/DRPKt9tDWwK/",
+    "https://www.instagram.com/p/DQd9SDPiryR/",
+    "https://www.instagram.com/bielefelduniversity/reel/DQL4FA0k-wa/"
+]
 
 const cellectiveProjectTabs: TabData[] = [
     {

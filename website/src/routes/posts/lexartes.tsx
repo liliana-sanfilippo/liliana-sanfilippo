@@ -7,8 +7,8 @@ export const metaLexartes = {
     spoiler: "",
     slug: "",
     date: new Date("2025-10-06"),
-    image: "",
-    cc: ""
+    image: "https://live.staticflickr.com/65535/54974644173_06faed0b99_c.jpg",
+    cc: "Liliana Sanfilippo"
 }
 
 export default function Lexartes() {

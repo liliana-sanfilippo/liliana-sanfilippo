@@ -1,5 +1,5 @@
 import {FLink} from "../More components/FurtherLinks";
-import {blogImg, newspaperImg, tvImg, webImg} from "./imgLinks";
+import {blogImg, magazineImg, newspaperImg, tvImg, webImg} from "./imgLinks";
 
 export
 const cellectivepresse: FLink[] = [
@@ -44,5 +44,17 @@ const cellectivepresse: FLink[] = [
         text: "IDT",
         img: webImg,
         url: "https://eu.idtdna.com/page/support-and-education/decoded-plus/igem-2025-meet-some-of-the-teams-driving-innovation/"
+    },
+    {
+        url: "https://antenne.nrw/nrw/bielefelder-studierende-entwickeln-neue-brustkrebstherapie/",
+        linktitle: "Bielefelder Studierende entwickeln neue Brustkrebstherapie ",
+        img: newspaperImg,
+        text: "Antenne NRW"
+    },
+    {
+        url: "https://www.biospektrum.de/magazinartikel/igem-teams-aus-bielefeld-bochum-duesseldorf-heidelberg-mainz-marburg-muenster-und",
+        linktitle: "iGEM-Teams aus Bielefeld, Bochum, Düsseldorf, Heidelberg, Mainz, Marburg, Münster und Stuttgart",
+        text: "BioSpektrum",
+        img: magazineImg
     }
 ]

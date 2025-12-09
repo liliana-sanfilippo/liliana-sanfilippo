@@ -50,5 +50,14 @@ const precysePresse: FLink[] = [
         img: magazineImg,
         linktitle: "iGEM-Teams aus Aachen, Wien, Münster, Heidelberg, Marburg und Bielefeld",
         url: "https://www.biospektrum.de/magazinartikel/igem-teams-aus-aachen-wien-muenster-heidelberg-marburg-und-bielefeld"
+    },
+    {
+        text: "CeBiTec Quarterly",
+        url: "https://www.cebitec.uni-bielefeld.de/localmedia/downloads/quarterly/CeBiTec-Quarterly_2024-4.pdf",
+        linktitle: "Quadruple gold for the iGEM team from Bielefeld-CeBiTec",
+        img: magazineImg
     }
 ]
+
+// facebook:
+// https://www.facebook.com/BielefeldUniversity/posts/-ein-studentisches-interdisziplin%C3%A4res-forschungsteam-forscht-zu-einer-gentherapi/896435142494599/

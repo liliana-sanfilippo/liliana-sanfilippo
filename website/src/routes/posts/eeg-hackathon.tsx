@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './document.module.css'
+import {ImageWrapper} from "../../More components/ImageWrapper";
 
 export const metaEegHackathon = {
     title: "Hackathon “AI in Health Sciences”",
@@ -14,8 +15,12 @@ export const metaEegHackathon = {
 export default function EegHackathon() {
     return (
         <div className={styles.Welcome}>
-
-
+            <ImageWrapper
+                src={"https://live.staticflickr.com/65535/54974685714_3298c044b2_c.jpg"}
+            />
+            <ImageWrapper
+                src={"https://live.staticflickr.com/65535/54974685624_f476e023e8_c.jpg"}
+            />
         </div>
     )
 }

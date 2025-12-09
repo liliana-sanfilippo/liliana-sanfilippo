@@ -8,5 +8,6 @@ export    const linkedinposts: string[] = [
 
 export const instaurls: string[] = [
     "https://www.instagram.com/p/DCBamUFMuyZ/?utm_source=ig_embed&amp;utm_campaign=loading",
-    "https://www.instagram.com/reel/DA-rJmEO4Uq/?utm_source=ig_embed&amp;utm_campaign=loading"
+    "https://www.instagram.com/reel/DA-rJmEO4Uq/?utm_source=ig_embed&amp;utm_campaign=loading",
+    "https://www.instagram.com/p/DDWn1zVNLeB/"
 ]

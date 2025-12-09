@@ -125,6 +125,10 @@ export const posts: Post[] = [
     {
         ...metaIgemHomecoming25,
         MDXComponent: IgemHomecoming25
+    },
+    {
+        ...metawiardaBlogAidare,
+        MDXComponent: wiardaBlogAidare
     }
 
 ]

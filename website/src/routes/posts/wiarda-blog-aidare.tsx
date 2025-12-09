@@ -4,6 +4,7 @@ import ExternalMeta from "../../More components/getUniBlog";
 import UniBlog from "../../More components/getUniBlog";
 import ZifBlog from "../../More components/ZifBlog";
 import {LinkedInEmbed} from "react-social-media-embed";
+import {SourceBox} from "../../More components/SourceBox";
 
 export const  metawiardaBlogAidare = {
     title: "External Blog: Open Models statt OpenAI - Wiarda Blog",
@@ -11,8 +12,8 @@ export const  metawiardaBlogAidare = {
     spoiler: "",
     slug: "aidare-wiarda",
     date: new Date("2025-09-23"),
-    cc: "Amrei Bahr",
-    image: "https://media.licdn.com/dms/image/v2/D4E07AQF4jZJ-yofq9Q/group-logo_image-shrink_92x92/B4EZlRw4sxIMAc-/0/1758013394257?e=1759600800&v=beta&t=-e-BtyJX59RfBaD_AV6dsoo3CI8KFLvmvIMEgpH-lWw"
+    image: "",
+    cc: ""
 }
 
 export default function wiardaBlogAidare() {
@@ -20,8 +21,15 @@ export default function wiardaBlogAidare() {
 
     return (
         <div className="row align-items-center">
-            <iframe className="m-auto" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7376158271956750336" height="1253"
-                    width="504" frameBorder="0" allowFullScreen title="Embedded post"></iframe>
+            <SourceBox author={"Jan-Martin Wiarda"}
+                       url={"https://www.jmwiarda.de/blog/2025/09/23/open-models-statt-openai"}/>
+            <p>
+                {/* TODO zusammenfassung*/}
+            </p>
+           <div className={"col-7 mx-auto"}>
+               <iframe className="m-auto" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7376158271956750336" height="1253"
+                       width="504" frameBorder="0" allowFullScreen title="Embedded post"></iframe>
+           </div>
 
         </div>
     )
