@@ -18,6 +18,15 @@ import {bfhimages24} from "../../data/bfhimages24";
 import {bfhimages25} from "../../data/bfhimages25";
 import {LinkLine} from "../../More components/LinkLine";
 import TagCarousel from "../../More components/TagCarousel";
+import {InstagramCarousel, LinkedInCarousel} from "../../More components/LinkedInCarousel";
+import React from "react";
+import {instaurls25, linkedinposts25} from "../../data/bfh-socials-2025";
+import {Supporters} from "../../components/Supporters";
+import {bfhsupporter25} from "../../data/bfhsupporter25";
+import {bfhsupporter24} from "../../data/bfhsupporter24";
+import {linkedinposts24} from "../../data/bfh-socials-2024";
+
+
 
 const links24 = [
     {
@@ -36,6 +45,23 @@ const links24 = [
         img: "https://static.igem.wiki/teams/5077/libelle.png"
     }
 ]
+const links25 = [
+    {
+        href: "https://2025.igem.wiki/gu-frankfurt/bfh",
+        text: "Wiki of team Frankfurt",
+        img: "https://static.igem.wiki/teams/5628/images/logos/sprout-pink-white.webp"
+    },
+    {
+        href: "https://2025.igem.wiki/bielefeld-cebitec/home",
+        text: "Wiki of team Bielefeld",
+        img: "https://static.igem.wiki/teams/5833/teamlogos/cellective-slogan-erweitert-offblack.webp"
+    },
+    {
+        href: "https://2025.igem.wiki/hamburg/outreach#bfh-meet",
+        text: "Wiki of team Hamburg",
+        img: "https://static.igem.wiki/teams/5561/images/alpaka-navbar.webp"
+    }
+]
 
 const bfhtabs: TabData[] = [
     {
@@ -52,8 +78,7 @@ const bfhtabs: TabData[] = [
                     </GBox>
                     <GBox background={"https://static.igem.wiki/teams/5628/images/articleimages/groupbfh.webp"}>
                         <h3 className="my-auto">5 workshops</h3>
-                        <h3 className="my-auto">X talks</h3>
-                        <h3 className="my-auto">X talks</h3>
+                        <h3 className="my-auto">? talks</h3>
                     </GBox>
                     <Video url={"https://video.igem.org/videos/embed/4owykB8DWkx8Dwkc5YaMCM"}/>
                 </VideoBox>
@@ -70,11 +95,11 @@ const bfhtabs: TabData[] = [
                 <H3>
                     Workshops
                 </H3>
-                <TabbedBox id={"workshops25"} tabs={workshops25} defaultActiveKey="design"/>
+                <TabbedBox  tabs={workshops25} defaultActiveKey="design"/>
                 <H3>
                     Talks
                 </H3>
-                <TabbedBox tabs={talks25} defaultActiveKey="design"/>
+                <TabbedBox  tabs={talks25} defaultActiveKey="design"/>
                 <H3>
                     Prizes and Winners
                 </H3>
@@ -84,6 +109,7 @@ const bfhtabs: TabData[] = [
                 <H2>
                     Supporters
                 </H2>
+                    <Supporters supporters={bfhsupporter25} />
                 <H2>
                     Gallery
                 </H2>
@@ -91,13 +117,22 @@ const bfhtabs: TabData[] = [
                 <H2>
                     Social Media
                 </H2>
+                <LinkedInCarousel urls={linkedinposts25}/>
+                <InstagramCarousel urls={instaurls25}/>
                 <H2>
                     Files
                 </H2>
+                {/* TODO kaum files */}
                 <PosterCarousel posters={bfhfiles25}/>
                 <H2>
                     Links
                 </H2>
+                {/* TODO mehr links*/}
+                <div className={"row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2"}>
+                    {links25.map(link => (
+                        <LinkLine url={link.img} text={link.text} href={link.href}/>
+                    ))}
+                </div>
 
             </div>
         )
@@ -112,11 +147,10 @@ const bfhtabs: TabData[] = [
                     <GBox background={"https://static.igem.wiki/teams/5247/photos/meetup/badges.jpeg"}>
                         <h3 className="my-auto">150+ attendees</h3>
                         <h3 className="my-auto">13 teams</h3>
-                        <h3 className="my-auto">x countries</h3>
+                        <h3 className="my-auto">6 countries</h3>
                     </GBox>
                     <GBox background={"https://static.igem.wiki/teams/5247/photos/meetup/joern.jpeg"}>
                         <h3 className="my-auto">7 workshops</h3>
-                        <h3 className="my-auto">X talks</h3>
                         <h3 className="my-auto">8 talks</h3>
                     </GBox>
                     <Video url={"https://video.igem.org/videos/embed/2G8U94Ubp6bCK5abA8Gu89"}/>
@@ -149,6 +183,7 @@ const bfhtabs: TabData[] = [
                 <H2>
                     Supporters
                 </H2>
+                    <Supporters supporters={bfhsupporter24} />
                 <H2>
                     Gallery
                 </H2>
@@ -156,6 +191,7 @@ const bfhtabs: TabData[] = [
                 <H2>
                     Social Media
                 </H2>
+                    <LinkedInCarousel urls={linkedinposts24}/>
                 <H2>
                     Files
                 </H2>
@@ -177,7 +213,7 @@ const bfhtabs: TabData[] = [
 export function Bfh() {
 
     return (
-        <div className={"mx-5"}>
+        <div>
             <div className={"row my-5"}>
                 <img alt={"BFH European Meetup Logo"} className="mx-auto w-25 mt-5"
                      src="https://static.igem.wiki/teams/5247/logos-team/bfh-with-tagline-black.svg"/>

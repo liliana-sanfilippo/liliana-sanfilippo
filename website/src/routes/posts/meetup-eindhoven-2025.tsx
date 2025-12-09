@@ -7,8 +7,8 @@ export const metaMeetupEindhoven2025 = {
     spoiler: "",
     slug: "",
     date: new Date("2025-10-19"),
-    image: "",
-    cc: ""
+    image: "https://igemtueindhoven.nl/assets/images/events/mini-jamboree.webp",
+    cc: "iGEM Eindhoven"
 }
 
 export default function MeetupEindhoven2025() {

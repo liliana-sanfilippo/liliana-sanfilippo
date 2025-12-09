@@ -25,7 +25,7 @@ export const winners24: Winner[] = [
     {
         id: 4,
         team: "Aachen",
-        thumbnail: "https://static.igem.wiki/teams/5295/bfh/23-best-presentation-aachen.webp",
+        thumbnail: "https://static.igem.wiki/teams/5247/photos/meetup/aachen.jpeg",
         prize: "Best Presentation",
         placement: "Winner",
     },

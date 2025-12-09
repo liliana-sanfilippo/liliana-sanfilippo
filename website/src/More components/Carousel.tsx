@@ -34,11 +34,11 @@ export default function WinnerCarousel({ winners }: CarouselProps) {
                     const index = (currentIndex + slot + winners.length) % winners.length;
                     const team = winners[index];
 
-                    const isCenter = slot === 0;
-                    const xOffset = slot * horizontalSpacing;
-                    const scale = isCenter ? 1 : 0.85;
-                    const opacity = isCenter ? 1 : 0.6;
-                    const yOffset = isCenter ? 0 : 20; // ⬅ slight downward offset for non-center items
+                    const isCenter: boolean = slot === 0;
+                    const xOffset: number = slot * horizontalSpacing;
+                    const scale: 1 | 0.85 = isCenter ? 1 : 0.85;
+                    const opacity:  1 | 0.6 = isCenter ? 1 : 0.6;
+                    const yOffset: 0 | 20 = isCenter ? 0 : 20; // ⬅ slight downward offset for non-center items
 
                     return (
                         <div
@@ -50,7 +50,6 @@ export default function WinnerCarousel({ winners }: CarouselProps) {
                                 transition: "transform 0.5s ease, opacity 0.5s ease",
                                 zIndex: isCenter ? 5 : 1,
                                 display: "inline-flex",
-                                flexDirection: "column",
                                 alignItems: "center",
                             }}
                         >

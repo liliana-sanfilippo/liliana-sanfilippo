@@ -7,8 +7,8 @@ export const metaSailSpringSchool = {
     spoiler: "",
     slug: "sail-spring-school-2025",
     date: new Date("2025-03-30"),
-    image: "",
-    cc: ""
+    image: "https://www.sail.nrw/wp-content/uploads/2025/04/2025_SpringSchoolCollage-900x0-c-default.png",
+    cc: "Peter Kuchling (HSBI) & SAIL"
 }
 
 

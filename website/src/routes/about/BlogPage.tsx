@@ -6,7 +6,7 @@ import posts from "../posts";
 // TODO einstellen, dass auf jeder Projektseit die dazugehörige Posts angezeigt werden 
 export function BlogPage() {
     return(<div className={styles.Document}>
-        <div className="w-75 mx-auto">
+        <div>
             <>
                 <div className="h-100 m-5 p-5">
                     <div className="col-8 mx-auto" key={posts[0].slug}>

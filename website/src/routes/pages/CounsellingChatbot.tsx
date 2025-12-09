@@ -14,7 +14,7 @@ export function CounsellingChatbot() {
     const handlePosterClick = (poster: Poster) => setSelectedPoster(poster);
     const handleClose = () => setSelectedPoster(null);
     return (
-        <div className="w-75 mx-auto">
+        <div>
             Text
             <Row>
                 <iframe title="" aria-label="Line chart" id="datawrapper-chart-w365o"

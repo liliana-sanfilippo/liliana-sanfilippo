@@ -25,6 +25,8 @@ import WikiGuide1, {metaWikiGuide1} from "./wiki-guide-1";
 import SailSpringSchool, {metaSailSpringSchool} from "./sail-spring-school";
 import JamboreePrep2024, {metaJamboreePrep2024} from "./jamboree-prep-2024";
 import EegHackathon, {metaEegHackathon} from "./eeg-hackathon";
+import IgemHomecoming24, {metaIgemHomecoming24} from "./igem-homecoming-24";
+import IgemHomecoming25, {metaIgemHomecoming25} from "./igem-homecoming-25";
 
 export const posts: Post[] = [
     {
@@ -96,10 +98,10 @@ export const posts: Post[] = [
         ...metaBiteach2024,
         MDXComponent: Biteach2024
     },
-    {
+   /* {
         ...metaRoxenTraining,
         MDXComponent: RoxenTraining
-    },
+    },*/
     {
         ...metaWikiGuide1 ,
         MDXComponent: WikiGuide1
@@ -115,6 +117,14 @@ export const posts: Post[] = [
     {
         ...metaEegHackathon,
         MDXComponent: EegHackathon
+    },
+    {
+        ...metaIgemHomecoming24,
+        MDXComponent: IgemHomecoming24
+    },
+    {
+        ...metaIgemHomecoming25,
+        MDXComponent: IgemHomecoming25
     }
 
 ]

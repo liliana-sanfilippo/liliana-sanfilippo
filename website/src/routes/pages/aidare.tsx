@@ -7,7 +7,7 @@ import {aidareLinks} from "../../data/aidareLinks";
 export function Aidare() {
 
     return (
-        <div className="w-75 mx-auto">
+        <div>
             Text
             <div className="">
               <a href="https://aidare.org/">https://aidare.org/</a>

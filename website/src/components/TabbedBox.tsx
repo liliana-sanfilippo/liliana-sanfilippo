@@ -1,4 +1,4 @@
-import React, { useId } from "react";
+import React from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import "./TabbedBox.css";
@@ -22,13 +22,12 @@ const TabbedBox: React.FC<TabbedBoxProps> = ({
                                                  id,
                                              }) => {
     const autoId = id;
-
     return (
         <div className="tabbedBox dont-style">
             <Tabs
                 defaultActiveKey={defaultActiveKey}
                 id={id || `tabbed-box-${autoId}`}
-                className="navTabs dont-style"
+                className="navTabs dont-style nav-fill"
             >
                 {tabs.map((tab) => (
                     <Tab

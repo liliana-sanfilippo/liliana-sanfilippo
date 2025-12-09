@@ -3,6 +3,7 @@ import styles from './document.module.css'
 import {LinkedInCarousel} from "../../More components/LinkedInCarousel";
 import {Card} from "react-bootstrap";
 import {FLink, FurtherLinks} from "../../More components/FurtherLinks";
+import {linkedinposts24} from "../../data/bfh-socials-2024";
 
 export const metabfh2024 = {
     title: "BFH European MeetUp 2024",
@@ -15,10 +16,7 @@ export const metabfh2024 = {
     image: "https://static.igem.wiki/teams/5247/photos/meetup/badges.jpeg"
 }
 
-const linkedinposts: string[] = [
-"https://www.linkedin.com/embed/feed/update/urn:li:share:7188957114109673472?collapsed=1",
-"https://www.linkedin.com/embed/feed/update/urn:li:share:7199356996272226304?collapsed=1"
-]
+
 
 // https://web.archive.org/web/20240523205340/https://bfheuropeanmeetup.mobirisesite.com/home.html
 const furtherlinks: FLink[] = [
@@ -213,7 +211,7 @@ export default function bfh2024() {
             </section>
            <section>
                <h2>See also:</h2>
-               <LinkedInCarousel urls={linkedinposts}/>
+               <LinkedInCarousel urls={linkedinposts24}/>
                <FurtherLinks flinks={furtherlinks}/>
            </section>
         </div>

@@ -7,10 +7,9 @@ export const metaJamboreePrep2024 = {
     spoiler: "",
     slug: "jamboree-preparations-2024",
     date: new Date("2024-10-15"),
-    image: "https://media.licdn.com/dms/image/v2/D4E2DAQHvvjs4hYYtdg/profile-treasury-image-shrink_160_160/B4EZmRNunJKgAk-/0/1759077948685?e=1759683600&v=beta&t=IHSdIKxlRastnAiEJm2mkNKGy0TxJnLboyGfC3ckDOY",
+    image: "https://live.staticflickr.com/65535/54139153111_cd2e54f07d_b.jpg",
     cc: "iGEM Foundation"
 }
-
 
 export default function JamboreePrep2024() {
     return (

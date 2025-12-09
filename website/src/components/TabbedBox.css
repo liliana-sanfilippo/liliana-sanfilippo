@@ -35,11 +35,10 @@
 /* Auch die aktive Tab-Unterstreichung entfernen */
 .navTabs .nav-link {
     border: none !important;
-    font-size: clamp(0.1rem, 768px, 1.1rem);
-    min-width: clamp(100px, 991px, 200px) !important;
     text-align: center;
     white-space: nowrap; /* keep on one line */
 }
+
 /* DESIGN */
 .design-tab {
     background-color: var(--accent-gradient-one-of-three)  !important; /* Grundfarbe */
@@ -101,37 +100,37 @@
 
 /* Secret 5th tab */
 .secret-tab {
-    background-color: var(--accent-gradient-five-of-three) !important;
+    background-color: var(--accent-gradient-three-of-three) !important;
     color: #fff !important;
 }
 .nav-link.active.secret-tab {
-    background-color: var(--accent-gradient-five-of-three) !important;
+    background-color: var(--accent-gradient-three-of-three) !important;
 }
 .secret-wrapper {
-    border: 2px solid var(--accent-gradient-five-of-three);
+    border: 2px solid var(--accent-gradient-three-of-three);
 }
 
 /* Secret 6th tab */
 .secretA-tab {
-    background-color: var(--accent-gradient-five-of-three) !important;
+    background-color: var(--accent-gradient-two-of-three) !important;
     color: #fff !important;
 }
 .nav-link.active.secretA-tab {
-    background-color: var(--accent-gradient-five-of-three) !important;
+    background-color: var(--accent-gradient-two-of-three) !important;
 }
 .secretA-wrapper {
-    border: 2px solid var(--accent-gradient-five-of-three);
+    border: 2px solid var(--accent-gradient-two-of-three);
 }
 /* Secret 7th tab */
 .secretB-tab {
-    background-color: var(--accent-gradient-five-of-three) !important;
+    background-color: var(--accent-gradient-one-of-three) !important;
     color: #fff !important;
 }
 .nav-link.active.secretB-tab {
-    background-color: var(--accent-gradient-five-of-three) !important;
+    background-color: var(--accent-gradient-one-of-three) !important;
 }
 .secretB-wrapper {
-    border: 2px solid var(--accent-gradient-five-of-three);
+    border: 2px solid var(--accent-gradient-one-of-three);
 }
 
 
@@ -179,9 +178,4 @@
         min-width: 200px; /* Mindestbreite */
         text-align: center;
     }
-}
-
-
-#workshops24 .nav-item button{
-min-width: clamp(100px, 991px, 160px) !important;
 }
