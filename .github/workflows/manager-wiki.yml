@@ -23,6 +23,12 @@ jobs:
           repository: liliana-sanfilippo/react-bibtex-reference-manager.wiki
           path: wiki-temp
 
+      - name: Checkout Main Repo (für README)
+        uses: actions/checkout@v4
+        with:
+            repository: liliana-sanfilippo/react-bibtex-reference-manager
+            path: repo-temp
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -37,6 +43,9 @@ jobs:
           
           # Kopiere auch Bilder falls vorhanden
           cp wiki-temp/*.png wiki-temp/*.jpg wiki-temp/*.gif website/public/wiki/ 2>/dev/null || true
+          
+          # Kopiere README vom Main-Repo
+          cp repo-temp/README.md website/public/wiki/README.md || true
 
       - name: Commit Changes
         working-directory: website
