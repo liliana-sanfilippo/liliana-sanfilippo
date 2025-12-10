@@ -29,11 +29,11 @@ jobs:
         run: npm run build
       
       - name: Add _redirects file
-        run: echo '/* /index.html 200' > website/build/_redirects
+        run: echo '/* /index.html 200' > website/dist/_redirects
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./website/build
+          publish_dir: ./website/dist
