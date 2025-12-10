@@ -11,6 +11,7 @@ import TagIndexPageWrapper from "./TagIndexWrapper";
 import postsWithNav from "./posts";
 import TagPageWrapper from "./tags";
 import {getPathMapping} from "../utils/getPathMapping";
+import {WikiPage} from "../components/wiki/WikiPage";
 
 
 function BlogPostWrapper({blogRoot}: { blogRoot: string }) {
@@ -59,9 +60,9 @@ function AppRouter() {
                     {/* <Route path="/tags" element={<TagsPage />} />*/}
                     <Route path="/home" element={<AboutPage/>}/>
 
-
                     {Object.entries(pathMapping).map(([path, {component: Component}]) => (
                         <Route path={path} element={Component}/>))}
+                    <Route path="/react-reference-manager/:pageName" element={<WikiPage />} />
 
                     {/* Tag Index Page */}
                     <Route path="/tags" element={<TagIndexPageWrapper/>}/>
