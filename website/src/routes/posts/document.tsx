@@ -10,18 +10,16 @@ export const meta = {
 }
 
 export default function DocumentPost() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
-            <h2>How to...</h2>
+        <h2>How to...</h2>
 
-            <p>
-                <strong>To update this post,</strong> edit <code>document.mdx</code> and save to reload.
-            </p>
+        <p>
+            <strong>To update this post,</strong> edit <code>document.mdx</code> and save to reload.
+        </p>
 
-            <p>
-                <strong>To update the site's title,</strong> edit <code>siteMetadata.ts</code>.
-            </p>
-        </div>
-    )
+        <p>
+            <strong>To update the site's title,</strong> edit <code>siteMetadata.ts</code>.
+        </p>
+    </div>)
 }

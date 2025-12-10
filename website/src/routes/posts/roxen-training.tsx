@@ -13,10 +13,8 @@ export const metaRoxenTraining = {
 
 
 export default function RoxenTraining() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
 
-        </div>
-    )
+    </div>)
 }

@@ -12,10 +12,10 @@ export const metajamboree2025 = {
 }
 
 export default function Jamboree2025() {
-    return (
-        <div className={styles.Welcome}>
-            <iframe title="BFH European Meetup: How to Host a Successful Meetup" width="560" height="315" src="https://video.igem.org/videos/embed/e36UnJvud2WWrv8a1pxPwL" style={{border: "0px"}} allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+    return (<div className={styles.Welcome}>
+        <iframe title="BFH European Meetup: How to Host a Successful Meetup" width="560" height="315"
+                src="https://video.igem.org/videos/embed/e36UnJvud2WWrv8a1pxPwL" style={{border: "0px"}}
+                allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
 
-        </div>
-    )
+    </div>)
 }

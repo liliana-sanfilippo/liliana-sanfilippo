@@ -1,6 +1,6 @@
 import {Image, Modal, Row} from "react-bootstrap";
 import {useState} from "react";
-import {Poster} from "../../More components/PosterCarousel";
+import {Poster} from "../../components/Carousels/PosterCarousel";
 
 const poster = {
     id: 1,
@@ -13,48 +13,42 @@ export function CounsellingChatbot() {
     const [selectedPoster, setSelectedPoster] = useState<Poster | null>(null);
     const handlePosterClick = (poster: Poster) => setSelectedPoster(poster);
     const handleClose = () => setSelectedPoster(null);
-    return (
-        <div>
-            Text
-            <Row>
-                <iframe title="" aria-label="Line chart" id="datawrapper-chart-w365o"
-                        src="https://datawrapper.dwcdn.net/w365o/1/" scrolling="no" frameBorder="0"
-                        style={{border: "none"}} width="600" height="362" data-external="1"></iframe>
-            </Row>
-            <section className={"flex flex-col gap-8 lg:gap-16"}>
-                <div
-                    className={`center w-min mx-auto`}
-                    style={{
-                        zIndex:  5 ,
-                        flexDirection: "column",
-                        alignItems: "center",
-                    }}
-                >
-                    <div className="poster-title">{poster.title}</div>
-                    <Image
-                        src={poster.thumbnail}
-                        alt={poster.title}
-                        fluid
-                        onClick={() =>  handlePosterClick(poster)}
-                        style={{ cursor: "pointer" }}
-                    />
-                </div>
-                <Modal show={!!selectedPoster} onHide={handleClose} centered size="xl">
-                    <Modal.Header closeButton></Modal.Header>
-                    <Modal.Body style={{ padding: 0 }}>
-                        {selectedPoster && (
-                            <iframe
-                                src={selectedPoster.pdf}
-                                title={selectedPoster.title}
-                                style={{ width: "100%", height: "80vh", border: "none" }}
-                            />
-                        )}
-                    </Modal.Body>
-                </Modal>
-            </section>
+    return (<div>
+        Text
+        <Row>
+            <iframe title="" aria-label="Line chart" id="datawrapper-chart-w365o"
+                    src="https://datawrapper.dwcdn.net/w365o/1/" scrolling="no" frameBorder="0"
+                    style={{border: "none"}} width="600" height="362" data-external="1"></iframe>
+        </Row>
+        <section className={"flex flex-col gap-8 lg:gap-16"}>
+            <div
+                className={`center w-min mx-auto`}
+                style={{
+                    zIndex: 5, flexDirection: "column", alignItems: "center",
+                }}
+            >
+                <div className="poster-title">{poster.title}</div>
+                <Image
+                    src={poster.thumbnail}
+                    alt={poster.title}
+                    fluid
+                    onClick={() => handlePosterClick(poster)}
+                    style={{cursor: "pointer"}}
+                />
+            </div>
+            <Modal show={!!selectedPoster} onHide={handleClose} centered size="xl">
+                <Modal.Header closeButton></Modal.Header>
+                <Modal.Body style={{padding: 0}}>
+                    {selectedPoster && (<iframe
+                        src={selectedPoster.pdf}
+                        title={selectedPoster.title}
+                        style={{width: "100%", height: "80vh", border: "none"}}
+                    />)}
+                </Modal.Body>
+            </Modal>
+        </section>
 
-        </div>
-    )
+    </div>)
 }
 
 //

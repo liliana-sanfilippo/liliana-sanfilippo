@@ -1,8 +1,7 @@
 import React from 'react'
 import styles from './document.module.css'
-import Carousel from "react-bootstrap/Carousel";
-import {LinkedInCarousel} from "../../More components/LinkedInCarousel";
-import {linkedinposts25} from "../../data/bfh-socials-2025";
+import {LinkedInCarousel} from "../../components/Carousels/LinkedInCarousel";
+import {linkedinposts25} from "../../data/bfh/bfh-socials-2025";
 
 export const metabfh2025 = {
     title: "BFH European MeetUp 2025",
@@ -15,14 +14,11 @@ export const metabfh2025 = {
 }
 
 
-
 export default function bfh2025() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
-            <LinkedInCarousel urls={linkedinposts25}/>
+        <LinkedInCarousel urls={linkedinposts25}/>
 
 
-        </div>
-    )
+    </div>)
 }

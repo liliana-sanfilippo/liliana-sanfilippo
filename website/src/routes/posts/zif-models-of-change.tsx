@@ -1,14 +1,9 @@
-import React, {useEffect, useState} from 'react'
-import styles from './document.module.css'
-import ExternalMeta from "../../More components/getUniBlog";
-import UniBlog from "../../More components/getUniBlog";
-import ZifBlog from "../../More components/ZifBlog";
-import {LinkedInEmbed} from "react-social-media-embed";
-import {FurtherLinks} from "../../More components/FurtherLinks";
+import React from 'react'
+import {FurtherLinks} from "../../components/FurtherLinks";
 
-export const  metazifModelsOfChange = {
+export const metazifModelsOfChange = {
     title: "Conference: Building Models of Change", //: Bridging Sciences and Humanities
-    tags: ["conference","zif"],
+    tags: ["conference", "zif"],
     spoiler: "",
     slug: "models-of-change",
     date: new Date("2025-05-16"),
@@ -17,34 +12,26 @@ export const  metazifModelsOfChange = {
 }
 
 
-
-const flinks = [
-    {
-        text: "University page of the conference",
-        url: "https://www.uni-bielefeld.de/themen/conference-march-2025/"
-    },
-    {
-        text: "Recap",
-        url: "https://www.uni-bielefeld.de/themen/conference-march-2025/recap/"
-    }
-]
+const flinks = [{
+    text: "University page of the conference", url: "https://www.uni-bielefeld.de/themen/conference-march-2025/"
+}, {
+    text: "Recap", url: "https://www.uni-bielefeld.de/themen/conference-march-2025/recap/"
+}]
 
 export default function zifModelsOfChange() {
 
-    return (
+    return (<div className="row align-items-center">
+
         <div className="row align-items-center">
-
-            <div className="row align-items-center">
-                <iframe
-                    className="col-6 m-auto"
-                    src="https://www.linkedin.com/embed/feed/update/urn:li:share:7308846426644463616"
-                    height="670"
-                    width="50%"
-                    frameBorder="0"
-                />
-            </div>
-
-            <FurtherLinks flinks={flinks}/>
+            <iframe
+                className="col-6 m-auto"
+                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7308846426644463616"
+                height="670"
+                width="50%"
+                frameBorder="0"
+            />
         </div>
-    )
+
+        <FurtherLinks flinks={flinks}/>
+    </div>)
 }

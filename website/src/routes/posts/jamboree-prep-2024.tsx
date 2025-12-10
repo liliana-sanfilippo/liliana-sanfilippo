@@ -12,10 +12,8 @@ export const metaJamboreePrep2024 = {
 }
 
 export default function JamboreePrep2024() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
 
-        </div>
-    )
+    </div>)
 }

@@ -1,5 +1,5 @@
-import {NavigationBar} from "../More components/navigationBar";
-import {Page} from "../More components/Pages";
+import {NavigationBar} from "../components/navComponents/navigationBar";
+import {Page} from "../components/Pages";
 
 
 export const getPathMapping = () => {

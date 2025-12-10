@@ -13,10 +13,8 @@ export const metaWikiGuide1 = {
 
 
 export default function WikiGuide1() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
 
-        </div>
-    )
+    </div>)
 }

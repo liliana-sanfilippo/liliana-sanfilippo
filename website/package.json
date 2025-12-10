@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@liliana-sanfilippo/react-bibtex-reference-generator": "^0.1.7",
     "@liliana-sanfilippo/react-link": "^0.0.2",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",

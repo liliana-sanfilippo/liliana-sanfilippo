@@ -12,10 +12,8 @@ export const metaCellective = {
 }
 
 export default function Cellective() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
 
-        </div>
-    )
+    </div>)
 }

@@ -60,6 +60,9 @@ a {
 }
 
 .accordion {
+    .show {
+        visibility: visible !important;
+    }
     .bi, svg, .icon {
         width: min-content !important;
     }

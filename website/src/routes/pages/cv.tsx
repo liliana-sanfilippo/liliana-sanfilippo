@@ -1,15 +1,20 @@
 import {Accordion, Row} from "react-bootstrap";
 import {BootstrapFill, Css, Github, Gitlab, Javascript, Typescript, Ubuntu} from 'react-bootstrap-icons';
 import {
-    AngularIcon, CounsellingIcon,
+    AngularIcon,
+    CounsellingIcon,
     HtmlIcon,
     IntellijIcon,
     JavaIcon,
     PythonIcon,
-    ReactIcon, SpringbootIcon, TailwindIcon,
-    VscIcon, VueIcon
-} from "../../More components/Icons";
-import {GrStakeholder} from "react-icons/gr";
+    ReactIcon,
+    SpringbootIcon,
+    TailwindIcon,
+    VscIcon,
+    VueIcon
+} from "../../components/media/Icons";
+import {PublicationInfo} from "../../components/PublicationInfo";
+import {cfpaper} from "../../data/publications";
 
 export function Cv() {
 
@@ -66,12 +71,12 @@ export function Cv() {
                     <span className="cv-inst">iGEM Foundation</span>
                 </Accordion.Header>
                 <Accordion.Body>
-                   <Row>
-                       <Typescript/> <Javascript/>
-                       <Css/> <HtmlIcon/>
-                       <BootstrapFill/> <ReactIcon/>
-                       <Gitlab/> <IntellijIcon/>
-                   </Row>
+                    <Row>
+                        <Typescript/> <Javascript/>
+                        <Css/> <HtmlIcon/>
+                        <BootstrapFill/> <ReactIcon/>
+                        <Gitlab/> <IntellijIcon/>
+                    </Row>
                 </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="2">
@@ -186,6 +191,23 @@ export function Cv() {
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
+        <h2>Publications</h2>
+        <Accordion>
+            <Accordion.Item eventKey="0">
+                <Accordion.Header>
+                    <span className="cv-year">Dec. 2025</span>
+                    <span className="cv-stelle">Towards effective cystic fibrosis gene therapy by optimizing prime editing and pulmonary-targeted LNPs</span>
+                </Accordion.Header>
+                <Accordion.Body>
+                    <PublicationInfo
+                        bibtex={cfpaper}
+                        link={"https://doi.org/10.3389/fsysb.2025.1603749"}
+                        abstract={"Cystic fibrosis (CF) is the most prevalent inherited disease. Inactivating mutations in the Cystic Fibrosis Transmembrane Conductance Regulator (CFTR) gene lead to the accumulation of viscous mucus and subsequent respiratory complications. This study optimized a prime editing (PE) approach to correct CFTR mutations focusing on the F508del mutation. Prime editing allowed to introduce missing bases without double-strand breaks using a Cas9-nickase fused with a reverse transcriptase in combination with a prime editing guide RNA (pegRNA). Various self-designed pegRNAs were compared. For delivery, various lipid nanoparticles (LNP) were tested, which were optimized for stability and lung cells targeting based on lipid selection or chitosan complexion. A fluorescence reporter system, pPEAR_CFTR, was developed mimicking F508del for validation. The five pegRNAs yielding the highest efficiency were used for genomic CFTR correction in a CF bronchial cell line. Nanopore sequencing of genomic DNA revealed approximate 5% edited reads. These results highlight the promise of prime editing-LNP systems for precise and lung-specific gene correction, paving the way for novel therapies in cystic fibrosis and other pulmonary genetic disorders."}
+                    />
+                </Accordion.Body>
+            </Accordion.Item>
+        </Accordion>
+
         <h2>Software</h2>
 
         <h2>Outreach & Press</h2>

@@ -12,15 +12,13 @@ export const metaAidareWebsiteLaunch = {
 }
 
 export default function AidareWebsiteLaunch() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
-            <div className="row align-items-center">
-                <iframe className="m-auto"
-                        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7376158271956750336" height="1253"
-                        width="504" frameBorder="0" allowFullScreen title="Embedded post"></iframe>
+        <div className="row align-items-center">
+            <iframe className="m-auto"
+                    src="https://www.linkedin.com/embed/feed/update/urn:li:share:7376158271956750336" height="1253"
+                    width="504" frameBorder="0" allowFullScreen title="Embedded post"></iframe>
 
-            </div>
         </div>
-    )
+    </div>)
 }

@@ -13,10 +13,8 @@ export const metaIgemHomecoming24 = {
 // https://static.igem.wiki/teams/5247/photos/hp/homecoming.webp
 
 export default function IgemHomecoming24() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
 
-        </div>
-    )
+    </div>)
 }

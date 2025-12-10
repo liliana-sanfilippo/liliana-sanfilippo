@@ -11,10 +11,8 @@ export const metaCitationManagerFirstsTests = {
 }
 
 export default function CitationManagerFirstsTests() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
 
-        </div>
-    )
+    </div>)
 }

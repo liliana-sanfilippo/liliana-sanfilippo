@@ -1,4 +1,4 @@
-import {FLink} from "../More components/FurtherLinks";
+import {FLink} from "../components/FurtherLinks";
 
 export const aidareLinks: FLink[] = [
     {

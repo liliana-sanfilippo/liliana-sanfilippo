@@ -1,31 +1,30 @@
-import {Video} from "../../More components/Video";
-import {GBox, VideoBox} from "../../More components/G_Box";
-import PosterCarousel from "../../More components/PosterCarousel";
-import {posters25} from "../../data/poster2025";
-import {H2, H3} from "../../More components/H2";
-import {posters24} from "../../data/poster24";
-import {bfhfiles24} from "../../data/bfhfiles24";
-import {bfhfiles25} from "../../data/bfhfiles25";
-import TabbedBox, {TabData} from "../../components/TabbedBox";
-import {othertalks24, talks24, workshops24} from "../../data/talks24";
-import {talks25, workshops25} from "../../data/talks25";
+import {Video} from "../../components/media/Video";
+import {GBox, VideoBox} from "../../components/boxes/G_Box";
+import PosterCarousel from "../../components/Carousels/PosterCarousel";
+import {posters25} from "../../data/bfh/poster2025";
+import {H2, H3} from "../../components/H2";
+import {posters24} from "../../data/bfh/poster24";
+import {bfhfiles24} from "../../data/bfh/bfhfiles24";
+import {bfhfiles25} from "../../data/bfh/bfhfiles25";
+import TabbedBox, {TabData} from "../../components/boxes/TabbedBox";
+import {othertalks24, talks24, workshops24} from "../../data/bfh/talks24";
+import {talks25, workshops25} from "../../data/bfh/talks25";
 import {Row} from "react-bootstrap";
-import WinnerCarousel from "../../More components/Carousel";
-import {winners24} from "../../data/winners24";
-import {winners25} from "../../data/winners25";
-import PictureRotation from "../../More components/PictureRotation";
-import {bfhimages24} from "../../data/bfhimages24";
-import {bfhimages25} from "../../data/bfhimages25";
-import {LinkLine} from "../../More components/LinkLine";
-import TagCarousel from "../../More components/TagCarousel";
-import {InstagramCarousel, LinkedInCarousel} from "../../More components/LinkedInCarousel";
+import WinnerCarousel from "../../components/Carousels/Carousel";
+import {winners24} from "../../data/bfh/winners24";
+import {winners25} from "../../data/bfh/winners25";
+import PictureRotation from "../../components/Carousels/PictureRotation";
+import {bfhimages24} from "../../data/bfh/bfhimages24";
+import {bfhimages25} from "../../data/bfh/bfhimages25";
+import {LinkLine} from "../../components/LinkLine";
+import TagCarousel from "../../components/Carousels/TagCarousel";
+import {InstagramCarousel, LinkedInCarousel} from "../../components/Carousels/LinkedInCarousel";
 import React from "react";
-import {instaurls25, linkedinposts25} from "../../data/bfh-socials-2025";
+import {instaurls25, linkedinposts25} from "../../data/bfh/bfh-socials-2025";
 import {Supporters} from "../../components/Supporters";
-import {bfhsupporter25} from "../../data/bfhsupporter25";
-import {bfhsupporter24} from "../../data/bfhsupporter24";
-import {linkedinposts24} from "../../data/bfh-socials-2024";
-
+import {bfhsupporter25} from "../../data/bfh/bfhsupporter25";
+import {bfhsupporter24} from "../../data/bfh/bfhsupporter24";
+import {linkedinposts24} from "../../data/bfh/bfh-socials-2024";
 
 
 const links24 = [
@@ -95,11 +94,11 @@ const bfhtabs: TabData[] = [
                 <H3>
                     Workshops
                 </H3>
-                <TabbedBox  tabs={workshops25} defaultActiveKey="design"/>
+                <TabbedBox tabs={workshops25} defaultActiveKey="design"/>
                 <H3>
                     Talks
                 </H3>
-                <TabbedBox  tabs={talks25} defaultActiveKey="design"/>
+                <TabbedBox tabs={talks25} defaultActiveKey="design"/>
                 <H3>
                     Prizes and Winners
                 </H3>
@@ -109,7 +108,7 @@ const bfhtabs: TabData[] = [
                 <H2>
                     Supporters
                 </H2>
-                    <Supporters supporters={bfhsupporter25} />
+                <Supporters supporters={bfhsupporter25}/>
                 <H2>
                     Gallery
                 </H2>
@@ -183,7 +182,7 @@ const bfhtabs: TabData[] = [
                 <H2>
                     Supporters
                 </H2>
-                    <Supporters supporters={bfhsupporter24} />
+                <Supporters supporters={bfhsupporter24}/>
                 <H2>
                     Gallery
                 </H2>
@@ -191,7 +190,7 @@ const bfhtabs: TabData[] = [
                 <H2>
                     Social Media
                 </H2>
-                    <LinkedInCarousel urls={linkedinposts24}/>
+                <LinkedInCarousel urls={linkedinposts24}/>
                 <H2>
                     Files
                 </H2>

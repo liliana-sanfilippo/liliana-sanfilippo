@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './document.module.css'
-import {ImageWrapper} from "../../More components/ImageWrapper";
+import {ImageWrapper} from "../../components/media/ImageWrapper";
 
 export const metaIgemHomecoming25 = {
     title: "Homecoming 2025",
@@ -14,14 +14,12 @@ export const metaIgemHomecoming25 = {
 
 
 export default function IgemHomecoming25() {
-    return (
-        <div className={styles.Welcome}>
-            <ImageWrapper
-                src={"https://live.staticflickr.com/65535/54974595808_268778b85b_c.jpg"}
-            />
-            <ImageWrapper
-                src={"https://live.staticflickr.com/65535/54973525712_b60a71124f_c.jpg"}
-            />
-        </div>
-    )
+    return (<div className={styles.Welcome}>
+        <ImageWrapper
+            src={"https://live.staticflickr.com/65535/54974595808_268778b85b_c.jpg"}
+        />
+        <ImageWrapper
+            src={"https://live.staticflickr.com/65535/54973525712_b60a71124f_c.jpg"}
+        />
+    </div>)
 }

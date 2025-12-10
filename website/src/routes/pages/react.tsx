@@ -1,10 +1,7 @@
-
 export function React() {
 
-    return (
-        <div>
-            Text
+    return (<div>
+        Text
 
-        </div>
-    )
+    </div>)
 }

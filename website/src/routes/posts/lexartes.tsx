@@ -12,10 +12,8 @@ export const metaLexartes = {
 }
 
 export default function Lexartes() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
 
-        </div>
-    )
+    </div>)
 }

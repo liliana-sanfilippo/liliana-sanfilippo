@@ -13,10 +13,8 @@ export const metaSailSpringSchool = {
 
 
 export default function SailSpringSchool() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
 
-        </div>
-    )
+    </div>)
 }

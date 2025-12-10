@@ -12,10 +12,8 @@ export const metaPrecysePaper = {
 }
 
 export default function PrecysePaper() {
-    return (
-        <div className={styles.Welcome}>
+    return (<div className={styles.Welcome}>
 
 
-        </div>
-    )
+    </div>)
 }
