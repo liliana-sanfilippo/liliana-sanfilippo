@@ -50,6 +50,16 @@ code {
 
 }
 
+.btn-outline-primary, .btn:active, .btn:hover {
+    --bs-btn-active-bg: var(--offblack) !important;
+    --bs-btn-hover-bg: var(--offblack) !important;
+    --bs-btn-color: var(--offblack) !important;
+    --bs-btn-border-color: var(--offblack) !important;
+    --bs-btn-active-border-color: var(--offblack) !important;
+    --bs-btn-active-hover-color: var(--offblack) !important;
+    --bs-btn-hover-border-color: var(--offblack) !important;
+}
+
 hr {
     opacity: 0.5;
 }
@@ -264,3 +274,4 @@ img {
     color: #0f0f0f !important;
     background-color: var(--darkerbeige);
 }
+

@@ -46,8 +46,9 @@
 
 #main-wrapper{
     max-width: 85%;
-    margin: auto;
+    margin: 100px auto;
 }
+
 
 .carousel-item ul {
     padding: 0;
@@ -70,3 +71,15 @@
 code {
     color: var(--text-primary);
 }
+
+.linkcard {
+    padding-left: 0;
+    padding-right: 0;
+    .card-header, .card-footer {
+        background-color: var(--lightblue);
+        border-radius: 0;
+    }
+}
+
+
+
