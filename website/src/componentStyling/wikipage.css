@@ -1,0 +1,32 @@
+.prose {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    table {
+        border: var(--offblack) solid ;
+        margin: 1.5rem auto;
+       tbody {
+           display: block;
+           max-height: 300px;
+           overflow-y: auto;
+       }
+        thead {
+            border: var(--offblack) solid ;
+            background-color: var(--darkerbeige);
+        }
+        th, td {
+            padding: .5rem;
+        }
+
+    }
+    pre {
+        margin: auto;
+        padding: 1.5rem;
+        background-color: var(--darkerbeige);
+        width: fit-content;
+        border: var(--offblack) solid ;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
+}

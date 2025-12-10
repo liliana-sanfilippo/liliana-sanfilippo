@@ -67,3 +67,6 @@
     margin-left: 0.5rem;
 }
 
+code {
+    color: var(--text-primary);
+}
