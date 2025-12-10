@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
     plugins: [react(), tailwindcss()],
-    base: "/",
+    base: "/liliana-sanfilippo/",
     resolve: {
         alias: {
             "@": fileURLToPath(new URL("./src", import.meta.url)),
