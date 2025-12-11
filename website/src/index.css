@@ -6,6 +6,9 @@ body {
    h1, h2, h3, h4, h5, h5, nav *, .fake-h2, .fake-h3 {
        font-family: "Cutive Mono", monospace;
    }
+    h1, h2{
+        margin-bottom: 3rem;
+    }
     font-weight: 500;
     font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -152,7 +155,7 @@ a {
     }
 }
 
-.article-summary, .bfh-card{
+.bfh-card{
     height: 100%;
 }
 
@@ -235,6 +238,15 @@ img {
 }
 .navbar-nav{
     visibility: visible;
+}
+
+.dropend {
+    .nav-item {
+        padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+        .dropdown-toggle {
+            padding: 0 0 !important;
+        }
+    }
 }
 
 #basic-navbar-nav {

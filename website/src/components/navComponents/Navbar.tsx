@@ -67,47 +67,24 @@ export function Navbar() {
         };
     }, []);
 
-    const pages = NavigationBar.map((item, pageIndex) => {
-        if ("folder" in item && item.folder) {
-            const folderItems = item.folder.map((subpage, subpageIndex) => {
-                if (subpage.path) {
-                    return (<NavDropdown.Item
-                        as={Link}
-                        to={subpage.path}
-                        key={`subpage-${pageIndex}-${subpageIndex}`}>
-                        {subpage.name}
-                    </NavDropdown.Item>);
-                }
-                return null;
-            });
-            return (<NavDropdown
-                key={`page-${pageIndex}`}
-                title={item.name}
-                id="basic-nav-dropdown"
-
-            >
-                {folderItems}
-            </NavDropdown>);
-        } else if ("path" in item && item.path) {
-            return (<OurLink
-
-                text={item.name}
-
-                page={item.path}
-
-                key={`page-${pageIndex}`}
-
-                classes='nav-link'
-
-            />);
+    const pages = NavigationBar.map((item, index) => {
+        if ("path" in item && item.path && !("folder" in item)) {
+            return (
+                <OurLink
+                    text={item.name}
+                    page={item.path}
+                    key={`page-${index}`}
+                    classes='nav-link'
+                />
+            );
         }
-        return null;
+        return renderMenuItem(item, "");
     });
 
     return (<BootstrapNavbar
         className="p-0"
         expand="lg"
-        bg="bg-transparent"
+        bg="white"
         fixed="top"
     >
         <Container className={"h-100"}>
@@ -120,10 +97,47 @@ export function Navbar() {
                 <Nav className="ms-auto px-5">{pages}</Nav>
             </BootstrapNavbar>
 
-            {/* Scroll Progress mit Maskottchen */}
             <div className="scroll-progress" ref={progressBarRef}>
 
             </div>
         </Container>
     </BootstrapNavbar>);
 }
+
+
+const renderMenuItem = (item, parentPath : string = "") => {
+
+
+    if ("folder" in item && item.folder) {
+        const currentPath =  parentPath + '/' + item.name.toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[^a-z0-9-]/g, '');
+        return (
+            <NavDropdown
+                key={currentPath}
+                title={item.name}
+                id={`dropdown-${currentPath}`}
+                drop="end"
+            >
+                {item.folder.map((subItem) =>
+                    renderMenuItem(subItem, currentPath)
+                )}
+            </NavDropdown>
+        );
+    }
+
+    if ("path" in item && item.path) {
+        const currentPath = (parentPath == "" ? item.path : parentPath + '/' + item.path);
+        return (
+            <NavDropdown.Item
+                as={Link}
+                to={currentPath}
+                key={currentPath}
+            >
+                {item.name}
+            </NavDropdown.Item>
+        );
+    }
+
+    return null;
+};

@@ -8,7 +8,7 @@ export interface Base {
 
 export class Folder implements Base {
     name: string | undefined;
-    folder: Page[] | PageRef[] | undefined;
+    folder: Page[] | PageRef[] | Folder[] | undefined;
 }
 
 export class Page implements Base {

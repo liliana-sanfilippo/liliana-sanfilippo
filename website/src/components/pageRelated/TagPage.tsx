@@ -1,5 +1,5 @@
 import React from 'react'
-import ArticleSummary from '../ArticleSummary'
+import ArticleCard from '../ArticleCard'
 import {Post} from "../../routes/posts/post_interface";
 
 
@@ -13,7 +13,7 @@ function TagPage({name, routes}: TagPageProps) {
             <h1>{name} posts</h1>
             <ul>
                 {routes.map(route => (<li key={route.slug}>
-                        <ArticleSummary blogRoot={"/"} post={route}/>
+                        <ArticleCard post={route}/>
                     </li>))}
             </ul>
         </div>)

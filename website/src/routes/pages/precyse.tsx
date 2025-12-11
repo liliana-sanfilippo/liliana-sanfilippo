@@ -1,10 +1,8 @@
-import {FurtherLinks} from "../../components/FurtherLinks";
 import React from "react";
 import {InstagramCarousel, LinkedInCarousel} from "../../components/Carousels/LinkedInCarousel";
 
 import {igemfiles24} from "../../data/igem/igemfiles24";
 import PosterCarousel from "../../components/Carousels/PosterCarousel";
-import {TBox} from "../../components/boxes/T_Box";
 import {H2} from "../../components/H2";
 import {Col, Row} from "react-bootstrap";
 import TabbedBox, {TabData} from "../../components/boxes/TabbedBox";
@@ -12,6 +10,8 @@ import {precysePresse} from "../../data/igem/precysePresse";
 import {instaurls, linkedinposts} from "../../data/igem/precyseSocials";
 import TagCarousel from "../../components/Carousels/TagCarousel";
 import {LinkLine} from "../../components/LinkLine";
+import {GBox, VideoBox } from "../../components/boxes/G_Box";
+import {Video} from "../../components/media/Video";
 
 export function Precyse() {
 
@@ -20,17 +20,17 @@ export function Precyse() {
         <h1>
             PreCyse
         </h1>
-        <TBox video={"https://video.igem.org/videos/embed/9QWExnNCFSWJWbsRTFEZDd"}>
-            <p>
-                We are proud to present PreCyse, a next-generation Prime Editing technology, as innovative gene
-                therapy approach for Cystic Fibrosis (CF) specifically targeting the most common mutation F508del of
-                the CFTR gene.
-            </p>
-            <p><a
-                href="https://2024.igem.wiki/bielefeld-cebitec/description?scrollTo=Abstract">https://2024.igem.wiki/bielefeld-cebitec/</a>
-            </p>
-
-        </TBox>
+        <VideoBox>
+           <Col>
+               <p> We are proud to present PreCyse, a next-generation Prime Editing technology, as innovative gene
+                   therapy approach for Cystic Fibrosis (CF) specifically targeting the most common mutation F508del of
+                   the CFTR gene.</p>
+               <p><a
+                   href="https://2024.igem.wiki/bielefeld-cebitec/description?scrollTo=Abstract">https://2024.igem.wiki/bielefeld-cebitec/</a>
+               </p>
+           </Col>
+            <Video url={"https://video.igem.org/videos/embed/9QWExnNCFSWJWbsRTFEZDd"}/>
+        </VideoBox>
         <H2>
             Project
         </H2>

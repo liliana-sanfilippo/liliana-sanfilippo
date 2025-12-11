@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import postsWithNav from "../../routes/posts";
-import {ArticleCard} from "../ArticleSummary";
+import ArticleCard from "../ArticleCard";
 import Carousel from "react-bootstrap/Carousel";
 
 export default function TagCarousel({tag}: { tag: string }) {
@@ -14,14 +14,18 @@ export default function TagCarousel({tag}: { tag: string }) {
         setFilteredPosts(filtered)
     }, [tag])
 
+    function capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1).replace(/-/g, ' ');
+    }
+
 
     return (<div>
-        <h1>{tag} posts</h1>
-        <Carousel data-bs-theme="">
+        {/* <h2>{capitalize(tag)} posts</h2>*/}
+        <Carousel data-bs-theme="" className={"max-w-[50vw] mx-auto"}>
             {filteredPosts.map((route, i) => (<Carousel.Item key={i}>
                 <ul>
                     <li key={route.slug}>
-                        <ArticleCard blogRoot={"/"} post={route}/>
+                        <ArticleCard post={route}/>
                     </li>
                 </ul>
             </Carousel.Item>))}

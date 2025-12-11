@@ -2,6 +2,7 @@ import {Button, Card} from "react-bootstrap";
 import {WikiPage} from "../../components/wiki/WikiPage";
 import {IssuesList} from "../../components/github/IssuesList";
 import TabbedBox, {TabData} from "../../components/boxes/TabbedBox";
+import TagCarousel from "../../components/Carousels/TagCarousel";
 
 export function React() {
 
@@ -13,7 +14,6 @@ export function React() {
             consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
             sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        <h2>Highlighted:</h2>
         <div className={"row gap-8 lg:gap-16 m-auto"}>
             <Card className="text-center linkcard" style={{width: '20rem'}}>
                 <Card.Header>For iGEMers</Card.Header>
@@ -36,9 +36,7 @@ export function React() {
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
             </Card>
-        </div>
-        {/*
-         <Card className="text-center linkcard" style={{width: '20rem'}}>
+            <Card className="text-center linkcard" style={{width: '20rem'}}>
                 <Card.Header>Collaborate!</Card.Header>
                 <Card.Body>
                     <Card.Text>
@@ -50,6 +48,22 @@ export function React() {
                 <Card.Footer className="text-muted">live</Card.Footer>
             </Card>
             <Card className="text-center linkcard" style={{width: '20rem'}}>
+                <Card.Header>Browse features</Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                        See what bibtex types are supported, the available citation styles and more
+                    </Card.Text>
+                    <Button href="/liliana-sanfilippo/react-reference-manager/Features"
+                            variant="outline-primary">Feature Docu</Button>
+                </Card.Body>
+                <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
+            </Card>
+        </div>
+        <h2>News</h2>
+        <TagCarousel tag={"citation-manager"}/>
+        <IssuesList/>
+        {/*
+         <Card className="text-center linkcard" style={{width: '20rem'}}>
                 <Card.Header>README</Card.Header>
                 <Card.Body>
                     <Card.Text>
@@ -60,18 +74,17 @@ export function React() {
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
             </Card>
-
          <TabbedBox
             className={"!max-h-[80vh] overflow-y-auto overflow-x-hidden"}
             tabs={tabs2}
             defaultActiveKey={"design"}
         />
-        */}
         <TabbedBox
             className={"!max-h-[80vh] overflow-y-auto overflow-x-hidden"}
             tabs={boxName}
             defaultActiveKey={"design"}
         />
+        */}
     </div>)
 }
 

@@ -31,7 +31,7 @@ export const NavigationBar: (PageRef | Folder)[] = [{
         component: <CounsellingChatbot/>
 
     }, {
-        name: "iGEM Bielefeld", title: "iGEM Bielefel", path: "/igem-bielefeld", component: <IgemBielefeld/>
+        name: "iGEM Bielefeld", title: "iGEM Bielefeld", path: "/igem-bielefeld", component: <IgemBielefeld/>
 
     }, /**{
      name: "PreCyse",
@@ -41,12 +41,16 @@ export const NavigationBar: (PageRef | Folder)[] = [{
 
      },**/
         {
-            name: "React Reference Manager",
-            title: "React Reference Manager",
-            path: "/react-reference-manager",
-            component: <React/>
+            name: "React Packages", folder: [
+                {
+                    name: "React Reference Manager",
+                    title: "React Reference Manager",
+                    path: "/react-reference-manager",
+                    component: <React/>
 
-        },
+                },
+            ]
+        }
 
     ]
 },
