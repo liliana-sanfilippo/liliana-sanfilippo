@@ -1,6 +1,7 @@
 import {Button, Card} from "react-bootstrap";
 import {WikiPage} from "../../components/wiki/WikiPage";
 import {IssuesList} from "../../components/github/IssuesList";
+import TabbedBox, {TabData} from "../../components/boxes/TabbedBox";
 
 export function React() {
 
@@ -35,7 +36,9 @@ export function React() {
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
             </Card>
-            <Card className="text-center linkcard" style={{width: '20rem'}}>
+        </div>
+        {/*
+         <Card className="text-center linkcard" style={{width: '20rem'}}>
                 <Card.Header>Collaborate!</Card.Header>
                 <Card.Body>
                     <Card.Text>
@@ -57,11 +60,59 @@ export function React() {
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
             </Card>
-        </div>
-        <h2 id={"readme"}>The Readme</h2>
-        <WikiPage page={"README"}/>
-        <IssuesList/>
 
-
+         <TabbedBox
+            className={"!max-h-[80vh] overflow-y-auto overflow-x-hidden"}
+            tabs={tabs2}
+            defaultActiveKey={"design"}
+        />
+        */}
+        <TabbedBox
+            className={"!max-h-[80vh] overflow-y-auto overflow-x-hidden"}
+            tabs={boxName}
+            defaultActiveKey={"design"}
+        />
     </div>)
 }
+
+
+const boxName: TabData[] = [
+{
+    eventKey: "design",
+        title: "README",
+        content:  <WikiPage page={"README"}/>,
+},
+    {
+        eventKey: "test",
+        title: "Collaborate!",
+        content:  <>
+        <p>Feel free to browse the issues and open new ones or request features.</p>
+            <IssuesList/>
+        </>,
+    }
+]
+
+const tabs2: TabData[] = [
+    {
+        eventKey: "design",
+        title: "Manual for iGEM wikis",
+        content: <WikiPage page={"Manual-for-iGEM-Wikis"}/>,
+    },
+    {
+        eventKey: "build",
+        title: "Build",
+        content: <p>Content for pH Sensor - Build</p>,
+    },
+    {
+        eventKey: "test",
+        title: "Test",
+        content: <p>Content for pH Sensor - Test</p>,
+    },
+    {
+        eventKey: "learn",
+        title: "Learn",
+        content: <p>Content for pH Sensor - Learn</p>,
+    },
+];
+
+

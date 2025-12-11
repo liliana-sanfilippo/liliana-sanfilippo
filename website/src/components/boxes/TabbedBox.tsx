@@ -14,10 +14,11 @@ interface TabbedBoxProps {
     tabs: TabData[];
     defaultActiveKey: string;
     id?: string;
+    className?: string
 }
 
 const TabbedBox: React.FC<TabbedBoxProps> = ({
-                                                 tabs, defaultActiveKey, id,
+                                                 tabs, defaultActiveKey, id, className
                                              }) => {
     return (<div className="tabbedBox dont-style">
             <Tabs
@@ -33,7 +34,7 @@ const TabbedBox: React.FC<TabbedBoxProps> = ({
                         tabClassName={`navLink ${tab.eventKey}-tab`}
                     >
                         <div className={`tabWrapper ${tab.eventKey}-wrapper`}>
-                            <div className="tabContent">{tab.content}</div>
+                            <div className={`tabContent ${className}`}>{tab.content}</div>
                         </div>
                     </Tab>))}
             </Tabs>

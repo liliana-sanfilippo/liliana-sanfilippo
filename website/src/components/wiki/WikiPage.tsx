@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import {Link, useParams} from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import "../../componentStyling/wikipage.css"
+import {H2, H3} from "../H2";
 
 interface Heading {
     id: string;
@@ -11,8 +12,9 @@ interface Heading {
     level: number;
 }
 
-export function WikiPage({page}: {page?:string}) {
-    const { pageName = 'Home' } = useParams<{ pageName: string }>();
+export function WikiPage({page}: { page?: string }) {
+    const params = useParams<{ pageName: string }>();
+    const pageName = params.pageName || page || "Home";
     const [content, setContent] = useState('');
     const [headings, setHeadings] = useState<Heading[]>([]);
     const [activeId, setActiveId] = useState<string>('');
@@ -24,7 +26,7 @@ export function WikiPage({page}: {page?:string}) {
         setError(null);
         let wikiPath: string;
 
-        if(page) {
+        if (page) {
             wikiPath = `/liliana-sanfilippo/wiki/${page}.md`;
         } else {
             wikiPath = `/liliana-sanfilippo/wiki/${pageName}.md`;
@@ -83,8 +85,8 @@ export function WikiPage({page}: {page?:string}) {
         <div className="container py-4">
             <div className="flex gap-8">
                 {/* Main Content */}
-                {!page && headings.length > 0 && (
-                    <aside className="hidden lg:block w-64 flex-shrink-0">
+                { headings.length > 0 && (
+                    <aside className="hidden lg:block w-64 flex-shrink-0 me-5">
                         <div className="sticky top-24">
                             <h3 className="font-semibold text-sm uppercase text-gray-600 mb-4">
                                 On this page
@@ -94,11 +96,11 @@ export function WikiPage({page}: {page?:string}) {
                                     {headings.map(heading => (
                                         <li
                                             key={heading.id}
-                                            style={{ paddingLeft: `${(heading.level - 1) * 0.75}rem` }}
+                                            style={{paddingLeft: `${(heading.level - 1) * 0.75}rem`}}
                                         >
 
                                             <a href={`#${heading.id}`}
-                                               className={`block hover:text-blue-600 transition-colors ${
+                                               className={`blocktransition-colors ${
                                                    activeId === heading.id
                                                        ? 'text-blue-600 font-medium'
                                                        : 'text-gray-600'
@@ -106,7 +108,9 @@ export function WikiPage({page}: {page?:string}) {
                                                onClick={(e) => {
                                                    e.preventDefault();
                                                    document.getElementById(heading.id)?.scrollIntoView({
-                                                       behavior: 'smooth'
+                                                       behavior: 'smooth',
+                                                       block: 'start',
+                                                       inline: 'nearest',
                                                    });
                                                }}
                                             >
@@ -119,49 +123,50 @@ export function WikiPage({page}: {page?:string}) {
                         </div>
                     </aside>
                 )}
-                <main className="flex-1 min-w-0">
+                <main className="flex flex-col max-w-[70vw] gap-8 lg:gap-16">
                     <div className="prose max-w-none">
                         <ReactMarkdown
                             remarkPlugins={[remarkGfm]}
                             rehypePlugins={[rehypeRaw]}
                             components={{
                                 h1: ({node, children, ...props}) => {
-                                const text = String(children);
-                                const id = generateId(text);
-                                return <h1 id={id} {...props}>{children}</h1>;
-                        },
-                        h2: ({node, children, ...props}) => {
-                        const text = String(children);
-                        const id = generateId(text);
-                        return <h2 id={id} {...props}>{children}</h2>;
-                        },
-                        h3: ({node, children, ...props}) => {
-                        const text = String(children);
-                        const id = generateId(text);
-                        return <h3 id={id} {...props}>{children}</h3>;
-                        },
-                        h4: ({node, children, ...props}) => {
-                        const text = String(children);
-                        const id = generateId(text);
-                        return <h4 id={id} {...props}>{children}</h4>;
-                        },
-                        h5: ({node, children, ...props}) => {
-                        const text = String(children);
-                        const id = generateId(text);
-                        return <h5 id={id} {...props}>{children}</h5>;
-                        },
-                        h6: ({node, children, ...props}) => {
-                        const text = String(children);
-                        const id = generateId(text);
-                        return <h6 id={id} {...props}>{children}</h6>;
-                        },
+                                    const text = String(children);
+                                    const id = generateId(text);
+                                    return <H2 id={id} {...props}>{children}</H2>;
+                                },
+                                h2: ({node, children, ...props}) => {
+                                    const text = String(children);
+                                    const id = generateId(text);
+                                    return <H3 id={id} {...props}>{children}</H3>;
+                                },
+                                h3: ({node, children, ...props}) => {
+                                    const text = String(children);
+                                    const id = generateId(text);
+                                    return <h3 id={id} {...props}>{children}</h3>;
+                                },
+                                h4: ({node, children, ...props}) => {
+                                    const text = String(children);
+                                    const id = generateId(text);
+                                    return <h4 id={id} {...props}>{children}</h4>;
+                                },
+                                h5: ({node, children, ...props}) => {
+                                    const text = String(children);
+                                    const id = generateId(text);
+                                    return <h5 id={id} {...props}>{children}</h5>;
+                                },
+                                h6: ({node, children, ...props}) => {
+                                    const text = String(children);
+                                    const id = generateId(text);
+                                    return <h6 id={id} {...props}>{children}</h6>;
+                                },
                                 a: ({node, href, children, ...props}) => {
                                     if (href?.startsWith('/react-reference-manager/') ||
                                         (!href?.includes('://') && href?.startsWith('/'))) {
                                         const path = href?.replace(/\.md$/, '') || '';
                                         return <Link to={path}>{children}</Link>;
                                     }
-                                    return <a href={href} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>;
+                                    return <a href={href} target="_blank"
+                                              rel="noopener noreferrer" {...props}>{children}</a>;
                                 },
                                 img: ({node, src, alt, ...props}) => {
                                     return (
@@ -201,7 +206,7 @@ function extractHeadings(markdown: string): Heading[] {
                 .replace(/[^a-z0-9\s-]/g, '')
                 .replace(/\s+/g, '-');
 
-            headings.push({ id, text, level });
+            headings.push({id, text, level});
         }
     });
 

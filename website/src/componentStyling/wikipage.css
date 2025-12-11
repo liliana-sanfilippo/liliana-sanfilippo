@@ -1,5 +1,4 @@
 .prose {
-    border: var(--offblack) solid  1px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -22,14 +21,32 @@
 
     }
     pre {
-        width: 50%;
+        width: 60%;
         margin: auto;
         padding: 1.5rem;
         background-color: var(--ourbeige);
-        min-width: fit-content;
         border: var(--offblack) solid 1px;
+        overflow: auto;
+        max-width: 100%;
+        display: block;
     }
     p {
         margin-bottom: 1rem;
     }
+    .fake-h2, .fake-h3{
+        margin: 4rem auto !important;
+    }
+    h4 {
+        margin: 3rem auto !important;
+    }
+}
+
+aside {
+    a {
+        color: #0f0f0f !important;
+    }
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    scroll-margin-top: 150px; /* Dein gewünschter Offset */
 }

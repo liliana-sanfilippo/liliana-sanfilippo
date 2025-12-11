@@ -3,7 +3,9 @@
 body {
   margin: 0;
 
-    font-family: "Cutive Mono", monospace;
+   h1, h2, h3, h4, h5, h5, nav *, .fake-h2, .fake-h3 {
+       font-family: "Cutive Mono", monospace;
+   }
     font-weight: 500;
     font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -272,6 +274,6 @@ img {
 
 .linkding{
     color: #0f0f0f !important;
-    background-color: var(--darkerbeige);
+    background-color: var(--verylightblue);
 }
 
