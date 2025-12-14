@@ -20,7 +20,7 @@ export function BlogPage() {
                 <PostByTags tag={"iGEM"}/>
                 <PostByTags tag={"AI"}/>
                 <PostByTags tag={"BFH"}/>
-                <PostByTags tag={"AI"}/>
+                <PostByTags tag={"React"}/>
             </div>
             <H2>All posts</H2>
                 <div className="h-100 m-5 p-5">

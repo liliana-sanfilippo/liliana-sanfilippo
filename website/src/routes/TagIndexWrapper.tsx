@@ -12,7 +12,7 @@ export default function TagIndexPageWrapper() {
         })
     })
 
-    const tagsArray = Object.keys(tagMap).map(tag => ({
+    const tagsArray = Object.keys(tagMap).sort().map(tag => ({
         name: tag, href: `/tags/${tag}`, count: tagMap[tag],
     }))
 

@@ -14,9 +14,7 @@ export default function TagCarousel({tag}: { tag: string }) {
         setFilteredPosts(filtered)
     }, [tag])
 
-    function capitalize(str) {
-        return str.charAt(0).toUpperCase() + str.slice(1).replace(/-/g, ' ');
-    }
+
 
 
     return (<div>

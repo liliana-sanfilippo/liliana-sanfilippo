@@ -1,6 +1,7 @@
 import ArticleCard from "./ArticleCard";
 import React from "react";
 import postsWithNav from "../routes/posts";
+import {Link} from "react-router-dom";
 
 
 
@@ -16,7 +17,7 @@ function PostByTags({tag}: { tag: string }) {
     } else {
         return (
             <div className={"col mb-5"}>
-                <h4>{tag}</h4>
+                <h4><Link to={"/tags/"+lowerTag}>{tag}</Link></h4>
                 <ArticleCard post={latestPost}/>
             </div>
         )

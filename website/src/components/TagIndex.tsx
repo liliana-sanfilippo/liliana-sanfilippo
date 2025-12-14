@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {Col, Row} from "react-bootstrap";
 
 interface Tag {
     count: number
@@ -12,15 +13,29 @@ interface TagIndexPage {
 }
 
 function TagIndex({tags}: TagIndexPage) {
-    return (<div>
+    const middleIndex = Math.ceil(tags.length / 2);
+    const firstHalf = tags.slice(0, middleIndex);
+    const secondHalf = tags.slice(middleIndex);
+    return (<Row>
+        <Col>
             <ul>
-                {tags.map(tag => (<li key={tag.href}>
-                        <Link to={tag.href}>
-                            {tag.name} ({tag.count})
-                        </Link>
-                    </li>))}
+                {firstHalf.map(tag => (<li key={tag.href}>
+                    <Link to={tag.href}>
+                        {tag.name} ({tag.count})
+                    </Link>
+                </li>))}
             </ul>
-        </div>)
+        </Col>
+        <Col>
+            <ul>
+                {secondHalf.map(tag => (<li key={tag.href}>
+                    <Link to={tag.href}>
+                        {tag.name} ({tag.count})
+                    </Link>
+                </li>))}
+            </ul>
+        </Col>
+    </Row>)
 }
 
 export default TagIndex
