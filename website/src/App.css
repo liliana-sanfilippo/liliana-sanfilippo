@@ -81,5 +81,15 @@ code {
     }
 }
 
+.card-img-top {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.card-header {
+    background-color: var(--verylightblue);
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
 
 
