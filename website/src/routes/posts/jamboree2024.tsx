@@ -8,7 +8,7 @@ export const metajamboree2024 = {
     tags: ["igem", "precyse", "award"],
     spoiler: "Title",
     slug: "jamboree-2024",
-    date: new Date("2024-11"),
+    date: new Date("2024-10-29"),
     image: "https://static.igem.wiki/teams/5247/photos/header/judging.webp",
     cc: "iGEM team Bielefeld-CeBiTec 2024"
 }

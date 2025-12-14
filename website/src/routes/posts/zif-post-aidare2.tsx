@@ -4,7 +4,7 @@ import {SourceBox} from "../../components/boxes/SourceBox";
 export const metazifBlogAidare2 = {
     title: "External Blog: Rearticulating Autonomy in Higher Education",
     tags: ["aidare", "ai", "zif", "external"],
-    spoiler: "",
+    spoiler: "The workshop, led by Benjamin Paaßen, Amrei Bahr, and Maximilian Mayer, addressed the question of how digital autonomy in higher education and research can be preserved and strengthened despite the current challenges.",
     slug: "aidare-zif-blog-2",
     date: new Date("2025-05-27"),
     cc: "P. Ottendörfer/Universität Bielefeld",

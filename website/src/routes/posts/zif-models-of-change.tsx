@@ -4,7 +4,7 @@ import {FurtherLinks} from "../../components/FurtherLinks";
 export const metazifModelsOfChange = {
     title: "Conference: Building Models of Change", //: Bridging Sciences and Humanities
     tags: ["conference", "zif"],
-    spoiler: "",
+    spoiler: "The conference aimed to bridge the gap between various disciplines, to explore the diverse world of modelling in distinct fields, and to transfer these insights to interdisciplinary research by extracting similarities and differences in how models are used across disciplines.",
     slug: "models-of-change",
     date: new Date("2025-05-16"),
     image: "https://www.uni-bielefeld.de/_internal/cimg!0/r0xeuo4daqn587ucx72v6up4wqs2yi5.jpeg",

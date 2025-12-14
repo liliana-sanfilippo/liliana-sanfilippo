@@ -18,7 +18,7 @@ function ArticleCard({post, noimg, h}: {
             {!noimg ? <><Card.Img className={"p-0"} variant="top" src={image}/></> : <></>}
             <Card.Body>
                   {post.cc && (<p className={"my-0"}><small className="img-cc"> Image: {post.cc} </small></p>)}
-                  <p className={"my-1"}> <Link to={`/posts/${post.slug}`}>{post.title}</Link> </p>
+                  <p className={"my-2"}> <Link to={`/posts/${post.slug}`}>{post.title}</Link> </p>
                   {post.spoiler && <p className={"m-1"}>{post.spoiler}</p>}
                 {post.tags && post.tags.length && (<>
                     {' '}

@@ -3,7 +3,7 @@ import styles from './document.module.css'
 
 export const metamuensterMeetup2025 = {
     title: "MeetUp: JuniorJam Münster 2025",
-    tags: ["igem"],
+    tags: ["igem", "meetup"],
     spoiler: "Team Münster again invited to their yearly JuniorJam MeetUp where teams get the opportunity to present" + " their projects and listen to lectures.",
     slug: "muenster-2025",
     date: new Date("2025-09"),
