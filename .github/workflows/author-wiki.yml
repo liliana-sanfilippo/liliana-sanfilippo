@@ -1,4 +1,4 @@
-name: Sync Wiki to Website
+name: Sync author-name-parser Wiki to Website
 
 on:
   schedule:
@@ -20,13 +20,13 @@ jobs:
       - name: Checkout Wiki
         uses: actions/checkout@v4
         with:
-          repository: liliana-sanfilippo/bibtex-ts-parser.wiki
+          repository: liliana-sanfilippo/author-name-parser.wiki
           path: wiki-temp
 
       - name: Checkout Main Repo (für README)
         uses: actions/checkout@v4
         with:
-          repository: liliana-sanfilippo/bibtex-ts-parser
+          repository: liliana-sanfilippo/author-name-parser
           path: repo-temp
 
       - name: Setup Node
@@ -36,26 +36,26 @@ jobs:
 
       - name: Process Wiki Files
         run: |
-          mkdir -p website/public/wiki-parser
+          mkdir -p website/public/wiki-author
           
           # Kopiere alle Markdown-Dateien
-          cp wiki-temp/*.md website/public/wiki-parser/ || true
+          cp wiki-temp/*.md website/public/wiki-author/ || true
           
           # Kopiere auch Bilder falls vorhanden
-          cp wiki-temp/*.png wiki-temp/*.jpg wiki-temp/*.gif website/public/wiki-parser/ 2>/dev/null || true
+          cp wiki-temp/*.png wiki-temp/*.jpg wiki-temp/*.gif website/public/wiki-author/ 2>/dev/null || true
           
           # Kopiere README vom Main-Repo
-          cp repo-temp/README.md website/public/wiki-parser/README.md || true
+          cp repo-temp/README.md website/public/wiki-author/README.md || true
 
       - name: Commit Changes
         working-directory: website
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          git add public/wiki/
+          git add public/wiki-author/
           
           if ! git diff --staged --quiet; then
-            git commit -m "Sync wiki from bibtex-ts-parser [skip ci]"
+            git commit -m "Sync wiki from author-name-parser [skip ci]"
             git push
           else
             echo "No changes to commit"
