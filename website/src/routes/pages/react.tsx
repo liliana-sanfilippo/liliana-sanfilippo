@@ -21,7 +21,7 @@ export function React() {
                     <Card.Text>
                         Go directly to the manual for iGEM wikis
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/react-reference-manager/Manual-for-iGEM-Wikis" variant="outline-primary">iGEM Manual</Button>
+                    <Button href="/liliana-sanfilippo/current-projects/react-packages/react-reference-manager/Manual-for-iGEM-Wikis" variant="outline-primary">iGEM Manual</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
             </Card>
@@ -31,7 +31,7 @@ export function React() {
                     <Card.Text>
                         Manuals, feature lists and troubleshooting help
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/react-reference-manager/Home" variant="outline-primary">Bibtex
+                    <Button href="/liliana-sanfilippo/current-projects/react-packages/react-reference-manager/Home" variant="outline-primary">Bibtex
                         manager wiki</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -42,7 +42,7 @@ export function React() {
                     <Card.Text>
                         Browse or create issues and request features
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/react-reference-manager/#issues"
+                    <Button href="#issues"
                             variant="outline-primary">Issues</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">live</Card.Footer>
@@ -53,7 +53,7 @@ export function React() {
                     <Card.Text>
                         See what bibtex types are supported, the available citation styles and more
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/react-reference-manager/Features"
+                    <Button href="/liliana-sanfilippo/current-projects/react-packages/react-reference-manager/Features"
                             variant="outline-primary">Feature Docu</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>

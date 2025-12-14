@@ -15,6 +15,7 @@ import {
 } from "../../components/media/Icons";
 import {PublicationInfo} from "../../components/PublicationInfo";
 import {cfpaper} from "../../data/publications";
+import {Link} from "react-router-dom";
 
 export function Cv() {
 
@@ -25,10 +26,19 @@ export function Cv() {
                 <Accordion.Header>
                     <span className="cv-year">Sep. 2023 - today</span>
                     <span className="cv-stelle">Student assistant</span>
-                    <span className="cv-desc"> for the development of an interactive counselling system</span>
-                    <span className="cv-inst">Universität Bielefeld</span>
+                    <span className="cv-desc">for the working group&nbsp;
+                        <Link to={"www.uni-bielefeld.de/fakultaeten/technische-fakultaet/arbeitsgruppen/kml/"}>
+                             Knowledge Representation and Machine Learning
+                        </Link>
+                    </span>&nbsp;at
+                    <span className="cv-inst"> Universität Bielefeld </span>
                 </Accordion.Header>
                 <Accordion.Body>
+                    <p>Development of an interactive counselling system that is available around the clock to students and prospective students at the Technical Faculty, capable of answering common questions.</p>
+                    <p><b>Associated with:</b></p>
+                    <ul className={"list-disc mb-5"}>
+                        <li><Link to={"/current-projects/intelligent-counselling-system"}>An Intelligent Counselling System for Student Counselling</Link></li>
+                    </ul>
                     <Row>
                         <Typescript/> <Javascript/> <PythonIcon/>
                         <Css/> <HtmlIcon/>
@@ -45,11 +55,16 @@ export function Cv() {
             <Accordion.Item eventKey="1">
                 <Accordion.Header>
                     <span className="cv-year">Oct. 2022 - today</span>
-                    <span className="cv-stelle">Bachelor</span>
+                    <span className="cv-stelle">Bachelor Studies</span>
                     <span className="cv-desc"> Bioinformatics and Genome Research</span>
+                    &nbsp;at
                     <span className="cv-inst">Universität Bielefeld</span>
                 </Accordion.Header>
                 <Accordion.Body>
+                    <p><b>Associated with:</b></p>
+                    <ul className={"list-disc mb-5"}>
+                        <li> <a href={"#awards"}>2nd place for the software project LexArtes</a></li>
+                    </ul>
                     <Row>
                         <Typescript/> <Javascript/> <JavaIcon/> <PythonIcon/>
                         <Css/> <HtmlIcon/>
@@ -61,7 +76,7 @@ export function Cv() {
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
-        <h2>Awards</h2>
+        <h2 id={"awards"}>Awards</h2>
         <Accordion>
             <Accordion.Item eventKey="6">
                 <Accordion.Header>
@@ -79,7 +94,7 @@ export function Cv() {
                     </Row>
                 </Accordion.Body>
             </Accordion.Item>
-            <Accordion.Item eventKey="2">
+            <Accordion.Item eventKey="2" id={"lexartes"}>
                 <Accordion.Header>
                     <span className="cv-year">Oct. 2025</span>
                     <span className="cv-stelle"> 2nd place </span>
@@ -204,6 +219,10 @@ export function Cv() {
                         link={"https://doi.org/10.3389/fsysb.2025.1603749"}
                         abstract={"Cystic fibrosis (CF) is the most prevalent inherited disease. Inactivating mutations in the Cystic Fibrosis Transmembrane Conductance Regulator (CFTR) gene lead to the accumulation of viscous mucus and subsequent respiratory complications. This study optimized a prime editing (PE) approach to correct CFTR mutations focusing on the F508del mutation. Prime editing allowed to introduce missing bases without double-strand breaks using a Cas9-nickase fused with a reverse transcriptase in combination with a prime editing guide RNA (pegRNA). Various self-designed pegRNAs were compared. For delivery, various lipid nanoparticles (LNP) were tested, which were optimized for stability and lung cells targeting based on lipid selection or chitosan complexion. A fluorescence reporter system, pPEAR_CFTR, was developed mimicking F508del for validation. The five pegRNAs yielding the highest efficiency were used for genomic CFTR correction in a CF bronchial cell line. Nanopore sequencing of genomic DNA revealed approximate 5% edited reads. These results highlight the promise of prime editing-LNP systems for precise and lung-specific gene correction, paving the way for novel therapies in cystic fibrosis and other pulmonary genetic disorders."}
                     />
+                    <p><b>Associated with:</b></p>
+                    <ul className={"list-disc"}>
+                        <li><Link to={"/current-projects/igem-bielefeld"}>iGEM Bielefeld-CeBiTec - PreCyse</Link></li>
+                    </ul>
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>

@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 export function Footer() {
 
 
-    return (<footer className="px-3">
+    return (<footer className="px-3 mt-5">
         <Container className="">
             <div className="row align-items-center" style={{}}>
                 <div className="col grid">
@@ -24,39 +24,18 @@ export function Footer() {
             <br/>
             <div className="d-flex align-items-baseline">
 
-                <div className="col-sm-4">
+                <div className="col-sm-6">
                     <h6>Contact</h6>
 
                     <br/>
 
                 </div>
 
-                <div className="col-sm-4 align-top">
-                    Something
-
-                </div>
-
-                <div className="col-sm-4" style={{paddingLeft: "20px"}}>
+                <div className="col-sm-6" style={{paddingLeft: "20px"}}>
                     <h6 className="sticky-top">Tags</h6>
-                    <div className="col">
-                        <TagIndexPageWrapper></TagIndexPageWrapper>
-                    </div>
+                    <TagIndexPageWrapper></TagIndexPageWrapper>
                 </div>
 
-            </div>
-
-
-            <hr/>
-            {/* The following MUST be on every page: license information and link to the repository on gitlab.igem.org */}
-            <div className="mt-4">
-                <div className="col">
-                    <p className="mb-0">
-
-                    </p>
-                    <p>
-
-                    </p>
-                </div>
             </div>
         </Container>
     </footer>);

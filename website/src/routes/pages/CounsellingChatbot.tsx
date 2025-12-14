@@ -57,9 +57,11 @@ export function CounsellingChatbot() {
         <TagCarousel tag={"counselling-bot"}/>
         <section id={"data"}>
             <h2>Data collection</h2>
-            <iframe title="" aria-label="Line chart" id="datawrapper-chart-w365o"
-                    src="https://datawrapper.dwcdn.net/w365o/1/" scrolling="no" frameBorder="0"
-                    style={{border: "none"}} width="600" height="362" data-external="1"></iframe>
+           <Row>
+               <iframe title="" aria-label="Line chart" id="datawrapper-chart-w365o"
+                       src="https://datawrapper.dwcdn.net/w365o/1/" scrolling="no" frameBorder="0"
+                       style={{border: "none"}} width="1200" height="362" data-external="1"></iframe>
+           </Row>
         </section>
 
         <section className={"flex flex-col gap-8 lg:gap-16"}>
