@@ -11,7 +11,7 @@ export const metamuensterMeetup2025 = {
     image: "https://static.igem.org/websites/community/2025/images/events/ambassadors-regions/europe/igem-at-juniorjam-2025-1.webp"
 }
 
-export default function muensterMeetup2025() {
+export default function meetupMuenster2025() {
     return (<div className={styles.Welcome}>
 
 

@@ -12,7 +12,7 @@ export const metamuensterMeetup2024 = {
     image: "https://www.uni-muenster.de/imperia/md/images/biologie_immb_igem/iGEM24/meet-up_announcement_hochkant.png"
 }
 
-export default function muensterMeetup2024() {
+export default function meetupMuenster2024() {
     return (<div className={styles.Welcome}>
         <p>We were able to present our project PreCyse at the Münster JuniorJam and met a lot of people from BFH
             again!</p>

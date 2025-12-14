@@ -10,7 +10,7 @@ export const metaCellective = {
     image: "https://static.igem.wiki/teams/5833/hauptseite/schnecke-progress-bar.webp",
     cc: "iGEM team Bielefeld-CeBiTeC 2025"
 }
-
+// https://aktuell.uni-bielefeld.de/wp-content/uploads/2025/10/iGEM-Bielefeld_2025-1024x887.jpg
 export default function Cellective() {
     return (<div className={styles.Welcome}>
 

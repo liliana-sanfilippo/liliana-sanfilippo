@@ -12,7 +12,7 @@ export const metaEegHackathon = {
     cc: "© T. Doerk / HSBI"
 }
 
-export default function EegHackathon() {
+export default function SailEegHackathon() {
     return (<div className={styles.Welcome}>
         <ImageWrapper
             src={"https://live.staticflickr.com/65535/54974685714_3298c044b2_c.jpg"}

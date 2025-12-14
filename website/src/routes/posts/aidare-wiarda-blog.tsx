@@ -11,7 +11,7 @@ export const metawiardaBlogAidare = {
     cc: ""
 }
 
-export default function wiardaBlogAidare() {
+export default function aidareWiardaBlog() {
 
 
     return (<div className="row align-items-center">
