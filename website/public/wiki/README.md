@@ -2,8 +2,8 @@
 [![publish to npm](https://github.com/liliana-sanfilippo/react-bibtex-reference-manager/actions/workflows/publish-npm.yml/badge.svg)](https://github.com/liliana-sanfilippo/react-bibtex-reference-manager/actions/workflows/publish-npm.yml)
 [![Deploy Demo](https://github.com/liliana-sanfilippo/react-bibtex-reference-manager/actions/workflows/demo.yml/badge.svg)](https://github.com/liliana-sanfilippo/react-bibtex-reference-manager/actions/workflows/demo.yml)
 
-# React BibTeX Reference Manager
-React Component for Managing references. Automatically generates Citations based on the ids used with Citation Links in the text of a page. 
+# ReactManager BibTeX Reference Manager
+ReactManager Component for Managing references. Automatically generates Citations based on the ids used with Citation Links in the text of a page. 
 Wiki with manual in progress. 
 
 [Boring Demo with nothig to see really](https://liliana-sanfilippo.github.io/react-bibtex-reference-manager/)
@@ -35,7 +35,7 @@ PLEASE create issues if you ancounter bugs or have ideas or enhancements.
 
 ## Related projects and components
 
-- [React BibteX Reference Generator](https://github.com/liliana-sanfilippo/react-bibtex-reference-generator)
+- [ReactManager BibteX Reference Generator](https://github.com/liliana-sanfilippo/react-bibtex-reference-generator)
 - [TypeScript BibTeX parser](https://github.com/liliana-sanfilippo/bibtex-ts-parser)
 - [Extended Bibtex Grammar](https://github.com/liliana-sanfilippo/Extended-BibTeX-Grammar)
 - [Name parsing grammar for ANTLRts](https://github.com/liliana-sanfilippo/author-name-parser)

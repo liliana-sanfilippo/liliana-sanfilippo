@@ -12,9 +12,10 @@ interface Heading {
     level: number;
 }
 
-export function WikiPage({page}: { page?: string }) {
-    const params = useParams<{ pageName: string }>();
+export function WikiPage({page, folder}: { page?: string , folder?: string}) {
+    const params = useParams<{ pageName: string, folderName: string }>();
     const pageName = params.pageName || page || "Home";
+    const foldername = params.folderName || folder || "wiki";
     const [content, setContent] = useState('');
     const [headings, setHeadings] = useState<Heading[]>([]);
     const [activeId, setActiveId] = useState<string>('');
@@ -27,9 +28,9 @@ export function WikiPage({page}: { page?: string }) {
         let wikiPath: string;
 
         if (page) {
-            wikiPath = `/liliana-sanfilippo/wiki/${page}.md`;
+            wikiPath = `/liliana-sanfilippo/${foldername}/${page}.md`;
         } else {
-            wikiPath = `/liliana-sanfilippo/wiki/${pageName}.md`;
+            wikiPath = `/liliana-sanfilippo/${foldername}/${pageName}.md`;
         }
 
         fetch(wikiPath)

@@ -58,7 +58,7 @@ After:
 
 ## Create a file that the manager can use
 
-While it is [possible to load the BibTeX files asynchronously from the public folder](https://github.com/liliana-sanfilippo/react-bibtex-reference-generator/wiki/Manual#importing-bibtex) we will not do that because most React Wiki pages do not even have a public folder. 
+While it is [possible to load the BibTeX files asynchronously from the public folder](https://github.com/liliana-sanfilippo/react-bibtex-reference-generator/wiki/Manual#importing-bibtex) we will not do that because most ReactManager Wiki pages do not even have a public folder. 
 We will do it simple: 
 
 We will declare the whole collection BibTeX references we want to use on a page as one string and give that String to the manager. 

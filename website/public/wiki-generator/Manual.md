@@ -19,7 +19,7 @@ export default defineConfig({
 
 ### Importing one file
 
-**Using the Citation component in a React function**
+**Using the Citation component in a ReactManager function**
 
 Create the hook for state management. 
 
@@ -67,7 +67,7 @@ export default function App() {
 
 ### Importing from multiple bibtex files and use the contents together
 
-**Using the Citation component in a React function**
+**Using the Citation component in a ReactManager function**
 
 Create the hook for state management. 
 
@@ -116,7 +116,7 @@ export default function App() {
 ### Importing from multiple bibtex files and use the contents seperately
 
 
-**Using the Citation component in a React function**
+**Using the Citation component in a ReactManager function**
 
 Create the hooks for state management. 
 

@@ -4,10 +4,10 @@ import {IssuesList} from "../../components/github/IssuesList";
 import TabbedBox, {TabData} from "../../components/boxes/TabbedBox";
 import TagCarousel from "../../components/Carousels/TagCarousel";
 
-export function React() {
+export function AuthorNameParser() {
 
     return (<div className={"flex flex-col gap-8 lg:gap-16"}>
-        <h1>The Bibtex Reference Manager for React</h1>
+        <h1>The Typescript Name Parser</h1>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
             dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
             clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
@@ -16,23 +16,13 @@ export function React() {
             sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <div className={"row gap-8 lg:gap-16 m-auto"}>
             <Card className="text-center linkcard" style={{width: '20rem'}}>
-                <Card.Header>For iGEMers</Card.Header>
-                <Card.Body>
-                    <Card.Text>
-                        Go directly to the manual for iGEM wikis
-                    </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/react-packages/react-reference-manager/Manual-for-iGEM-Wikis" variant="outline-primary">iGEM Manual</Button>
-                </Card.Body>
-                <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
-            </Card>
-            <Card className="text-center linkcard" style={{width: '20rem'}}>
                 <Card.Header>Documentation</Card.Header>
                 <Card.Body>
                     <Card.Text>
                         Manuals, feature lists and troubleshooting help
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/react-packages/react-reference-manager/Home" variant="outline-primary">Bibtex
-                        manager wiki</Button>
+                    <Button href="/liliana-sanfilippo/current-projects/packages/author-name-parser/Home" variant="outline-primary">Name
+                        parser wiki</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
             </Card>
@@ -51,9 +41,9 @@ export function React() {
                 <Card.Header>Browse features</Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        See what bibtex types are supported, the available citation styles and more
+                        See what bibtex types are supported and more
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/react-packages/react-reference-manager/Features"
+                    <Button href="/liliana-sanfilippo/current-projects/packages/author-name-parser/Features"
                             variant="outline-primary">Feature Docu</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -61,7 +51,7 @@ export function React() {
         </div>
         <h2>News</h2>
         <TagCarousel tag={"citation-manager"}/>
-        <IssuesList/>
+        <IssuesList repo={"author-name-parser"}/>
         {/*
          <Card className="text-center linkcard" style={{width: '20rem'}}>
                 <Card.Header>README</Card.Header>
@@ -69,7 +59,7 @@ export function React() {
                     <Card.Text>
                         See above for the repository README
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/react-reference-manager/#readme" variant="outline-primary">GitHub
+                    <Button href="/liliana-sanfilippo/author-name-parser/#readme" variant="outline-primary">GitHub
                         README</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -90,17 +80,17 @@ export function React() {
 
 
 const boxName: TabData[] = [
-{
-    eventKey: "design",
+    {
+        eventKey: "design",
         title: "README",
         content:  <WikiPage page={"README"}/>,
-},
+    },
     {
         eventKey: "test",
         title: "Collaborate!",
         content:  <>
-        <p>Feel free to browse the issues and open new ones or request features.</p>
-            <IssuesList/>
+            <p>Feel free to browse the issues and open new ones or request features.</p>
+            <IssuesList repo={"author-name-parser"}/>
         </>,
     }
 ]

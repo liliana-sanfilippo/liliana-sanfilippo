@@ -93,3 +93,7 @@ code {
 }
 
 
+.transition-grow {
+    transition: all .3s cubic-bezier(0,0,.5,1);
+}
+

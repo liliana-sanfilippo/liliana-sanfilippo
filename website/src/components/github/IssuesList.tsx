@@ -17,13 +17,12 @@ interface Issue {
     body?: string;
 }
 
-export function IssuesList() {
+export function IssuesList({repo}: {repo: string}) {
     const [issues, setIssues] = useState<Issue[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [filter, setFilter] = useState<'all' | 'open' | 'closed'>('open');
-
-    const CACHE_KEY = 'github_issues_cache';
+    const CACHE_KEY = `github_issues_cache_${repo}`;
     const CACHE_DURATION = 5 * 60 * 1000; // 5 Minuten
 
     useEffect(() => {
@@ -41,7 +40,7 @@ export function IssuesList() {
         }
 
         // Fetch von API
-        fetch('https://api.github.com/repos/liliana-sanfilippo/react-bibtex-reference-manager/issues?state=all&per_page=100')
+        fetch(`https://api.github.com/repos/liliana-sanfilippo/${repo}/issues?state=all&per_page=100`)
             .then(res => res.json())
             .then(data => {
                 const actualIssues = data.filter((issue: any) => !issue.pull_request);
@@ -59,7 +58,7 @@ export function IssuesList() {
                 setError(err.message);
                 setLoading(false);
             });
-    }, []);
+    }, [repo]);
 
     const filteredIssues = issues.filter(issue =>
         filter === 'all' ? true : issue.state === filter
@@ -82,10 +81,10 @@ export function IssuesList() {
             <div className="flex justify-between items-center mb-6">
                 <h2 className="text-3xl font-bold" id={"issues"}>Issues</h2>
                 <a
-                    href="https://github.com/liliana-sanfilippo/react-bibtex-reference-manager/issues/new"
+                    href={`https://github.com/liliana-sanfilippo/${repo}/issues/new`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+                    className="px-4 py-2 bg-(--igemdarkgreen) text-white rounded hover:bg-(--igemdarkgreen)    "
                 >
                     New Issue
                 </a>
@@ -101,7 +100,7 @@ export function IssuesList() {
                             : 'text-gray-600 hover:text-gray-900'
                     }`}
                 >
-                    🟢 Open ({issues.filter(i => i.state === 'open').length})
+                    Open ({issues.filter(i => i.state === 'open').length})
                 </button>
                 <button
                     onClick={() => setFilter('closed')}
@@ -111,7 +110,7 @@ export function IssuesList() {
                             : 'text-gray-600 hover:text-gray-900'
                     }`}
                 >
-                    🟣 Closed ({issues.filter(i => i.state === 'closed').length})
+                    Closed ({issues.filter(i => i.state === 'closed').length})
                 </button>
                 <button
                     onClick={() => setFilter('all')}
@@ -151,8 +150,8 @@ export function IssuesList() {
                                     </a>
                                     <span className={`px-2 py-1 text-xs font-medium rounded whitespace-nowrap ${
                                         issue.state === 'open'
-                                            ? 'bg-green-100 text-green-800'
-                                            : 'bg-purple-100 text-purple-800'
+                                            ? 'bg-(--igemlightgreen) text-(--igemdarkgreen)'
+                                            : 'bg-(--verylightblue) text-(--text-primary)'
                                     }`}>
                     {issue.state}
                   </span>

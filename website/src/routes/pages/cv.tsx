@@ -34,10 +34,12 @@ export function Cv() {
                     <span className="cv-inst"> Universität Bielefeld </span>
                 </Accordion.Header>
                 <Accordion.Body>
-                    <p>Development of an interactive counselling system that is available around the clock to students and prospective students at the Technical Faculty, capable of answering common questions.</p>
+                    <p>Development of an interactive counselling system that is available around the clock to students
+                        and prospective students at the Technical Faculty, capable of answering common questions.</p>
                     <p><b>Associated with:</b></p>
                     <ul className={"list-disc mb-5"}>
-                        <li><Link to={"/current-projects/intelligent-counselling-system"}>An Intelligent Counselling System for Student Counselling</Link></li>
+                        <li><Link to={"/current-projects/intelligent-counselling-system"}>An Intelligent Counselling
+                            System for Student Counselling</Link></li>
                     </ul>
                     <Row>
                         <Typescript/> <Javascript/> <PythonIcon/>
@@ -63,7 +65,7 @@ export function Cv() {
                 <Accordion.Body>
                     <p><b>Associated with:</b></p>
                     <ul className={"list-disc mb-5"}>
-                        <li> <a href={"#awards"}>2nd place for the software project LexArtes</a></li>
+                        <li><a href={"#awards"}>2nd place for the software project LexArtes</a></li>
                     </ul>
                     <Row>
                         <Typescript/> <Javascript/> <JavaIcon/> <PythonIcon/>
@@ -86,6 +88,26 @@ export function Cv() {
                     <span className="cv-inst">iGEM Foundation</span>
                 </Accordion.Header>
                 <Accordion.Body>
+                    <p>
+                        Cellective is a riboswitch-based therapeutic platform that selectively targets cancer cells by
+                        detecting specific microRNAs and mRNAs, subsequently translating a cellular kill system. This
+                        platform is intended to be further developed specifically for the treatment of triple-negative
+                        breast cancer (TNBC), a particularly aggressive and hard-to-treat form of breast cancer.
+                        The selective detection of cancer-specific marker RNAs using the engineered riboswitch RNAs
+                        enables a highly specific, minimally invasive therapy that spares healthy cells and is only
+                        activated in tumor-relevant contexts. The modular design allows for flexible adaptation to
+                        different tumor types and RNA profiles, allowing personalized medicine. We successfully
+                        engineered this therapeutic system and confirmed its functionality.
+                    </p>
+                    <p><b>More information:</b></p>
+                    <ul className={"list-disc mb-5"}>
+                        <li><a href={"https://2025.igem.wiki/bielefeld-cebitec/description"}>Cellective Wiki</a></li>
+                    </ul>
+                    <p><b>Associated with:</b></p>
+                    <ul className={"list-disc mb-5"}>
+                        <li><a href={"#volunteering"}>Volunteering "Team Advisor"</a></li>
+                        <li><Link to={"/current-projects/igem-bielefeld"}>iGEM Bielefeld</Link></li>
+                    </ul>
                     <Row>
                         <Typescript/> <Javascript/>
                         <Css/> <HtmlIcon/>
@@ -119,7 +141,40 @@ export function Cv() {
                     <span className="cv-inst">iGEM Foundation</span>
                 </Accordion.Header>
                 <Accordion.Body>
-
+                    <p>
+                        PreCyse is a next-generation Prime Editing technology, an innovative gene therapy approach for
+                        Cystic Fibrosis (CF) specifically targeting the most common mutation F508del of the CFTR gene.
+                        Cystic Fibrosis is a severe disorder that primarily affects the lungs and for which only
+                        short-term symptomatic treatments exist. PreCyse aims to provide long-term relief by delivering
+                        a small genetic payload with speed and precision. Our approach integrates PrimeGuide, a highly
+                        optimized Prime Editing system, with AirBuddy, a novel lipid nanoparticle (LNP) delivery
+                        platform. The SORT LNPs used in AirBuddy are optimized for pulmonary delivery, offering precise
+                        organ targeting and structural stability throughout the inhalation process. Small payload size
+                        is key for effective delivery and compatibility with viral vectors, which have a limited
+                        capacity. PrimeGuide embodies this vision by utilizing a smaller, more efficient editing
+                        complex. Current treatments often require daily administration whereas PreCyse is currently
+                        developed as a monthly applied therapy. In addition, Prime Editing holds the promise to offer a
+                        causal cure, when mutations are corrected in stem cells. Our approach aims to reduce medication
+                        frequency while improving patient outcomes. By lowering costs and improving accessibility,
+                        PreCyse aspires to offer an advanced and user-friendly cure for Cystic Fibrosis.
+                    </p>
+                    <p><b>More information:</b></p>
+                    <ul className={"list-disc mb-5"}>
+                        <li><a href={"https://2024.igem.wiki/bielefeld-cebitec/description"}>PreCyse Wiki</a></li>
+                    </ul>
+                    <p><b>Associated with:</b></p>
+                    <ul className={"list-disc mb-5"}>
+                        <li><a href={"#publications"}>Publication "Towards effective cystic fibrosis gene therapy by
+                            optimizing prime editing and pulmonary-targeted LNPs"</a></li>
+                        <li><a href={"#volunteering"}>Volunteering "Head of Web Developement"</a></li>
+                        <li><Link to={"/current-projects/igem-bielefeld"}>iGEM Bielefeld</Link></li>
+                    </ul>
+                    <Row>
+                        <Typescript/> <Javascript/>
+                        <Css/> <HtmlIcon/>
+                        <BootstrapFill/> <ReactIcon/>
+                        <Gitlab/> <IntellijIcon/>
+                    </Row>
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
@@ -206,7 +261,7 @@ export function Cv() {
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
-        <h2>Publications</h2>
+        <h2 id={"publications"}>Publications</h2>
         <Accordion>
             <Accordion.Item eventKey="0">
                 <Accordion.Header>
@@ -226,9 +281,11 @@ export function Cv() {
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
-
-        <h2>Software</h2>
+        {/*
+         <h2>Software</h2>
 
         <h2>Outreach & Press</h2>
+        */}
+
     </section>)
 }
