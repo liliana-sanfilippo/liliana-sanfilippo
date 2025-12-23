@@ -12,7 +12,7 @@ interface Heading {
     level: number;
 }
 
-export function WikiPage({page}: { page?: string }) {
+export function WikiPage({page, wikiName, wikiUrl}: {wikiName: string, wikiUrl: string, page?: string }) {
     const params = useParams<{ pageName: string }>();
     const pageName = params.pageName || page || "Home";
     const [content, setContent] = useState('');
@@ -27,10 +27,11 @@ export function WikiPage({page}: { page?: string }) {
         let wikiPath: string;
 
         if (page) {
-            wikiPath = `/liliana-sanfilippo/wiki/${page}.md`;
+            wikiPath = `/liliana-sanfilippo/${wikiName}/${page}.md`;
         } else {
-            wikiPath = `/liliana-sanfilippo/wiki/${pageName}.md`;
+            wikiPath = `/liliana-sanfilippo/${wikiName}/${pageName}.md`;
         }
+        console.log(wikiPath)
 
         fetch(wikiPath)
             .then(res => {
@@ -38,7 +39,7 @@ export function WikiPage({page}: { page?: string }) {
                 return res.text();
             })
             .then(text => {
-                const transformed = transformWikiLinks(text);
+                const transformed = transformWikiLinks(text, wikiUrl);
                 setContent(transformed);
 
 
@@ -75,7 +76,7 @@ export function WikiPage({page}: { page?: string }) {
     if (error) return (
         <div className="container py-4">
             <div className="text-red-600">Error: {error}</div>
-            <Link to="/react-reference-manager" className="text-blue-600">
+            <Link to={`/current-projects/${wikiUrl}`} className="text-blue-600">
                 ← Back to Documentation
             </Link>
         </div>
@@ -160,7 +161,7 @@ export function WikiPage({page}: { page?: string }) {
                                     return <h6 id={id} {...props}>{children}</h6>;
                                 },
                                 a: ({node, href, children, ...props}) => {
-                                    if (href?.startsWith('/react-reference-manager/') ||
+                                    if (href?.startsWith(`/current-projects/${wikiUrl}/`) ||
                                         (!href?.includes('://') && href?.startsWith('/'))) {
                                         const path = href?.replace(/\.md$/, '') || '';
                                         return <Link to={path}>{children}</Link>;
@@ -213,13 +214,13 @@ function extractHeadings(markdown: string): Heading[] {
     return headings;
 }
 
-function transformWikiLinks(markdown: string): string {
+function transformWikiLinks(markdown: string, wikiUrl: string): string {
     return markdown
-        .replace(/\[\[([^\|\]]+)\|([^\]]+)\]\]/g, '[$2](/react-reference-manager/$1)')
-        .replace(/\[\[([^\]]+)\]\]/g, '[$1](/react-reference-manager/$1)')
+        .replace(/\[\[([^\|\]]+)\|([^\]]+)\]\]/g, `[$2](/current-projects/${wikiUrl}/$1)`)
+        .replace(/\[\[([^\]]+)\]\]/g, `[$1](/current-projects/${wikiUrl}/$1)`)
         .replace(
             /\[([^\]]+)\]\(https?:\/\/github\.com\/liliana-sanfilippo\/react-bibtex-reference-manager\/wiki\/([^\)]+)\)/g,
-            '[$1](/react-reference-manager/$2)'
+            `[$1](/current-projects/${wikiUrl}/$2)`
         );
 }
 

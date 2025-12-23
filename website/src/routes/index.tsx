@@ -62,7 +62,7 @@ function AppRouter() {
 
                     {Object.entries(pathMapping).map(([path, {component: Component}]) => (
                         <Route path={path} element={Component}/>))}
-                    <Route path="/react-reference-manager/:pageName" element={<WikiPage />} />
+                    <Route path="/current-projects/react-packages/react-reference-manager/:pageName" element={<WikiPage />} />
 
                     {/* Tag Index Page */}
                     <Route path="/tags" element={<TagIndexPageWrapper/>}/>

@@ -24,7 +24,7 @@ export function WikiIndex() {
             <ul className="mt-4">
                 {pages.map(page => (
                     <li key={page}>
-                        <Link to={`/wiki/${page}`} className="text-blue-600 hover:underline">
+                        <Link to={`/wiki-manager/${page}`} className="text-blue-600 hover:underline">
                             {page.replace(/-/g, ' ')}
                         </Link>
                     </li>

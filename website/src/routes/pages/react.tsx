@@ -93,7 +93,7 @@ const boxName: TabData[] = [
 {
     eventKey: "design",
         title: "README",
-        content:  <WikiPage page={"README"}/>,
+        content:  <WikiPage page={"README"} wikiUrl={"react-packages/react-reference-manager"} wikiName={"wiki-manager"}/>,
 },
     {
         eventKey: "test",
@@ -109,7 +109,7 @@ const tabs2: TabData[] = [
     {
         eventKey: "design",
         title: "Manual for iGEM wikis",
-        content: <WikiPage page={"Manual-for-iGEM-Wikis"}/>,
+        content: <WikiPage page={"Manual-for-iGEM-Wikis"} wikiUrl={"react-packages/react-reference-manager"} wikiName={"wiki-manager"}/>,
     },
     {
         eventKey: "build",

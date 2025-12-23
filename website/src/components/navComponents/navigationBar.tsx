@@ -7,6 +7,8 @@ import {Bfh} from "../../routes/pages/bfh";
 import {CounsellingChatbot} from "../../routes/pages/CounsellingChatbot";
 import {IgemBielefeld} from "../../routes/pages/igemBielefeld";
 import {Cv} from "../../routes/pages/cv";
+import {BibtexTSParser} from "../../routes/pages/BibtexTSParser";
+import {AuthorNameParser} from "../../routes/pages/AuthorNameParser";
 
 export const NavigationBar: (PageRef | Folder)[] = [{
     name: "About", title: "About", path: "/about", component: <AboutPage/>
@@ -47,6 +49,24 @@ export const NavigationBar: (PageRef | Folder)[] = [{
                     title: "React Reference Manager",
                     path: "/react-reference-manager",
                     component: <React/>
+
+                },
+            ]
+        },
+        {
+            name: "Webpack Parser", folder: [
+                {
+                    name: "Author Name Parser",
+                    title: "Author Name Parser",
+                    path: "/author-name-parser",
+                    component: <AuthorNameParser/>
+
+                },
+                {
+                    name: "BibTeX TS Parser",
+                    title: "BibTeX TS Parser",
+                    path: "/bibtex-ts-parser",
+                    component: <BibtexTSParser/>
 
                 },
             ]
