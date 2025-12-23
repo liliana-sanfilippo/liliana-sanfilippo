@@ -3,6 +3,7 @@ import {Link, useLocation} from 'react-router-dom'
 import {MDXProvider} from '@mdx-js/react'
 import ArticleMeta from '../ArticleMeta'
 import {Post} from "../../routes/posts/post_interface";
+import {formatDate} from "../../utils/formats";
 
 
 export interface BlogPostLayoutProps {
@@ -20,17 +21,14 @@ function BlogPostLayout({post}: BlogPostLayoutProps) {
     return (<div>
         <article>
             <header>
-                <h1>
-                    <Link to={location.pathname}>{post.title}</Link>
+                <h1 className={"mb-3"}>
+                    {post.title}
                 </h1>
-                <ArticleMeta
-                    blogRoot={"/"}
-                    data={post}
-                />
+                <i className={"text-gray-500"}>{formatDate(post.date)}</i>
             </header>
             {}
 
-            <div className="row">
+            <div className="row my-5">
                 <div className="col-12">
                     <MDXProvider
                         components={{

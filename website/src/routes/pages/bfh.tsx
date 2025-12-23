@@ -128,8 +128,8 @@ const bfhtabs: TabData[] = [
                 </H2>
                 {/* TODO mehr links*/}
                 <div className={"row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2"}>
-                    {links25.map(link => (
-                        <LinkLine url={link.img} text={link.text} href={link.href}/>
+                    {links25.map((link, index) => (
+                        <LinkLine key={index} url={link.img} text={link.text} href={link.href}/>
                     ))}
                 </div>
 
