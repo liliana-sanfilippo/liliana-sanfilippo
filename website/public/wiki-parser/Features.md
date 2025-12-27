@@ -41,7 +41,7 @@ See https://mirror.dogado.de/tex-archive/macros/latex/contrib/biblatex/doc/bibla
 |suppcollection|incollection|
 |www|online|
 
-TODO: collection + mvcollection & periodical + suppperiodical  & reference + mvreference + inreference & set & thesis 
+TODO: collection + mvcollection & periodical + suppperiodical  & reference + mvreference + inreference  & thesis 
 
 
 ### Non-standard 
@@ -65,8 +65,10 @@ TODO: commentary & image & jurisdiction & legislation & legal & letter & music &
 |@type|translated to (optional)|
 |--|--|
 |genai||
+|mastersthesis|masterthesis|
+|bachelorthesis||
+|igemwiki||
 
-TODO: bachelor thesis & igem wiki
 
 # Fields
 
