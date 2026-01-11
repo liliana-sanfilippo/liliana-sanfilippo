@@ -76,8 +76,8 @@ export function WikiPage({page, folder}: { page?: string , folder?: string}) {
     if (error) return (
         <div className="container py-4">
             <div className="text-red-600">Error: {error}</div>
-            <Link to="/react-reference-manager" className="text-blue-600">
-                ← Back to Documentation
+            <Link to="/Home" className="text-blue-600">
+                ← Back Home
             </Link>
         </div>
     );

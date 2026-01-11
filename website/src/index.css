@@ -74,40 +74,58 @@ a {
 .accordion {
     .show {
         visibility: visible !important;
+        display: block;
     }
     .bi, svg, .icon {
         width: min-content !important;
     }
+    /* TOOLS AND TECHNOLOGY */
+    /* Programmiersprachen */
     .bi-typescript, .bi-javascript, .icon-python, .icon-java{
         fill: var(--lightpurple);
         svg {
             fill: var(--lightpurple);
         }
     }
-    .bi-css, .icon-html {
+    /* Webdev */
+    .bi-css, .icon-html,.icon-react, .icon-angular, .bi-bootstrap-fill, .icon-tailwind, .icon-vue, .icon-springboot {
         fill: var(--mediumpurple);
         svg {
             fill: var(--mediumpurple);
         }
     }
-    .bi-gitlab, .bi-github, .icon-vsc, .icon-intellij {
+    /* dev tools */
+    .bi-gitlab, .bi-github, .icon-vsc, .icon-intellij, .icon-webpack, .icon-maven {
         fill: var(--very-light-purple);
         svg {
             fill: var(--very-light-purple);
             stroke: var(--very-light-purple);
         }
     }
-    .icon-react, .icon-angular, .bi-bootstrap-fill, .icon-tailwind {
+    /* Infrastructure */
+    .bi-ubuntu, .icon-githubactions, .icon-jenkins {
         svg {
             fill: var(--text-primary);
         }
         fill: var(--text-primary);
     }
+
+    /* SOFT SKILLS */
     .icon-counselling {
         svg {
             fill: var(--accen-secondary);
         }
     }
+
+    /* BUSINESS AND PRODUCTIVITY */
+    .icon-teams, icon-powerpoint, .icon-notion {
+        fill: var(--dark-secondary);
+        svg {
+            fill: var(--dark-secondary);
+        }
+    }
+
+    /* DOMAIN KNOWLEDGE */
 }
 
 
@@ -297,4 +315,15 @@ img {
 
 .accordion-button:not(.collapsed) {
     color: black;
+}
+
+.accordion-item, .accordion-item:not(:first-of-type){
+    border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+    border-radius: 0 !important;
+}
+
+
+.filterable {
+    margin-bottom: 4px;
+    display: none;
 }

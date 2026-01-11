@@ -30,6 +30,7 @@
     "react-icons": "4.10.1",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^6.26.0",
+    "react-select": "^5.10.2",
     "react-social-media-embed": "^2.5.18",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
