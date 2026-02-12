@@ -21,7 +21,7 @@ export function ReactGenerator() {
     <Card.Text>
         Manuals, feature lists and troubleshooting help
     </Card.Text>
-    <Button href="/liliana-sanfilippo/current-projects/packages/react-reference-generator/Home" variant="outline-primary">Bibtex
+    <Button href={`/liliana-sanfilippo${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/Home`} variant="outline-primary">Bibtex
     generator wiki</Button>
     </Card.Body>
     <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -43,7 +43,7 @@ export function ReactGenerator() {
     <Card.Text>
         See what bibtex types are supported, the available citation styles and more
     </Card.Text>
-    <Button href="/liliana-sanfilippo/current-projects/packages/react-reference-generator/Features"
+    <Button href={`/liliana-sanfilippo${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/Features`}
     variant="outline-primary">Feature Docu</Button>
     </Card.Body>
     <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -90,7 +90,7 @@ const boxName: TabData[] = [
         title: "Collaborate!",
     content:  <>
     <p>Feel free to browse the issues and open new ones or request features.</p>
-<IssuesList/>
+<IssuesList repo={"react-reference-generator"}/>
 </>,
 }
 ]

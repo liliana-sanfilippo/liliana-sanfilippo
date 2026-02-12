@@ -39,11 +39,11 @@ export function WikiPage({page, folder}: { page?: string , folder?: string}) {
                 return res.text();
             })
             .then(text => {
-                const transformed = transformWikiLinks(text);
-                setContent(transformed);
+                const txt = text.replace(/:x:/g, "🚫")
+                    .replace(/:white_check_mark:/g, "✅");
+                setContent(txt);
 
-
-                const extractedHeadings = extractHeadings(transformed);
+                const extractedHeadings = extractHeadings(text);
                 setHeadings(extractedHeadings);
 
                 setLoading(false);
@@ -83,7 +83,7 @@ export function WikiPage({page, folder}: { page?: string , folder?: string}) {
     );
 
     return (
-        <div className="container py-4">
+        <div className="container py-4 wiki-page">
             <div className="flex gap-8">
                 {/* Main Content */}
                 { headings.length > 0 && (
@@ -161,13 +161,29 @@ export function WikiPage({page, folder}: { page?: string , folder?: string}) {
                                     return <h6 id={id} {...props}>{children}</h6>;
                                 },
                                 a: ({node, href, children, ...props}) => {
-                                    if (href?.startsWith('/react-reference-manager/') ||
-                                        (!href?.includes('://') && href?.startsWith('/'))) {
-                                        const path = href?.replace(/\.md$/, '') || '';
-                                        return <Link to={path}>{children}</Link>;
+                                    console.log("FOUND < A >:" + href);
+
+                                    if (href?.includes('github.com') && href?.includes('/liliana-sanfilippo/')) {
+
+                                        const match = href.match(/\/liliana-sanfilippo\/(.+)/);
+                                        if (match) {
+                                            let path = match[1];
+
+                                            path = path.replace(/^(blob|tree)\/[^/]+\//, '');
+
+                                            path = path.replace(/\.md$/, '');
+
+                                            path = path.replace(/\/wiki\//g, '/');
+
+                                            const internalPath = import.meta.env.VITE_PACKAGE_PATH + "/" + path;
+
+                                            console.log("GitHub Link erkannt, interner Pfad:", internalPath);
+                                            return <Link to={internalPath}>{children}</Link>;
+                                        }
                                     }
-                                    return <a href={href} target="_blank"
-                                              rel="noopener noreferrer" {...props}>{children}</a>;
+
+
+                                    return <a href={href} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>;
                                 },
                                 img: ({node, src, alt, ...props}) => {
                                     return (
@@ -214,15 +230,6 @@ function extractHeadings(markdown: string): Heading[] {
     return headings;
 }
 
-function transformWikiLinks(markdown: string): string {
-    return markdown
-        .replace(/\[\[([^\|\]]+)\|([^\]]+)\]\]/g, '[$2](/react-reference-manager/$1)')
-        .replace(/\[\[([^\]]+)\]\]/g, '[$1](/react-reference-manager/$1)')
-        .replace(
-            /\[([^\]]+)\]\(https?:\/\/github\.com\/liliana-sanfilippo\/react-bibtex-reference-manager\/wiki\/([^\)]+)\)/g,
-            '[$1](/react-reference-manager/$2)'
-        );
-}
 
 function generateId(text: string): string {
     return text

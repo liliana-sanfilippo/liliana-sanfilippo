@@ -14,11 +14,11 @@ import {getPathMapping} from "../utils/getPathMapping";
 import {WikiPage} from "../components/wiki/WikiPage";
 
 
-function BlogPostWrapper({blogRoot}: { blogRoot: string }) {
+function BlogPostWrapper() {
     const {slug} = useParams<{ slug: string }>()
     const post = postsWithNav.find(p => p.slug === slug)
     if (!post) return <div>Post not found</div>
-    return <BlogPostLayout blogRoot={blogRoot} post={post}/>
+    return <BlogPostLayout post={post}/>
 }
 
 function AppRouter() {
@@ -26,8 +26,7 @@ function AppRouter() {
     let chunks = chunk(postsWithNav, siteMetadata.indexPageSize)
     const pathMapping = getPathMapping();
 
-
-    return (<BrowserRouter basename={"/liliana-sanfilippo"}>
+    return (<BrowserRouter basename={import.meta.env.VITE_BASE_NAME}>
         <Suspense fallback={<div>Loading...</div>}>
             <Routes>
 
@@ -40,21 +39,15 @@ function AppRouter() {
                     {chunks.map((chunkPosts: any[], i: number) => (i === 0 ? (<Route
                         key={i}
                         index
-                        element={<BlogIndexPage
-                            blogRoot="/blog"
-                            postRoutes={chunkPosts}
-                        />}
+                        element={<BlogIndexPage/>}
                     />) : (<Route
                         key={i}
                         path={`page/${i + 1}`}
-                        element={<BlogIndexPage
-                            blogRoot="/blog"
-                            postRoutes={chunkPosts}
-                        />}
+                        element={<BlogIndexPage/>}
                     />)))}
 
                     {/* Posts */}
-                    <Route path="/posts/:slug" element={<BlogPostWrapper blogRoot="/blog"/>}/>
+                    <Route path="/posts/:slug" element={<BlogPostWrapper/>}/>
 
                     {/* Misc NavigationBar */}
                     {/* <Route path="/tags" element={<TagsPage />} />*/}
@@ -62,18 +55,18 @@ function AppRouter() {
 
                     {Object.entries(pathMapping).map(([path, {component: Component}]) => (
                         <Route path={path} element={Component}/>))}
-                    <Route path="/current-projects/packages/react-reference-manager/:pageName" element={<WikiPage folder={"wiki"}/>} />
-                    <Route path="/current-projects/packages/react-reference-generator/:pageName" element={<WikiPage folder={"wiki-generator"}/>} />
-                    <Route path="/current-projects/packages/bibtex-ts-parser/:pageName" element={<WikiPage folder={"wiki-parser"}/>} />
-                    <Route path="/current-projects/packages/author-name-parser/:pageName" element={<WikiPage folder={"wiki-author"}/>} />
+                    <Route path={`${import.meta.env.VITE_REACT_REFERENCE_MANAGER_PATH}/:pageName`}  element={<WikiPage folder={"wiki"}/>} />
+                    <Route path={`${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/:pageName`}  element={<WikiPage folder={"wiki-generator"}/>} />
+                    <Route path={`${import.meta.env.VITE_REACT_BIBTEX_PARSER_PATH}/:pageName`}  element={<WikiPage folder={"wiki-parser"}/>} />
+                    <Route path={`${import.meta.env.VITE_REACT_AUTHOR_PARSER_PATH}/:pageName`} element={<WikiPage folder={"wiki-author"}/>} />
 
 
                     {/* Tag Index Page */}
-                    <Route path="/tags" element={<TagIndexPageWrapper/>}/>
+                    <Route path={import.meta.env.VITE_TAG_ROOT} element={<TagIndexPageWrapper/>}/>
 
 
                     {/* Tag NavigationBar */}
-                    <Route path="/tags/:tag" element={<TagPageWrapper blogRoot="/"/>}/>
+                    <Route path={`${import.meta.env.VITE_TAG_ROOT}/:tag`} element={<TagPageWrapper/>}/>
 
 
                 </Route>

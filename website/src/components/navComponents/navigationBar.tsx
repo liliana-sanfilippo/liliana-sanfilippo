@@ -55,7 +55,7 @@ export const NavigationBar: (PageRef | Folder)[] = [{
                 {
                     name: "React Reference Generator",
                     title: "React Reference Generator",
-                    path: "/react-reference-generator",
+                    path: "/react-bibtex-reference-generator",
                     component: <ReactGenerator/>
 
                 },

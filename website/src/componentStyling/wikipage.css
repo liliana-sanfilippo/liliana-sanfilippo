@@ -4,16 +4,20 @@
     flex-direction: column;
     gap: 2rem;
     table {
+        display: block;
         border: var(--offblack) solid ;
         margin: 1.5rem auto;
+        max-width: 100%;
+        overflow: scroll;
        tbody {
-           display: block;
            max-height: 300px;
-           overflow-y: auto;
+           overflow-y: scroll;
+           width: 100%;
        }
         thead {
-            border: var(--offblack) solid ;
+            border-bottom: var(--offblack) solid ;
             background-color: var(--darkerbeige);
+            min-width: max-content;
         }
         th, td {
             padding: .5rem;

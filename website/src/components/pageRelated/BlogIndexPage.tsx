@@ -5,20 +5,16 @@ import {Post} from "../../routes/posts/post_interface";
 
 
 interface BlogIndexPageProps {
-    blogRoot: string
     postRoutes: Post[]
 }
 
 
-function BlogIndexPage({
-                           blogRoot,
-                       }: BlogIndexPageProps) {
+function BlogIndexPage() {
     return (<div>
         <header>
             <h1 className={"blogindex-title"}>
-                <Link to={blogRoot}>{siteMetadata.title}</Link>
+                <Link to={import.meta.env.VITE_BLOG_ROOT}>{siteMetadata.title}</Link>
             </h1>
-
         </header>
     </div>)
 }

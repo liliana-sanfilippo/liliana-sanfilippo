@@ -1,18 +1,15 @@
 import React from 'react'
-import {Link, useLocation} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {MDXProvider} from '@mdx-js/react'
-import ArticleMeta from '../ArticleMeta'
 import {Post} from "../../routes/posts/post_interface";
 import {formatDate} from "../../utils/formats";
 
 
 export interface BlogPostLayoutProps {
-    blogRoot: string
     post: Post
 }
 
 function BlogPostLayout({post}: BlogPostLayoutProps) {
-    const location = useLocation();
 
     if (!post) {
         return <div>Post not found</div> // oder deine NotFoundPage
