@@ -1,5 +1,5 @@
 import React from 'react'
-import {FurtherLinks} from "../../components/FurtherLinks";
+import {FurtherLinks} from "../components/FurtherLinks";
 
 export const metazifModelsOfChange = {
     title: "Conference: Building Models of Change", //: Bridging Sciences and Humanities

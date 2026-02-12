@@ -1,5 +1,5 @@
 import TagIndex from "../components/TagIndex"
-import postsWithNav from "./posts";
+import postsWithNav from "../posts";
 
 export default function TagIndexPageWrapper() {
 

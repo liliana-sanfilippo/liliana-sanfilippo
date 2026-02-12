@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react"
 import {useParams} from "react-router-dom"
 import TagPage from "../components/pageRelated/TagPage"
-import postsWithNav from "./posts";
+import postsWithNav from "../posts";
 
 
 export default function TagPageWrapper() {

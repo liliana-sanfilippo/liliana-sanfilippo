@@ -1,5 +1,5 @@
 import React from 'react'
-import {SourceBox} from "../../components/boxes/SourceBox";
+import {SourceBox} from "../components/boxes/SourceBox";
 
 export const metawiardaBlogAidare = {
     title: "External Blog: Open Models statt OpenAI - Wiarda Blog",

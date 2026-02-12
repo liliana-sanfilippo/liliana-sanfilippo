@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './document.module.css'
-import {LinkedInCarousel} from "../../components/Carousels/LinkedInCarousel";
+import {LinkedInCarousel} from "../components/Carousels/LinkedInCarousel";
 import {Card} from "react-bootstrap";
-import {FLink, FurtherLinks} from "../../components/FurtherLinks";
-import {linkedinposts24} from "../../data/bfh/bfh-socials-2024";
+import {FLink, FurtherLinks} from "../components/FurtherLinks";
+import {linkedinposts24} from "../data/bfh/bfh-socials-2024";
 
 export const metabfh2024 = {
     title: "BFH European MeetUp 2024",

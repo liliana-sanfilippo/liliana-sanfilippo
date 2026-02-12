@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './document.module.css'
-import UniBlog from "../../components/getExternal/getUniBlog";
+import UniBlog from "../components/getExternal/getUniBlog";
 
 export const metauniBlogPrecyse1 = {
     title: "External Blog: Students conduct research into gene therapy for cystic fibrosis",

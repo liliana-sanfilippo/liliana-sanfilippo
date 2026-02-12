@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './document.module.css'
-import {LinkedInCarousel} from "../../components/Carousels/LinkedInCarousel";
-import {FLink, FurtherLinks} from "../../components/FurtherLinks";
+import {LinkedInCarousel} from "../components/Carousels/LinkedInCarousel";
+import {FLink, FurtherLinks} from "../components/FurtherLinks";
 
 export const metajamboree2024 = {
     title: "Grand Jamboree 2024",

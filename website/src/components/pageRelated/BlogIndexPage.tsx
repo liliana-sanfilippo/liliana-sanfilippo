@@ -1,7 +1,7 @@
 import React from 'react'
 import siteMetadata from '../../siteMetadata'
 import {Link} from 'react-router-dom'
-import {Post} from "../../routes/posts/post_interface";
+import {Post} from "../../posts/post_interface";
 
 
 interface BlogIndexPageProps {

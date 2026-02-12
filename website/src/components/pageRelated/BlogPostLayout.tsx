@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {MDXProvider} from '@mdx-js/react'
-import {Post} from "../../routes/posts/post_interface";
+import {Post} from "../../posts/post_interface";
 import {formatDate} from "../../utils/formats";
 
 

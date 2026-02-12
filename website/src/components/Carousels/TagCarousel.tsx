@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import postsWithNav from "../../routes/posts";
+import postsWithNav from "../../posts";
 import ArticleCard from "../ArticleCard";
 import Carousel from "react-bootstrap/Carousel";
 

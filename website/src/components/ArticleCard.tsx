@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {Post} from "../routes/posts/post_interface";
+import {Post} from "../posts/post_interface";
 import {Card} from "react-bootstrap";
 import {formatDate} from "../utils/formats";
 

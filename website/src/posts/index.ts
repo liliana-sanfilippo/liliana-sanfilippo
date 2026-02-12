@@ -1,4 +1,4 @@
-import {posts} from "../posts/post"
+import {posts} from "./post"
 import {Post} from "./post_interface";
 
 const sorted: Post[] = [...posts].sort((a, b) => b.date.getTime() - a.date.getTime())

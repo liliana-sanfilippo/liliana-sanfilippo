@@ -15,6 +15,15 @@ export const getPathMapping = () => {
 
             // Vollständigen Pfad aufbauen
             const currentPath = parentPath + '/' + slug;
+            if (item.component) {
+                map[currentPath] = {
+                    name: item.name,
+                    title: item.title,
+                    path: item.path,
+                    component: item.component,
+                    header: item.header,
+                };
+            }
             item.folder.forEach((subItem: any) => {
                 processItem(map, subItem, currentPath); // Rekursiver Aufruf
             });

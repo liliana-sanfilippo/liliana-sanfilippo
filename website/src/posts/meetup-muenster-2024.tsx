@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './document.module.css'
-import {ImageWrapper} from "../../components/media/ImageWrapper";
+import {ImageWrapper} from "../components/media/ImageWrapper";
 
 export const metamuensterMeetup2024 = {
     title: "MeetUp: Münster 2024",

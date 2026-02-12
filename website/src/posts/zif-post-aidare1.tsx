@@ -1,5 +1,5 @@
 import React from 'react'
-import {SourceBox} from "../../components/boxes/SourceBox";
+import {SourceBox} from "../components/boxes/SourceBox";
 
 export const metazifBlogAidare = {
     title: "Workshop: Artificial Intelligence and Digital Autonomy in Research and Education",

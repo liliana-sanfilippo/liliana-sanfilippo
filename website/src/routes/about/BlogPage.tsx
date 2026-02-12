@@ -1,7 +1,7 @@
 import React from "react";
 import ArticleCard from "../../components/ArticleCard";
-import posts from "../posts";
-import {Post} from "../posts/post_interface";
+import posts from "../../posts";
+import {Post} from "../../posts/post_interface";
 import {H2} from "../../components/H2"
 import PostByTags from "../../components/PostByTags";
 

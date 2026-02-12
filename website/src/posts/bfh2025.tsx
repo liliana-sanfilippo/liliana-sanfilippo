@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './document.module.css'
-import {LinkedInCarousel} from "../../components/Carousels/LinkedInCarousel";
-import {linkedinposts25} from "../../data/bfh/bfh-socials-2025";
+import {LinkedInCarousel} from "../components/Carousels/LinkedInCarousel";
+import {linkedinposts25} from "../data/bfh/bfh-socials-2025";
 
 export const metabfh2025 = {
     title: "BFH European MeetUp 2025",

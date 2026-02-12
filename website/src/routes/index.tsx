@@ -8,7 +8,7 @@ import {chunk} from 'lodash'
 import NotFoundPage from "../components/pageRelated/NotFoundPage";
 import {AboutPage} from "./about/AboutPage";
 import TagIndexPageWrapper from "./TagIndexWrapper";
-import postsWithNav from "./posts";
+import postsWithNav from "../posts";
 import TagPageWrapper from "./tags";
 import {getPathMapping} from "../utils/getPathMapping";
 import {WikiPage} from "../components/wiki/WikiPage";
@@ -59,7 +59,7 @@ function AppRouter() {
                     <Route path={`${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/:pageName`}  element={<WikiPage folder={"wiki-generator"}/>} />
                     <Route path={`${import.meta.env.VITE_REACT_BIBTEX_PARSER_PATH}/:pageName`}  element={<WikiPage folder={"wiki-parser"}/>} />
                     <Route path={`${import.meta.env.VITE_REACT_AUTHOR_PARSER_PATH}/:pageName`} element={<WikiPage folder={"wiki-author"}/>} />
-
+                    <Route path={"/current-projects/igem-bielefeld/:pageName"} element={<WikiPage folder={"igemnotes"}/>} />
 
                     {/* Tag Index Page */}
                     <Route path={import.meta.env.VITE_TAG_ROOT} element={<TagIndexPageWrapper/>}/>

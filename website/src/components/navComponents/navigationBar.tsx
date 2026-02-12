@@ -10,6 +10,9 @@ import {Cv} from "../../routes/pages/cv";
 import {ReactGenerator} from "../../routes/pages/react-generator";
 import {BibtexParser} from "../../routes/pages/bibtex-parser";
 import {AuthorNameParser} from "../../routes/pages/author-name-parser";
+import {IgemBielefeldOverview} from "../../routes/pages/igemBielefeldOverview";
+import {CurrentProjects} from "../../routes/pages/currentProjects";
+import {Packages} from "../../routes/pages/packages";
 
 export const NavigationBar: (PageRef | Folder)[] = [{
     name: "About", title: "About", path: "/about", component: <AboutPage/>
@@ -21,30 +24,42 @@ export const NavigationBar: (PageRef | Folder)[] = [{
     name: "Posts", title: "Posts", path: "/posts", component: <BlogPage/>
 
 }, {
-    name: "Current Projects", folder: [{
-        name: "AIDARE", title: "AIDARE", path: "/aidare", component: <Aidare/>
-
-    }, {
-        name: "BFH European MeetUp", title: "BFH European MeetUp", path: "/bfh", component: <Bfh/>
-
-    }, {
-        name: "Intelligent Counselling System",
-        title: "Intelligent Counselling System",
-        path: "/intelligent-counselling-system",
-        component: <CounsellingChatbot/>
-
-    }, {
-        name: "iGEM Bielefeld", title: "iGEM Bielefeld", path: "/igem-bielefeld", component: <IgemBielefeld/>
-
-    }, /**{
-     name: "PreCyse",
-     title: "PreCyse",
-     path: "/precyse",
-     component: <Precyse/>
-
-     },**/
+    name: "Current Projects", component: <CurrentProjects/>, folder: [
         {
-            name: "Packages", folder: [
+            name: "AIDARE", title: "AIDARE", path: "/aidare", component: <Aidare/>
+
+        }, {
+            name: "BFH European MeetUp", title: "BFH European MeetUp", path: "/bfh", component: <Bfh/>
+
+        }, {
+            name: "Intelligent Counselling System",
+            title: "Intelligent Counselling System",
+            path: "/intelligent-counselling-system",
+            component: <CounsellingChatbot/>
+
+        }, {
+            name: "iGEM Bielefeld", component: <IgemBielefeldOverview/>, folder: [
+                {
+                    name: "Overview", title: "iGEM Bielefeld", path: "/"
+                },
+                {
+                    name: "iGEM Bielefeld projects",
+                    title: "iGEM Bielefeld projects",
+                    path: "/projects",
+                    component: <IgemBielefeld/>
+                }
+            ]
+
+
+        }, /**{
+         name: "PreCyse",
+         title: "PreCyse",
+         path: "/precyse",
+         component: <Precyse/>
+
+         },**/
+        {
+            name: "Packages", component: <Packages/>, folder: [
                 {
                     name: "React Reference Manager",
                     title: "React Reference Manager",
