@@ -432,6 +432,18 @@ export const igemguides: Linktype[] = [
         link: "https://static.igem.wiki/teams/5661/contribution/software-guide.pdf",
         tag: "team-system",
         author: "TAU-Israel 2025"
+    },
+    {
+        title: "How To Wiki - A Brief Introduction to How This Wiki Works",
+        link: "https://2024.igem.wiki/marburg/how-to-wiki",
+        tag: "wiki",
+        author: "Marburg 2024"
+    },
+    {
+        title: "Wiki code - Jekyll",
+        link: "https://2024.igem.wiki/sdu-china/wiki-code",
+        tag: "wiki",
+        author: "sdu-china 2025"
     }
 ]
 
