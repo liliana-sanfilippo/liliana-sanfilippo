@@ -100,6 +100,21 @@ export const noteslinks: Linktype[] = [
         title: "The iGEM Sciebo",
         link: "Sciebo",
         tag: "infrastructure"
+    },
+    {
+        title: "Getting started with Geneious",
+        link: "Geneious",
+        tag: "infrastructure"
+    },
+    {
+        title: "Getting access to the shared team email",
+        link: "Team-Email",
+        tag: "infrastructure"
+    },
+    {
+        title: "Wiki & Documentation Guide",
+        link: "https://liliana-sanfilippo.github.io/igem-wiki-guide/wiki-guide.pdf",
+        tag: "wiki"
     }
 ]
 
