@@ -12,8 +12,10 @@ export const metaMeetupEindhoven2025 = {
 }
 
 export default function MeetupEindhoven2025() {
-    return (<div className={styles.Welcome}>
+    return (
+        <div className={styles.Welcome}>
 
 
-    </div>)
+        </div>
+    )
 }

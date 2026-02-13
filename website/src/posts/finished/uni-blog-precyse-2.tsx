@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './document.module.css'
-import UniBlog from "../components/getExternal/getUniBlog";
+import styles from '../document.module.css'
+import UniBlog from "../../components/getExternal/getUniBlog";
 
 export const metauniBlogPrecyse2 = {
     title: "External Blog: Four gold medals for Bielefeld iGEM team",

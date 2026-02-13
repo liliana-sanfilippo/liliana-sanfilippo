@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './document.module.css'
-import UniBlog from "../components/getExternal/getUniBlog";
+import styles from '../document.module.css'
+import UniBlog from "../../components/getExternal/getUniBlog";
 
 export const metauniBlogCellective1 = {
     title: "External Blog: Students develop therapeutic approach to breast cancer",

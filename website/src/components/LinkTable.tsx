@@ -5,7 +5,7 @@ import {Linktype} from "../types/linktype";
 import "../componentStyling/LinkTable.css"
 
 export function LinkTable({data}: {data: Array<Linktype>}){
-
+    var author = false;
     const rows = data.map(point => {
         var link;
         if (point.link.includes("https")) {
@@ -13,15 +13,26 @@ export function LinkTable({data}: {data: Array<Linktype>}){
         } else {
             link =  `/current-projects/igem-bielefeld/${point.link}`
         }
+        if (point.author != null) {
+            author = true
+        }
         return ([
             point.title,
             <Link to={link}>Click here</Link>,
-            <span className={`${point.tag}-tag tag`}>{point.tag}</span>
+            <span className={`${point.tag}-tag tag`}>{point.tag}</span>,
+            (point.author && point.author)
         ])
     })
+    var headers;
+
+    if (author) {
+        headers = [{header: "Title", }, {header: "Link"}, {header: "Category"}, {header: "Author"}]
+    } else {
+        headers =  [{header: "Title", }, {header: "Link"}, {header: "Category"}]
+    }
     return(
         <TableChart
-            headers={[{header: "Title", }, {header: "Link"}, {header: "Category"}]}
+            headers={headers}
             rows={rows}
             headerPosition={"top"}
             bordered={true}

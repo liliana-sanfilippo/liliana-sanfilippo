@@ -3,11 +3,15 @@
     padding: 0.3rem;
 }
 
-.team-start-tag {
+.protocol-tag {
+    background-color: var(--dark-secondary);
+}
+
+.team-start-tag, .meetup-tag {
     background-color: var(--very-light-purple);
 }
 
-.bureaucracy-tag {
+.bureaucracy-tag, .igem-tag {
     background-color: var(--very-light-secondary);
 }
 
@@ -15,10 +19,14 @@
     background-color: var(--verylightblue);
 }
 
+.hp-tag {
+    background-color: var(--lightblue-drei);
+}
+
 .wiki-tag {
     background-color: var(--lightyellow);
 }
 
-.infrastructure-tag {
+.infrastructure-tag, .entrepreneurship-tag {
     background-color: var(--cebitecgray);
 }

@@ -97,6 +97,12 @@ export function IgemBielefeldOverview() {
                 </section>
                 <section>
                     <h2>
+                        iGEM data collections
+                    </h2>
+                    Visit <Link to={"/current-projects/igem-bielefeld/data"}>here</Link> to view datasets I started.
+                </section>
+                <section>
+                    <h2>
                         Notes and manuals
                     </h2>
                     <p>Browse my checklists and notes for starting new teams and passing over advisor duties.</p>

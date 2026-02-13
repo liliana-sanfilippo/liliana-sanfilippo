@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import styles from './document.module.css'
+import styles from '../document.module.css'
 import {Link} from "react-router-dom";
 import {Image, Modal} from "react-bootstrap";
-import {Poster} from "../components/Carousels/PosterCarousel";
+import {Poster} from "../../components/Carousels/PosterCarousel";
 
 export const metaBiteach2024 = {
     title: "The counselling chatbot presented at BI.teach",

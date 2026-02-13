@@ -1,10 +1,11 @@
 import {Post} from "./post_interface";
-import uniBlogPrecyse1, {metauniBlogPrecyse1} from "./uni-blog-precyse-1";
-import uniBlogPrecyse2, {metauniBlogPrecyse2} from "./uni-blog-precyse-2";
-import uniBlogCellective1, {metauniBlogCellective1} from "./uni-blog-cellective-1";
-import uniBlogCellective2, {metauniBlogCellective2} from "./uni-blog-cellective-2";
-import zifBlogAidare2, {metazifBlogAidare2} from "./zif-post-aidare2";
-import Biteach2024, {metaBiteach2024} from "./biteach-2024";
+import uniBlogPrecyse1, {metauniBlogPrecyse1} from "./finished/uni-blog-precyse-1";
+import uniBlogPrecyse2, {metauniBlogPrecyse2} from "./finished/uni-blog-precyse-2";
+import uniBlogCellective1, {metauniBlogCellective1} from "./finished/uni-blog-cellective-1";
+import uniBlogCellective2, {metauniBlogCellective2} from "./finished/uni-blog-cellective-2";
+import zifBlogAidare2, {metazifBlogAidare2} from "./finished/zif-post-aidare2";
+import Biteach2024, {metaBiteach2024} from "./finished/biteach-2024";
+import IgemHomecoming24, {metaIgemHomecoming24} from "./finished/igem-homecoming-24";
 
 export const posts: Post[] = [{
     ...metauniBlogPrecyse1, MDXComponent: uniBlogPrecyse1,
@@ -18,7 +19,10 @@ export const posts: Post[] = [{
     ...metazifBlogAidare2, MDXComponent: zifBlogAidare2,
 }, {
     ...metaBiteach2024, MDXComponent: Biteach2024
-}
+},
+    {
+        ...metaIgemHomecoming24, MDXComponent: IgemHomecoming24
+    },
     /*
 
 
@@ -60,8 +64,6 @@ export const posts: Post[] = [{
             ...metaJamboreePrep2024, MDXComponent: JamboreePrep2024
         }, {
             ...metaEegHackathon, MDXComponent: SailEegHackathon
-        }, {
-            ...metaIgemHomecoming24, MDXComponent: IgemHomecoming24
         }, {
             ...metaIgemHomecoming25, MDXComponent: IgemHomecoming25
         }, {
