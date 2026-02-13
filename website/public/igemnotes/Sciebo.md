@@ -31,6 +31,14 @@ Depending on the privacy setting, a person may have to first accept an invitatio
 
 ### Managing teams 
 
+Under "contacts" teams can be created and managed. 
+
+<img width="296" height="336" alt="grafik" src="https://github.com/user-attachments/assets/4d86da17-5bc5-446f-9841-20de899c5879" />
+
+It can be checked what decks and folders are shared with the teams as well. 
+
+<img width="696" height="374" alt="grafik" src="https://github.com/user-attachments/assets/15cc0044-5e32-49ea-9266-ef3821670583" />
+
 
 ## Further uses of sciebo
 
