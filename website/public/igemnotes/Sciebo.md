@@ -103,12 +103,47 @@ The deck is a project management board that uses "cards" instead of typical "tas
 Cards can be assigned to people or groups, tags and notes can be added and it is possible to link documents, which can be very handy for text review later on. 
 
 
+<img width="400" alt="grafik" src="https://github.com/user-attachments/assets/fdac5ce5-23e4-4e92-8d1b-95335695590e" />
+
+<img width="400" alt="grafik" src="https://github.com/user-attachments/assets/e3d36e61-cc97-4de5-9aa0-e88d18889276" />
+
+It is even possible to link specific document sections. 
+
+<img width="626" height="367" alt="grafik" src="https://github.com/user-attachments/assets/cbd698c1-9994-4921-b907-ed99b4e3e9d9" />
 
 
-### File sharing features
+### File features
+
+#### File types
+
+Many file types are supported, commmon ones like xslx and docx as well as other such as markdown. 
+
+<img height="300" alt="grafik" src="https://github.com/user-attachments/assets/fbde0688-8856-44ea-96e7-c9509eeaabf1" />
+
+#### Templates
+
+It is possible to create templates for file types by placing the template in the folder called "Vorlagen" in the root folder of the current team. 
+
+<img width="939" height="446" alt="grafik" src="https://github.com/user-attachments/assets/4d12bcf1-4905-4979-a192-2232ea67ba66" />
+
+#### Editing together
+
+The editor has the usual function for comments.  
+
+<img width="1041" height="443" alt="grafik" src="https://github.com/user-attachments/assets/576566cb-bbad-484d-8b2c-99a3a47e59dc" />
+
 
 #### File drop
 
+It is possible to create folders for file drops to have external people share pictures or documents with your without those people gaining any type of access to internal files. 
+
 #### File share 
+
+As mentionaed, public links can be created with different kinds of acces such as "view", "edit", etc. 
+
+
+## Desktop Client 
+
+Sciebo can be used in the web version as well as a local version on most operating systems including Linux distributions. This allows to edit files with the editor of your choice such as Word or Libre Office. 
 
 
