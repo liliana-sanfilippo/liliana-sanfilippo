@@ -8,7 +8,7 @@ Home (level 0)
 └── iGEM Bielefeld (level 1)
   |
   ├── Archive
-  |    └── [folders from former teams]
+  |    └── [folders from former teams] 
   |
   └── iGEM[currentyear] (level 2)
     ├── Team Start
@@ -20,10 +20,16 @@ Of course, teams can alter the structure to their taste.
 
 ## Access rights
 
+- Level 0 is only visible to people with the password. 
+- Level 1 is permanently shared with the PI.
+- Level 2 is shared with the current team. 
+
 Files, calenders, averything can be shared with other users or (more easily) with **teams** of people. 
 We are using the "share with team" function as then only the team members have to be managed and not all individual access rights. 
 
 Depending on the privacy setting, a person may have to first accept an invitation to a team to be accepted into the team. These invitations are sent through email to the uni-bielefeld mail (usually). 
+
+### Managing teams 
 
 
 ## Further uses of sciebo
@@ -81,6 +87,22 @@ And the results can be downloaded in various forms as well:
 <img width="537" height="278" alt="grafik" src="https://github.com/user-attachments/assets/8f420f37-4b45-4215-aa85-3c06f10abe78" />
 
 
+### Tasks 
+
+The tasks feature is good-ish but it is not possible to assign tasks to specific people, only share the task list (that belogns to the iGEM Calender) with individuals or teams. But the **task board** (deck) allows this and is meant for project management.  
+
+<img width="582" height="203" alt="grafik" src="https://github.com/user-attachments/assets/bdcc9b8a-d33b-4d60-8619-f53dcd34a0ad" />
+
+
+### Deck
+
+The deck is a project management board that uses "cards" instead of typical "task items". The task lists are presented as boards: 
+
+<img width="653" height="271" alt="grafik" src="https://github.com/user-attachments/assets/5bf97b55-dd6a-4422-aa3d-3d93eb302b22" />
+
+Cards can be assigned to people or groups, tags and notes can be added and it is possible to link documents, which can be very handy for text review later on. 
+
+
 
 
 ### File sharing features
@@ -88,3 +110,5 @@ And the results can be downloaded in various forms as well:
 #### File drop
 
 #### File share 
+
+
