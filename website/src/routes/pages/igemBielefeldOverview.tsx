@@ -84,14 +84,16 @@ export function IgemBielefeldOverview() {
                     <h2>
                         Projects
                     </h2>
-                    <p>Browse summaries of former projects <Link
+                    <p>Browse summaries of former projects I participated in <Link
                         to={"/current-projects/igem-bielefeld/projects"}>here</Link>. </p>
                 </section>
                 <section>
                     <h2>
                         Starting as an advisor
                     </h2>
-                    <p>TODO</p>
+                    <p>TODO <Link
+                        to={"/current-projects/igem-bielefeld/for-advisors"}>here</Link></p>
+
                 </section>
                 <section>
                     <h2>

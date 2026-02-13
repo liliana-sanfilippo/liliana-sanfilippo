@@ -5,7 +5,7 @@ import BootstrapNavbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import {Link as OurLink} from '@liliana-sanfilippo/react-link';
 import {Link} from 'react-router-dom';
-import {NavigationBar} from "./navigationBar";
+import {NavBarContent} from "../../navBarContent";
 import siteMetadata from "../../siteMetadata";
 
 export function Navbar() {
@@ -67,7 +67,7 @@ export function Navbar() {
         };
     }, []);
 
-    const pages = NavigationBar.map((item, index) => {
+    const pages = NavBarContent.map((item, index) => {
         if ("path" in item && item.path && !("folder" in item)) {
             return (
                 <OurLink

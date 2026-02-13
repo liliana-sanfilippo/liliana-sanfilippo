@@ -1,7 +1,7 @@
 import {Linktype} from "../../types/linktype";
 
 export const noteslinks: Linktype[] = [
-    {
+    /*{
         title: "Assessing coding and computer skills",
         link: "Computer-Skills",
         tag: "team-start"
@@ -95,6 +95,11 @@ export const noteslinks: Linktype[] = [
         title: "Consent and Release Forms",
         link: "Consent-Forms",
         tag: ""
+    },*/
+    {
+        title: "The iGEM Sciebo",
+        link: "Sciebo",
+        tag: "infrastructure"
     }
 ]
 

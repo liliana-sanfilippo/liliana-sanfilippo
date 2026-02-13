@@ -43,6 +43,11 @@
     h4 {
         margin: 3rem auto !important;
     }
+    img {
+        max-height: 300px;
+        max-width: fit-content;
+        align-self: center;
+    }
 }
 
 aside {

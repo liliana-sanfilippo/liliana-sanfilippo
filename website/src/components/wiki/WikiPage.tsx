@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import "../../componentStyling/wikipage.css"
 import {H2, H3} from "../H2";
+import {stringToSlug} from "@liliana-sanfilippo/react-wiki-components";
 
 interface Heading {
     id: string;
@@ -132,27 +133,27 @@ export function WikiPage({page, folder}: { page?: string , folder?: string}) {
                             components={{
                                 h1: ({node, children, ...props}) => {
                                     const text = String(children);
-                                    const id = generateId(text);
+                                    const id =  stringToSlug(text);
                                     return <H2 id={id} {...props}>{children}</H2>;
                                 },
                                 h2: ({node, children, ...props}) => {
                                     const text = String(children);
-                                    const id = generateId(text);
+                                    const id = stringToSlug(text);
                                     return <H3 id={id} {...props}>{children}</H3>;
                                 },
                                 h3: ({node, children, ...props}) => {
                                     const text = String(children);
-                                    const id = generateId(text);
+                                    const id = stringToSlug(text);
                                     return <h3 id={id} {...props}>{children}</h3>;
                                 },
                                 h4: ({node, children, ...props}) => {
                                     const text = String(children);
-                                    const id = generateId(text);
+                                    const id = stringToSlug(text);
                                     return <h4 id={id} {...props}>{children}</h4>;
                                 },
                                 h5: ({node, children, ...props}) => {
                                     const text = String(children);
-                                    const id = generateId(text);
+                                    const id = stringToSlug(text);
                                     return <h5 id={id} {...props}>{children}</h5>;
                                 },
                                 h6: ({node, children, ...props}) => {

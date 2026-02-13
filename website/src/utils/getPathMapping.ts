@@ -1,4 +1,4 @@
-import { NavigationBar } from "../components/navComponents/navigationBar";
+import { NavBarContent } from "../navBarContent";
 import { Page } from "../components/Pages";
 
 export const getPathMapping = () => {
@@ -40,7 +40,7 @@ export const getPathMapping = () => {
         }
     };
 
-    return NavigationBar.reduce<{
+    return NavBarContent.reduce<{
         [key: string]: Page;
     }>((map, item) => {
         processItem(map, item);

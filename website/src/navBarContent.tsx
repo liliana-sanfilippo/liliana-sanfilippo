@@ -1,20 +1,21 @@
-import {Folder, PageRef} from "../Pages";
-import {AboutPage} from "../../routes/about/AboutPage";
-import {BlogPage} from "../../routes/about/BlogPage";
-import {Aidare} from "../../routes/pages/aidare";
-import {ReactManager} from "../../routes/pages/react-manager";
-import {Bfh} from "../../routes/pages/bfh";
-import {CounsellingChatbot} from "../../routes/pages/CounsellingChatbot";
-import {IgemBielefeld} from "../../routes/pages/igemBielefeld";
-import {Cv} from "../../routes/pages/cv";
-import {ReactGenerator} from "../../routes/pages/react-generator";
-import {BibtexParser} from "../../routes/pages/bibtex-parser";
-import {AuthorNameParser} from "../../routes/pages/author-name-parser";
-import {IgemBielefeldOverview} from "../../routes/pages/igemBielefeldOverview";
-import {CurrentProjects} from "../../routes/pages/currentProjects";
-import {Packages} from "../../routes/pages/packages";
+import {Folder, PageRef} from "./components/Pages";
+import {AboutPage} from "./routes/about/AboutPage";
+import {BlogPage} from "./routes/about/BlogPage";
+import {Aidare} from "./routes/pages/aidare";
+import {ReactManager} from "./routes/pages/react-manager";
+import {Bfh} from "./routes/pages/bfh";
+import {CounsellingChatbot} from "./routes/pages/CounsellingChatbot";
+import {IgemBielefeld} from "./routes/pages/igemBielefeld";
+import {Cv} from "./routes/pages/cv";
+import {ReactGenerator} from "./routes/pages/react-generator";
+import {BibtexParser} from "./routes/pages/bibtex-parser";
+import {AuthorNameParser} from "./routes/pages/author-name-parser";
+import {IgemBielefeldOverview} from "./routes/pages/igemBielefeldOverview";
+import {CurrentProjects} from "./routes/pages/currentProjects";
+import {Packages} from "./routes/pages/packages";
+import {StartingAsAdvisor} from "./routes/pages/StartingAsAdvisor";
 
-export const NavigationBar: (PageRef | Folder)[] = [{
+export const NavBarContent: (PageRef | Folder)[] = [{
     name: "About", title: "About", path: "/about", component: <AboutPage/>
 
 }, {
@@ -47,6 +48,12 @@ export const NavigationBar: (PageRef | Folder)[] = [{
                     title: "iGEM Bielefeld projects",
                     path: "/projects",
                     component: <IgemBielefeld/>
+                },
+                {
+                    name: "Starting as advisor",
+                    title: "Starting as advisor",
+                    path: "/for-advisors",
+                    component: <StartingAsAdvisor/>
                 }
             ]
 
