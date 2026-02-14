@@ -15,7 +15,7 @@ export const igemreportstudylink: Linktype[] = [
     },
     {
         title: "",
-        link: "",
+        link: "https://static.igem.wiki/teams/5916/education/public/perspective-analysis.pdf",
         tag: "",
         author: ""
     },

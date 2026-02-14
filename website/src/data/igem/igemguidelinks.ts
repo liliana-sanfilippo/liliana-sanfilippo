@@ -444,6 +444,12 @@ export const igemguides: Linktype[] = [
         link: "https://2024.igem.wiki/sdu-china/wiki-code",
         tag: "wiki",
         author: "sdu-china 2025"
+    },
+    {
+        title: "iGEM Ethical Guideline for Human Practices",
+        link: "https://static.igem.org/mediawiki/2017/8/8f/T--Toronto--2016_igem_ethical_guideline.pdf",
+        tag: "hp",
+        author: "Toronto 2016"
     }
 ]
 

@@ -24,6 +24,10 @@ export const posts: Post[] = [{
         ...metaIgemHomecoming24, MDXComponent: IgemHomecoming24
     },
     /*
+    {
+        ...metaIgemaiethics, MDXComponent: Igemaiethics
+    }
+
 
 
     {
