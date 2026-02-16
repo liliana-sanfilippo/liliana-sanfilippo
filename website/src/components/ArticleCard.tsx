@@ -21,8 +21,10 @@ function ArticleCard({post, noimg, h}: {
                   <p className={"my-2"}> <Link to={`/posts/${post.slug}`}>{post.title}</Link> </p>
                   {post.spoiler && <p className={"m-1"}>{post.spoiler}</p>}
                 {post.tags && post.tags.length && (<>
-                    {' '}
+                    {/*
+                        {' '}
                     &bull;{' '}
+                    */}
                     <ul className={"tags"}>
                         {post.tags.map((tag: string) => (<li key={tag}>
                             <Link to={`${"/".replace(/\/$/, '')}/tags/${tag}`}>{tag}</Link>

@@ -51,8 +51,8 @@ export const NavBarContent: (PageRef | Folder)[] = [{
                     component: <IgemBielefeld/>
                 },
                 {
-                    name: "Starting as advisor",
-                    title: "Starting as advisor",
+                    name: "For advisors",
+                    title: "For advisors",
                     path: "/for-advisors",
                     component: <StartingAsAdvisor/>
                 },

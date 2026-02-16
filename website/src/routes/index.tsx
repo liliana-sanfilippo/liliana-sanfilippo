@@ -12,6 +12,7 @@ import postsWithNav from "../posts";
 import TagPageWrapper from "./tags";
 import {getPathMapping} from "../utils/getPathMapping";
 import {WikiPage} from "../components/wiki/WikiPage";
+import { Sidebar } from "@liliana-sanfilippo/react-wiki-components"
 
 
 function BlogPostWrapper() {
@@ -28,11 +29,24 @@ function AppRouter() {
 
     return (<BrowserRouter basename={import.meta.env.VITE_BASE_NAME}>
         <Suspense fallback={<div>Loading...</div>}>
+            <div id={"main-wrapper"}>
             <Routes>
 
 
                 {/* Blog Layout Wrapper */}
-                <Route element={<BlogLayout/>}>
+                <Route element={
+                    <div className={"flex flex-row"}>
+                        <div className={"sidebarbox hidden md:block xl:block md:w-2/12 xl:w-2/12"}>
+                            {/*
+                            <Sidebar/>
+                            */}
+                        </div>
+                        <div className={"w-full md:w-9/12 xl:w-9/12 mx-auto"}>
+                            <BlogLayout/>
+                        </div>
+                    </div>
+
+                }>
 
 
                     {/* Index NavigationBar */}
@@ -54,12 +68,22 @@ function AppRouter() {
                     <Route path="/home" element={<AboutPage/>}/>
 
                     {Object.entries(pathMapping).map(([path, {component: Component}]) => (
-                        <Route path={path} element={Component}/>))}
-                    <Route path={`${import.meta.env.VITE_REACT_REFERENCE_MANAGER_PATH}/:pageName`}  element={<WikiPage folder={"wiki"}/>} />
-                    <Route path={`${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/:pageName`}  element={<WikiPage folder={"wiki-generator"}/>} />
-                    <Route path={`${import.meta.env.VITE_REACT_BIBTEX_PARSER_PATH}/:pageName`}  element={<WikiPage folder={"wiki-parser"}/>} />
-                    <Route path={`${import.meta.env.VITE_REACT_AUTHOR_PARSER_PATH}/:pageName`} element={<WikiPage folder={"wiki-author"}/>} />
-                    <Route path={"/current-projects/igem-bielefeld/:pageName"} element={<WikiPage folder={"igemnotes"}/>} />
+                            <Route path={path} element={Component}/>
+                        )
+                    )
+                    }
+
+
+                    <Route path={`${import.meta.env.VITE_REACT_REFERENCE_MANAGER_PATH}/:pageName`}
+                           element={<WikiPage folder={"wiki"}/>}/>
+                    <Route path={`${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/:pageName`}
+                           element={<WikiPage folder={"wiki-generator"}/>}/>
+                    <Route path={`${import.meta.env.VITE_REACT_BIBTEX_PARSER_PATH}/:pageName`}
+                           element={<WikiPage folder={"wiki-parser"}/>}/>
+                    <Route path={`${import.meta.env.VITE_REACT_AUTHOR_PARSER_PATH}/:pageName`}
+                           element={<WikiPage folder={"wiki-author"}/>}/>
+                    <Route path={"/current-projects/igem-bielefeld/:pageName"}
+                           element={<WikiPage folder={"igemnotes"}/>}/>
 
                     {/* Tag Index Page */}
                     <Route path={import.meta.env.VITE_TAG_ROOT} element={<TagIndexPageWrapper/>}/>
@@ -74,7 +98,9 @@ function AppRouter() {
                 <Route path="*" element={<NotFoundPage/>}/>
 
             </Routes>
+            </div>
         </Suspense>
+
     </BrowserRouter>)
 }
 

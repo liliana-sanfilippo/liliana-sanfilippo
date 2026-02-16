@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 export function Footer() {
 
 
-    return (<footer className="px-3 mt-5">
+    return (<footer className="px-3 mt-5 print:hidden">
         <Container className="">
             <div className="row align-items-center" style={{}}>
                 <div className="col grid">

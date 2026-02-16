@@ -16,6 +16,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/*
+@import "tailwindcss/preflight";
+*/
 
 :root{
     --ourgradient: linear-gradient(90deg, rgba(147,94,184,1) 0%, rgba(160,167,243,1) 100%);
@@ -51,6 +54,158 @@ code {
     --igemlightgreen: #99cb9a;
 
 }
+
+
+
+
+
+@media print {
+    /* DONT PRINT (NAV & CO) */
+    nav,
+    footer,
+    .navbar,
+    .footer,
+    .sidebarbox,
+    .navTabs,
+    .sort-indicator,
+    .carousel-indicators,
+    .carousel-control-prev,
+    .carousel-control-next,
+    iframe,
+    .wheel-buttons
+    {
+        display: none !important;
+    }
+
+    table, .table-container, .table-wrapper, .table-chart-container {
+        height: max-content !important;
+        min-height: 100% !important;
+        max-height: none !important;
+    }
+
+    main {
+        padding-top: 0 !important;
+    }
+
+
+
+    /* SHOW LINKS */
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+    a {
+        page-break-inside: avoid;
+    }
+
+
+    /* NO DECORATIONS */
+    .tabWrapper {
+        border: none!important;
+        margin-bottom: 2rem !important;
+    }
+
+    /* SHOW ALL TABS */
+    .tab-pane, .tab-content, .tab-pane > * {
+        display: block !important;
+        visibility: visible !important;
+        page-break-inside: avoid;
+        opacity: 100 !important;
+    }
+    /* CHARTS*/
+    .recharts-wrapper,
+    .recharts-surface,
+    canvas,
+    .chart-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .recharts-responsive-container {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 400px !important;
+    }
+
+    .recharts-wrapper,
+    .chart-container {
+        page-break-inside: avoid;
+    }
+    /* PRINT CAROUSELS*/
+
+    .carousel-item,
+    .wheel-item,
+    .p-carousel-item,
+    .swiper-slide,
+    .slick-slide {
+        float: none !important;
+        display: block !important;
+        position: static !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-bottom: 2rem;
+        page-break-inside: avoid;
+        clear: both;
+    }
+
+    .carousel {
+        max-width: 100% !important;
+        width: 100% !important;
+        .card, .card-header  {
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            min-width: 0 !important;
+        }
+        .m-1, .tags, .m-1, .card-img-top, .my-0 {
+            display: none !important;
+        }
+    }
+
+
+    .p-carousel-items-container,
+    .carousel-inner,
+    .swiper-wrapper,
+    .slick-track {
+        display: block !important;
+        transform: none !important;
+        width: 100% !important;
+        height: auto !important;
+        position: static !important;
+    }
+
+
+
+    /* PRINT CARD */
+    #latestpostwrapper {
+        padding: 0 !important;
+    }
+    #latestpost {
+        margin: 0 !important;
+    }
+
+    /* LINK LISTS RICHTIG*/
+
+    .my-2 {
+        margin: 3rem 0.2rem;
+    }
+    .linkding {
+        background: transparent !important;
+        padding: 0 !important;
+        margin-top: 2rem !important;
+    }
+}
+
+
+
+
+
 
 .btn-outline-primary, .btn:active, .btn:hover {
     --bs-btn-active-bg: var(--offblack) !important;

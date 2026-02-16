@@ -4,7 +4,7 @@ import UniBlog from "../../components/getExternal/getUniBlog";
 
 export const metauniBlogPrecyse1 = {
     title: "External Blog: Students conduct research into gene therapy for cystic fibrosis",
-    tags: ["igem", "precyse", "external"],
+    tags: ["igem", "precyse", "external", "igem-bielefeld"],
     spoiler: "An interdisciplinary student research team at Bielefeld University is improving a gene" + " therapy for the treatment of cystic fibrosis, one of the world's most common genetic diseases.",
     slug: "uni-blog-precyse",
     date: new Date("2024-10-15"),

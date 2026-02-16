@@ -4,7 +4,7 @@ import UniBlog from "../../components/getExternal/getUniBlog";
 
 export const metauniBlogCellective1 = {
     title: "External Blog: Students develop therapeutic approach to breast cancer",
-    tags: ["igem", "cellective", "external"],
+    tags: ["igem", "cellective", "external", "igem-bielefeld"],
     spoiler: "An interdisciplinary team of students from Bielefeld University is working on a novel approach to treating breast cancer. With their research, the eleven students are participating in the iGEM competition, the world's largest competition for synthetic biology.",
     slug: "uni-blog-cellective-1",
     date: new Date("2025-10-20"),
