@@ -36,11 +36,11 @@ function AppRouter() {
                 {/* Blog Layout Wrapper */}
                 <Route element={
                     <div className={"flex flex-row"}>
-                        <div className={"sidebarbox hidden md:block xl:block md:w-2/12 xl:w-2/12"}>
-                            {/*
+                        {/* <div className={"sidebarbox hidden md:block xl:block md:w-2/12 xl:w-2/12"}>
+
                             <Sidebar/>
-                            */}
-                        </div>
+
+                        </div> */}
                         <div className={"w-full md:w-9/12 xl:w-9/12 mx-auto"}>
                             <BlogLayout/>
                         </div>

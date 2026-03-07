@@ -14,8 +14,8 @@ export function StartingAsAdvisor() {
                 (Not final)
                 <IGEMTimeline items={igemtimeline}/>
             </Section>
-             <Section title={"Printable Checklist"}>
-                 {/*
+            {/*<Section title={"Printable Checklist"}>
+
                 <h3>Before the first team meeting</h3>
                 <p>Before the first team meeting, ideally</p>
                 <p>
@@ -98,7 +98,7 @@ export function StartingAsAdvisor() {
                     <li><input type="checkbox" disabled/> knows how to fill out travel permission and reimbursement
                         forms
                     </li>
-                </ul> */}
+                </ul>
                 <h3>Before the lab</h3>
                 <ul>
                     <li><input type="checkbox" disabled/> have the PI do the safety instructions</li>
@@ -113,7 +113,7 @@ export function StartingAsAdvisor() {
                     </li>
                     <li><input type="checkbox" disabled/> Microphone usage workshop</li>
                 </ul>
-            </Section>
+            </Section>*/}
         </div>
     )
 }
