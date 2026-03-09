@@ -6,6 +6,7 @@ import uniBlogCellective2, {metauniBlogCellective2} from "./finished/uni-blog-ce
 import zifBlogAidare2, {metazifBlogAidare2} from "./finished/zif-post-aidare2";
 import Biteach2024, {metaBiteach2024} from "./finished/biteach-2024";
 import IgemHomecoming24, {metaIgemHomecoming24} from "./finished/igem-homecoming-24";
+import bfh2024, {metabfh2024} from "./bfh2024";
 
 export const posts: Post[] = [{
     ...metauniBlogPrecyse1, MDXComponent: uniBlogPrecyse1,
@@ -23,6 +24,9 @@ export const posts: Post[] = [{
     {
         ...metaIgemHomecoming24, MDXComponent: IgemHomecoming24
     },
+    {
+        ...metabfh2024, MDXComponent: bfh2024
+    },
     /*
     {
         ...metaIgemaiethics, MDXComponent: Igemaiethics
@@ -30,9 +34,7 @@ export const posts: Post[] = [{
 
 
 
-    {
-        ...metabfh2024, MDXComponent: bfh2024
-    },
+
         {
             ...metazifModelsOfChange, MDXComponent: zifModelsOfChange
         }, {

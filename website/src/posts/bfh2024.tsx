@@ -26,7 +26,7 @@ const furtherlinks: FLink[] = [{
     url: "https://2024.igem.wiki/gu-frankfurt/contribution", text: "Website team Hamburg"
 }]
 
-const pics: string[] = ["https://static.igem.wiki/teams/5247/photos/meetup/joern.jpeg", "https://static.igem.wiki/teams/5247/photos/meetup/affe.jpeg", "https://static.igem.wiki/teams/5247/photos/meetup/orgateam.jpeg", "https://static.igem.wiki/teams/5247/photos/meetup/uni.jpeg", "https://static.igem.wiki/teams/5247/photos/meetup/bye1.jpeg", "https://live.staticflickr.com/65535/54818174539_64e3358709_b.jpg", "https://live.staticflickr.com/65535/54818269930_88a8ed529f_b.jpg", "https://live.staticflickr.com/65535/54818196618_60524ffd90_b.jpg", "https://static.igem.wiki/teams/5247/photos/meetup/exhibition/posterexhibition-plasmid-factory.webp", "https://static.igem.wiki/teams/5247/photos/meetup/exhibition/posterexhibition-frankfurt.webp", "https://static.igem.wiki/teams/5247/photos/meetup/exhibition/posterexhibition-air-view.webp",
+const pics: string[] = ["https://static.igem.wiki/teams/5247/photos/meetup/joern.jpeg", "https://static.igem.wiki/teams/5247/photos/meetup/affe.jpeg", "https://static.igem.wiki/teams/5247/photos/meetup/orgateam.jpeg", "https://static.igem.wiki/teams/5247/photos/meetup/uni.jpeg", "https://static.igem.wiki/teams/5247/photos/meetup/bye1.jpeg", "https://live.staticflickr.com/65535/54818174539_64e3358709_b.jpg", "https://live.staticflickr.com/65535/54818269930_88a8ed529f_b.jpg", "https://live.staticflickr.com/65535/54818196618_60524ffd90_b.jpg", "https://static.igem.wiki/teams/5247/photos/meetup/exhibition/posterexhibition-plasmid-factory.webp", "https://static.igem.wiki/teams/5247/photos/meetup/exhibition/posterexhibition-frankfurt.webp",
 
 ]
 
@@ -39,22 +39,26 @@ export default function bfh2024() {
             <section>
                 <p></p>
                 <p>
-                    This year, the iGEM team Bielefeld-CeBiTec organised and hosted the first BFH European Meet-Up
-                    conference.
-                    This event was designed to unite iGEM teams from across Europe and beyond, providing a platform for
-                    sharing ideas and fostering international connections during the early stages of the iGEM
-                    competition.
-                    Over the course of three full days, the teams presented their projects, participated in workshops
-                    and discussions and were able to get their first external feedback.
+                    "<i>
+                        This year, the iGEM team Bielefeld-CeBiTec organised and hosted the first BFH European Meet-Up
+                        conference.
+                        This event was designed to unite iGEM teams from across Europe and beyond, providing a platform for
+                        sharing ideas and fostering international connections during the early stages of the iGEM
+                        competition.
+                        Over the course of three full days, the teams presented their projects, participated in workshops
+                        and discussions and were able to get their first external feedback.
+                    </i>
                 </p>
-                <p>Meetups are an essential part of forming the iGEM community and offer a platform of exchanging ideas
+                <p>
+                    <i>Meetups are an essential part of forming the iGEM community and offer a platform of exchanging ideas
                     and enthusiasm, but most iGEM MeetUps take place in the middle of the year or shortly before the
                     jamboree. The BFH European MeetUp took place earlier than most MeetUps to facilitate project
                     collaborations between teams and to allow a high number of teams to participate, since most teams
                     get busier as the iGEM year goes on. Further, May is a good time to get feedback and advice from
                     other students and professionals to avoid major mistakes and running into dead ends from the get go.
                     Usually, teams are already actively working on specific ideas, but it is still possible to implement
-                    bigger changes.</p>
+                    bigger changes.</i>
+                </p>
                 {/*
                        <div className="row align-items-center">
                         <div className="col-4 mx-auto">
@@ -64,9 +68,14 @@ export default function bfh2024() {
                         </div>
                     </div>
                     */}
-                <p>Our team was able to secure sponsorships so that participation could remain free of charge for all
-                    attendees. We are glad to be able to provide this opportunity for other teams, many of which have to
-                    secure their own funding.</p>
+                <p>
+                    <i>
+                        Our team was able to secure sponsorships so that participation could remain free of charge for all
+                        attendees. We are glad to be able to provide this opportunity for other teams, many of which have to
+                        secure their own funding.
+                    </i>"
+                </p>
+                <p>I took pictures at the event and am looking forward to do that again at next year's event in Frankfurt!</p>
             </section>
             <section>
                 <h2>Highlights</h2>
@@ -102,7 +111,7 @@ export default function bfh2024() {
                     </div>
                     <div className="col-4 my-3">
                         <Card className="article-summary">
-                            <Card.Img variant="top" src="https://bfh-euromeet.de/assets/workshop-kV5kD_9C.webp"/>
+                            <Card.Img variant="top" src="https://bfh-euromeet.de/img/highlights/workshop.jpg"/>
                             <Card.Body>
                                 <Card.Title>Workshops</Card.Title>
                                 <Card.Text>
@@ -115,7 +124,7 @@ export default function bfh2024() {
                     </div>
                     <div className="col-4 my-3">
                         <Card className="article-summary">
-                            <Card.Img variant="top" src="https://bfh-euromeet.de/assets/vip-C4JYB4yK.webp"/>
+                            <Card.Img variant="top" src="https://bfh-euromeet.de/img/highlights/vip.jpg"/>
                             <Card.Body>
                                 <Card.Title>Special Guests</Card.Title>
                                 <Card.Text>
@@ -128,7 +137,7 @@ export default function bfh2024() {
                     </div>
                     <div className="col-4 my-3">
                         <Card className="article-summary">
-                            <Card.Img variant="top" src="https://bfh-euromeet.de/assets/scientific_talk-CSgoJ-aw.webp"/>
+                            <Card.Img variant="top" src="https://bfh-euromeet.de/img/highlights/scientific_talk.jpg"/>
                             <Card.Body>
                                 <Card.Title>Scientific Talks</Card.Title>
                                 <Card.Text>
@@ -139,7 +148,7 @@ export default function bfh2024() {
                     </div>
                     <div className="col-4 my-3">
                         <Card className="article-summary">
-                            <Card.Img variant="top" src="https://bfh-euromeet.de/assets/networking-DG4lXYy6.webp"/>
+                            <Card.Img variant="top" src="https://static.igem.wiki/teams/5247/photos/meetup/exhibition/posterexhibition-air-view.webp"/>
                             <Card.Body>
                                 <Card.Title>Collaborations and networking</Card.Title>
                                 <Card.Text>
@@ -182,7 +191,7 @@ export default function bfh2024() {
             </section>
             <section>
                 <h2>Gallery</h2>
-                <p> It was a lot of fun to photograph the event!</p>
+                <p>Some more of my photos:</p>
                 <div className="row">
                     {pics.map(value => (<div className="col-3">
                         <img className="gallery-img" src={value}/>
@@ -206,7 +215,7 @@ export default function bfh2024() {
             </section>
             <section>
                 <h2>See also:</h2>
-                <LinkedInCarousel urls={linkedinposts24}/>
+                {/*<LinkedInCarousel urls={linkedinposts24}/>*/}
                 <FurtherLinks flinks={furtherlinks}/>
             </section>
         </div>
