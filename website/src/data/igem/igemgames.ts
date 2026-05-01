@@ -23,4 +23,6 @@ export const igemgames: Linktype[] = [
         tag: "",
         author: ""
     }
+    https://2025.igem.wiki/ualberta/game
+    https://2025.igem.wiki/aboa/bacteriumgame
  */
