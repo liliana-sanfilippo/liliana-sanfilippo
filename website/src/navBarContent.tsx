@@ -17,10 +17,13 @@ import {StartingAsAdvisor} from "./routes/pages/StartingAsAdvisor";
 import {IGEMData} from "./routes/pages/iGEMData";
 import {Other} from "./routes/pages/other"
 
-export const NavBarContent: (PageRef | Folder)[] = [{
+export const NavBarContent: (PageRef | Folder)[] = [
+    /*{
     name: "About", title: "About", path: "/about", component: <AboutPage/>
 
-}, {
+},
+*/
+{
     name: "CV", title: "CV", path: "/cv", component: <Cv/>
 
 }, {

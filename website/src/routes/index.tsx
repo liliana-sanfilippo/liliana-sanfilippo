@@ -30,15 +30,6 @@ function AppRouter() {
             <div id={"main-wrapper"}>
                 <Routes>
 
-                    <Route
-                        path="/"
-                        element={<Navigate to="/home" replace />}
-                    />
-                    <Route
-                        path=""
-                        element={<Navigate to="/home" replace />}
-                    />
-
 
                     {/* Blog Layout Wrapper */}
                     <Route element={
@@ -56,16 +47,6 @@ function AppRouter() {
                     }>
 
 
-                        {/* Index NavigationBar */}
-                        {chunks.map((chunkPosts: any[], i: number) => (i === 0 ? (<Route
-                            key={i}
-                            index
-                            element={<BlogIndexPage/>}
-                        />) : (<Route
-                            key={i}
-                            path={`page/${i + 1}`}
-                            element={<BlogIndexPage/>}
-                        />)))}
 
                         {/* Posts */}
                         <Route path="/posts/:slug" element={<BlogPostWrapper/>}/>

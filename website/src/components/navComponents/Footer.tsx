@@ -25,14 +25,14 @@ export function Footer() {
             <div className="d-flex align-items-baseline">
 
                 <div className="col-sm-6">
-                    <h6>Contact</h6>
-
+                    <h1>Contact</h1>
+                    <p> liliana.sanfilippo[at]bfh-euromeet.de</p>
                     <br/>
 
                 </div>
 
                 <div className="col-sm-6" style={{paddingLeft: "20px"}}>
-                    <h6 className="sticky-top">Tags</h6>
+                    <h1 className="sticky-top">Blog Tags</h1>
                     <TagIndexPageWrapper></TagIndexPageWrapper>
                 </div>
 

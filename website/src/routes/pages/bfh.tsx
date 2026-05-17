@@ -65,6 +65,105 @@ const links25 = [
 const bfhtabs: TabData[] = [
     {
         eventKey: "first",
+        title: "2026",
+        content: (
+            <div className={"flex flex-col gap-8 lg:gap-16"}>
+                <h1>BFH 2026</h1>
+                <VideoBox>
+                    <GBox background={"https://static.igem.wiki/teams/5247/photos/meetup/badges.jpeg"}>
+                        <h3 className="my-auto">200+ attendees</h3>
+                        <h3 className="my-auto">24 teams</h3>
+                        <h3 className="my-auto">8 countries</h3>
+                    </GBox>
+                    <GBox background={"https://static.igem.wiki/teams/5247/photos/meetup/joern.jpeg"}>
+                        <h3 className="my-auto">4 workshops</h3>
+                        <h3 className="my-auto">7 talks</h3>
+                    </GBox>
+                    {/*
+                    <Video url={"https://video.igem.org/videos/embed/2G8U94Ubp6bCK5abA8Gu89"}/>
+                    */}
+                </VideoBox>
+                <H2>
+                    Teams
+                </H2>
+                <H3>
+                    Poster Gallery
+                </H3>
+                Incoming
+                {/*
+                  TODO   <PosterCarousel posters={posters24}/>
+                */}
+                <H2>
+                    Program
+                </H2>
+                <H3>
+                    Workshops
+                </H3>
+                Incoming
+                {/*
+                <TabbedBox id={"workshops24"} tabs={workshops24} defaultActiveKey="design"/>
+                */}
+                <H3>
+                    Talks
+                </H3>
+                 Incoming
+                    {/*
+                <TabbedBox tabs={talks24} defaultActiveKey="design"/>
+                <TabbedBox tabs={othertalks24} defaultActiveKey="design"/>
+                */}
+                <H2>
+                    Prizes and Winners
+                </H2>
+                <Row>
+                    Incoming
+                    {/*
+                    <WinnerCarousel winners={winners24}/>
+                    */}
+                </Row>
+                <H2>
+                    Supporters
+                </H2>
+                Incoming
+                {/*
+                <Supporters supporters={bfhsupporter24}/>
+                */}
+                <H2>
+                    Gallery
+                </H2>
+                Incoming
+                {/*
+                <PictureRotation images={bfhimages24} interval={5000}/>
+                */}
+                <H2>
+                    Social Media
+                </H2>
+                Incoming
+                {/*
+                <LinkedInCarousel urls={linkedinposts24}/>
+                */}
+                <H2>
+                    Files
+                </H2>
+                Incoming
+                {/*
+                <PosterCarousel posters={bfhfiles24}/>
+                */}
+                <H2>
+                    Links
+                </H2>
+                Incoming
+                {/*
+                <p></p>
+                <div className={"row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2"}>
+                    {links24.map(link => (
+                        <LinkLine url={link.img} text={link.text} href={link.href}/>
+                    ))}
+                </div>
+                */}
+            </div>)
+    },
+    {
+        eventKey: "second",
         title: "2025",
         content: (
             <div className={"flex flex-col gap-8 lg:gap-16"}>
@@ -137,8 +236,8 @@ const bfhtabs: TabData[] = [
         )
     },
     {
-        eventKey: "second",
-        title: "2024    ",
+        eventKey: "third",
+        title: "2024",
         content: (
             <div className={"flex flex-col gap-8 lg:gap-16"}>
                 <h1>BFH 2024</h1>
