@@ -15,7 +15,7 @@ function ArticleCard({post, noimg, h}: {
             <Card.Header>
                 <time dateTime={post.date.toUTCString()}>{formatDate(post.date)}</time>
             </Card.Header>
-            {!noimg ? <><Card.Img className={"p-0"} variant="top" src={image}/></> : <></>}
+            {!noimg ? <><Card.Img className={"p-0"} variant="top" src={image} style={{objectPosition: post.objectPosition ? post.objectPosition : "center"}}/></> : <></>}
             <Card.Body>
                   {post.cc && (<p className={"my-0"}><small className="img-cc"> Image: {post.cc} </small></p>)}
                   <p className={"my-2"}> <Link to={`/posts/${post.slug}`}>{post.title}</Link> </p>

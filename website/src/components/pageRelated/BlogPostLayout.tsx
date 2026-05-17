@@ -18,7 +18,9 @@ function BlogPostLayout({post}: BlogPostLayoutProps) {
     return (<div>
         <article>
             <header>
-                <h1 className={"mb-3"}>
+                <img className={"mb-3"} src={post.image} style={{maxHeight: "50vh", width: "100%", objectFit: "cover", objectPosition: post.objectPosition ? post.objectPosition : "top"}} />
+                <small  className={"text-gray-500"} >Image: {post.cc} </small>
+                <h1 className={"mb-3 mt-4"}>
                     {post.title}
                 </h1>
                 <i className={"text-gray-500"}>{formatDate(post.date)}</i>
@@ -38,15 +40,22 @@ function BlogPostLayout({post}: BlogPostLayoutProps) {
             </div>
 
             <footer>
-                <section>
-                    {post.previousDetails && (<Link
-                        to={post.previousDetails.path}>
-                        ← {post.previousDetails.title}
-                    </Link>)}
-                    {post.nextDetails && (<Link to={post.nextDetails.path}>
-                        {post.nextDetails.title} →
-                    </Link>)}
-                </section>
+                <div className={"row"}>
+                    <div className={"col-3"}>
+                        {post.previousDetails && (<Link
+                            to={post.previousDetails.path}>
+                            ← {post.previousDetails.title}
+                        </Link>)}
+                    </div>
+                    <div className={"col"}>
+
+                    </div>
+                    <div className={"col-3"}>
+                        {post.nextDetails && (<Link to={post.nextDetails.path}>
+                            {post.nextDetails.title} →
+                        </Link>)}
+                    </div>
+                </div>
             </footer>
         </article>
     </div>)

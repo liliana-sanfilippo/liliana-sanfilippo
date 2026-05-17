@@ -205,6 +205,15 @@ code {
 
 
 
+a:hover, .nav-link:hover, .dropdown-item:hover  {
+    color: var(--accent-primary) !important;
+}
+
+.dropdown-item:active {
+    background-color: transparent;
+}
+
+
 
 
 .btn-outline-primary, .btn:active, .btn:hover {

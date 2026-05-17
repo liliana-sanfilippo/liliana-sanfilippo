@@ -9,6 +9,7 @@ export const metauniBlogCellective1 = {
     slug: "uni-blog-cellective-1",
     date: new Date("2025-10-20"),
     cc: "Kristian Müller",
+    objectPosition: "top",
     image: "https://aktuell.uni-bielefeld.de/wp-content/uploads/2025/10/iGEM-Bielefeld_2025-1024x887.jpg"
 }
 

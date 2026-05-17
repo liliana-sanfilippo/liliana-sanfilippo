@@ -6,7 +6,9 @@ import uniBlogCellective2, {metauniBlogCellective2} from "./finished/uni-blog-ce
 import zifBlogAidare2, {metazifBlogAidare2} from "./finished/zif-post-aidare2";
 import Biteach2024, {metaBiteach2024} from "./finished/biteach-2024";
 import IgemHomecoming24, {metaIgemHomecoming24} from "./finished/igem-homecoming-24";
-import bfh2024, {metabfh2024} from "./bfh2024";
+import bfh2024, {metabfh2024} from "./finished/bfh2024";
+import meetupMuenster2024, {metamuensterMeetup2024} from "./finished/meetup-muenster-2024";
+import jamboree2024, { metajamboree2024 } from "./jamboree2024";
 
 export const posts: Post[] = [{
     ...metauniBlogPrecyse1, MDXComponent: uniBlogPrecyse1,
@@ -27,6 +29,12 @@ export const posts: Post[] = [{
     {
         ...metabfh2024, MDXComponent: bfh2024
     },
+    {
+        ...metamuensterMeetup2024, MDXComponent: meetupMuenster2024
+    },
+    {
+        ...metajamboree2024, MDXComponent: jamboree2024,
+    },
     /*
     {
         ...metaIgemaiethics, MDXComponent: Igemaiethics
@@ -38,14 +46,10 @@ export const posts: Post[] = [{
         {
             ...metazifModelsOfChange, MDXComponent: zifModelsOfChange
         }, {
-            ...metajamboree2024, MDXComponent: jamboree2024,
-        }, {
             ...metajamboree2025, MDXComponent: jamboree2025,
         }, {
             ...metabfh2025, MDXComponent: bfh2025
-        }, {
-            ...metamuensterMeetup2024, MDXComponent: meetupMuenster2024
-        }, {
+        },{
             ...metamuensterMeetup2025, MDXComponent: meetupMuenster2025
         }, {
             ...metaCitationManagerFirstsTests, MDXComponent: CitationManagerFirstsTests

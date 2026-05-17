@@ -9,6 +9,7 @@ export interface Post {
     MDXComponent: React.ComponentType,
     image?: string
     cc?: string;
+    objectPosition?: string
 }
 
 export interface LoadedPost extends Post {

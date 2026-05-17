@@ -15,6 +15,7 @@ import {CurrentProjects} from "./routes/pages/currentProjects";
 import {Packages} from "./routes/pages/packages";
 import {StartingAsAdvisor} from "./routes/pages/StartingAsAdvisor";
 import {IGEMData} from "./routes/pages/iGEMData";
+import {Other} from "./routes/pages/other"
 
 export const NavBarContent: (PageRef | Folder)[] = [{
     name: "About", title: "About", path: "/about", component: <AboutPage/>
@@ -27,10 +28,11 @@ export const NavBarContent: (PageRef | Folder)[] = [{
 
 }, {
     name: "Current Projects", component: <CurrentProjects/>, folder: [
-        {
+       /* {
             name: "AIDARE", title: "AIDARE", path: "/aidare", component: <Aidare/>
 
-        }, {
+        }, */
+        {
             name: "BFH European MeetUp", title: "BFH European MeetUp", path: "/bfh", component: <Bfh/>
 
         }, {
@@ -106,6 +108,12 @@ export const NavBarContent: (PageRef | Folder)[] = [{
         }
 
     ]
-},
+} /*
+,
+    {
+        name: "Other", title: "Other", path: "/other", component: <Other/>
 
+    }
+    */
 ]
+
