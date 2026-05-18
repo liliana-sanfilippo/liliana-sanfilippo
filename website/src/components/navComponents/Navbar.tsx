@@ -17,7 +17,7 @@ export function Navbar() {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const scrollHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercentage = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            const scrollPercentage = scrollHeight > 0 ? (scrollTop / scrollHeight) * 50 : 0;
 
             // Balkenbreite setzen
             if (progressBarRef.current) {

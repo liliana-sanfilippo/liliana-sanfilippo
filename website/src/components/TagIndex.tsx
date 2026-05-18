@@ -18,7 +18,7 @@ function TagIndex({tags}: TagIndexPage) {
     const secondHalf = tags.slice(middleIndex);
     return (<Row>
         <Col>
-            <ul>
+            <ul className={"ps-0"}>
                 {firstHalf.map(tag => (<li key={tag.href}>
                     <Link to={tag.href}>
                         {tag.name} ({tag.count})
@@ -27,7 +27,7 @@ function TagIndex({tags}: TagIndexPage) {
             </ul>
         </Col>
         <Col>
-            <ul>
+            <ul className={"ps-0"}>
                 {secondHalf.map(tag => (<li key={tag.href}>
                     <Link to={tag.href}>
                         {tag.name} ({tag.count})
