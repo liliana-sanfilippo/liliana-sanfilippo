@@ -117,7 +117,7 @@ export const awards: CVItemProps[] = [
         'intellij',
         'teams'
     ]
-    },
+    }, /*
     {
         date: "Oct. 2025",
         stelle: "2nd place",
@@ -139,7 +139,7 @@ export const awards: CVItemProps[] = [
             'intellij',
             'jenkins'
         ]
-    },
+    },*/
     {
         date: "Oct. 2024",
         stelle: "Best Integrated Human Practices, Safety and Security, Best Presentation and Gold Medal",
