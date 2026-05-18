@@ -8,6 +8,7 @@ import Biteach2024, {metaBiteach2024} from "./finished/biteach-2024";
 import IgemHomecoming24, {metaIgemHomecoming24} from "./finished/igem-homecoming-24";
 import bfh2024, {metabfh2024} from "./finished/bfh2024";
 import meetupMuenster2024, {metamuensterMeetup2024} from "./finished/meetup-muenster-2024";
+import HannoverMesse2026, {metaHannoverMesse2026} from "@/posts/under_construction/hannover-messe-2026";
 
 export const posts: Post[] = [{
     ...metauniBlogPrecyse1, MDXComponent: uniBlogPrecyse1,
@@ -31,6 +32,9 @@ export const posts: Post[] = [{
     {
         ...metamuensterMeetup2024, MDXComponent: meetupMuenster2024
     },
+    {
+        ...metaHannoverMesse2026, MDXComponent: HannoverMesse2026
+    }
 
     /*
      {
