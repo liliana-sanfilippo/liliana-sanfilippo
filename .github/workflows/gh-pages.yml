@@ -1,51 +1,43 @@
 name: Deploy React App to GitHub Pages
 
+name: Deploy React App to GitHub Pages
+
 on:
   push:
     branches:
-      - main
+      - master  
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
-        
-      - name: Setup Node
-        uses: actions/setup-node@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'
-          
+          node-version: '20'  # Use the latest stable Node.js version
+
       - name: Install dependencies
-        working-directory: ./website
-        run: npm ci
-        
-      - name: Build
-        working-directory: ./website
+        run: npm install
+
+      - name: Build the React app
         run: npm run build
-        
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./website/dist
-          
+
+      - name: Add _redirects file
+        run: echo '/* /index.html 200' > build/_redirects
+
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./build
