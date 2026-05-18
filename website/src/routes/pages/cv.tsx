@@ -1,7 +1,7 @@
 import {Accordion} from "react-bootstrap";
 import {MultiCategoryFilter} from "../../components/Filter";
 import {CVItem} from "../../components/cvItem";
-import {awards, edu, functions, publications, software, volunteering, workEx} from "../../data/cvData";
+import {awards, edu, publications, software, volunteering, workEx} from "../../data/cvData";
 import {H2} from "../../components/H2";
 
 

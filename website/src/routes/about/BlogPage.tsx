@@ -23,18 +23,18 @@ export function BlogPage() {
                 <PostByTags tag={"React"}/>
             </div>
             <H2>All posts</H2>
-                <div id={"latestpostwrapper"} className="h-100 m-5 p-5">
-                    <div id={"latestpost"} className="col-8 mx-auto" key={postOne.slug}>
-                        <ArticleCard post={postOne}/>
+            <div id={"latestpostwrapper"} className="h-100 m-5 p-5">
+                <div id={"latestpost"} className="col-8 mx-auto" key={postOne.slug}>
+                    <ArticleCard post={postOne}/>
+                </div>
+            </div>
+            <div className={'row gap-8 lg:gap-16 mx-auto'}>
+                {otherPosts.map((route: Post) => (
+                    <div className={"col"}>
+                        <ArticleCard post={route} key={route.slug}/>
                     </div>
-                </div>
-                <div className={'row gap-8 lg:gap-16 mx-auto'}>
-                    {otherPosts.map( (route: Post) => (
-                        <div className={"col"}>
-                            <ArticleCard post={route} key={route.slug}/>
-                        </div>
-                    ))}
-                </div>
+                ))}
+            </div>
         </div>
     )
 }

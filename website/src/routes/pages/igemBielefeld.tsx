@@ -1,8 +1,6 @@
 import TabbedBox, {TabData} from "../../components/boxes/TabbedBox";
 import {Precyse} from "./precyse";
 import {Cellective} from "./cellective"
-import {GBox, VideoBox} from "../../components/boxes/G_Box";
-import {Video} from "../../components/media/Video";
 import React from "react";
 import TagCarousel from "../../components/Carousels/TagCarousel";
 

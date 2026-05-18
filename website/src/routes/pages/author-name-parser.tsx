@@ -1,7 +1,7 @@
 import {Button, Card} from "react-bootstrap";
 import {WikiPage} from "../../components/wiki/WikiPage";
 import {IssuesList} from "../../components/github/IssuesList";
-import TabbedBox, {TabData} from "../../components/boxes/TabbedBox";
+import {TabData} from "../../components/boxes/TabbedBox";
 import TagCarousel from "../../components/Carousels/TagCarousel";
 
 export function AuthorNameParser() {
@@ -21,7 +21,8 @@ export function AuthorNameParser() {
                     <Card.Text>
                         Manuals, feature lists and troubleshooting help
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/author-name-parser/Home" variant="outline-primary">Name
+                    <Button href="/liliana-sanfilippo/current-projects/packages/author-name-parser/Home"
+                            variant="outline-primary">Name
                         parser wiki</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -83,12 +84,12 @@ const boxName: TabData[] = [
     {
         eventKey: "design",
         title: "README",
-        content:  <WikiPage page={"README"}/>,
+        content: <WikiPage page={"README"}/>,
     },
     {
         eventKey: "test",
         title: "Collaborate!",
-        content:  <>
+        content: <>
             <p>Feel free to browse the issues and open new ones or request features.</p>
             <IssuesList repo={"author-name-parser"}/>
         </>,

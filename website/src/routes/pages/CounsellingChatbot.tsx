@@ -1,7 +1,6 @@
-import {Button, Card, Image, Modal, Row} from "react-bootstrap";
+import {Row} from "react-bootstrap";
 import {useState} from "react";
 import {Poster} from "../../components/Carousels/PosterCarousel";
-import{H2} from "../../components/H2"
 import TagCarousel from "../../components/Carousels/TagCarousel";
 
 const poster = {
@@ -18,7 +17,8 @@ export function CounsellingChatbot() {
     return (<div className={"flex flex-col gap-8 lg:gap-16"}>
         <h1>An Intelligent Counselling System for Student Counselling</h1>
         <p>
-            <b>What is student counselling?</b> Student counselling (also called peer-counselling) involves students advising other students, rather than
+            <b>What is student counselling?</b> Student counselling (also called peer-counselling) involves students
+            advising other students, rather than
             professors or external staff.
         </p>
         {/* <div className={"row gap-8 lg:gap-16 m-auto"}>
@@ -58,11 +58,11 @@ export function CounsellingChatbot() {
         <TagCarousel tag={"counselling-bot"}/>
         <section id={"data"}>
             <h2>Data collection</h2>
-           <Row>
-               <iframe title="" aria-label="Line chart" id="datawrapper-chart-w365o"
-                       src="https://datawrapper.dwcdn.net/w365o/1/" scrolling="no" frameBorder="0"
-                       style={{border: "none"}} width="1200" height="362" data-external="1"></iframe>
-           </Row>
+            <Row>
+                <iframe title="" aria-label="Line chart" id="datawrapper-chart-w365o"
+                        src="https://datawrapper.dwcdn.net/w365o/1/" scrolling="no" frameBorder="0"
+                        style={{border: "none"}} width="1200" height="362" data-external="1"></iframe>
+            </Row>
         </section>
 
         {/*

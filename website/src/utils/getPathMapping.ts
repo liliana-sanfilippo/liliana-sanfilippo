@@ -1,5 +1,5 @@
-import { NavBarContent } from "../navBarContent";
-import { Page } from "../components/Pages";
+import {NavBarContent} from "../navBarContent";
+import {Page} from "../components/Pages";
 
 export const getPathMapping = () => {
     // Rekursive Hilfsfunktion zum Verarbeiten eines Items

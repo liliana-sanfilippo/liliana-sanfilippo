@@ -1,10 +1,7 @@
-import React, {Suspense} from 'react'
-import {BrowserRouter, Route, Routes, useParams, Navigate} from 'react-router-dom'
+import React from 'react'
+import {BrowserRouter, Route, Routes, useParams} from 'react-router-dom'
 import BlogLayout from '../components/pageRelated/BlogLayout'
-import BlogIndexPage from '../components/pageRelated/BlogIndexPage'
 import BlogPostLayout from '../components/pageRelated/BlogPostLayout'
-import siteMetadata from '../siteMetadata'
-import {chunk} from 'lodash'
 import NotFoundPage from "../components/pageRelated/NotFoundPage";
 import {AboutPage} from "./about/AboutPage";
 import TagIndexPageWrapper from "./TagIndexWrapper";
@@ -23,74 +20,72 @@ function BlogPostWrapper() {
 
 function AppRouter() {
 
-    let chunks = chunk(postsWithNav, siteMetadata.indexPageSize)
     const pathMapping = getPathMapping();
 
     return (<BrowserRouter basename={import.meta.env.VITE_BASE_NAME}>
-            <div id={"main-wrapper"}>
-                <Routes>
+        <div id={"main-wrapper"}>
+            <Routes>
 
 
-                    {/* Blog Layout Wrapper */}
-                    <Route element={
-                        <div className={"flex flex-row"}>
-                            {/* <div className={"sidebarbox hidden md:block xl:block md:w-2/12 xl:w-2/12"}>
+                {/* Blog Layout Wrapper */}
+                <Route element={
+                    <div className={"flex flex-row"}>
+                        {/* <div className={"sidebarbox hidden md:block xl:block md:w-2/12 xl:w-2/12"}>
 
                             <Sidebar/>
 
                         </div> */}
-                            <div className={"w-full md:w-9/12 xl:w-9/12 mx-auto"}>
-                                <BlogLayout/>
-                            </div>
+                        <div className={"w-full md:w-9/12 xl:w-9/12 mx-auto"}>
+                            <BlogLayout/>
                         </div>
+                    </div>
 
-                    }>
+                }>
 
 
+                    {/* Posts */}
+                    <Route path="/posts/:slug" element={<BlogPostWrapper/>}/>
 
-                        {/* Posts */}
-                        <Route path="/posts/:slug" element={<BlogPostWrapper/>}/>
+                    {/* Misc NavigationBar */}
+                    {/* <Route path="/tags" element={<TagsPage />} />*/}
+                    <Route path="/home" element={<AboutPage/>}/>
+                    <Route path={"/"} element={<AboutPage/>}/>
+                    <Route path={""} element={<AboutPage/>}/>
 
-                        {/* Misc NavigationBar */}
-                        {/* <Route path="/tags" element={<TagsPage />} />*/}
-                        <Route path="/home" element={<AboutPage/>}/>
-                        <Route path={"/"} element={<AboutPage/>}/>
-                        <Route path={""} element={<AboutPage/>}/>
-
-                        {Object.entries(pathMapping).map(([path, {component: Component}]) => (
-                                <Route path={path} element={Component}/>
-                            )
+                    {Object.entries(pathMapping).map(([path, {component: Component}]) => (
+                            <Route path={path} element={Component}/>
                         )
-                        }
+                    )
+                    }
 
 
-                        <Route path={`${import.meta.env.VITE_REACT_REFERENCE_MANAGER_PATH}/:pageName`}
-                               element={<WikiPage folder={"wiki"}/>}/>
-                        <Route path={`${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/:pageName`}
-                               element={<WikiPage folder={"wiki-generator"}/>}/>
-                        <Route path={`${import.meta.env.VITE_REACT_BIBTEX_PARSER_PATH}/:pageName`}
-                               element={<WikiPage folder={"wiki-parser"}/>}/>
-                        <Route path={`${import.meta.env.VITE_REACT_AUTHOR_PARSER_PATH}/:pageName`}
-                               element={<WikiPage folder={"wiki-author"}/>}/>
-                        <Route path={"/current-projects/igem-bielefeld/:pageName"}
-                               element={<WikiPage folder={"igemnotes"}/>}/>
-                        <Route path={"/other/:pageName"}
-                               element={<WikiPage folder={"other"}/>}/>
+                    <Route path={`${import.meta.env.VITE_REACT_REFERENCE_MANAGER_PATH}/:pageName`}
+                           element={<WikiPage folder={"wiki"}/>}/>
+                    <Route path={`${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/:pageName`}
+                           element={<WikiPage folder={"wiki-generator"}/>}/>
+                    <Route path={`${import.meta.env.VITE_REACT_BIBTEX_PARSER_PATH}/:pageName`}
+                           element={<WikiPage folder={"wiki-parser"}/>}/>
+                    <Route path={`${import.meta.env.VITE_REACT_AUTHOR_PARSER_PATH}/:pageName`}
+                           element={<WikiPage folder={"wiki-author"}/>}/>
+                    <Route path={"/current-projects/igem-bielefeld/:pageName"}
+                           element={<WikiPage folder={"igemnotes"}/>}/>
+                    <Route path={"/other/:pageName"}
+                           element={<WikiPage folder={"other"}/>}/>
 
-                        {/* Tag Index Page */}
-                        <Route path={import.meta.env.VITE_TAG_ROOT} element={<TagIndexPageWrapper/>}/>
-
-
-                        {/* Tag NavigationBar */}
-                        <Route path={`${import.meta.env.VITE_TAG_ROOT}/:tag`} element={<TagPageWrapper/>}/>
+                    {/* Tag Index Page */}
+                    <Route path={import.meta.env.VITE_TAG_ROOT} element={<TagIndexPageWrapper/>}/>
 
 
-                    </Route>
-                    {/* Fallback 404 */}
-                    <Route path="*" element={<NotFoundPage/>}/>
+                    {/* Tag NavigationBar */}
+                    <Route path={`${import.meta.env.VITE_TAG_ROOT}/:tag`} element={<TagPageWrapper/>}/>
 
-                </Routes>
-            </div>
+
+                </Route>
+                {/* Fallback 404 */}
+                <Route path="*" element={<NotFoundPage/>}/>
+
+            </Routes>
+        </div>
 
     </BrowserRouter>)
 }

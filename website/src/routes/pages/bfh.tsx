@@ -106,8 +106,8 @@ const bfhtabs: TabData[] = [
                 <H3>
                     Talks
                 </H3>
-                 Incoming
-                    {/*
+                Incoming
+                {/*
                 <TabbedBox tabs={talks24} defaultActiveKey="design"/>
                 <TabbedBox tabs={othertalks24} defaultActiveKey="design"/>
                 */}

@@ -6,7 +6,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import {Link as OurLink} from '@liliana-sanfilippo/react-link';
 import {Link} from 'react-router-dom';
 import {NavBarContent} from "../../navBarContent";
-import siteMetadata from "../../siteMetadata";
 
 export function Navbar() {
     const navbarCollapseRef = useRef<HTMLDivElement>(null);
@@ -89,7 +88,7 @@ export function Navbar() {
     >
         <Container className={"h-100"}>
             <BootstrapNavbar.Brand href="/" className={"py-4 px-5"}>
-                {siteMetadata.title}
+                Website
             </BootstrapNavbar.Brand>
 
             <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav"/>
@@ -105,11 +104,11 @@ export function Navbar() {
 }
 
 
-const renderMenuItem = (item, parentPath : string = "") => {
+const renderMenuItem = (item, parentPath: string = "") => {
 
 
     if ("folder" in item && item.folder) {
-        const currentPath =  parentPath + '/' + item.name.toLowerCase()
+        const currentPath = parentPath + '/' + item.name.toLowerCase()
             .replace(/\s+/g, '-')
             .replace(/[^a-z0-9-]/g, '');
         return (

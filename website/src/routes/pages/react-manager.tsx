@@ -1,7 +1,7 @@
 import {Button, Card} from "react-bootstrap";
 import {WikiPage} from "../../components/wiki/WikiPage";
 import {IssuesList} from "../../components/github/IssuesList";
-import TabbedBox, {TabData} from "../../components/boxes/TabbedBox";
+import {TabData} from "../../components/boxes/TabbedBox";
 import TagCarousel from "../../components/Carousels/TagCarousel";
 
 export function ReactManager() {
@@ -21,7 +21,9 @@ export function ReactManager() {
                     <Card.Text>
                         Go directly to the manual for iGEM wikis
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/react-reference-manager/Manual-for-iGEM-Wikis" variant="outline-primary">iGEM Manual</Button>
+                    <Button
+                        href="/liliana-sanfilippo/current-projects/packages/react-reference-manager/Manual-for-iGEM-Wikis"
+                        variant="outline-primary">iGEM Manual</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
             </Card>
@@ -31,7 +33,8 @@ export function ReactManager() {
                     <Card.Text>
                         Manuals, feature lists and troubleshooting help
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/react-reference-manager/Home" variant="outline-primary">Bibtex
+                    <Button href="/liliana-sanfilippo/current-projects/packages/react-reference-manager/Home"
+                            variant="outline-primary">Bibtex
                         manager wiki</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -90,16 +93,16 @@ export function ReactManager() {
 
 
 const boxName: TabData[] = [
-{
-    eventKey: "design",
+    {
+        eventKey: "design",
         title: "README",
-        content:  <WikiPage page={"README"}/>,
-},
+        content: <WikiPage page={"README"}/>,
+    },
     {
         eventKey: "test",
         title: "Collaborate!",
-        content:  <>
-        <p>Feel free to browse the issues and open new ones or request features.</p>
+        content: <>
+            <p>Feel free to browse the issues and open new ones or request features.</p>
             <IssuesList repo={"react-bibtex-reference-manager"}/>
         </>,
     }
