@@ -8,7 +8,7 @@ import Biteach2024, {metaBiteach2024} from "./finished/biteach-2024";
 import IgemHomecoming24, {metaIgemHomecoming24} from "./finished/igem-homecoming-24";
 import bfh2024, {metabfh2024} from "./finished/bfh2024";
 import meetupMuenster2024, {metamuensterMeetup2024} from "./finished/meetup-muenster-2024";
-import jamboree2024, { metajamboree2024 } from "./jamboree2024";
+import jamboree2024, {metajamboree2024} from "./jamboree2024";
 
 export const posts: Post[] = [{
     ...metauniBlogPrecyse1, MDXComponent: uniBlogPrecyse1,
@@ -36,6 +36,21 @@ export const posts: Post[] = [{
         ...metajamboree2024, MDXComponent: jamboree2024,
     },
     /*
+        {
+        ...metabfh2026, MDXComponent: bfh2026
+    },
+    {
+        ...metaHeistBrick2026, MDXComponent: heistBrick2026
+    },
+    {
+        ...metaCommunityBoard, MDXComponent: communityBoard
+    },
+       {
+        ...metamuensterMeetup2026, MDXComponent: meetupMuenster2026
+    },
+    {
+        ...metaMeetupEindhoven2026, MDXComponent: MeetupEindhoven2026
+    },
     {
         ...metaIgemaiethics, MDXComponent: Igemaiethics
     }
