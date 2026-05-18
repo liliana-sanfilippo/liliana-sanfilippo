@@ -16,7 +16,7 @@ export const workEx: CVItemProps[] = [
                     and prospective students at the Technical Faculty, capable of answering common questions.</p>
                 <p><b>Associated with:</b></p>
                 <ul className={"list-disc mb-5"}>
-                    <li><Link to={"/current-projects/intelligent-counselling-system"}>An Intelligent Counselling
+                    <li><Link to={import.meta.env.VITE_COUNSELLING_SYSTEM_PATH}>An Intelligent Counselling
                         System for Student Counselling</Link></li>
                 </ul>
             </>
@@ -102,7 +102,7 @@ export const awards: CVItemProps[] = [
             <p><b>Associated with:</b></p>
             <ul className={"list-disc mb-5"}>
                 <li><a href={"#volunteering"}>Volunteering "Team Advisor"</a></li>
-                <li><Link to={"/current-projects/igem-bielefeld"}>iGEM Bielefeld</Link></li>
+                <li><Link to={import.meta.env.VITE_IGEM_BIELEFELD_PATH}>iGEM Bielefeld</Link></li>
             </ul>
         </>
     ),
@@ -174,7 +174,7 @@ export const awards: CVItemProps[] = [
                     <li><a href={"#publications"}>Publication "Towards effective cystic fibrosis gene therapy by
                         optimizing prime editing and pulmonary-targeted LNPs"</a></li>
                     <li><a href={"#volunteering"}>Volunteering "Head of Web Developement"</a></li>
-                    <li><Link to={"/current-projects/igem-bielefeld"}>iGEM Bielefeld</Link></li>
+                    <li><Link to={import.meta.env.VITE_IGEM_BIELEFELD_PATH}>iGEM Bielefeld</Link></li>
                 </ul>
             </>
         ),
@@ -237,7 +237,7 @@ export const publications: CVItemProps[] = [
                 />
                 <p><b>Associated with:</b></p>
                 <ul className={"list-disc"}>
-                    <li><Link to={"/current-projects/igem-bielefeld"}>iGEM Bielefeld-CeBiTec - PreCyse</Link></li>
+                    <li><Link to={import.meta.env.VITE_IGEM_BIELEFELD_PATH}>iGEM Bielefeld-CeBiTec - PreCyse</Link></li>
                 </ul>
             </>
         ),

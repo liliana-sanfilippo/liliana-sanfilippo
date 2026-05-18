@@ -83,11 +83,11 @@ export function IgemBielefeldOverview() {
             <div className={"row my-5"}>
                 <Section title={"Projects"}>
                     <p>Browse summaries of former projects I participated in <Link
-                        to={"/current-projects/igem-bielefeld/projects"}>here</Link>. </p>
+                        to={import.meta.env.VITE_IGEM_BIELEFELD_PROJECTS_PATH}>here</Link>. </p>
                 </Section>
                 <Section title={"For advisors"}>
                     <p> <Link
-                        to={"/current-projects/igem-bielefeld/for-advisors"}>here</Link></p>
+                        to={import.meta.env.VITE_IGEM_BIELEFELD_FOR_ADVISORS_PATH}>here</Link></p>
 
                 </Section>
                 <Section title={"Notes and manuals"}>

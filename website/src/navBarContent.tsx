@@ -20,18 +20,14 @@ export const NavBarContent: (PageRef | Folder)[] = [
     }, {
         name: "Posts", title: "Posts", path: "/posts", component: <BlogPage/>
 
-    }, {
-        name: "Current Projects", component: <CurrentProjects/>, folder: [
+    },
+    {
+        name: "iGEM", component: <CurrentProjects/>, folder: [
             {
                 name: "BFH European MeetUp", title: "BFH European MeetUp", path: "/bfh", component: <Bfh/>
 
-            }, {
-                name: "Intelligent Counselling System",
-                title: "Intelligent Counselling System",
-                path: "/intelligent-counselling-system",
-                component: <CounsellingChatbot/>
-
-            }, {
+            },
+            {
                 name: "iGEM Bielefeld", component: <IgemBielefeldOverview/>, folder: [
                     {
                         name: "Overview", title: "iGEM Bielefeld", path: "/"
@@ -50,42 +46,55 @@ export const NavBarContent: (PageRef | Folder)[] = [
                     }
                 ]
 
+            },
+        ]
+    },
+    {
+        name: "Packages", component: <Packages/>, folder: [
+            {
+                name: "React Reference Manager",
+                title: "React Reference Manager",
+                path: "/react-reference-manager",
+                component: <ReactManager/>
 
             },
             {
-                name: "Packages", component: <Packages/>, folder: [
-                    {
-                        name: "React Reference Manager",
-                        title: "React Reference Manager",
-                        path: "/react-reference-manager",
-                        component: <ReactManager/>
+                name: "React Reference Generator",
+                title: "React Reference Generator",
+                path: "/react-bibtex-reference-generator",
+                component: <ReactGenerator/>
 
-                    },
-                    {
-                        name: "React Reference Generator",
-                        title: "React Reference Generator",
-                        path: "/react-bibtex-reference-generator",
-                        component: <ReactGenerator/>
+            },
+            {
+                name: "Typescript BibteX Parser",
+                title: "Typescript BibteX Parser",
+                path: "/bibtex-ts-parser",
+                component: <BibtexParser/>
 
-                    },
-                    {
-                        name: "Typescript BibteX Parser",
-                        title: "Typescript BibteX Parser",
-                        path: "/bibtex-ts-parser",
-                        component: <BibtexParser/>
+            },
+            {
+                name: "Typescript Name Parser",
+                title: "Typescript Name Parser",
+                path: "/author-name-parser",
+                component: <AuthorNameParser/>
 
-                    },
-                    {
-                        name: "Typescript Name Parser",
-                        title: "Typescript Name Parser",
-                        path: "/author-name-parser",
-                        component: <AuthorNameParser/>
+            },
+        ]
+    },
+    {
+        name: "Intelligent Counselling System",
+        title: "Intelligent Counselling System",
+        path: "/intelligent-counselling-system",
+        component: <CounsellingChatbot/>
 
-                    },
-                ]
-            }
+    }
+    /*
+    {
+        name: "Project Archive", component: <CurrentProjects/>, folder: [
+
 
         ]
     }
+    */
 ]
 

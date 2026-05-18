@@ -67,7 +67,7 @@ function AppRouter() {
                            element={<WikiPage folder={"wiki-parser"}/>}/>
                     <Route path={`${import.meta.env.VITE_REACT_AUTHOR_PARSER_PATH}/:pageName`}
                            element={<WikiPage folder={"wiki-author"}/>}/>
-                    <Route path={"/current-projects/igem-bielefeld/:pageName"}
+                    <Route path={`${import.meta.env.VITE_IGEM_BIELEFELD_PATH}/:pageName`}
                            element={<WikiPage folder={"igemnotes"}/>}/>
                     <Route path={"/other/:pageName"}
                            element={<WikiPage folder={"other"}/>}/>
