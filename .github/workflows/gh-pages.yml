@@ -14,9 +14,6 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: website
 
     steps:
       - name: Checkout code
@@ -28,12 +25,15 @@ jobs:
           node-version: '20'  # Use the latest stable Node.js version
 
       - name: Install dependencies
+        working-directory: ./website
         run: npm install
 
       - name: Build the React app
+        working-directory: ./website
         run: npm run build
 
       - name: Add _redirects file
+        working-directory: ./website
         run: echo '/* /index.html 200' > dist/_redirects
 
       - name: Deploy to GitHub Pages
