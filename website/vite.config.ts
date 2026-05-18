@@ -12,7 +12,7 @@ export default defineConfig({
         tailwindcss(),
         tsconfigPaths(),
     ],
-    base: "/liliana-sanfilippo/",
+    base: "/",
     resolve: {
         alias: {
             "@": fileURLToPath(new URL("./src", import.meta.url)),

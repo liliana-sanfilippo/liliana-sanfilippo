@@ -6,7 +6,7 @@ import TabbedBox, {TabData} from "../../components/boxes/TabbedBox";
 import {StackedBarChart, UniversalChart} from "../../components/UniversalChart";
 import {prize_labels, prizes} from "../../data/igem/prize-statistic";
 import {Line} from "react-chartjs-2";
-import {Section, Sidebar} from "@liliana-sanfilippo/react-wiki-components";
+import {Section} from "@liliana-sanfilippo/react-wiki-components";
 
 
 const labels = ["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2023", "2024", "2025"];
@@ -80,28 +80,27 @@ export function IgemBielefeldOverview() {
 
     return (
         <>
-                <div className={"row my-5"}>
-                    <Section title={"Projects"}>
-                        <p>Browse summaries of former projects I participated in <Link
-                            to={"/current-projects/igem-bielefeld/projects"}>here</Link>. </p>
-                    </Section>
-                    <Section title={"Starting a team (or as an advisor)"}>
-                        <p>TODO <Link
-                            to={"/current-projects/igem-bielefeld/for-advisors"}>here</Link></p>
-
-                    </Section>
+            <div className={"row my-5"}>
+                <Section title={"Projects"}>
+                    <p>Browse summaries of former projects I participated in <Link
+                        to={import.meta.env.VITE_IGEM_BIELEFELD_PROJECTS_PATH}>here</Link>. </p>
+                </Section>
+                <Section title={"For advisors"}>
+                    <p> <Link
+                        to={import.meta.env.VITE_IGEM_BIELEFELD_FOR_ADVISORS_PATH}>here</Link></p>
                     <Section title={" iGEM data collections"}>
                         Visit <Link to={"/current-projects/igem-bielefeld/data"}>here</Link> to view datasets I started.
                     </Section>
-                    <Section title={"Notes and manuals"}>
-                        <p>Browse my checklists and notes for starting new teams and passing over advisor duties.</p>
-                        <LinkTable data={noteslinks}/>
-                    </Section>
-                    <Section title={"Bielefeld Stats"}>
-                        <TabbedBox tabs={projectTabs} defaultActiveKey="design"/>
-                    </Section>
-                </div>
-            </>
+                </Section>
+                <Section title={"Notes and manuals"}>
+                    <p>Browse my checklists and notes for starting new teams and passing over advisor duties.</p>
+                    <LinkTable data={noteslinks}/>
+                </Section>
+                <Section title={"Bielefeld Stats"}>
+                    <TabbedBox tabs={projectTabs} defaultActiveKey="design"/>
+                </Section>
+            </div>
+        </>
     )
 }
 

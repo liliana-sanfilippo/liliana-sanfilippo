@@ -6,7 +6,7 @@ export function LinkedInCarousel({urls}: { urls: string[] }) {
         {urls.map((url, i) => (<Carousel.Item key={i}>
             <div className="row align-items-center">
                 <iframe
-                    className="col-6 m-auto"
+                    className="col sm-post-carousel-item m-auto"
                     src={url}
                     height="600"
                     width="50%"
@@ -24,7 +24,7 @@ export function InstagramCarousel({urls}: { urls: string[] }) {
             <div className="row align-items-center">
                 <InstagramEmbed height="670"
                                 style={{height: "670px"}}
-                                className="col-6 m-auto"
+                                className="col sm-post-carousel-item m-auto"
                                 width="50%" url={url}/>
             </div>
         </Carousel.Item>))}

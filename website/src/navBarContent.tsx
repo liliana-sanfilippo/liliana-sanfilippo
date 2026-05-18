@@ -1,7 +1,5 @@
 import {Folder, PageRef} from "./components/Pages";
-import {AboutPage} from "./routes/about/AboutPage";
 import {BlogPage} from "./routes/about/BlogPage";
-import {Aidare} from "./routes/pages/aidare";
 import {ReactManager} from "./routes/pages/react-manager";
 import {Bfh} from "./routes/pages/bfh";
 import {CounsellingChatbot} from "./routes/pages/CounsellingChatbot";
@@ -18,105 +16,89 @@ import {IGEMData} from "./routes/pages/iGEMData";
 import {Other} from "./routes/pages/other"
 
 export const NavBarContent: (PageRef | Folder)[] = [
-    /*{
-    name: "About", title: "About", path: "/about", component: <AboutPage/>
-
-},
-*/
 {
     name: "CV", title: "CV", path: "/cv", component: <Cv/>
 
-}, {
-    name: "Posts", title: "Posts", path: "/posts", component: <BlogPage/>
+    }, {
+        name: "Posts", title: "Posts", path: "/posts", component: <BlogPage/>
 
-}, {
-    name: "Current Projects", component: <CurrentProjects/>, folder: [
-       /* {
-            name: "AIDARE", title: "AIDARE", path: "/aidare", component: <Aidare/>
+    },
+    {
+        name: "iGEM", component: <CurrentProjects/>, folder: [
+            {
+                name: "BFH European MeetUp", title: "BFH European MeetUp", path: "/bfh", component: <Bfh/>
 
-        }, */
-        {
-            name: "BFH European MeetUp", title: "BFH European MeetUp", path: "/bfh", component: <Bfh/>
+            },
+            {
+                name: "iGEM Bielefeld", component: <IgemBielefeldOverview/>, folder: [
+                    {
+                        name: "Overview", title: "iGEM Bielefeld", path: "/"
+                    },
+                    {
+                        name: "iGEM Bielefeld projects",
+                        title: "iGEM Bielefeld projects",
+                        path: "/projects",
+                        component: <IgemBielefeld/>
+                    },
+                    {
+                        name: "For advisors",
+                        title: "For advisors",
+                        path: "/for-advisors",
+                        component: <StartingAsAdvisor/>
+                    },{
+                        name: "iGEM data",
+                        title: "iGEM data",
+                        path: "/data",
+                        component: <IGEMData/>
+                    }
+                ]
 
-        }, {
-            name: "Intelligent Counselling System",
-            title: "Intelligent Counselling System",
-            path: "/intelligent-counselling-system",
-            component: <CounsellingChatbot/>
+            },
+        ]
+    },
+    {
+        name: "Packages", component: <Packages/>, folder: [
+            {
+                name: "React Reference Manager",
+                title: "React Reference Manager",
+                path: "/react-reference-manager",
+                component: <ReactManager/>
 
-        }, {
-            name: "iGEM Bielefeld", component: <IgemBielefeldOverview/>, folder: [
-                {
-                    name: "Overview", title: "iGEM Bielefeld", path: "/"
-                },
-                {
-                    name: "iGEM Bielefeld projects",
-                    title: "iGEM Bielefeld projects",
-                    path: "/projects",
-                    component: <IgemBielefeld/>
-                },
-                {
-                    name: "For advisors",
-                    title: "For advisors",
-                    path: "/for-advisors",
-                    component: <StartingAsAdvisor/>
-                },
-                {
-                    name: "iGEM data",
-                    title: "iGEM data",
-                    path: "/data",
-                    component: <IGEMData/>
-                }
-            ]
+            },
+            {
+                name: "React Reference Generator",
+                title: "React Reference Generator",
+                path: "/react-bibtex-reference-generator",
+                component: <ReactGenerator/>
 
+            },
+            {
+                name: "Typescript BibteX Parser",
+                title: "Typescript BibteX Parser",
+                path: "/bibtex-ts-parser",
+                component: <BibtexParser/>
 
-        }, /**{
-         name: "PreCyse",
-         title: "PreCyse",
-         path: "/precyse",
-         component: <Precyse/>
+            },
+            {
+                name: "Typescript Name Parser",
+                title: "Typescript Name Parser",
+                path: "/author-name-parser",
+                component: <AuthorNameParser/>
 
-         },**/
-        {
-            name: "Packages", component: <Packages/>, folder: [
-                {
-                    name: "React Reference Manager",
-                    title: "React Reference Manager",
-                    path: "/react-reference-manager",
-                    component: <ReactManager/>
+            },
+        ]
+    },
+    {
+        name: "Intelligent Counselling System",
+        title: "Intelligent Counselling System",
+        path: "/intelligent-counselling-system",
+        component: <CounsellingChatbot/>
 
-                },
-                {
-                    name: "React Reference Generator",
-                    title: "React Reference Generator",
-                    path: "/react-bibtex-reference-generator",
-                    component: <ReactGenerator/>
-
-                },
-                {
-                    name: "Typescript BibteX Parser",
-                    title: "Typescript BibteX Parser",
-                    path: "/bibtex-ts-parser",
-                    component: <BibtexParser/>
-
-                },
-                {
-                    name: "Typescript Name Parser",
-                    title: "Typescript Name Parser",
-                    path: "/author-name-parser",
-                    component: <AuthorNameParser/>
-
-                },
-            ]
-        }
-
-    ]
-} /*
-,
+    },
     {
         name: "Other", title: "Other", path: "/other", component: <Other/>
 
     }
-    */
+
 ]
 

@@ -29,8 +29,8 @@ export default function meetupMuenster2024() {
             our team member Michael) was a hit and drew many compliments.
         </p>
         <div className={"row align-items-center mb-3"}>
-            <div className={"col-6 m-auto"}>
-                <iframe title="Bielefeld-CeBiTec: Sitcom Team Presentation (2024) [English]" width="560" height="315"
+            <div className={"md:col-6 m-auto w-full"}>
+                <iframe className={"w-full"} title="Bielefeld-CeBiTec: Sitcom Team Presentation (2024) [English]"  height="315"
                         src="https://video.igem.org/videos/embed/uakpHGXyCvvQFKhGKbKVjY" allow="fullscreen"
                         sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
             </div>
@@ -46,11 +46,11 @@ export default function meetupMuenster2024() {
             influence on academia and industry. </p>
         <p>
             <div className="row align-items-center">
-                <div className="col-5 mx-auto">
+                <div className="md:col-5 mx-auto mb-3">
                     <img
                         src="https://github.com/user-attachments/assets/a6d201bf-d6e4-4437-a960-89793959e0d9"/>
                 </div>
-                <div className="col-5 mx-auto">
+                <div className="md:col-5 mx-auto">
                     <img
                         src="https://github.com/user-attachments/assets/5cc2cf1f-f0b3-4557-8395-3a7d2585dd78"/>
                 </div>

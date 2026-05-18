@@ -8,6 +8,12 @@ interface ImportMetaEnv {
     readonly VITE_REACT_BIBTEX_PARSER_PATH: string
     readonly VITE_REACT_AUTHOR_PARSER_PATH: string
     readonly VITE_PACKAGE_PATH: string
+    readonly VITE_PROJECT_ARCHIVE_PATH: string
+    readonly VITE_IGEM_BIELEFELD_OVERVIEW_PATH: string
+    readonly VITE_IGEM_BIELEFELD_PATH: string
+    readonly VITE_IGEM_BIELEFELD_FOR_ADVISORS_PATH: string
+    readonly VITE_IGEM_BIELEFELD_PROJECTS_PATH: string
+    readonly VITE_COUNSELLING_SYSTEM_PATH: string
 }
 
 interface ImportMeta {

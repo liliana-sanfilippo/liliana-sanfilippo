@@ -80,7 +80,7 @@ export default function bfh2024() {
             <section>
                 <h2>Highlights</h2>
                 <div className="row">
-                    <div className="col-4 my-3">
+                    <div className="md:col-4 my-3">
                         <Card className="article-summary">
                             <Card.Img variant="top"
                                       src="https://static.igem.wiki/teams/5247/photos/meetup/posterexhibition-teddy.jpg"/>
@@ -96,7 +96,7 @@ export default function bfh2024() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-4 my-3">
+                    <div className="md:col-4 my-3">
                         <Card className="article-summary">
                             <Card.Img variant="top" src="https://static.igem.wiki/teams/5247/photos/meetup/hall.jpeg"/>
                             <Card.Body>
@@ -109,7 +109,7 @@ export default function bfh2024() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-4 my-3">
+                    <div className="md:col-4 my-3">
                         <Card className="article-summary">
                             <Card.Img variant="top" src="https://bfh-euromeet.de/img/highlights/workshop.jpg"/>
                             <Card.Body>
@@ -122,7 +122,7 @@ export default function bfh2024() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-4 my-3">
+                    <div className="md:col-4 my-3">
                         <Card className="article-summary">
                             <Card.Img variant="top" src="https://bfh-euromeet.de/img/highlights/vip.jpg"/>
                             <Card.Body>
@@ -135,7 +135,7 @@ export default function bfh2024() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-4 my-3">
+                    <div className="md:col-4 my-3">
                         <Card className="article-summary">
                             <Card.Img variant="top" src="https://bfh-euromeet.de/img/highlights/scientific_talk.jpg"/>
                             <Card.Body>
@@ -146,7 +146,7 @@ export default function bfh2024() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-4 my-3">
+                    <div className="md:col-4 my-3">
                         <Card className="article-summary">
                             <Card.Img variant="top" src="https://static.igem.wiki/teams/5247/photos/meetup/exhibition/posterexhibition-air-view.webp"/>
                             <Card.Body>
@@ -158,7 +158,7 @@ export default function bfh2024() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-4 my-3">
+                    <div className="md:col-4 my-3">
                         <Card className="article-summary">
                             <Card.Img variant="top"
                                       src="https://static.igem.wiki/teams/5247/photos/meetup/aachen.jpeg"/>
@@ -172,7 +172,7 @@ export default function bfh2024() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-4 my-3">
+                    <div className="md:col-4 my-3">
                         <Card className="article-summary">
                             <Card.Img variant="top"
                                       src="https://static.igem.wiki/teams/5247/photos/meetup/kristian.jpeg"/>
@@ -193,7 +193,7 @@ export default function bfh2024() {
                 <h2>Gallery</h2>
                 <p>Some more of my photos:</p>
                 <div className="row">
-                    {pics.map(value => (<div className="col-3">
+                    {pics.map(value => (<div className="md:col-3">
                         <img className="gallery-img" src={value}/>
                     </div>))}
 
@@ -202,7 +202,7 @@ export default function bfh2024() {
             <section>
                 <h2>Aftermovie</h2>
                 <div className="row align-items-center">
-                    <div className="col-8 mx-auto">
+                    <div className="md:col-8 mx-auto">
                         <iframe title="Bielefeld-CeBiTec: BFH European Meet-up (2024) [English]" width="100%"
                                 height="500vh" src="https://video.igem.org/videos/embed/2G8U94Ubp6bCK5abA8Gu89"
                                 allow="fullscreen"

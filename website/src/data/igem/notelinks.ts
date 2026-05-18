@@ -102,11 +102,6 @@ export const noteslinks: Linktype[] = [
         tag: "infrastructure"
     },
     {
-        title: "Getting started with Geneious",
-        link: "Geneious",
-        tag: "infrastructure"
-    },
-    {
         title: "Getting access to the shared team email",
         link: "Team-Email",
         tag: "infrastructure"

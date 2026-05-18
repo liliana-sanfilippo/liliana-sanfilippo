@@ -5,6 +5,33 @@ import {cfpaper} from "./publications";
 
 export const workEx: CVItemProps[] = [
     {
+        date: "Mar. 2026 - today",
+        stelle: "Full Stack Programmer",
+        desc: "",
+        inst: "Lexmea",
+        eventkey: "lexmea",
+        body: (
+            <>
+                <p><b>Associated with:</b></p>
+                <ul className={"list-disc mb-5"}>
+                    <li><a href={"#awards"}>2nd place for the software project LexArtes</a></li>
+                </ul>
+            </>
+        ),
+        skills: [
+            'typescript',
+            'javascript',
+            'php',
+            'css',
+            'html',
+            'tailwind',
+            'vue',
+            'github',
+            'vsc',
+            'jira'
+        ]
+    },
+    {
         date: "Sep. 2023 - today",
         stelle: "Student assistant",
         desc: "for the working group Knowledge Representation and Machine Learning",
@@ -16,7 +43,7 @@ export const workEx: CVItemProps[] = [
                     and prospective students at the Technical Faculty, capable of answering common questions.</p>
                 <p><b>Associated with:</b></p>
                 <ul className={"list-disc mb-5"}>
-                    <li><Link to={"/current-projects/intelligent-counselling-system"}>An Intelligent Counselling
+                    <li><Link to={import.meta.env.VITE_COUNSELLING_SYSTEM_PATH}>An Intelligent Counselling
                         System for Student Counselling</Link></li>
                 </ul>
             </>
@@ -77,46 +104,46 @@ export const edu: CVItemProps[] = [
 
 export const awards: CVItemProps[] = [
     {
-    date: "Oct. 2025",
-    stelle: "Silver Medal",
-    desc: "for the iGEM project Cellective",
-    inst: "iGEM Foundation",
-    eventkey: "11",
-    body: (
-        <>
-            <p>
-                Cellective is a riboswitch-based therapeutic platform that selectively targets cancer cells by
-                detecting specific microRNAs and mRNAs, subsequently translating a cellular kill system. This
-                platform is intended to be further developed specifically for the treatment of triple-negative
-                breast cancer (TNBC), a particularly aggressive and hard-to-treat form of breast cancer.
-                The selective detection of cancer-specific marker RNAs using the engineered riboswitch RNAs
-                enables a highly specific, minimally invasive therapy that spares healthy cells and is only
-                activated in tumor-relevant contexts. The modular design allows for flexible adaptation to
-                different tumor types and RNA profiles, allowing personalized medicine. We successfully
-                engineered this therapeutic system and confirmed its functionality.
-            </p>
-            <p><b>More information:</b></p>
-            <ul className={"list-disc mb-5"}>
-                <li><a href={"https://2025.igem.wiki/bielefeld-cebitec/description"}>Cellective Wiki</a></li>
-            </ul>
-            <p><b>Associated with:</b></p>
-            <ul className={"list-disc mb-5"}>
-                <li><a href={"#volunteering"}>Volunteering "Team Advisor"</a></li>
-                <li><Link to={"/current-projects/igem-bielefeld"}>iGEM Bielefeld</Link></li>
-            </ul>
-        </>
-    ),
-    skills: [
-        'typescript',
-        'javascript',
-        'css',
-        'html',
-        'bootstrap',
-        'react',
-        'gitlab',
-        'intellij',
-        'teams'
-    ]
+        date: "Oct. 2025",
+        stelle: "Silver Medal",
+        desc: "for the iGEM project Cellective",
+        inst: "iGEM Foundation",
+        eventkey: "11",
+        body: (
+            <>
+                <p>
+                    Cellective is a riboswitch-based therapeutic platform that selectively targets cancer cells by
+                    detecting specific microRNAs and mRNAs, subsequently translating a cellular kill system. This
+                    platform is intended to be further developed specifically for the treatment of triple-negative
+                    breast cancer (TNBC), a particularly aggressive and hard-to-treat form of breast cancer.
+                    The selective detection of cancer-specific marker RNAs using the engineered riboswitch RNAs
+                    enables a highly specific, minimally invasive therapy that spares healthy cells and is only
+                    activated in tumor-relevant contexts. The modular design allows for flexible adaptation to
+                    different tumor types and RNA profiles, allowing personalized medicine. We successfully
+                    engineered this therapeutic system and confirmed its functionality.
+                </p>
+                <p><b>More information:</b></p>
+                <ul className={"list-disc mb-5"}>
+                    <li><a href={"https://2025.igem.wiki/bielefeld-cebitec/description"}>Cellective Wiki</a></li>
+                </ul>
+                <p><b>Associated with:</b></p>
+                <ul className={"list-disc mb-5"}>
+                    <li><a href={"#volunteering"}>Volunteering "Team Advisor"</a></li>
+                    <li><Link to={import.meta.env.VITE_IGEM_BIELEFELD_PATH}>iGEM Bielefeld</Link></li>
+                </ul>
+            </>
+        ),
+        skills: [
+            'typescript',
+            'javascript',
+            'css',
+            'html',
+            'bootstrap',
+            'react',
+            'gitlab',
+            'intellij',
+            'teams'
+        ]
     },
     {
         date: "Oct. 2025",
@@ -125,7 +152,15 @@ export const awards: CVItemProps[] = [
         inst: "LexMea",
         eventkey: "10",
         id: "lexartes",
-        body: <></>,
+        body: <>
+            <p>
+                <i>
+                    "LexArtes is a modern web app designed to help law students prepare for exams. Users select sets of
+                    flashcards, study using the flip or reveal mode (spaced repetition), track their progress via the
+                    dashboard, and benefit from content on the LexMea platform."
+                </i>
+            </p>
+        </>,
         skills: [
             'typescript',
             'java',
@@ -174,7 +209,7 @@ export const awards: CVItemProps[] = [
                     <li><a href={"#publications"}>Publication "Towards effective cystic fibrosis gene therapy by
                         optimizing prime editing and pulmonary-targeted LNPs"</a></li>
                     <li><a href={"#volunteering"}>Volunteering "Head of Web Developement"</a></li>
-                    <li><Link to={"/current-projects/igem-bielefeld"}>iGEM Bielefeld</Link></li>
+                    <li><Link to={import.meta.env.VITE_IGEM_BIELEFELD_PATH}>iGEM Bielefeld</Link></li>
                 </ul>
             </>
         ),
@@ -237,7 +272,7 @@ export const publications: CVItemProps[] = [
                 />
                 <p><b>Associated with:</b></p>
                 <ul className={"list-disc"}>
-                    <li><Link to={"/current-projects/igem-bielefeld"}>iGEM Bielefeld-CeBiTec - PreCyse</Link></li>
+                    <li><Link to={import.meta.env.VITE_IGEM_BIELEFELD_PATH}>iGEM Bielefeld-CeBiTec - PreCyse</Link></li>
                 </ul>
             </>
         ),
@@ -252,9 +287,7 @@ export const volunteering: CVItemProps[] = [
         inst: "BFH European MeetUp",
         eventkey: "14",
         body: <></>,
-        skills: [
-
-        ]
+        skills: []
     },
     {
         date: "Dec. 2024 - Dec. 2025",
@@ -320,11 +353,20 @@ export const volunteering: CVItemProps[] = [
 
 export const software: CVItemProps[] = [
     {
-        date: "web package",
+        date: "Aug 2025+",
         stelle: "React Citation Manager",
-        inst: "",
+        inst: "(web package)",
         eventkey: "13",
-        body: <></>,
+        body: <>
+            <p>React Component for Managing references. Automatically generates Citations based on the ids used with
+                Citation Links in the text of a page.</p>
+            <p>
+                It provides proper and consistent formatting of references (with visual warnings if information is missing) And the auther names are formatted consistently! It even recognises particles such as "van" to be last names instead of just taking the last word as the last name and having everything else as the first names..
+                No need to keep track in which order references are cited in the text, the manager is able to infer the order of citations and generates the list accordingly.
+                This makes it very easy to add references later on as the order adjusts automatically.
+                It is not necessary to number the citations in the text as that happens automatically, too.
+            </p>
+        </>,
         skills: [
             "typescript",
             "react",

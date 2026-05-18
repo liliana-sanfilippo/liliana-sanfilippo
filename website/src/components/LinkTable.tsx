@@ -11,7 +11,7 @@ export function LinkTable({data}: {data: Array<Linktype>}){
         if (point.link.includes("https")) {
             link =  point.link
         } else {
-            link =  `/current-projects/igem-bielefeld/${point.link}`
+            link =  `${import.meta.env.VITE_IGEM_BIELEFELD_PATH}/${point.link}`
         }
         if (point.author != null) {
             author = true

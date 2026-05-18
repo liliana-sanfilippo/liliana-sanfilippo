@@ -18,13 +18,14 @@ import {
     SiMicrosoftpowerpoint, SiNotion, SiNpm, SiSass,
     SiSpringboot,
     SiTailwindcss,
-    SiWebpack
+    SiWebpack,
+    SiJira
 } from "react-icons/si";
 import {BootstrapFill, Css, Github, Gitlab, Javascript, Typescript, Ubuntu} from "react-bootstrap-icons";
 import {ReactElement} from "react";
 import {BsMicrosoftTeams} from "react-icons/bs";
 import {GiBrain, GiTreeBranch} from "react-icons/gi";
-import {BiNetworkChart} from "react-icons/bi";
+import {BiNetworkChart, BiLogoPhp} from "react-icons/bi";
 
 export const ReactIcon = () => <span className={"icon icon-react"}> <FaReact/> </span>
 
@@ -87,6 +88,12 @@ export const BioinformaticsIcon = () => <span className={"icon icon-bioinformati
 export const SyntheticBiologyIcon = () => <span className={"icon icon-synthetic-bio"}><FaFlask/></span>
 
 export const PhylogeneticsIcon = () => <span className={"icon icon-phylogenetics"}><GiTreeBranch/></span>
+
+
+export const PHPIcon = () => <span className={"icon icon-php"}><BiLogoPhp/></span>
+
+export const JiraIcon = () => <span className={"icon icon-jira"}><SiJira/></span>
+
 //export const AntlrIcon = () => <span className={"icon icon-antlr"}><SiAntlr/></span>
 
 
@@ -130,6 +137,8 @@ export const iconMap: Record<string, ReactElement> = {
     latex: <LatexIcon/>,
     npm: <NpmIcon/>,
     node: <NodeIcon/>,
+    php: <PHPIcon/>,
+    jira: <JiraIcon/>,
     'ai-ethics': <AIEthicsIcon/>,
     'machine-learning': <MachineLearningIcon/>,
     'ml': <MachineLearningIcon/>,

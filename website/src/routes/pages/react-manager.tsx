@@ -1,19 +1,13 @@
 import {Button, Card} from "react-bootstrap";
 import {WikiPage} from "../../components/wiki/WikiPage";
 import {IssuesList} from "../../components/github/IssuesList";
-import TabbedBox, {TabData} from "../../components/boxes/TabbedBox";
+import {TabData} from "../../components/boxes/TabbedBox";
 import TagCarousel from "../../components/Carousels/TagCarousel";
 
 export function ReactManager() {
 
     return (<div className={"flex flex-col gap-8 lg:gap-16"}>
         <h1>The Bibtex Reference Manager for React</h1>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-            sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <div className={"row gap-8 lg:gap-16 m-auto"}>
             <Card className="text-center linkcard" style={{width: '20rem'}}>
                 <Card.Header>For iGEMers</Card.Header>
@@ -21,7 +15,9 @@ export function ReactManager() {
                     <Card.Text>
                         Go directly to the manual for iGEM wikis
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/react-reference-manager/Manual-for-iGEM-Wikis" variant="outline-primary">iGEM Manual</Button>
+                    <Button
+                        href={`${import.meta.env.VITE_REACT_REFERENCE_MANAGER_PATH}/Manual-for-iGEM-Wikis`}
+                        variant="outline-primary">iGEM Manual</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
             </Card>
@@ -31,7 +27,8 @@ export function ReactManager() {
                     <Card.Text>
                         Manuals, feature lists and troubleshooting help
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/react-reference-manager/Home" variant="outline-primary">Bibtex
+                    <Button href={`${import.meta.env.VITE_REACT_REFERENCE_MANAGER_PATH}/Home`}
+                            variant="outline-primary">Bibtex
                         manager wiki</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -53,7 +50,7 @@ export function ReactManager() {
                     <Card.Text>
                         See what bibtex types are supported, the available citation styles and more
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/react-reference-manager/Features"
+                    <Button href={`${import.meta.env.VITE_REACT_REFERENCE_MANAGER_PATH}/Features`}
                             variant="outline-primary">Feature Docu</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -90,16 +87,16 @@ export function ReactManager() {
 
 
 const boxName: TabData[] = [
-{
-    eventKey: "design",
+    {
+        eventKey: "design",
         title: "README",
-        content:  <WikiPage page={"README"} wikiUrl={"react-packages/react-reference-manager"} wikiName={"wiki-manager"}/>,
-},
+        content: <WikiPage page={"README"}/>,
+    },
     {
         eventKey: "test",
         title: "Collaborate!",
-        content:  <>
-        <p>Feel free to browse the issues and open new ones or request features.</p>
+        content: <>
+            <p>Feel free to browse the issues and open new ones or request features.</p>
             <IssuesList repo={"react-bibtex-reference-manager"}/>
         </>,
     }
@@ -109,7 +106,7 @@ const tabs2: TabData[] = [
     {
         eventKey: "design",
         title: "Manual for iGEM wikis",
-        content: <WikiPage page={"Manual-for-iGEM-Wikis"} wikiUrl={"react-packages/react-reference-manager"} wikiName={"wiki-manager"}/>,
+        content: <WikiPage page={"Manual-for-iGEM-Wikis"}/>,
     },
     {
         eventKey: "build",

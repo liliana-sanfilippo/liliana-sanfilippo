@@ -11,10 +11,10 @@ export function IGEMData() {
     return (
         <div>
             <div className={"row my-5"}>
-               <section>
-                   <h2>iGEM Guides</h2>
-                   <LinkTable data={igemguides}/>
-               </section>
+                <section>
+                    <h2>iGEM Guides</h2>
+                    <LinkTable data={igemguides}/>
+                </section>
                 <section>
                     <h2>iGEM Reports and Studies</h2>
                     <LinkTable data={igemreportstudylink}/>

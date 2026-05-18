@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import "../../componentStyling/wikipage.css"
 import {H2, H3} from "../H2";
+import {stringToSlug} from "@liliana-sanfilippo/react-wiki-components";
 
 interface Heading {
     id: string;
@@ -12,9 +13,10 @@ interface Heading {
     level: number;
 }
 
-export function WikiPage({page, wikiName, wikiUrl}: {wikiName: string, wikiUrl: string, page?: string }) {
-    const params = useParams<{ pageName: string }>();
+export function WikiPage({page, folder}: { page?: string , folder?: string}) {
+    const params = useParams<{ pageName: string, folderName: string }>();
     const pageName = params.pageName || page || "Home";
+    const foldername = params.folderName || folder || "wiki";
     const [content, setContent] = useState('');
     const [headings, setHeadings] = useState<Heading[]>([]);
     const [activeId, setActiveId] = useState<string>('');
@@ -27,11 +29,10 @@ export function WikiPage({page, wikiName, wikiUrl}: {wikiName: string, wikiUrl: 
         let wikiPath: string;
 
         if (page) {
-            wikiPath = `/liliana-sanfilippo/${wikiName}/${page}.md`;
+            wikiPath = `/${foldername}/${page}.md`;
         } else {
-            wikiPath = `/liliana-sanfilippo/${wikiName}/${pageName}.md`;
+            wikiPath = `/${foldername}/${pageName}.md`;
         }
-        console.log(wikiPath)
 
         fetch(wikiPath)
             .then(res => {
@@ -39,11 +40,11 @@ export function WikiPage({page, wikiName, wikiUrl}: {wikiName: string, wikiUrl: 
                 return res.text();
             })
             .then(text => {
-                const transformed = transformWikiLinks(text, wikiUrl);
-                setContent(transformed);
+                const txt = text.replace(/:x:/g, "🚫")
+                    .replace(/:white_check_mark:/g, "✅");
+                setContent(txt);
 
-
-                const extractedHeadings = extractHeadings(transformed);
+                const extractedHeadings = extractHeadings(text);
                 setHeadings(extractedHeadings);
 
                 setLoading(false);
@@ -76,14 +77,14 @@ export function WikiPage({page, wikiName, wikiUrl}: {wikiName: string, wikiUrl: 
     if (error) return (
         <div className="container py-4">
             <div className="text-red-600">Error: {error}</div>
-            <Link to={`/current-projects/${wikiUrl}`} className="text-blue-600">
-                ← Back to Documentation
+            <Link to="/Home" className="text-blue-600">
+                ← Back Home
             </Link>
         </div>
     );
 
     return (
-        <div className="container py-4">
+        <div className="container py-4 wiki-page">
             <div className="flex gap-8">
                 {/* Main Content */}
                 { headings.length > 0 && (
@@ -132,27 +133,27 @@ export function WikiPage({page, wikiName, wikiUrl}: {wikiName: string, wikiUrl: 
                             components={{
                                 h1: ({node, children, ...props}) => {
                                     const text = String(children);
-                                    const id = generateId(text);
+                                    const id =  stringToSlug(text);
                                     return <H2 id={id} {...props}>{children}</H2>;
                                 },
                                 h2: ({node, children, ...props}) => {
                                     const text = String(children);
-                                    const id = generateId(text);
+                                    const id = stringToSlug(text);
                                     return <H3 id={id} {...props}>{children}</H3>;
                                 },
                                 h3: ({node, children, ...props}) => {
                                     const text = String(children);
-                                    const id = generateId(text);
+                                    const id = stringToSlug(text);
                                     return <h3 id={id} {...props}>{children}</h3>;
                                 },
                                 h4: ({node, children, ...props}) => {
                                     const text = String(children);
-                                    const id = generateId(text);
+                                    const id = stringToSlug(text);
                                     return <h4 id={id} {...props}>{children}</h4>;
                                 },
                                 h5: ({node, children, ...props}) => {
                                     const text = String(children);
-                                    const id = generateId(text);
+                                    const id = stringToSlug(text);
                                     return <h5 id={id} {...props}>{children}</h5>;
                                 },
                                 h6: ({node, children, ...props}) => {
@@ -161,13 +162,29 @@ export function WikiPage({page, wikiName, wikiUrl}: {wikiName: string, wikiUrl: 
                                     return <h6 id={id} {...props}>{children}</h6>;
                                 },
                                 a: ({node, href, children, ...props}) => {
-                                    if (href?.startsWith(`/current-projects/${wikiUrl}/`) ||
-                                        (!href?.includes('://') && href?.startsWith('/'))) {
-                                        const path = href?.replace(/\.md$/, '') || '';
-                                        return <Link to={path}>{children}</Link>;
+                                    console.log("FOUND < A >:" + href);
+
+                                    if (href?.includes('github.com') && href?.includes('/')) {
+
+                                        const match = href.match(/\/liliana-sanfilippo\/(.+)/);
+                                        if (match) {
+                                            let path = match[1];
+
+                                            path = path.replace(/^(blob|tree)\/[^/]+\//, '');
+
+                                            path = path.replace(/\.md$/, '');
+
+                                            path = path.replace(/\/wiki\//g, '/');
+
+                                            const internalPath = import.meta.env.VITE_PACKAGE_PATH + "/" + path;
+
+                                            console.log("GitHub Link erkannt, interner Pfad:", internalPath);
+                                            return <Link to={internalPath}>{children}</Link>;
+                                        }
                                     }
-                                    return <a href={href} target="_blank"
-                                              rel="noopener noreferrer" {...props}>{children}</a>;
+
+
+                                    return <a href={href} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>;
                                 },
                                 img: ({node, src, alt, ...props}) => {
                                     return (
@@ -214,15 +231,6 @@ function extractHeadings(markdown: string): Heading[] {
     return headings;
 }
 
-function transformWikiLinks(markdown: string, wikiUrl: string): string {
-    return markdown
-        .replace(/\[\[([^\|\]]+)\|([^\]]+)\]\]/g, `[$2](/current-projects/${wikiUrl}/$1)`)
-        .replace(/\[\[([^\]]+)\]\]/g, `[$1](/current-projects/${wikiUrl}/$1)`)
-        .replace(
-            /\[([^\]]+)\]\(https?:\/\/github\.com\/liliana-sanfilippo\/react-bibtex-reference-manager\/wiki\/([^\)]+)\)/g,
-            `[$1](/current-projects/${wikiUrl}/$2)`
-        );
-}
 
 function generateId(text: string): string {
     return text

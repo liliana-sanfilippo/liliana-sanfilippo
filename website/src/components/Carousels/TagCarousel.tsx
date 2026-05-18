@@ -16,7 +16,7 @@ export default function TagCarousel({tag}: { tag: string }) {
 
     return (<div>
         {/* <h2>{capitalize(tag)} posts</h2>*/}
-        <Carousel data-bs-theme="" className={"max-w-[50vw] mx-auto h-100"}>
+        <Carousel data-bs-theme="" className={"md:max-w-[50vw] mx-auto h-100"}>
             {filteredPosts.map((route, i) => (<Carousel.Item key={i}>
                 <ul>
                     <li key={route.slug}>
