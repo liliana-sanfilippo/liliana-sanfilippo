@@ -1,3 +1,4 @@
+<img width="852" height="682" alt="PXL_20260423_150453450_exported_676_1777231119978" src="https://github.com/user-attachments/assets/0f3614d5-d15f-4b17-ab43-6ade4d9b4678" />
 
 
 <img width="423" height="97" alt="Bild" src="https://github.com/user-attachments/assets/6e1556c3-20d5-4221-9b13-1851286c59b6" />
