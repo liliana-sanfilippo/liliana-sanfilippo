@@ -1,6 +1,6 @@
 import ArticleCard from "./ArticleCard";
 import React from "react";
-import postsWithNav from "../routes/posts";
+import postsWithNav from "../posts";
 import {Link} from "react-router-dom";
 
 

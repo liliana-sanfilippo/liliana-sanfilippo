@@ -1,5 +1,4 @@
 export function LinkLine({url, text, href}: { url: string, text: string, href: string }) {
-
     return (<a href={href} className={"my-2"}>
             <div
                 className={"linkding flex gap-4 h-full w-full items-center justify-start text-white" + " rounded-full p-3" + " transition-grow cursor-pointer"}>

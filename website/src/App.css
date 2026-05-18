@@ -1,3 +1,5 @@
+
+
 /** ArticleMeta*/
 .tags,
 .tags li {
@@ -72,6 +74,8 @@ code {
     color: var(--text-primary);
 }
 
+
+
 .linkcard {
     padding-left: 0;
     padding-right: 0;
@@ -90,6 +94,11 @@ code {
     background-color: var(--verylightblue);
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
+}
+
+
+.transition-grow {
+    transition: all .3s cubic-bezier(0,0,.5,1);
 }
 
 

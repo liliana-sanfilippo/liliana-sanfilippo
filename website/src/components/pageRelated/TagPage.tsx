@@ -1,6 +1,6 @@
 import React from 'react'
 import ArticleCard from '../ArticleCard'
-import {Post} from "../../routes/posts/post_interface";
+import {Post} from "../../posts/post_interface";
 
 
 interface TagPageProps {

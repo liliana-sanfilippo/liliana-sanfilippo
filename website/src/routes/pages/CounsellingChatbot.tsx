@@ -21,7 +21,7 @@ export function CounsellingChatbot() {
             <b>What is student counselling?</b> Student counselling (also called peer-counselling) involves students advising other students, rather than
             professors or external staff.
         </p>
-        <div className={"row gap-8 lg:gap-16 m-auto"}>
+        {/* <div className={"row gap-8 lg:gap-16 m-auto"}>
             <Card className="text-center linkcard" style={{width: '20rem'}}>
                 <Card.Header>Data collection</Card.Header>
                 <Card.Body>
@@ -53,6 +53,7 @@ export function CounsellingChatbot() {
                 <Card.Footer className="text-muted">external</Card.Footer>
             </Card>
         </div>
+        */}
         <h2>News</h2>
         <TagCarousel tag={"counselling-bot"}/>
         <section id={"data"}>
@@ -64,6 +65,7 @@ export function CounsellingChatbot() {
            </Row>
         </section>
 
+        {/*
         <section className={"flex flex-col gap-8 lg:gap-16"}>
             <div
                 className={`center w-min mx-auto`}
@@ -91,6 +93,7 @@ export function CounsellingChatbot() {
                 </Modal.Body>
             </Modal>
         </section>
+        */}
 
     </div>)
 }

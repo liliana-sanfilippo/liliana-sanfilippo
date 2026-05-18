@@ -179,6 +179,20 @@
     border: 2px solid var(--lightblue-zwei);
 }
 
+/* other third tab */
+.third-tab {
+    background-color: var(--lightblue-drei) !important;
+    color: #fff !important;
+}
+
+.nav-link.active.third-tab {
+    background-color: var(--lightblue-drei) !important;
+}
+
+.third-wrapper {
+    border: 2px solid var(--lightblue-drei);
+}
+
 @media (max-width: 550px) {
     .tabWrapper {
         overflow: hidden;

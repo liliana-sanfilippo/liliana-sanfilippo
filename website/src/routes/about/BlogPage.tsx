@@ -1,7 +1,7 @@
 import React from "react";
 import ArticleCard from "../../components/ArticleCard";
-import posts from "../posts";
-import {Post} from "../posts/post_interface";
+import posts from "../../posts";
+import {Post} from "../../posts/post_interface";
 import {H2} from "../../components/H2"
 import PostByTags from "../../components/PostByTags";
 
@@ -16,19 +16,19 @@ export function BlogPage() {
     }
     return (<div className={"mx-auto gap-8 lg:gap-16"}>
             <H2>By category</H2>
-            <div className={"row gap-8 lg:gap-16 w-75 mx-auto"}>
+            <div className={"row gap-8 lg:gap-16 mx-auto"}>
                 <PostByTags tag={"iGEM"}/>
                 <PostByTags tag={"AI"}/>
                 <PostByTags tag={"BFH"}/>
                 <PostByTags tag={"React"}/>
             </div>
             <H2>All posts</H2>
-                <div className="h-100 m-5 p-5">
-                    <div className="col-8 mx-auto" key={postOne.slug}>
+                <div id={"latestpostwrapper"} className="h-100 m-5 p-5">
+                    <div id={"latestpost"} className="col-8 mx-auto" key={postOne.slug}>
                         <ArticleCard post={postOne}/>
                     </div>
                 </div>
-                <div className={'row gap-8 lg:gap-16 w-75 mx-auto'}>
+                <div className={'row gap-8 lg:gap-16 mx-auto'}>
                     {otherPosts.map( (route: Post) => (
                         <div className={"col"}>
                             <ArticleCard post={route} key={route.slug}/>

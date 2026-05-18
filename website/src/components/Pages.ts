@@ -8,14 +8,14 @@ export interface Base {
 
 export class Folder implements Base {
     name: string | undefined;
-    folder: Page[] | PageRef[] | Folder[] | undefined;
+    folder: ContentArray | undefined;
 }
 
 export class Page implements Base {
     name: string | undefined;
     title: string | undefined;
     path: string | undefined;
-    component!: ReactNode;
+    component!: ReactNode | JSX.Element;
     header?: ReactNode;
 }
 
@@ -23,6 +23,9 @@ export class PageRef implements Base {
     name: string | undefined;
     title: string | undefined;
     path: string | undefined;
-    component?: ReactNode;
+    component?: ReactNode | JSX.Element;
     header?: ReactNode;
 }
+
+type ContentItem = Page | PageRef | Folder | undefined;
+type ContentArray = ContentItem[];

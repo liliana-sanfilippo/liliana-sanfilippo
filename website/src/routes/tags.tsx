@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react"
 import {useParams} from "react-router-dom"
 import TagPage from "../components/pageRelated/TagPage"
-import postsWithNav from "./posts";
+import postsWithNav from "../posts";
 
 
-export default function TagPageWrapper({blogRoot}: { blogRoot: string }) {
+export default function TagPageWrapper() {
     const {tag} = useParams<{ tag: string }>()
     const [filteredPosts, setFilteredPosts] = useState<any[]>([])
 

@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 export function Footer() {
 
 
-    return (<footer className="px-3 mt-5">
+    return (<footer className="px-3 mt-5 print:hidden">
         <Container className="">
             <div className="row align-items-center" style={{}}>
                 <div className="col grid">
@@ -25,14 +25,14 @@ export function Footer() {
             <div className="d-flex align-items-baseline">
 
                 <div className="col-sm-6">
-                    <h6>Contact</h6>
-
+                    <h1>Contact</h1>
+                    <p> liliana.sanfilippo[at]bfh-euromeet.de</p>
                     <br/>
 
                 </div>
 
                 <div className="col-sm-6" style={{paddingLeft: "20px"}}>
-                    <h6 className="sticky-top">Tags</h6>
+                    <h1 className="sticky-top">Blog Tags</h1>
                     <TagIndexPageWrapper></TagIndexPageWrapper>
                 </div>
 

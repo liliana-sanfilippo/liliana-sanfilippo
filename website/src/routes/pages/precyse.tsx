@@ -10,7 +10,7 @@ import {precysePresse} from "../../data/igem/precysePresse";
 import {instaurls, linkedinposts} from "../../data/igem/precyseSocials";
 import TagCarousel from "../../components/Carousels/TagCarousel";
 import {LinkLine} from "../../components/LinkLine";
-import {GBox, VideoBox } from "../../components/boxes/G_Box";
+import {VideoBox} from "../../components/boxes/G_Box";
 import {Video} from "../../components/media/Video";
 
 export function Precyse() {
@@ -21,14 +21,14 @@ export function Precyse() {
             PreCyse
         </h1>
         <VideoBox>
-           <Col>
-               <p> We are proud to present PreCyse, a next-generation Prime Editing technology, as innovative gene
-                   therapy approach for Cystic Fibrosis (CF) specifically targeting the most common mutation F508del of
-                   the CFTR gene.</p>
-               <p><a
-                   href="https://2024.igem.wiki/bielefeld-cebitec/description?scrollTo=Abstract">https://2024.igem.wiki/bielefeld-cebitec/</a>
-               </p>
-           </Col>
+            <Col>
+                <p> We are proud to present PreCyse, a next-generation Prime Editing technology, as innovative gene
+                    therapy approach for Cystic Fibrosis (CF) specifically targeting the most common mutation F508del of
+                    the CFTR gene.</p>
+                <p><a
+                    href="https://2024.igem.wiki/bielefeld-cebitec/description?scrollTo=Abstract">https://2024.igem.wiki/bielefeld-cebitec/</a>
+                </p>
+            </Col>
             <Video url={"https://video.igem.org/videos/embed/9QWExnNCFSWJWbsRTFEZDd"}/>
         </VideoBox>
         <H2>
@@ -72,9 +72,11 @@ export function Precyse() {
         </div>
         <H2> Files </H2>
         <PosterCarousel posters={igemfiles24}/>
-        <H2> Social Media </H2>
+        <span className={"print:hidden"}>
+            <H2> Social Media </H2>
         <LinkedInCarousel urls={linkedinposts}/>
         <InstagramCarousel urls={instaurls}/>
+        </span>
         <H2>Posts</H2>
         <TagCarousel tag={"precyse"}/>
     </div>)

@@ -3,7 +3,7 @@ import React from "react";
 export function GBox({background, children}: { background: string, children: React.ReactNode }) {
 
     return (<div
-            className="relative overflow-clip p-6 lg:py-8 w-full transition-grow">
+            className="active:outline-solid relative overflow-clip p-6 lg:py-8 w-full transition-grow">
             <div className="*:z-20 flex flex-col gap-4 lg:gap-8 items-start text-text-primary">
                 <div className="flex flex-col gap-0.5 ">
                     {children}

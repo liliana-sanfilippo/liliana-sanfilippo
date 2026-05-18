@@ -1,4 +1,4 @@
-import { NavigationBar } from "../components/navComponents/navigationBar";
+import { NavBarContent } from "../navBarContent";
 import { Page } from "../components/Pages";
 
 export const getPathMapping = () => {
@@ -15,6 +15,15 @@ export const getPathMapping = () => {
 
             // Vollständigen Pfad aufbauen
             const currentPath = parentPath + '/' + slug;
+            if (item.component) {
+                map[currentPath] = {
+                    name: item.name,
+                    title: item.title,
+                    path: item.path,
+                    component: item.component,
+                    header: item.header,
+                };
+            }
             item.folder.forEach((subItem: any) => {
                 processItem(map, subItem, currentPath); // Rekursiver Aufruf
             });
@@ -31,7 +40,7 @@ export const getPathMapping = () => {
         }
     };
 
-    return NavigationBar.reduce<{
+    return NavBarContent.reduce<{
         [key: string]: Page;
     }>((map, item) => {
         processItem(map, item);
