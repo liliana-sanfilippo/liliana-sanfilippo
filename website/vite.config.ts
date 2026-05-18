@@ -6,15 +6,13 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
     plugins: [
         react(),
         tailwindcss(),
         tsconfigPaths(),
     ],
-    base: command === 'serve'
-        ? '/'
-        : '/liliana-sanfilippo/',
+    base: "/",
     resolve: {
         alias: {
             "@": fileURLToPath(new URL("./src", import.meta.url)),
@@ -24,4 +22,4 @@ export default defineConfig(({ command }) => ({
         host: true,
     },
 
-}));
+});
