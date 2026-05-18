@@ -4,11 +4,10 @@ import styles from '.././document.module.css'
 export const metaHannoverMesse2026 = {
     title: "FEMWORX and Hannovermesse 2026",
     tags: ["trade-fair"],
-    spoiler: "",
+    spoiler: " Last week I was at the Hannovermesse and Femworx career fair - both were very interesting!",
     slug: "hannover-messe-2026",
     date: new Date("2026-04-30"),
-    image: "https://github.com/user-attachments/assets/0f3614d5-d15f-4b17-ab43-6ade4d9b4678\n",
-    cc: ""
+    image: "https://github.com/user-attachments/assets/0f3614d5-d15f-4b17-ab43-6ade4d9b4678"
 }
 export default function HannoverMesse2026() {
     return (<div className={styles.Welcome}>
