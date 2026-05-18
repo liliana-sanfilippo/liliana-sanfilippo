@@ -1,6 +1,6 @@
 import {Accordion} from "react-bootstrap";
 import {CVItem} from "../../components/cvItem";
-import {awards, edu, workEx} from "../../data/cvData";
+import {awards, edu, software, workEx} from "../../data/cvData";
 import {H2} from "../../components/H2";
 
 export function Cv() {
@@ -16,6 +16,10 @@ export function Cv() {
             ))}
             <H2>Awards</H2>
             {awards.map(item => (
+                <CVItem props={item}/>
+            ))}
+            <H2>Software</H2>
+            {software.map(item => (
                 <CVItem props={item}/>
             ))}
         </Accordion>
