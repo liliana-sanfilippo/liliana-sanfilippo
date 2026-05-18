@@ -1,1 +1,0 @@
-# HP and Ethics
