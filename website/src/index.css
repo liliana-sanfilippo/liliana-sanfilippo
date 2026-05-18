@@ -326,7 +326,7 @@ a {
 
     .uni-image {
         margin: auto !important;
-        max-width: 70%;
+        max-width: 100%;
 
         img {
             max-width: 100% !important;
@@ -522,4 +522,90 @@ img {
 .filterable {
     margin-bottom: 4px;
     display: none;
+}
+
+
+.show {
+    visibility: visible !important;
+}
+
+
+/* MEDIA RULES*/
+
+.navbar-brand {
+    border-right: none !important;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+}
+
+.dropdown-toggle.show {
+    text-align: start;
+}
+
+.dropdown-menu {
+    border: hidden;
+}
+
+
+@media (width >= 48rem) {
+    .navbar-brand {
+        border-right: solid #1a1a1a 1px !important;
+    }
+
+    .collapse {
+        visibility: visible !important;
+    }
+
+    .article-card {
+        min-width: 32rem;
+    }
+
+    .dropdown-menu {
+        border: solid #1a1a1a 1px !important;
+        border-radius: 0;
+    }
+
+    .img-25 {
+        width: 25vw;
+    }
+
+    .sm-post-carousel-item {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    #latestpost, .md\:col-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+
+    .md\:col-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    .md\:col-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
+    .md\:col-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .md\:col-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+
+    .uni-embed {
+        .uni-image {
+            margin: auto !important;
+            max-width: 70%;
+        }
+    }
+
 }

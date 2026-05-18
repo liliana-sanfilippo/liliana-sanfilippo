@@ -11,7 +11,7 @@ function ArticleCard({post, noimg, h}: {
     const image: string = post.image ? post.image : "https://static.igem.wiki/teams/5833/other/placeholder.svg";
     const height = h? `h-${h}` : "h-100"
     return (
-        <Card className={`mb-3 mx-auto ${height}`} style={{minWidth: '32rem'}}>
+        <Card className={`mb-3 mx-auto ${height} article-card`}>
             <Card.Header>
                 <time dateTime={post.date.toUTCString()}>{formatDate(post.date)}</time>
             </Card.Header>

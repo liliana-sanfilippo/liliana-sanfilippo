@@ -134,7 +134,7 @@ export function Bfh() {
     return (
         <div>
             <div className={"row my-5"}>
-                <img alt={"BFH European Meetup Logo"} className="mx-auto w-25 mt-5"
+                <img alt={"BFH European Meetup Logo"} className="mx-auto img-25 mt-5"
                      src="https://static.igem.wiki/teams/5247/logos-team/bfh-with-tagline-black.svg"/>
             </div>
             <section>

@@ -8,7 +8,7 @@ export function IgemBielefeld() {
 
     return (<div>
         <div className={"row my-5"}>
-            <img alt={"iGEM Bielefeld Logo"} className="mx-auto w-25 mt-5"
+            <img alt={"iGEM Bielefeld Logo"} className="mx-auto mt-5 img-25"
                  src="https://static.igem.wiki/teams/5247/logos-team/igem-bielefeld-logo-our-colours.png"/>
         </div>
         <section>

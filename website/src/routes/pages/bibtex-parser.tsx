@@ -38,7 +38,7 @@ export function BibtexParser() {
                     <Card.Text>
                         See what bibtex types are supported and more
                     </Card.Text>
-                    <Button href={`${import.meta.env.VITE_REACT_BIBTEX_PARSER_PATH}/Features"`}
+                    <Button href={`${import.meta.env.VITE_REACT_BIBTEX_PARSER_PATH}/Features`}
                             variant="outline-primary">Feature Docu</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>

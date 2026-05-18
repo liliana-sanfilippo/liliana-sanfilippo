@@ -87,14 +87,16 @@ export function Navbar() {
         fixed="top"
     >
         <Container className={"h-100"}>
+
             <BootstrapNavbar.Brand href="/" className={"py-4 px-5"}>
                 Home
             </BootstrapNavbar.Brand>
 
-            <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav"/>
-            <BootstrapNavbar id="basic-navbar-nav" ref={navbarCollapseRef}>
+            <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" className={"sm:ms-auto"}/>
+
+            <BootstrapNavbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto px-5">{pages}</Nav>
-            </BootstrapNavbar>
+            </BootstrapNavbar.Collapse>
 
             <div className="scroll-progress" ref={progressBarRef}>
 

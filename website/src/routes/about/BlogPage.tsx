@@ -23,8 +23,8 @@ export function BlogPage() {
                 <PostByTags tag={"React"}/>
             </div>
             <H2>All posts</H2>
-            <div id={"latestpostwrapper"} className="h-100 m-5 p-5">
-                <div id={"latestpost"} className="col-8 mx-auto" key={postOne.slug}>
+            <div id={"latestpostwrapper"} className="h-100 md:m-5 md:p-5">
+                <div id={"latestpost"} className="mx-auto" key={postOne.slug}>
                     <ArticleCard post={postOne}/>
                 </div>
             </div>
