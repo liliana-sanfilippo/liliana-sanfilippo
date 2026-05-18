@@ -15,7 +15,7 @@ export function BibtexParser() {
                     <Card.Text>
                         Manuals, feature lists and troubleshooting help
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/bibtex-ts-parser/Home"
+                    <Button href={`${import.meta.env.VITE_REACT_BIBTEX_PARSER_PATH}/Home`}
                             variant="outline-primary">Bibtex
                         parser wiki</Button>
                 </Card.Body>
@@ -38,7 +38,7 @@ export function BibtexParser() {
                     <Card.Text>
                         See what bibtex types are supported and more
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/bibtex-ts-parser/Features"
+                    <Button href={`${import.meta.env.VITE_REACT_BIBTEX_PARSER_PATH}/Features"`}
                             variant="outline-primary">Feature Docu</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -54,7 +54,7 @@ export function BibtexParser() {
                     <Card.Text>
                         See above for the repository README
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/bibtex-ts-parser/#readme" variant="outline-primary">GitHub
+                    <Button href="/bibtex-ts-parser/#readme" variant="outline-primary">GitHub
                         README</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>

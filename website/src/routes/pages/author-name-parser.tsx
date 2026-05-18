@@ -15,7 +15,7 @@ export function AuthorNameParser() {
                     <Card.Text>
                         Manuals, feature lists and troubleshooting help
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/author-name-parser/Home"
+                    <Button href={`${import.meta.env.VITE_REACT_AUTHOR_PARSER_PATH}/Home`}
                             variant="outline-primary">Name
                         parser wiki</Button>
                 </Card.Body>
@@ -38,7 +38,7 @@ export function AuthorNameParser() {
                     <Card.Text>
                         See what bibtex types are supported and more
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/author-name-parser/Features"
+                    <Button href={`${import.meta.env.VITE_REACT_AUTHOR_PARSER_PATH}/Features`}
                             variant="outline-primary">Feature Docu</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>

@@ -29,9 +29,9 @@ export function WikiPage({page, folder}: { page?: string , folder?: string}) {
         let wikiPath: string;
 
         if (page) {
-            wikiPath = `/liliana-sanfilippo/${foldername}/${page}.md`;
+            wikiPath = `/${foldername}/${page}.md`;
         } else {
-            wikiPath = `/liliana-sanfilippo/${foldername}/${pageName}.md`;
+            wikiPath = `/${foldername}/${pageName}.md`;
         }
 
         fetch(wikiPath)
@@ -164,7 +164,7 @@ export function WikiPage({page, folder}: { page?: string , folder?: string}) {
                                 a: ({node, href, children, ...props}) => {
                                     console.log("FOUND < A >:" + href);
 
-                                    if (href?.includes('github.com') && href?.includes('/liliana-sanfilippo/')) {
+                                    if (href?.includes('github.com') && href?.includes('/')) {
 
                                         const match = href.match(/\/liliana-sanfilippo\/(.+)/);
                                         if (match) {

@@ -88,7 +88,7 @@ export function Navbar() {
     >
         <Container className={"h-100"}>
             <BootstrapNavbar.Brand href="/" className={"py-4 px-5"}>
-                Website
+                Home
             </BootstrapNavbar.Brand>
 
             <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav"/>

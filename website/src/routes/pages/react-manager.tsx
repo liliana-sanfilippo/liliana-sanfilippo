@@ -16,7 +16,7 @@ export function ReactManager() {
                         Go directly to the manual for iGEM wikis
                     </Card.Text>
                     <Button
-                        href="/liliana-sanfilippo/current-projects/packages/react-reference-manager/Manual-for-iGEM-Wikis"
+                        href={`${import.meta.env.VITE_REACT_REFERENCE_MANAGER_PATH}/Manual-for-iGEM-Wikis`}
                         variant="outline-primary">iGEM Manual</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -27,7 +27,7 @@ export function ReactManager() {
                     <Card.Text>
                         Manuals, feature lists and troubleshooting help
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/react-reference-manager/Home"
+                    <Button href={`${import.meta.env.VITE_REACT_REFERENCE_MANAGER_PATH}/Home`}
                             variant="outline-primary">Bibtex
                         manager wiki</Button>
                 </Card.Body>
@@ -50,7 +50,7 @@ export function ReactManager() {
                     <Card.Text>
                         See what bibtex types are supported, the available citation styles and more
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/current-projects/packages/react-reference-manager/Features"
+                    <Button href={`${import.meta.env.VITE_REACT_REFERENCE_MANAGER_PATH}/Features`}
                             variant="outline-primary">Feature Docu</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -66,7 +66,7 @@ export function ReactManager() {
                     <Card.Text>
                         See above for the repository README
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/react-reference-manager/#readme" variant="outline-primary">GitHub
+                    <Button href="/react-reference-manager/#readme" variant="outline-primary">GitHub
                         README</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>

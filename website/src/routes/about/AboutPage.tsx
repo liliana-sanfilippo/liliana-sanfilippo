@@ -6,7 +6,7 @@ export function AboutPage() {
             develop my webdev skills.
         </p>
         <p>
-            Yes, the design is intended to look like this.
+            Yes, the design is intended to look like this. I like it.
         </p>
     </div>)
 }

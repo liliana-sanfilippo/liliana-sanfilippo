@@ -15,7 +15,7 @@ export function ReactGenerator() {
                     <Card.Text>
                         Manuals, feature lists and troubleshooting help
                     </Card.Text>
-                    <Button href={`/liliana-sanfilippo${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/Home`}
+                    <Button href={`${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/Home`}
                             variant="outline-primary">Bibtex
                         generator wiki</Button>
                 </Card.Body>
@@ -38,7 +38,7 @@ export function ReactGenerator() {
                     <Card.Text>
                         See what bibtex types are supported, the available citation styles and more
                     </Card.Text>
-                    <Button href={`/liliana-sanfilippo${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/Features`}
+                    <Button href={`${import.meta.env.VITE_REACT_REFERENCE_GENERATOR_PATH}/Features`}
                             variant="outline-primary">Feature Docu</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
@@ -54,7 +54,7 @@ export function ReactGenerator() {
                     <Card.Text>
                         See above for the repository README
                     </Card.Text>
-                    <Button href="/liliana-sanfilippo/react-reference-manager/#readme" variant="outline-primary">GitHub
+                    <Button href="/react-reference-manager/#readme" variant="outline-primary">GitHub
                         README</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">automatically updates weekly</Card.Footer>
