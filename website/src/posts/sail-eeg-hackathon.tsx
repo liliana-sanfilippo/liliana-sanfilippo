@@ -20,6 +20,12 @@ export default function SailEegHackathon() {
         <ImageWrapper
             src={"https://live.staticflickr.com/65535/54974685624_f476e023e8_c.jpg"}
         />
+        <ImageWrapper
+            src={"https://live.staticflickr.com/65535/55279049308_4d671fdf0f_b.jpg"}
+        />
+        <ImageWrapper
+            src={"https://live.staticflickr.com/65535/55279137509_0478b99c1e_b.jpg"}
+        />
     </div>)
 }
 // https://www.hsbi.de/presse/pressemitteilungen/hackathon-ai-in-health-sciences-kann-ein-ki-algorithmus-bewegungen-auf-basis-von-gehirnstroemen-erkennen

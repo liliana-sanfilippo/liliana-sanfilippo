@@ -5,7 +5,7 @@ export const metaMeetupEindhoven2026 = {
     title: "MeetUp: Eindhoven 2026",
     tags: ["igem", "meetup"],
     spoiler: "",
-    slug: "",
+    slug: "eindhoven-2026",
     date: new Date("2026-10"),
     image: "",
     cc: ""

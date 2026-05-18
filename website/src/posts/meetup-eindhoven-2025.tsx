@@ -5,7 +5,7 @@ export const metaMeetupEindhoven2025 = {
     title: "MeetUp: Eindhoven 2025",
     tags: ["igem", "meetup"],
     spoiler: "",
-    slug: "",
+    slug: "eindhoven-2025",
     date: new Date("2025-10-19"),
     image: "https://live.staticflickr.com/65535/54974421161_acdde4c670_c.jpg",
     cc: "Liliana Sanfilippo"
