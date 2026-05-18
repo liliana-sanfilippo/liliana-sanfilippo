@@ -31,6 +31,7 @@ export function Precyse() {
             </Col>
             <Video url={"https://video.igem.org/videos/embed/9QWExnNCFSWJWbsRTFEZDd"}/>
         </VideoBox>
+        {/**
         <H2>
             Project
         </H2>
@@ -42,7 +43,7 @@ export function Precyse() {
         <TabbedBox tabs={peopletabs} defaultActiveKey="design"/>
 
 
-        {/**
+
          <iframe width="560" height="315" src="https://www.youtube.com/embed/pJrpLIjvDV0?si=kFp18yHKlnBxKtZR"
          title="YouTube video player" frameBorder="0"
          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -56,13 +57,13 @@ export function Precyse() {
          title="title" className="two-pdf-line small-i"></iframe> **/}
 
         {/**<p><img src="https://static.igem.wiki/teams/5247/photos/meetup/posters-and-stuff/bfh-poster-bielefeld-1.png"/></p>**/}
-        <H2>
+        {/**<H2>
             Wiki
         </H2>
         <H2>
             Paper
         </H2>
-
+         **/}
         <H2>
             Press
         </H2>
@@ -70,8 +71,10 @@ export function Precyse() {
             {precysePresse.map(link => (
                 <LinkLine url={link.img ?? ""} text={link.linktitle ?? ""} href={link.url}/>))}
         </div>
+        {/**
         <H2> Files </H2>
         <PosterCarousel posters={igemfiles24}/>
+         **/}
         <span className={"print:hidden"}>
             <H2> Social Media </H2>
         <LinkedInCarousel urls={linkedinposts}/>

@@ -8,12 +8,6 @@ export function ReactManager() {
 
     return (<div className={"flex flex-col gap-8 lg:gap-16"}>
         <h1>The Bibtex Reference Manager for React</h1>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-            sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <div className={"row gap-8 lg:gap-16 m-auto"}>
             <Card className="text-center linkcard" style={{width: '20rem'}}>
                 <Card.Header>For iGEMers</Card.Header>

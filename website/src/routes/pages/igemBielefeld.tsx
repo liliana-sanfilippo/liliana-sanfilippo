@@ -1,6 +1,5 @@
 import TabbedBox, {TabData} from "../../components/boxes/TabbedBox";
 import {Precyse} from "./precyse";
-import {Cellective} from "./cellective"
 import React from "react";
 import TagCarousel from "../../components/Carousels/TagCarousel";
 
@@ -24,7 +23,5 @@ export function IgemBielefeld() {
 
 const igembielefeldTabs: TabData[] = [{
     eventKey: "first", title: "2024", content: (<Precyse/>)
-}, {
-    eventKey: "second", title: "2025", content: (<Cellective/>)
 }]
 

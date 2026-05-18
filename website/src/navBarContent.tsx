@@ -12,7 +12,6 @@ import {IgemBielefeldOverview} from "./routes/pages/igemBielefeldOverview";
 import {CurrentProjects} from "./routes/pages/currentProjects";
 import {Packages} from "./routes/pages/packages";
 import {StartingAsAdvisor} from "./routes/pages/StartingAsAdvisor";
-import {IGEMData} from "./routes/pages/iGEMData";
 
 export const NavBarContent: (PageRef | Folder)[] = [
     {
@@ -48,12 +47,6 @@ export const NavBarContent: (PageRef | Folder)[] = [
                         title: "For advisors",
                         path: "/for-advisors",
                         component: <StartingAsAdvisor/>
-                    },
-                    {
-                        name: "iGEM data",
-                        title: "iGEM data",
-                        path: "/data",
-                        component: <IGEMData/>
                     }
                 ]
 

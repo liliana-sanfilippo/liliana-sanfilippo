@@ -85,13 +85,10 @@ export function IgemBielefeldOverview() {
                     <p>Browse summaries of former projects I participated in <Link
                         to={"/current-projects/igem-bielefeld/projects"}>here</Link>. </p>
                 </Section>
-                <Section title={"Starting a team (or as an advisor)"}>
-                    <p>TODO <Link
+                <Section title={"For advisors"}>
+                    <p> <Link
                         to={"/current-projects/igem-bielefeld/for-advisors"}>here</Link></p>
 
-                </Section>
-                <Section title={" iGEM data collections"}>
-                    Visit <Link to={"/current-projects/igem-bielefeld/data"}>here</Link> to view datasets I started.
                 </Section>
                 <Section title={"Notes and manuals"}>
                     <p>Browse my checklists and notes for starting new teams and passing over advisor duties.</p>
