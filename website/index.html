@@ -7,16 +7,17 @@
     <title>Liliana Sanfilippo</title>
 
     <script>
-        (function(l) {
-            if (l.search[1] === '/' ) {
-                var decoded = l.search.slice(1).split('&').map(function(s) {
-                    return s.replace(/~and~/g, '&')
-                }).join('?');
-                window.history.replaceState(null, null,
-                    l.pathname.slice(0, -1) + decoded + l.hash
-                );
+        // Fange alle direkten Zugriffe ab und redirect zu Root mit Path als Query-Param
+        (function() {
+            var path = window.location.pathname;
+            var search = window.location.search;
+            var hash = window.location.hash;
+
+            // Wenn wir nicht auf root sind, redirect zu root mit vollem Path
+            if (path !== '/' && !path.endsWith('.html') && !path.endsWith('.js') && !path.endsWith('.css')) {
+                window.location.href = '/?_path=' + encodeURIComponent(path + search + hash);
             }
-        }(window.location))
+        })();
     </script>
 </head>
 <body>
