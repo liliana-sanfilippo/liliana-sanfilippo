@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {BrowserRouter, Route, Routes, useNavigate, useParams} from 'react-router-dom'
+import {BrowserRouter, Route, Routes, useParams} from 'react-router-dom'
 import BlogLayout from '../components/pageRelated/BlogLayout'
 import BlogPostLayout from '../components/pageRelated/BlogPostLayout'
 import NotFoundPage from "../components/pageRelated/NotFoundPage";
@@ -19,18 +19,16 @@ function BlogPostWrapper() {
 }
 
 function AppRouter() {
-    const navigate = useNavigate();
-
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
-        const path = params.get('_path');
+        const redirect = params.get('p');
 
-        if (path) {
-            // Entferne den Query-Param und navigate zur echten Route
-            window.history.replaceState(null, '', path);
-            navigate(path);
+        if (redirect) {
+            // Setze die echte URL ohne Query-Param
+            window.history.replaceState({}, '', redirect);
         }
-    }, [navigate]);
+    }, []);
+
 
     const pathMapping = getPathMapping();
 

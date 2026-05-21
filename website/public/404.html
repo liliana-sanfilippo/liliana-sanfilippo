@@ -4,11 +4,21 @@
     <meta charset="utf-8">
     <title>Page Not Found</title>
     <script>
-        // Speichere den ursprünglichen Path
-        sessionStorage.setItem('redirect', window.location.pathname + window.location.search);
-        // Redirect zu Root, damit React Router es handhaben kann
-        window.location = '/index.html';
+        // GitHub Pages 404 Redirect für React Router
+        // Encodes den Path und schickt ihn als Query-Param zu index.html
+        var pathSegments = window.location.pathname
+            .split('/')
+            .slice(1)  // Entferne leeren String am Anfang
+            .map(s => s || '/')
+            .join('/');
+
+        window.location.replace(
+            '/index.html?p=' + encodeURIComponent('/' + pathSegments) +
+            window.location.search.replace(/&/g, '~and~') +
+            window.location.hash
+        );
     </script>
 </head>
-<body></body>
+<body>
+</body>
 </html>
