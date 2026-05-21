@@ -13,7 +13,9 @@ function BlogLayout() {
             setNavbarHeight(navbar.offsetHeight + 10);
         }
     }, []);
-    handleNavigation();
+    useEffect(() => {
+        handleNavigation();
+    }, []);
     return (<>
         <Navbar></Navbar>
 
