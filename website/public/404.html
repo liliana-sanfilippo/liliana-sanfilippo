@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <script>
+        // Speichere den ursprünglichen Path
+        sessionStorage.setItem('redirect', window.location.pathname + window.location.search);
+        // Redirect zu Root, damit React Router es handhaben kann
+        window.location = '/index.html';
+    </script>
+</head>
+<body></body>
+</html>
