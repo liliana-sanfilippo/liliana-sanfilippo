@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {BrowserRouter, Route, Routes, useParams} from 'react-router-dom'
+import {BrowserRouter, Route, Routes, useNavigate, useParams} from 'react-router-dom'
 import BlogLayout from '../components/pageRelated/BlogLayout'
 import BlogPostLayout from '../components/pageRelated/BlogPostLayout'
 import NotFoundPage from "../components/pageRelated/NotFoundPage";
@@ -19,13 +19,17 @@ function BlogPostWrapper() {
 }
 
 function AppRouter() {
+    const navigate = useNavigate();
+
     useEffect(() => {
         const redirectPath = sessionStorage.getItem('redirectPath');
         if (redirectPath) {
             sessionStorage.removeItem('redirectPath');
-            window.history.replaceState({}, '', redirectPath);
+            // Nutze navigate statt replaceState!
+            navigate(redirectPath, { replace: true });
         }
-    }, []);
+    }, [navigate]);
+
 
 
     const pathMapping = getPathMapping();
