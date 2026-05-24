@@ -20,12 +20,10 @@ function BlogPostWrapper() {
 
 function AppRouter() {
     useEffect(() => {
-        const params = new URLSearchParams(window.location.search);
-        const redirect = params.get('p');
-
-        if (redirect) {
-            // Setze die echte URL ohne Query-Param
-            window.history.replaceState({}, '', redirect);
+        const redirectPath = sessionStorage.getItem('redirectPath');
+        if (redirectPath) {
+            sessionStorage.removeItem('redirectPath');
+            window.history.replaceState({}, '', redirectPath);
         }
     }, []);
 
