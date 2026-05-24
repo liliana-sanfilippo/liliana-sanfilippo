@@ -18,23 +18,26 @@ function BlogPostWrapper() {
     return <BlogPostLayout post={post}/>
 }
 
-function AppRouter() {
-    const navigate = useNavigate();
 
+function RedirectHandler() {
+    const navigate = useNavigate();
     useEffect(() => {
         const redirectPath = sessionStorage.getItem('redirectPath');
         if (redirectPath) {
             sessionStorage.removeItem('redirectPath');
-            // Nutze navigate statt replaceState!
             navigate(redirectPath, { replace: true });
         }
     }, [navigate]);
 
+    return null;
+}
 
+function AppRouter() {
 
     const pathMapping = getPathMapping();
 
     return (<BrowserRouter basename={import.meta.env.VITE_BASE_NAME}>
+        <RedirectHandler />
         <div id={"main-wrapper"}>
             <Routes>
 
