@@ -7,6 +7,7 @@
 
 
 <img width="1401" height="739" alt="grafik" src="https://github.com/user-attachments/assets/75abb41e-ceca-4518-b87e-dbaea009e917" />
+<img width="1401" height="739" alt="grafik" src="https://github.com/user-attachments/assets/d41a221f-350c-4fc4-9e26-7060d1676397" />
 
 
 <img width="1401" height="739" alt="grafik" src="https://github.com/user-attachments/assets/b8be7ca0-86c9-428f-9456-767ba0b0ad6a" />
