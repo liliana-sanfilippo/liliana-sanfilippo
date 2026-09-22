@@ -4,3 +4,6 @@
 
 
 <img width="1401" height="739" alt="grafik" src="https://github.com/user-attachments/assets/4b5029c2-b6c5-4e04-b6c8-57a449bb79b9" />
+
+
+<img width="1401" height="739" alt="grafik" src="https://github.com/user-attachments/assets/75abb41e-ceca-4518-b87e-dbaea009e917" />
