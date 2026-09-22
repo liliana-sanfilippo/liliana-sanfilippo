@@ -14,3 +14,6 @@
 
 
 <img width="1401" height="739" alt="grafik" src="https://github.com/user-attachments/assets/0024da6d-dacb-456c-a938-e7722a96fb2b" />
+
+
+<img width="1090" height="579" alt="grafik" src="https://github.com/user-attachments/assets/693c8c6c-6989-435e-8e0b-979107fcdd24" />
