@@ -1,3 +1,4 @@
+<img width="1253" height="820" alt="Bildschirmfoto vom 2026-10-01 16-52-33" src="https://github.com/user-attachments/assets/d881e039-3b0e-4cfd-977f-259050dfb211" />
 <img width="1228" height="667" alt="grafik" src="https://github.com/user-attachments/assets/6b248124-f6c2-41a8-8601-8f0e9daa7d30" />
 <img width="1409" height="425" alt="grafik" src="https://github.com/user-attachments/assets/049c00f2-ec81-431f-98e3-e67d057d1318" />
 <img width="1198" height="485" alt="grafik" src="https://github.com/user-attachments/assets/573500a0-6a0a-4974-9dff-524d244a1d47" />
